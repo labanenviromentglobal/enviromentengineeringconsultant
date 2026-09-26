@@ -9,10 +9,7 @@
 
 <title>LABAN Environment Global</title>
 
-<!-- =====================================================
-     FAVICON / LOGO TAB BROWSER
-===================================================== -->
-
+<!-- FAVICON -->
 <link
     rel="icon"
     type="image/jpeg"
@@ -24,10 +21,6 @@
     type="image/jpeg"
     href="labanlogoterupdate.jpeg"
 >
-
-<!-- =====================================================
-     WEBSITE DESCRIPTION
-===================================================== -->
 
 <meta
     name="description"
@@ -57,15 +50,13 @@ html{
 }
 
 body{
-
     font-family:
     Arial,
     Helvetica,
     sans-serif;
 
     color:#18372a;
-
-    background:#ffffff;
+    background:#fff;
 
     line-height:1.6;
 
@@ -73,8 +64,8 @@ body{
 }
 
 img{
-    display:block;
     max-width:100%;
+    display:block;
 }
 
 a{
@@ -107,14 +98,14 @@ button{
 
     --border:#e2e9e4;
 
-    --white:#ffffff;
+    --white:#fff;
 
     --container:1180px;
 }
 
 
 /* =========================================================
-   CONTAINER
+   GLOBAL
 ========================================================= */
 
 .container{
@@ -127,11 +118,6 @@ button{
 
     margin:auto;
 }
-
-
-/* =========================================================
-   SECTION
-========================================================= */
 
 .section{
 
@@ -156,9 +142,9 @@ button{
     color:var(--dark);
 
     font-size:
-    clamp(38px,4vw,55px);
+    clamp(38px,4vw,56px);
 
-    line-height:1.08;
+    line-height:1.05;
 
     letter-spacing:-2px;
 
@@ -167,13 +153,13 @@ button{
 
 .section-description{
 
-    max-width:650px;
+    max-width:680px;
 
     color:var(--muted);
 
-    font-size:15px;
+    font-size:14px;
 
-    line-height:1.85;
+    line-height:1.9;
 }
 
 
@@ -193,22 +179,23 @@ button{
 
     min-height:50px;
 
-    padding:0 24px;
+    padding:
+    0 24px;
 
     border-radius:5px;
 
     font-size:13px;
 
-    font-weight:700;
+    font-weight:800;
 
     transition:.2s ease;
 }
 
 .btn-primary{
 
-    color:white;
-
     background:var(--green);
+
+    color:white;
 }
 
 .btn-primary:hover{
@@ -220,12 +207,12 @@ button{
 
 .btn-outline{
 
-    color:var(--green);
-
     background:white;
 
+    color:var(--green);
+
     border:
-    1px solid #cfdad3;
+    1px solid #cad8cf;
 }
 
 .btn-outline:hover{
@@ -269,7 +256,7 @@ header{
 
     justify-content:space-between;
 
-    gap:30px;
+    gap:25px;
 }
 
 
@@ -283,14 +270,16 @@ header{
 
     align-items:center;
 
-    gap:13px;
+    gap:12px;
+
+    flex-shrink:0;
 }
 
 .brand-logo{
 
-    width:58px;
+    width:55px;
 
-    height:58px;
+    height:55px;
 
     object-fit:contain;
 }
@@ -306,7 +295,7 @@ header{
 
     color:var(--dark);
 
-    font-size:23px;
+    font-size:21px;
 
     font-weight:900;
 
@@ -319,13 +308,13 @@ header{
 
     color:var(--green);
 
-    font-size:9px;
+    font-size:8px;
 
     font-weight:800;
 
-    letter-spacing:1.5px;
+    letter-spacing:1.4px;
 
-    margin-top:7px;
+    margin-top:6px;
 }
 
 
@@ -339,39 +328,25 @@ header{
 
     align-items:center;
 
-    gap:30px;
+    gap:19px;
 }
 
 .nav-menu > a{
 
     color:#45554d;
 
-    font-size:13px;
+    font-size:11px;
 
-    font-weight:700;
+    font-weight:800;
 
-    transition:.2s ease;
+    white-space:nowrap;
+
+    transition:.2s;
 }
 
 .nav-menu > a:hover{
 
     color:var(--green);
-}
-
-.nav-contact{
-
-    color:white !important;
-
-    background:var(--green);
-
-    padding:13px 21px;
-
-    border-radius:5px;
-}
-
-.nav-contact:hover{
-
-    background:var(--dark);
 }
 
 
@@ -385,7 +360,7 @@ header{
 
     align-items:center;
 
-    padding:4px;
+    padding:3px;
 
     border:
     1px solid #dfe7e1;
@@ -403,13 +378,14 @@ header{
 
     color:#718078;
 
-    padding:7px 10px;
+    padding:
+    6px 9px;
 
     border-radius:20px;
 
-    font-size:11px;
+    font-size:10px;
 
-    font-weight:800;
+    font-weight:900;
 
     cursor:pointer;
 }
@@ -423,7 +399,29 @@ header{
 
 
 /* =========================================================
-   MOBILE MENU BUTTON
+   CONTACT HEADER
+========================================================= */
+
+.nav-contact{
+
+    color:white !important;
+
+    background:var(--green);
+
+    padding:
+    11px 17px;
+
+    border-radius:5px;
+}
+
+.nav-contact:hover{
+
+    background:var(--dark);
+}
+
+
+/* =========================================================
+   MOBILE MENU
 ========================================================= */
 
 .menu-toggle{
@@ -450,7 +448,7 @@ header{
 
     padding-top:82px;
 
-    min-height:720px;
+    min-height:730px;
 
     display:flex;
 
@@ -467,46 +465,36 @@ header{
     grid-template-columns:
     1.1fr .9fr;
 
-    gap:80px;
+    gap:75px;
 
     align-items:center;
 }
 
 .hero-content{
 
-    padding:75px 0;
+    padding:
+    75px 0;
 }
-
-
-/* =========================================================
-   HERO SLOGAN
-========================================================= */
 
 .hero-slogan{
 
-    display:block;
-
     color:var(--green);
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:900;
 
     letter-spacing:3px;
 
-    margin-bottom:28px;
+    margin-bottom:27px;
 }
-
-
-/* =========================================================
-   HERO BADGE
-========================================================= */
 
 .hero-badge{
 
     display:inline-block;
 
-    padding:9px 14px;
+    padding:
+    9px 14px;
 
     margin-bottom:23px;
 
@@ -516,32 +504,25 @@ header{
 
     font-size:10px;
 
-    font-weight:800;
+    font-weight:900;
 
-    letter-spacing:.7px;
+    letter-spacing:.6px;
 
     border-radius:3px;
 }
-
-
-/* =========================================================
-   HERO TITLE
-========================================================= */
 
 .hero h1{
 
     color:var(--dark);
 
     font-size:
-    clamp(54px,6vw,78px);
+    clamp(53px,6vw,78px);
 
     line-height:.98;
 
     letter-spacing:-4px;
 
-    max-width:750px;
-
-    margin-bottom:26px;
+    margin-bottom:27px;
 }
 
 .hero h1 span{
@@ -553,11 +534,11 @@ header{
 
     color:var(--green);
 
-    font-size:20px;
+    font-size:19px;
 
-    font-weight:800;
+    font-weight:900;
 
-    margin-bottom:17px;
+    margin-bottom:15px;
 }
 
 .hero-description{
@@ -566,34 +547,34 @@ header{
 
     color:var(--muted);
 
-    font-size:16px;
+    font-size:15px;
 
     line-height:1.9;
 
-    margin-bottom:32px;
+    margin-bottom:30px;
 }
 
 .hero-actions{
 
     display:flex;
 
-    gap:12px;
-
     flex-wrap:wrap;
+
+    gap:11px;
 }
 
 
 /* =========================================================
-   HERO LOGO
+   HERO IMAGE
 ========================================================= */
 
 .hero-visual{
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
+
+    align-items:center;
 
     min-height:500px;
 }
@@ -602,9 +583,10 @@ header{
 
     width:100%;
 
-    max-width:480px;
+    max-width:470px;
 
-    padding:65px 55px;
+    padding:
+    65px 55px;
 
     border:
     1px solid var(--border);
@@ -627,8 +609,6 @@ header{
 
     max-width:330px;
 
-    height:auto;
-
     object-fit:contain;
 }
 
@@ -639,10 +619,10 @@ header{
 
 .company-strip{
 
+    background:#fafcfb;
+
     border-bottom:
     1px solid var(--border);
-
-    background:#fafcfb;
 }
 
 .company-strip-grid{
@@ -655,9 +635,10 @@ header{
 
 .company-strip-item{
 
-    padding:27px 20px;
-
     text-align:center;
+
+    padding:
+    25px 20px;
 
     border-right:
     1px solid var(--border);
@@ -672,18 +653,16 @@ header{
 
     color:var(--green);
 
-    font-size:22px;
+    font-size:21px;
 
     font-weight:900;
-
-    margin-bottom:3px;
 }
 
 .company-strip-title{
 
-    color:#65746d;
+    color:var(--muted);
 
-    font-size:11px;
+    font-size:10px;
 
     font-weight:700;
 }
@@ -705,14 +684,14 @@ header{
     grid-template-columns:
     .8fr 1.2fr;
 
-    gap:90px;
+    gap:80px;
 
     align-items:center;
 }
 
 .about-logo-area{
 
-    min-height:450px;
+    min-height:430px;
 
     display:flex;
 
@@ -720,10 +699,10 @@ header{
 
     justify-content:center;
 
+    background:#f8fbf8;
+
     border:
     1px solid var(--border);
-
-    background:#f8fbf8;
 }
 
 .about-logo{
@@ -746,68 +725,73 @@ header{
 
     letter-spacing:-2px;
 
-    margin-bottom:24px;
+    margin-bottom:23px;
 }
 
 .about-content p{
 
     color:var(--muted);
 
-    font-size:14px;
+    font-size:13px;
 
     line-height:1.9;
 
-    margin-bottom:15px;
+    margin-bottom:14px;
 }
 
-.about-points{
+
+/* =========================================================
+   COMPANY INFORMATION
+========================================================= */
+
+.info-grid{
 
     display:grid;
 
     grid-template-columns:
-    1fr 1fr;
+    repeat(2,1fr);
 
-    gap:12px;
+    gap:13px;
 
-    margin-top:27px;
+    margin-top:28px;
 }
 
-.about-point{
+.info-card{
 
-    padding:18px;
+    padding:20px;
+
+    background:#fff;
 
     border:
     1px solid var(--border);
-
-    background:white;
 }
 
-.about-point strong{
+.info-card strong{
 
     display:block;
 
     color:var(--dark);
 
-    font-size:13px;
+    font-size:12px;
 
-    margin-bottom:4px;
+    margin-bottom:6px;
 }
 
-.about-point span{
+.info-card span{
 
     color:var(--muted);
 
     font-size:10px;
 
-    line-height:1.6;
+    line-height:1.7;
 }
 
 
 /* =========================================================
-   SERVICES
+   VISION MISSION
 ========================================================= */
 
-.services{
+.vm-section{
 
     background:#f8faf8;
 
@@ -818,6 +802,62 @@ header{
     1px solid var(--border);
 }
 
+.vm-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:18px;
+
+    margin-top:45px;
+}
+
+.vm-card{
+
+    background:white;
+
+    border:
+    1px solid var(--border);
+
+    padding:35px;
+}
+
+.vm-card h3{
+
+    color:var(--dark);
+
+    font-size:22px;
+
+    margin-bottom:13px;
+}
+
+.vm-card p,
+.vm-card li{
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    line-height:1.8;
+}
+
+.vm-card ul{
+
+    padding-left:18px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services{
+
+    background:white;
+}
+
 .services-heading{
 
     display:flex;
@@ -826,9 +866,9 @@ header{
 
     align-items:flex-end;
 
-    gap:60px;
+    gap:50px;
 
-    margin-bottom:50px;
+    margin-bottom:48px;
 }
 
 .services-grid{
@@ -838,7 +878,7 @@ header{
     grid-template-columns:
     repeat(3,1fr);
 
-    gap:18px;
+    gap:17px;
 }
 
 .service-card{
@@ -848,9 +888,9 @@ header{
     border:
     1px solid var(--border);
 
-    padding:31px;
+    padding:28px;
 
-    min-height:255px;
+    min-height:240px;
 
     transition:.2s ease;
 }
@@ -869,18 +909,18 @@ header{
 
     color:#9fca77;
 
-    font-size:12px;
+    font-size:11px;
 
     font-weight:900;
 
-    margin-bottom:25px;
+    margin-bottom:22px;
 }
 
 .service-icon{
 
-    width:45px;
+    width:43px;
 
-    height:45px;
+    height:43px;
 
     display:flex;
 
@@ -892,155 +932,76 @@ header{
 
     color:var(--green);
 
-    font-size:13px;
+    font-size:11px;
 
     font-weight:900;
 
-    margin-bottom:22px;
+    margin-bottom:20px;
 }
 
 .service-card h3{
 
     color:var(--dark);
 
-    font-size:19px;
+    font-size:17px;
 
-    line-height:1.2;
-
-    margin-bottom:11px;
+    margin-bottom:9px;
 }
 
 .service-card p{
 
     color:var(--muted);
 
-    font-size:11px;
+    font-size:10.5px;
 
     line-height:1.8;
 }
 
 
 /* =========================================================
-   APPROACH
+   EXPERT TEAM
 ========================================================= */
 
-.approach{
+.experts{
 
-    background:var(--dark);
-
-    color:white;
-}
-
-.approach .section-label{
-
-    color:var(--lime);
-}
-
-.approach .section-title{
-
-    color:white;
-}
-
-.approach .section-description{
-
-    color:rgba(255,255,255,.65);
-}
-
-.approach-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    margin-top:55px;
+    background:#f8faf8;
 
     border-top:
-    1px solid rgba(255,255,255,.12);
+    1px solid var(--border);
 
     border-bottom:
-    1px solid rgba(255,255,255,.12);
+    1px solid var(--border);
 }
 
-.approach-card{
-
-    padding:
-    35px 35px 35px 0;
-
-    border-right:
-    1px solid rgba(255,255,255,.12);
-}
-
-.approach-card:not(:first-child){
-
-    padding-left:35px;
-}
-
-.approach-card:last-child{
-
-    border-right:none;
-}
-
-.approach-card span{
-
-    color:var(--lime);
-
-    font-size:10px;
-
-    font-weight:900;
-
-    letter-spacing:1px;
-}
-
-.approach-card h3{
-
-    font-size:21px;
-
-    margin:18px 0 10px;
-}
-
-.approach-card p{
-
-    color:rgba(255,255,255,.57);
-
-    font-size:11px;
-
-    line-height:1.8;
-}
-
-
-/* =========================================================
-   PROCESS
-========================================================= */
-
-.process-grid{
-
-    margin-top:55px;
+.expert-grid{
 
     display:grid;
 
     grid-template-columns:
     repeat(3,1fr);
+
+    gap:17px;
+
+    margin-top:48px;
 }
 
-.process-card{
+.expert-card{
 
-    padding-right:45px;
-}
+    background:white;
 
-.process-card:not(:last-child){
-
-    border-right:
+    border:
     1px solid var(--border);
 
-    margin-right:35px;
+    padding:30px;
+
+    min-height:260px;
 }
 
-.process-number{
+.expert-placeholder{
 
-    width:45px;
+    width:62px;
 
-    height:45px;
+    height:62px;
 
     display:flex;
 
@@ -1048,110 +1009,415 @@ header{
 
     justify-content:center;
 
-    background:var(--green);
+    background:var(--soft);
 
-    color:white;
+    color:var(--green);
 
-    font-size:12px;
+    font-size:20px;
 
     font-weight:900;
 
     margin-bottom:22px;
 }
 
-.process-card h3{
+.expert-card h3{
 
     color:var(--dark);
 
     font-size:18px;
 
-    margin-bottom:9px;
+    margin-bottom:7px;
 }
 
-.process-card p{
+.expert-card .role{
+
+    color:var(--green);
+
+    font-size:10px;
+
+    font-weight:800;
+
+    margin-bottom:14px;
+}
+
+.expert-card p{
 
     color:var(--muted);
 
-    font-size:11px;
+    font-size:10.5px;
 
     line-height:1.8;
+}
 
-    max-width:290px;
+.empty-note{
+
+    margin-top:20px;
+
+    color:#829087;
+
+    font-size:10px;
 }
 
 
 /* =========================================================
-   CTA
+   PORTFOLIO
 ========================================================= */
 
-.cta{
+.portfolio{
 
-    padding:
-    0 0 105px;
+    background:white;
 }
 
-.cta-box{
+.portfolio-grid{
 
-    background:var(--green);
+    display:grid;
 
-    color:white;
+    grid-template-columns:
+    repeat(3,1fr);
 
-    padding:65px;
+    gap:17px;
+
+    margin-top:48px;
+}
+
+.portfolio-card{
+
+    border:
+    1px solid var(--border);
+
+    background:white;
+
+    overflow:hidden;
+}
+
+.portfolio-image{
+
+    height:210px;
+
+    background:#eef4ef;
 
     display:flex;
 
     align-items:center;
 
-    justify-content:space-between;
+    justify-content:center;
 
-    gap:50px;
+    color:#7a897f;
+
+    font-size:11px;
+
+    text-align:center;
 }
 
-.cta-box .section-label{
+.portfolio-content{
+
+    padding:23px;
+}
+
+.portfolio-year{
+
+    color:var(--green);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    margin-bottom:7px;
+}
+
+.portfolio-card h3{
+
+    color:var(--dark);
+
+    font-size:17px;
+
+    margin-bottom:8px;
+}
+
+.portfolio-card p{
+
+    color:var(--muted);
+
+    font-size:10.5px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   DOCUMENTATION
+========================================================= */
+
+.documentation{
+
+    background:#f8faf8;
+
+    border-top:
+    1px solid var(--border);
+
+    border-bottom:
+    1px solid var(--border);
+}
+
+.documentation-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:14px;
+
+    margin-top:48px;
+}
+
+.documentation-card{
+
+    min-height:180px;
+
+    background:white;
+
+    border:
+    1px solid var(--border);
+
+    padding:23px;
+}
+
+.documentation-number{
+
+    color:var(--green);
+
+    font-size:10px;
+
+    font-weight:900;
+
+    margin-bottom:25px;
+}
+
+.documentation-card h3{
+
+    color:var(--dark);
+
+    font-size:14px;
+
+    margin-bottom:7px;
+}
+
+.documentation-card p{
+
+    color:var(--muted);
+
+    font-size:10px;
+
+    line-height:1.7;
+}
+
+
+/* =========================================================
+   INSIGHT
+========================================================= */
+
+.insight{
+
+    background:white;
+}
+
+.insight-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:17px;
+
+    margin-top:48px;
+}
+
+.insight-card{
+
+    border:
+    1px solid var(--border);
+
+    padding:27px;
+
+    background:white;
+
+    transition:.2s;
+}
+
+.insight-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 30px rgba(6,61,39,.06);
+}
+
+.insight-category{
+
+    color:var(--green);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    margin-bottom:17px;
+}
+
+.insight-card h3{
+
+    color:var(--dark);
+
+    font-size:18px;
+
+    line-height:1.3;
+
+    margin-bottom:10px;
+}
+
+.insight-card p{
+
+    color:var(--muted);
+
+    font-size:10.5px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   DOCUMENTS
+========================================================= */
+
+.documents{
+
+    background:var(--dark);
+
+    color:white;
+}
+
+.documents .section-label{
 
     color:var(--lime);
 }
 
-.cta-box h2{
+.documents .section-title{
 
-    max-width:730px;
-
-    font-size:
-    clamp(34px,4vw,52px);
-
-    line-height:1.08;
-
-    letter-spacing:-2px;
+    color:white;
 }
 
-.cta-box p{
+.documents .section-description{
 
-    color:rgba(255,255,255,.65);
-
-    font-size:13px;
-
-    margin-top:14px;
-
-    max-width:600px;
+    color:rgba(255,255,255,.62);
 }
 
-.cta-button{
+.document-grid{
 
-    flex-shrink:0;
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:15px;
+
+    margin-top:48px;
 }
 
-.cta-button .btn{
+.document-card{
+
+    border:
+    1px solid rgba(255,255,255,.12);
+
+    padding:28px;
+
+    background:
+    rgba(255,255,255,.035);
+}
+
+.document-card h3{
+
+    color:white;
+
+    font-size:16px;
+
+    margin-bottom:8px;
+}
+
+.document-card p{
+
+    color:rgba(255,255,255,.53);
+
+    font-size:10.5px;
+
+    line-height:1.8;
+}
+
+.document-status{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:
+    5px 9px;
+
+    background:
+    rgba(155,214,59,.1);
+
+    color:var(--lime);
+
+    font-size:9px;
+
+    font-weight:900;
+}
+
+
+/* =========================================================
+   CLIENTS
+========================================================= */
+
+.clients{
 
     background:white;
-
-    color:var(--green);
 }
 
-.cta-button .btn:hover{
+.client-grid{
 
-    background:var(--lime);
+    display:grid;
 
-    color:var(--dark);
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap:14px;
+
+    margin-top:48px;
+}
+
+.client-card{
+
+    min-height:130px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    border:
+    1px solid var(--border);
+
+    color:#7a887f;
+
+    font-size:11px;
+
+    font-weight:700;
 }
 
 
@@ -1174,7 +1440,7 @@ header{
     grid-template-columns:
     .9fr 1.1fr;
 
-    gap:80px;
+    gap:75px;
 }
 
 .contact-info h2{
@@ -1195,7 +1461,7 @@ header{
 
     color:var(--muted);
 
-    font-size:14px;
+    font-size:13px;
 
     line-height:1.8;
 
@@ -1217,9 +1483,9 @@ header{
 
     display:flex;
 
-    align-items:flex-start;
+    gap:13px;
 
-    gap:14px;
+    align-items:flex-start;
 }
 
 .contact-icon{
@@ -1240,7 +1506,7 @@ header{
 
     color:var(--green);
 
-    font-size:13px;
+    font-size:12px;
 
     font-weight:900;
 }
@@ -1253,7 +1519,7 @@ header{
 
     font-size:10px;
 
-    letter-spacing:.7px;
+    letter-spacing:.6px;
 
     margin-bottom:3px;
 }
@@ -1264,7 +1530,7 @@ header{
 
     font-size:11px;
 
-    line-height:1.6;
+    line-height:1.7;
 }
 
 .contact-card{
@@ -1292,7 +1558,7 @@ header{
 
     font-size:12px;
 
-    margin-bottom:25px;
+    margin-bottom:24px;
 }
 
 .contact-buttons{
@@ -1302,7 +1568,7 @@ header{
     grid-template-columns:
     1fr 1fr;
 
-    gap:12px;
+    gap:11px;
 }
 
 .contact-button{
@@ -1315,8 +1581,6 @@ header{
 
     justify-content:center;
 
-    gap:9px;
-
     font-size:12px;
 
     font-weight:800;
@@ -1324,7 +1588,7 @@ header{
     border:
     1px solid var(--border);
 
-    transition:.2s ease;
+    transition:.2s;
 }
 
 .contact-button:hover{
@@ -1342,6 +1606,85 @@ header{
 .email{
 
     background:#f3f7f4;
+
+    color:var(--green);
+}
+
+.maps{
+
+    margin-top:12px;
+
+    width:100%;
+
+    background:var(--green);
+
+    color:white;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta{
+
+    padding:
+    0 0 100px;
+
+    background:#f8faf8;
+}
+
+.cta-box{
+
+    background:var(--green);
+
+    color:white;
+
+    padding:60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+}
+
+.cta-box .section-label{
+
+    color:var(--lime);
+}
+
+.cta-box h2{
+
+    max-width:730px;
+
+    font-size:
+    clamp(34px,4vw,51px);
+
+    line-height:1.08;
+
+    letter-spacing:-2px;
+}
+
+.cta-box p{
+
+    color:rgba(255,255,255,.65);
+
+    font-size:12px;
+
+    margin-top:12px;
+}
+
+.cta-button{
+
+    flex-shrink:0;
+}
+
+.cta-button .btn{
+
+    background:white;
 
     color:var(--green);
 }
@@ -1373,7 +1716,7 @@ footer{
     padding-bottom:40px;
 
     border-bottom:
-    1px solid rgba(255,255,255,.10);
+    1px solid rgba(255,255,255,.1);
 }
 
 .footer-brand{
@@ -1398,11 +1741,9 @@ footer{
 
 .footer-brand-name{
 
-    font-size:16px;
+    font-size:15px;
 
     font-weight:900;
-
-    letter-spacing:.5px;
 }
 
 .footer-description{
@@ -1411,7 +1752,7 @@ footer{
 
     max-width:430px;
 
-    font-size:11px;
+    font-size:10.5px;
 
     line-height:1.8;
 }
@@ -1426,7 +1767,7 @@ footer{
 
     letter-spacing:1.5px;
 
-    margin-bottom:17px;
+    margin-bottom:16px;
 }
 
 .footer-links{
@@ -1442,7 +1783,7 @@ footer{
 
     color:rgba(255,255,255,.58);
 
-    font-size:11px;
+    font-size:10.5px;
 
     transition:.2s;
 }
@@ -1462,7 +1803,7 @@ footer{
 
     color:rgba(255,255,255,.35);
 
-    font-size:10px;
+    font-size:9.5px;
 }
 
 
@@ -1478,9 +1819,9 @@ footer{
 
     bottom:22px;
 
-    width:55px;
+    width:54px;
 
-    height:55px;
+    height:54px;
 
     display:flex;
 
@@ -1494,7 +1835,7 @@ footer{
 
     border-radius:50%;
 
-    font-size:18px;
+    font-size:17px;
 
     font-weight:900;
 
@@ -1506,7 +1847,7 @@ footer{
 
 
 /* =========================================================
-   ANIMATION
+   REVEAL
 ========================================================= */
 
 .reveal{
@@ -1532,39 +1873,19 @@ footer{
    TABLET
 ========================================================= */
 
-@media(max-width:1050px){
+@media(max-width:1150px){
 
     .nav-menu{
 
-        gap:18px;
+        gap:12px;
+    }
+
+    .nav-menu > a{
+
+        font-size:10px;
     }
 
     .hero-grid{
-
-        grid-template-columns:
-        1fr .8fr;
-
-        gap:40px;
-    }
-
-    .about-grid{
-
-        grid-template-columns:
-        1fr 1fr;
-
-        gap:50px;
-    }
-
-    .services-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .contact-grid{
-
-        grid-template-columns:
-        1fr 1fr;
 
         gap:45px;
     }
@@ -1576,7 +1897,7 @@ footer{
    MOBILE
 ========================================================= */
 
-@media(max-width:800px){
+@media(max-width:850px){
 
     .container{
 
@@ -1617,18 +1938,18 @@ footer{
 
         position:absolute;
 
-        top:78px;
+        top:76px;
 
         left:15px;
 
         right:15px;
 
+        padding:15px;
+
         background:white;
 
         border:
         1px solid var(--border);
-
-        padding:15px;
 
         flex-direction:column;
 
@@ -1647,21 +1968,22 @@ footer{
 
     .nav-menu > a{
 
-        padding:12px 13px;
-    }
+        padding:
+        11px 13px;
 
-    .nav-contact{
-
-        text-align:center;
-
-        margin-top:5px;
+        font-size:12px;
     }
 
     .language-switcher{
 
         justify-content:center;
 
-        margin:8px 0;
+        margin:7px 0;
+    }
+
+    .nav-contact{
+
+        text-align:center;
     }
 
     .hero{
@@ -1675,7 +1997,7 @@ footer{
 
         grid-template-columns:1fr;
 
-        gap:20px;
+        gap:15px;
     }
 
     .hero-content{
@@ -1687,14 +2009,9 @@ footer{
     .hero h1{
 
         font-size:
-        clamp(48px,13vw,68px);
+        clamp(47px,13vw,68px);
 
         letter-spacing:-3px;
-    }
-
-    .hero-description{
-
-        font-size:14px;
     }
 
     .hero-visual{
@@ -1702,7 +2019,7 @@ footer{
         min-height:auto;
 
         padding:
-        20px 0 70px;
+        20px 0 65px;
     }
 
     .hero-logo-box{
@@ -1713,7 +2030,7 @@ footer{
 
     .hero-logo{
 
-        max-width:260px;
+        max-width:250px;
     }
 
     .company-strip-grid{
@@ -1751,12 +2068,12 @@ footer{
         min-height:330px;
     }
 
-    .about-logo{
+    .info-grid{
 
-        width:220px;
+        grid-template-columns:1fr;
     }
 
-    .about-points{
+    .vm-grid{
 
         grid-template-columns:1fr;
     }
@@ -1764,8 +2081,6 @@ footer{
     .services-heading{
 
         display:block;
-
-        margin-bottom:35px;
     }
 
     .services-heading .section-description{
@@ -1778,59 +2093,43 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .approach-grid{
+    .expert-grid{
 
         grid-template-columns:1fr;
     }
 
-    .approach-card{
+    .portfolio-grid{
 
-        padding:
-        30px 0;
-
-        border-right:none;
-
-        border-bottom:
-        1px solid rgba(255,255,255,.12);
+        grid-template-columns:1fr;
     }
 
-    .approach-card:not(:first-child){
+    .documentation-grid{
 
-        padding-left:0;
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
-    .approach-card:last-child{
+    .insight-grid{
 
-        border-bottom:none;
+        grid-template-columns:1fr;
     }
 
-    .process-grid{
+    .document-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .client-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .contact-grid{
 
         grid-template-columns:1fr;
 
-        gap:35px;
-    }
-
-    .process-card{
-
-        padding-right:0;
-    }
-
-    .process-card:not(:last-child){
-
-        border-right:none;
-
-        border-bottom:
-        1px solid var(--border);
-
-        margin-right:0;
-
-        padding-bottom:35px;
-    }
-
-    .cta{
-
-        padding-bottom:75px;
+        gap:40px;
     }
 
     .cta-box{
@@ -1843,19 +2142,7 @@ footer{
 
     .cta-button{
 
-        margin-top:28px;
-    }
-
-    .contact-grid{
-
-        grid-template-columns:1fr;
-
-        gap:40px;
-    }
-
-    .contact-buttons{
-
-        grid-template-columns:1fr;
+        margin-top:27px;
     }
 
     .footer-grid{
@@ -1876,14 +2163,14 @@ footer{
 
 
 /* =========================================================
-   SMALL PHONE
+   SMALL MOBILE
 ========================================================= */
 
-@media(max-width:450px){
+@media(max-width:480px){
 
     .hero h1{
 
-        font-size:48px;
+        font-size:47px;
 
         letter-spacing:-2.5px;
     }
@@ -1897,18 +2184,22 @@ footer{
 
     .hero-badge{
 
-        font-size:9px;
+        font-size:8.5px;
     }
 
-    .hero-logo-box{
+    .documentation-grid{
 
-        padding:
-        35px 20px;
+        grid-template-columns:1fr;
     }
 
-    .section-title{
+    .client-grid{
 
-        font-size:37px;
+        grid-template-columns:1fr;
+    }
+
+    .contact-buttons{
+
+        grid-template-columns:1fr;
     }
 
 }
@@ -1962,7 +2253,6 @@ ENVIRONMENT GLOBAL
 class="menu-toggle"
 id="menuToggle"
 type="button"
-aria-label="Menu"
 >
 ☰
 </button>
@@ -1985,10 +2275,10 @@ Beranda
 
 <a
 href="#about"
-data-id="Tentang"
-data-en="About"
+data-id="Tentang Kami"
+data-en="About Us"
 >
-Tentang
+Tentang Kami
 </a>
 
 
@@ -2002,11 +2292,56 @@ Layanan
 
 
 <a
-href="#process"
-data-id="Proses"
-data-en="Process"
+href="#experts"
+data-id="Tenaga Ahli"
+data-en="Experts"
 >
-Proses
+Tenaga Ahli
+</a>
+
+
+<a
+href="#portfolio"
+data-id="Portofolio"
+data-en="Portfolio"
+>
+Portofolio
+</a>
+
+
+<a
+href="#documentation"
+data-id="Dokumentasi"
+data-en="Documentation"
+>
+Dokumentasi
+</a>
+
+
+<a
+href="#insight"
+data-id="Insight"
+data-en="Insight"
+>
+Insight
+</a>
+
+
+<a
+href="#documents"
+data-id="Dokumen"
+data-en="Documents"
+>
+Dokumen
+</a>
+
+
+<a
+href="#clients"
+data-id="Mitra"
+data-en="Partners"
+>
+Mitra
 </a>
 
 
@@ -2040,18 +2375,6 @@ EN
 </div>
 
 
-<a
-href="https://wa.me/6281299119884"
-target="_blank"
-rel="noopener"
-class="nav-contact"
-data-id="Konsultasi"
-data-en="Consultation"
->
-Konsultasi
-</a>
-
-
 </div>
 
 </nav>
@@ -2063,7 +2386,7 @@ Konsultasi
 
 
 <!-- =========================================================
-     HERO
+     HOME
 ========================================================= -->
 
 <section
@@ -2136,26 +2459,20 @@ kebutuhan proyek secara terarah, efektif, dan berkelanjutan.
 <a
 href="#services"
 class="btn btn-primary"
-data-id="Jelajahi Layanan"
-data-en="Explore Services"
+data-id="Lihat Layanan"
+data-en="View Services"
 >
-
-Jelajahi Layanan
-
-→
-
+Lihat Layanan →
 </a>
 
 
 <a
-href="#about"
+href="#contact"
 class="btn btn-outline"
-data-id="Tentang Kami"
-data-en="About Us"
+data-id="Hubungi Kami"
+data-en="Contact Us"
 >
-
-Tentang Kami
-
+Hubungi Kami
 </a>
 
 
@@ -2168,7 +2485,6 @@ Tentang Kami
 
 <div class="hero-visual reveal">
 
-
 <div class="hero-logo-box">
 
 <img
@@ -2178,7 +2494,6 @@ class="hero-logo"
 >
 
 </div>
-
 
 </div>
 
@@ -2192,7 +2507,7 @@ class="hero-logo"
 
 
 <!-- =========================================================
-     COMPANY STRIP
+     HOME SERVICE STRIP
 ========================================================= -->
 
 <section class="company-strip">
@@ -2210,10 +2525,10 @@ ENV
 
 <div
 class="company-strip-title"
-data-id="Solusi Lingkungan"
-data-en="Environmental Solutions"
+data-id="Lingkungan"
+data-en="Environment"
 >
-Solusi Lingkungan
+Lingkungan
 </div>
 
 </div>
@@ -2227,10 +2542,10 @@ ENG
 
 <div
 class="company-strip-title"
-data-id="Solusi Engineering"
-data-en="Engineering Solutions"
+data-id="Engineering"
+data-en="Engineering"
 >
-Solusi Engineering
+Engineering
 </div>
 
 </div>
@@ -2244,10 +2559,10 @@ CON
 
 <div
 class="company-strip-title"
-data-id="Konsultasi Profesional"
-data-en="Professional Consulting"
+data-id="Konsultasi"
+data-en="Consulting"
 >
-Konsultasi Profesional
+Konsultasi
 </div>
 
 </div>
@@ -2262,7 +2577,7 @@ Konsultasi Profesional
 
 
 <!-- =========================================================
-     ABOUT
+     TENTANG KAMI
 ========================================================= -->
 
 <section
@@ -2286,23 +2601,22 @@ class="about-logo"
 </div>
 
 
-
 <div class="about-content reveal">
 
 
 <div
 class="section-label"
-data-id="TENTANG LABAN"
-data-en="ABOUT LABAN"
+data-id="TENTANG KAMI"
+data-en="ABOUT US"
 >
-TENTANG LABAN
+TENTANG KAMI
 </div>
 
 
 <h2>
 
-Sustaining the future
-through better solutions.
+LABAN Environment
+Global
 
 </h2>
 
@@ -2323,106 +2637,96 @@ Environment, Engineering, dan Consultant.
 
 
 <p
-data-id="Kami mengembangkan pendekatan kerja yang mengutamakan kebutuhan klien, pemahaman terhadap kondisi proyek, serta penyusunan solusi yang sistematis dan dapat diterapkan."
-data-en="We develop a working approach that prioritizes client needs, project conditions, and the development of systematic and applicable solutions."
+data-id="Kami mengembangkan pendekatan kerja yang mengutamakan kebutuhan klien, pemahaman kondisi proyek, serta penyusunan solusi yang sistematis dan dapat diterapkan."
+data-en="We develop a working approach that prioritizes client needs, project conditions, and systematic and applicable solutions."
 >
 
 Kami mengembangkan pendekatan kerja yang
-mengutamakan kebutuhan klien, pemahaman terhadap
-kondisi proyek, serta penyusunan solusi yang
-sistematis dan dapat diterapkan.
+mengutamakan kebutuhan klien, pemahaman kondisi
+proyek, serta penyusunan solusi yang sistematis
+dan dapat diterapkan.
 
 </p>
 
 
-<p
-data-id="Melalui semangat <strong>“Sustaining Future Together”</strong>, LABAN berkomitmen untuk membangun kolaborasi dalam menghadirkan solusi yang memperhatikan kebutuhan saat ini sekaligus mempertimbangkan masa depan."
-data-en="Through the spirit of <strong>“Sustaining Future Together”</strong>, LABAN is committed to building collaboration and delivering solutions that address today's needs while considering the future."
->
-
-Melalui semangat
-
-<strong>
-“Sustaining Future Together”
-</strong>,
-
-LABAN berkomitmen untuk membangun kolaborasi
-dalam menghadirkan solusi yang memperhatikan
-kebutuhan saat ini sekaligus mempertimbangkan
-masa depan.
-
-</p>
+<div class="info-grid">
 
 
-<div class="about-points">
-
-
-<div class="about-point">
-
-<strong>
-Environment
-</strong>
-
-<span
-data-id="Pendekatan terhadap aspek lingkungan dan keberlanjutan."
-data-en="Approach to environmental and sustainability aspects."
->
-Pendekatan terhadap aspek lingkungan
-dan keberlanjutan.
-</span>
-
-</div>
-
-
-<div class="about-point">
-
-<strong>
-Engineering
-</strong>
-
-<span
-data-id="Pendekatan teknis yang sistematis sesuai kebutuhan."
-data-en="Systematic technical approach based on project needs."
->
-Pendekatan teknis yang sistematis
-sesuai kebutuhan.
-</span>
-
-</div>
-
-
-<div class="about-point">
-
-<strong>
-Consulting
-</strong>
-
-<span
-data-id="Pendampingan dan solusi berdasarkan kebutuhan proyek."
-data-en="Consulting and solutions based on project requirements."
->
-Pendampingan dan solusi berdasarkan
-kebutuhan proyek.
-</span>
-
-</div>
-
-
-<div class="about-point">
+<div class="info-card">
 
 <strong
-data-id="Kolaborasi"
-data-en="Collaboration"
+data-id="Profil"
+data-en="Company Profile"
 >
-Kolaborasi
+Profil
 </strong>
 
 <span
-data-id="Membangun solusi melalui kolaborasi dan komunikasi."
-data-en="Building solutions through collaboration and communication."
+data-id="Informasi mengenai profil dan ruang lingkup CV Laban."
+data-en="Information about LABAN's profile and scope of work."
 >
-Membangun solusi melalui kolaborasi
-dan komunikasi.
+Informasi mengenai profil dan ruang lingkup
+CV Laban.
+</span>
+
+</div>
+
+
+<div class="info-card">
+
+<strong
+data-id="Sejarah Singkat"
+data-en="Brief History"
+>
+Sejarah Singkat
+</strong>
+
+<span
+data-id="Bagian ini akan memuat perjalanan dan perkembangan perusahaan."
+data-en="This section will contain the company's journey and development."
+>
+Bagian ini akan memuat perjalanan dan
+perkembangan perusahaan.
+</span>
+
+</div>
+
+
+<div class="info-card">
+
+<strong
+data-id="Visi & Misi"
+data-en="Vision & Mission"
+>
+Visi & Misi
+</strong>
+
+<span
+data-id="Arah dan tujuan perusahaan dalam menjalankan kegiatan."
+data-en="The company's direction and objectives."
+>
+Arah dan tujuan perusahaan dalam menjalankan
+kegiatan.
+</span>
+
+</div>
+
+
+<div class="info-card">
+
+<strong
+data-id="Legalitas"
+data-en="Legal"
+>
+Legalitas
+</strong>
+
+<span
+data-id="Informasi legalitas perusahaan akan ditampilkan sesuai dokumen yang tersedia."
+data-en="Company legal information will be displayed based on available documents."
+>
+Informasi legalitas perusahaan akan ditampilkan
+sesuai dokumen yang tersedia.
 </span>
 
 </div>
@@ -2442,7 +2746,134 @@ dan komunikasi.
 
 
 <!-- =========================================================
-     SERVICES
+     VISI MISI
+========================================================= -->
+
+<section class="section vm-section">
+
+<div class="container">
+
+
+<div
+class="section-label"
+data-id="VISI & MISI"
+data-en="VISION & MISSION"
+>
+VISI & MISI
+</div>
+
+
+<h2
+class="section-title"
+data-id="Arah kami dalam membangun solusi."
+data-en="Our direction in building solutions."
+>
+Arah kami dalam
+membangun solusi.
+</h2>
+
+
+<div class="vm-grid">
+
+
+<div class="vm-card">
+
+<h3
+data-id="Visi"
+data-en="Vision"
+>
+Visi
+</h3>
+
+<p
+data-id="Visi perusahaan akan ditampilkan berdasarkan dokumen resmi CV Laban."
+data-en="The company's vision will be displayed based on LABAN's official documents."
+>
+
+Visi perusahaan akan ditampilkan berdasarkan
+dokumen resmi CV Laban.
+
+</p>
+
+</div>
+
+
+<div class="vm-card">
+
+<h3
+data-id="Misi"
+data-en="Mission"
+>
+Misi
+</h3>
+
+<p
+data-id="Misi perusahaan akan ditampilkan berdasarkan dokumen resmi CV Laban."
+data-en="The company's mission will be displayed based on LABAN's official documents."
+>
+
+Misi perusahaan akan ditampilkan berdasarkan
+dokumen resmi CV Laban.
+
+</p>
+
+</div>
+
+
+<div class="vm-card">
+
+<h3
+data-id="Nilai-Nilai Perusahaan"
+data-en="Company Values"
+>
+Nilai-Nilai Perusahaan
+</h3>
+
+<p
+data-id="Nilai perusahaan akan ditampilkan sesuai profil resmi perusahaan."
+data-en="Company values will be displayed according to the official company profile."
+>
+
+Nilai perusahaan akan ditampilkan sesuai
+profil resmi perusahaan.
+
+</p>
+
+</div>
+
+
+<div class="vm-card">
+
+<h3
+data-id="Legalitas Perusahaan"
+data-en="Company Legality"
+>
+Legalitas Perusahaan
+</h3>
+
+<p
+data-id="Dokumen legalitas dapat ditampilkan setelah data dan dokumen resmi tersedia."
+data-en="Legal documents can be displayed once official data and documents are available."
+>
+
+Dokumen legalitas dapat ditampilkan setelah
+data dan dokumen resmi tersedia.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LAYANAN
 ========================================================= -->
 
 <section
@@ -2453,30 +2884,26 @@ id="services"
 <div class="container">
 
 
-<div class="services-heading reveal">
+<div class="services-heading">
 
 
 <div>
 
 <div
 class="section-label"
-data-id="LAYANAN KAMI"
-data-en="OUR SERVICES"
+data-id="LAYANAN"
+data-en="SERVICES"
 >
-LAYANAN KAMI
+LAYANAN
 </div>
-
 
 <h2
 class="section-title"
-data-id="Layanan untuk kebutuhan proyek Anda."
-data-en="Solutions for your project needs."
+data-id="Solusi lingkungan yang terarah."
+data-en="Structured environmental solutions."
 >
-
-Layanan untuk
-kebutuhan proyek
-Anda.
-
+Solusi lingkungan
+yang terarah.
 </h2>
 
 </div>
@@ -2484,13 +2911,12 @@ Anda.
 
 <p
 class="section-description"
-data-id="Kami menyediakan pendekatan layanan yang dapat disesuaikan dengan karakteristik, kebutuhan, dan tujuan masing-masing proyek."
-data-en="We provide service approaches that can be adapted to the characteristics, requirements, and objectives of each project."
+data-id="Layanan dapat disesuaikan dengan kebutuhan kegiatan, proyek, serta ruang lingkup pekerjaan."
+data-en="Services can be tailored to project needs, activities, and scope of work."
 >
 
-Kami menyediakan pendekatan layanan yang dapat
-disesuaikan dengan karakteristik, kebutuhan, dan
-tujuan masing-masing proyek.
+Layanan dapat disesuaikan dengan kebutuhan
+kegiatan, proyek, serta ruang lingkup pekerjaan.
 
 </p>
 
@@ -2504,26 +2930,21 @@ tujuan masing-masing proyek.
 
 <div class="service-card reveal">
 
-<div class="service-number">
-01
-</div>
+<div class="service-number">01</div>
 
-<div class="service-icon">
-01
-</div>
+<div class="service-icon">01</div>
 
 <h3>
-Environmental Consulting
+Penyusunan Dokumen Lingkungan
 </h3>
 
 <p
-data-id="Pendampingan dan konsultasi yang berkaitan dengan kebutuhan lingkungan serta aspek keberlanjutan dalam suatu kegiatan atau proyek."
-data-en="Consulting and assistance related to environmental needs and sustainability aspects within activities or projects."
+data-id="Penyusunan dokumen lingkungan sesuai kebutuhan dan ruang lingkup kegiatan."
+data-en="Preparation of environmental documents according to project requirements and scope."
 >
 
-Pendampingan dan konsultasi yang berkaitan
-dengan kebutuhan lingkungan serta aspek
-keberlanjutan dalam suatu kegiatan atau proyek.
+Penyusunan dokumen lingkungan sesuai
+kebutuhan dan ruang lingkup kegiatan.
 
 </p>
 
@@ -2532,26 +2953,21 @@ keberlanjutan dalam suatu kegiatan atau proyek.
 
 <div class="service-card reveal">
 
-<div class="service-number">
-02
-</div>
+<div class="service-number">02</div>
 
-<div class="service-icon">
-02
-</div>
+<div class="service-icon">02</div>
 
 <h3>
-Engineering Solutions
+AMDAL
 </h3>
 
 <p
-data-id="Pendekatan teknis dan engineering yang disesuaikan dengan kebutuhan serta kondisi proyek."
-data-en="Technical and engineering approaches tailored to project requirements and conditions."
+data-id="Layanan penyusunan dan pendampingan terkait AMDAL sesuai kebutuhan kegiatan."
+data-en="AMDAL preparation and assistance according to project requirements."
 >
 
-Pendekatan teknis dan engineering yang
-disesuaikan dengan kebutuhan serta kondisi
-proyek.
+Layanan penyusunan dan pendampingan
+terkait AMDAL sesuai kebutuhan kegiatan.
 
 </p>
 
@@ -2560,26 +2976,21 @@ proyek.
 
 <div class="service-card reveal">
 
-<div class="service-number">
-03
-</div>
+<div class="service-number">03</div>
 
-<div class="service-icon">
-03
-</div>
+<div class="service-icon">03</div>
 
 <h3>
-Technical Consulting
+UKL-UPL
 </h3>
 
 <p
-data-id="Konsultasi teknis untuk membantu memahami kebutuhan, permasalahan, dan alternatif solusi secara lebih terstruktur."
-data-en="Technical consulting to help understand requirements, challenges, and solution alternatives in a structured manner."
+data-id="Pendampingan dan penyusunan UKL-UPL sesuai ruang lingkup kegiatan."
+data-en="UKL-UPL preparation and assistance according to project scope."
 >
 
-Konsultasi teknis untuk membantu memahami
-kebutuhan, permasalahan, dan alternatif solusi
-secara lebih terstruktur.
+Pendampingan dan penyusunan UKL-UPL
+sesuai ruang lingkup kegiatan.
 
 </p>
 
@@ -2588,26 +2999,21 @@ secara lebih terstruktur.
 
 <div class="service-card reveal">
 
-<div class="service-number">
-04
-</div>
+<div class="service-number">04</div>
 
-<div class="service-icon">
-04
-</div>
+<div class="service-icon">04</div>
 
 <h3>
-Project Assistance
+SPPL
 </h3>
 
 <p
-data-id="Dukungan dalam proses perencanaan dan pengembangan kebutuhan proyek sesuai ruang lingkup pekerjaan."
-data-en="Support throughout project planning and development based on the agreed scope of work."
+data-id="Pendampingan kebutuhan SPPL sesuai karakteristik kegiatan."
+data-en="Assistance for SPPL requirements based on project characteristics."
 >
 
-Dukungan dalam proses perencanaan dan
-pengembangan kebutuhan proyek sesuai ruang
-lingkup pekerjaan.
+Pendampingan kebutuhan SPPL sesuai
+karakteristik kegiatan.
 
 </p>
 
@@ -2616,26 +3022,21 @@ lingkup pekerjaan.
 
 <div class="service-card reveal">
 
-<div class="service-number">
-05
-</div>
+<div class="service-number">05</div>
 
-<div class="service-icon">
-05
-</div>
+<div class="service-icon">05</div>
 
 <h3>
-Environmental Planning
+ANDAL
 </h3>
 
 <p
-data-id="Pendekatan perencanaan yang mempertimbangkan aspek lingkungan sebagai bagian dari kebutuhan proyek."
-data-en="Planning approaches that consider environmental aspects as part of project requirements."
+data-id="Kajian dan penyusunan aspek ANDAL sesuai ruang lingkup pekerjaan."
+data-en="Assessment and preparation of ANDAL aspects according to the scope of work."
 >
 
-Pendekatan perencanaan yang mempertimbangkan
-aspek lingkungan sebagai bagian dari kebutuhan
-proyek.
+Kajian dan penyusunan aspek ANDAL
+sesuai ruang lingkup pekerjaan.
 
 </p>
 
@@ -2644,26 +3045,136 @@ proyek.
 
 <div class="service-card reveal">
 
-<div class="service-number">
-06
-</div>
+<div class="service-number">06</div>
 
-<div class="service-icon">
-06
-</div>
+<div class="service-icon">06</div>
 
 <h3>
-Integrated Solutions
+RKL-RPL
 </h3>
 
 <p
-data-id="Mengintegrasikan perspektif environment, engineering, dan consulting untuk kebutuhan yang lebih menyeluruh."
-data-en="Integrating environment, engineering, and consulting perspectives for more comprehensive solutions."
+data-id="Penyusunan rencana pengelolaan dan pemantauan lingkungan."
+data-en="Preparation of environmental management and monitoring plans."
 >
 
-Mengintegrasikan perspektif environment,
-engineering, dan consulting untuk kebutuhan
-yang lebih menyeluruh.
+Penyusunan rencana pengelolaan dan
+pemantauan lingkungan.
+
+</p>
+
+</div>
+
+
+<div class="service-card reveal">
+
+<div class="service-number">07</div>
+
+<div class="service-icon">07</div>
+
+<h3>
+Kajian Lingkungan
+</h3>
+
+<p
+data-id="Kajian terhadap aspek lingkungan sesuai kebutuhan proyek."
+data-en="Environmental assessments based on project requirements."
+>
+
+Kajian terhadap aspek lingkungan sesuai
+kebutuhan proyek.
+
+</p>
+
+</div>
+
+
+<div class="service-card reveal">
+
+<div class="service-number">08</div>
+
+<div class="service-icon">08</div>
+
+<h3>
+Pemantauan Kualitas Lingkungan
+</h3>
+
+<p
+data-id="Pemantauan aspek kualitas lingkungan sesuai kebutuhan kegiatan."
+data-en="Environmental quality monitoring according to project requirements."
+>
+
+Pemantauan aspek kualitas lingkungan
+sesuai kebutuhan kegiatan.
+
+</p>
+
+</div>
+
+
+<div class="service-card reveal">
+
+<div class="service-number">09</div>
+
+<div class="service-icon">09</div>
+
+<h3>
+Konsultasi & Perizinan Lingkungan
+</h3>
+
+<p
+data-id="Konsultasi dan pendampingan terkait kebutuhan perizinan lingkungan."
+data-en="Consulting and assistance related to environmental licensing requirements."
+>
+
+Konsultasi dan pendampingan terkait
+kebutuhan perizinan lingkungan.
+
+</p>
+
+</div>
+
+
+<div class="service-card reveal">
+
+<div class="service-number">10</div>
+
+<div class="service-icon">10</div>
+
+<h3>
+Pengelolaan Limbah
+</h3>
+
+<p
+data-id="Pendekatan dan konsultasi terkait pengelolaan limbah sesuai kebutuhan."
+data-en="Approaches and consulting related to waste management."
+>
+
+Pendekatan dan konsultasi terkait
+pengelolaan limbah sesuai kebutuhan.
+
+</p>
+
+</div>
+
+
+<div class="service-card reveal">
+
+<div class="service-number">11</div>
+
+<div class="service-icon">11</div>
+
+<h3>
+Kajian Sustainability
+</h3>
+
+<p
+data-id="Kajian keberlanjutan untuk mendukung kebutuhan pengembangan kegiatan."
+data-en="Sustainability assessments supporting project development needs."
+>
+
+Kajian keberlanjutan untuk mendukung
+kebutuhan pengembangan kegiatan.
 
 </p>
 
@@ -2679,263 +3190,978 @@ yang lebih menyeluruh.
 
 
 <!-- =========================================================
-     APPROACH
-========================================================= -->
-
-<section class="section approach">
-
-<div class="container">
-
-
-<div class="reveal">
-
-
-<div
-class="section-label"
-data-id="PENDEKATAN KAMI"
-data-en="OUR APPROACH"
->
-PENDEKATAN KAMI
-</div>
-
-
-<h2 class="section-title">
-
-Sustaining future
-through collaboration.
-
-</h2>
-
-
-<p
-class="section-description"
-data-id="Setiap kebutuhan memiliki karakteristik yang berbeda. Karena itu, pendekatan kami berangkat dari pemahaman terhadap kebutuhan sebelum menentukan solusi."
-data-en="Every requirement has its own characteristics. Therefore, our approach begins by understanding the needs before determining the solution."
->
-
-Setiap kebutuhan memiliki karakteristik yang berbeda.
-Karena itu, pendekatan kami berangkat dari pemahaman
-terhadap kebutuhan sebelum menentukan solusi.
-
-</p>
-
-
-</div>
-
-
-
-<div class="approach-grid">
-
-
-<div class="approach-card reveal">
-
-<span>
-01 / UNDERSTAND
-</span>
-
-<h3
-data-id="Pahami kebutuhan."
-data-en="Understand the needs."
->
-Pahami kebutuhan.
-</h3>
-
-<p
-data-id="Memahami konteks, kebutuhan, kondisi, serta ruang lingkup pekerjaan sebelum menentukan pendekatan."
-data-en="Understanding the context, requirements, conditions, and scope of work before determining the approach."
->
-
-Memahami konteks, kebutuhan, kondisi,
-serta ruang lingkup pekerjaan sebelum
-menentukan pendekatan.
-
-</p>
-
-</div>
-
-
-<div class="approach-card reveal">
-
-<span>
-02 / ANALYZE
-</span>
-
-<h3
-data-id="Analisis secara sistematis."
-data-en="Analyze systematically."
->
-Analisis secara sistematis.
-</h3>
-
-<p
-data-id="Mengidentifikasi aspek teknis dan lingkungan yang relevan untuk memperoleh gambaran permasalahan secara lebih menyeluruh."
-data-en="Identifying relevant technical and environmental aspects to gain a comprehensive understanding of the challenge."
->
-
-Mengidentifikasi aspek teknis dan lingkungan
-yang relevan untuk memperoleh gambaran
-permasalahan secara lebih menyeluruh.
-
-</p>
-
-</div>
-
-
-<div class="approach-card reveal">
-
-<span>
-03 / DELIVER
-</span>
-
-<h3
-data-id="Hadirkan solusi."
-data-en="Deliver solutions."
->
-Hadirkan solusi.
-</h3>
-
-<p
-data-id="Menyusun pendekatan dan solusi yang disesuaikan dengan tujuan serta kebutuhan proyek."
-data-en="Developing approaches and solutions aligned with project objectives and requirements."
->
-
-Menyusun pendekatan dan solusi yang
-disesuaikan dengan tujuan serta kebutuhan
-proyek.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- =========================================================
-     PROCESS
+     TENAGA AHLI
 ========================================================= -->
 
 <section
-class="section"
-id="process"
+class="section experts"
+id="experts"
 >
 
 <div class="container">
 
 
-<div class="reveal">
-
-
 <div
 class="section-label"
-data-id="PROSES KERJA"
-data-en="WORK PROCESS"
+data-id="TENAGA AHLI"
+data-en="EXPERT TEAM"
 >
-PROSES KERJA
+TENAGA AHLI
 </div>
 
 
-<h2 class="section-title">
-
-Simple process.
-Serious results.
-
+<h2
+class="section-title"
+data-id="Tim dengan keahlian yang mendukung kebutuhan proyek."
+data-en="Expertise to support project needs."
+>
+Tim dengan keahlian yang
+mendukung kebutuhan proyek.
 </h2>
 
 
 <p
 class="section-description"
-data-id="Proses kerja dibuat sederhana agar komunikasi, pemahaman kebutuhan, dan penyusunan solusi dapat berjalan secara efektif."
-data-en="Our process is designed to keep communication, requirement understanding, and solution development clear and effective."
+data-id="Profil tenaga ahli akan ditampilkan berdasarkan data dan dokumen kompetensi yang tersedia."
+data-en="Expert profiles will be displayed based on available professional and competency documentation."
 >
 
-Proses kerja dibuat sederhana agar komunikasi,
-pemahaman kebutuhan, dan penyusunan solusi
-dapat berjalan secara efektif.
+Profil tenaga ahli akan ditampilkan berdasarkan
+data dan dokumen kompetensi yang tersedia.
 
 </p>
 
 
+
+<div class="expert-grid">
+
+
+<div class="expert-card reveal">
+
+<div class="expert-placeholder">
+01
+</div>
+
+<h3
+data-id="Nama Tenaga Ahli"
+data-en="Expert Name"
+>
+Nama Tenaga Ahli
+</h3>
+
+<div class="role">
+ENVIRONMENT / ENGINEERING
+</div>
+
+<p
+data-id="Keahlian, pendidikan, sertifikasi, dan pengalaman akan ditampilkan di bagian ini."
+data-en="Expertise, education, certifications, and experience will be displayed here."
+>
+
+Keahlian, pendidikan, sertifikasi,
+dan pengalaman akan ditampilkan
+di bagian ini.
+
+</p>
+
 </div>
 
 
+<div class="expert-card reveal">
 
-<div class="process-grid">
+<div class="expert-placeholder">
+02
+</div>
+
+<h3
+data-id="Nama Tenaga Ahli"
+data-en="Expert Name"
+>
+Nama Tenaga Ahli
+</h3>
+
+<div class="role">
+CONSULTANT
+</div>
+
+<p
+data-id="Profil kompetensi dan pengalaman akan ditampilkan setelah data tersedia."
+data-en="Competency profile and experience will be displayed once the data is available."
+>
+
+Profil kompetensi dan pengalaman
+akan ditampilkan setelah data tersedia.
+
+</p>
+
+</div>
 
 
-<div class="process-card reveal">
+<div class="expert-card reveal">
 
-<div class="process-number">
+<div class="expert-placeholder">
+03
+</div>
+
+<h3
+data-id="Nama Tenaga Ahli"
+data-en="Expert Name"
+>
+Nama Tenaga Ahli
+</h3>
+
+<div class="role">
+TECHNICAL
+</div>
+
+<p
+data-id="Informasi tenaga ahli akan disesuaikan dengan data resmi perusahaan."
+data-en="Expert information will be based on official company data."
+>
+
+Informasi tenaga ahli akan disesuaikan
+dengan data resmi perusahaan.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PORTFOLIO
+========================================================= -->
+
+<section
+class="section portfolio"
+id="portfolio"
+>
+
+<div class="container">
+
+
+<div
+class="section-label"
+data-id="PORTOFOLIO / PENGALAMAN"
+data-en="PORTFOLIO / EXPERIENCE"
+>
+PORTOFOLIO / PENGALAMAN
+</div>
+
+
+<h2
+class="section-title"
+data-id="Pengalaman yang akan terus berkembang."
+data-en="Experience that continues to grow."
+>
+Pengalaman yang akan
+terus berkembang.
+</h2>
+
+
+<p
+class="section-description"
+data-id="Daftar proyek akan menampilkan nama kegiatan, tahun, lokasi, jenis pekerjaan, peran CV Laban, dan dokumentasi."
+data-en="Project entries will include project name, year, location, type of work, LABAN's role, and documentation."
+>
+
+Daftar proyek akan menampilkan nama kegiatan,
+tahun, lokasi, jenis pekerjaan, peran CV Laban,
+dan dokumentasi.
+
+</p>
+
+
+
+<div class="portfolio-grid">
+
+
+<div class="portfolio-card reveal">
+
+<div class="portfolio-image">
+
+Dokumentasi Proyek
+
+</div>
+
+<div class="portfolio-content">
+
+<div class="portfolio-year">
+YEAR
+</div>
+
+<h3
+data-id="Nama Kegiatan / Proyek"
+data-en="Project Name"
+>
+Nama Kegiatan / Proyek
+</h3>
+
+<p
+data-id="Lokasi dan jenis pekerjaan akan ditampilkan berdasarkan data proyek."
+data-en="Location and type of work will be displayed based on project data."
+>
+
+Lokasi dan jenis pekerjaan akan ditampilkan
+berdasarkan data proyek.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-card reveal">
+
+<div class="portfolio-image">
+
+Dokumentasi Proyek
+
+</div>
+
+<div class="portfolio-content">
+
+<div class="portfolio-year">
+YEAR
+</div>
+
+<h3
+data-id="Nama Kegiatan / Proyek"
+data-en="Project Name"
+>
+Nama Kegiatan / Proyek
+</h3>
+
+<p
+data-id="Peran CV Laban dan informasi proyek akan ditampilkan di sini."
+data-en="LABAN's role and project information will be displayed here."
+>
+
+Peran CV Laban dan informasi proyek
+akan ditampilkan di sini.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="portfolio-card reveal">
+
+<div class="portfolio-image">
+
+Dokumentasi Proyek
+
+</div>
+
+<div class="portfolio-content">
+
+<div class="portfolio-year">
+YEAR
+</div>
+
+<h3
+data-id="Nama Kegiatan / Proyek"
+data-en="Project Name"
+>
+Nama Kegiatan / Proyek
+</h3>
+
+<p
+data-id="Informasi proyek akan diperbarui berdasarkan portofolio resmi."
+data-en="Project information will be updated based on the official portfolio."
+>
+
+Informasi proyek akan diperbarui berdasarkan
+portofolio resmi.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROYEK & DOKUMENTASI
+========================================================= -->
+
+<section
+class="section documentation"
+id="documentation"
+>
+
+<div class="container">
+
+
+<div
+class="section-label"
+data-id="PROYEK & DOKUMENTASI"
+data-en="PROJECTS & DOCUMENTATION"
+>
+PROYEK & DOKUMENTASI
+</div>
+
+
+<h2
+class="section-title"
+data-id="Aktivitas lapangan dan proses pekerjaan."
+data-en="Field activities and project work."
+>
+Aktivitas lapangan dan
+proses pekerjaan.
+</h2>
+
+
+<p
+class="section-description"
+data-id="Galeri ini dapat digunakan untuk menampilkan kegiatan sampling, survey, pengukuran, konsultasi, dan penyusunan dokumen."
+data-en="This gallery can showcase sampling, surveys, measurements, consultations, and document preparation activities."
+>
+
+Galeri ini dapat digunakan untuk menampilkan
+kegiatan sampling, survey, pengukuran,
+konsultasi, dan penyusunan dokumen.
+
+</p>
+
+
+
+<div class="documentation-grid">
+
+
+<div class="documentation-card reveal">
+
+<div class="documentation-number">
 01
 </div>
 
 <h3>
-Consultation
+Sampling Lingkungan
 </h3>
 
 <p
-data-id="Diskusikan kebutuhan, kondisi, dan ruang lingkup pekerjaan bersama tim."
-data-en="Discuss your requirements, conditions, and scope of work with our team."
+data-id="Dokumentasi kegiatan sampling lingkungan."
+data-en="Environmental sampling documentation."
 >
-
-Diskusikan kebutuhan, kondisi, dan ruang
-lingkup pekerjaan bersama tim.
-
+Dokumentasi kegiatan sampling lingkungan.
 </p>
 
 </div>
 
 
-<div class="process-card reveal">
+<div class="documentation-card reveal">
 
-<div class="process-number">
+<div class="documentation-number">
 02
 </div>
 
 <h3>
-Assessment
+Survey Lapangan
 </h3>
 
 <p
-data-id="Memahami kondisi dan melakukan analisis terhadap kebutuhan yang telah disampaikan."
-data-en="Understand the conditions and assess the requirements that have been discussed."
+data-id="Dokumentasi kegiatan survey lapangan."
+data-en="Field survey documentation."
 >
-
-Memahami kondisi dan melakukan analisis
-terhadap kebutuhan yang telah disampaikan.
-
+Dokumentasi kegiatan survey lapangan.
 </p>
 
 </div>
 
 
-<div class="process-card reveal">
+<div class="documentation-card reveal">
 
-<div class="process-number">
+<div class="documentation-number">
 03
 </div>
 
 <h3>
-Solution
+Pengambilan Sampel Air
 </h3>
 
 <p
-data-id="Menyusun pendekatan dan solusi sesuai ruang lingkup pekerjaan yang disepakati."
-data-en="Develop approaches and solutions according to the agreed scope of work."
+data-id="Dokumentasi pengambilan sampel air."
+data-en="Water sampling documentation."
 >
-
-Menyusun pendekatan dan solusi sesuai ruang
-lingkup pekerjaan yang disepakati.
-
+Dokumentasi pengambilan sampel air.
 </p>
 
 </div>
 
+
+<div class="documentation-card reveal">
+
+<div class="documentation-number">
+04
+</div>
+
+<h3>
+Pengukuran Kualitas Udara
+</h3>
+
+<p
+data-id="Dokumentasi pengukuran kualitas udara."
+data-en="Air quality measurement documentation."
+>
+Dokumentasi pengukuran kualitas udara.
+</p>
+
+</div>
+
+
+<div class="documentation-card reveal">
+
+<div class="documentation-number">
+05
+</div>
+
+<h3>
+Pengukuran Kebisingan
+</h3>
+
+<p
+data-id="Dokumentasi pengukuran kebisingan."
+data-en="Noise measurement documentation."
+>
+Dokumentasi pengukuran kebisingan.
+</p>
+
+</div>
+
+
+<div class="documentation-card reveal">
+
+<div class="documentation-number">
+06
+</div>
+
+<h3>
+Survey Sosial
+</h3>
+
+<p
+data-id="Dokumentasi kegiatan survey sosial."
+data-en="Social survey documentation."
+>
+Dokumentasi kegiatan survey sosial.
+</p>
+
+</div>
+
+
+<div class="documentation-card reveal">
+
+<div class="documentation-number">
+07
+</div>
+
+<h3>
+Rapat & Konsultasi
+</h3>
+
+<p
+data-id="Dokumentasi rapat dan konsultasi dengan pihak terkait."
+data-en="Meetings and consultation documentation."
+>
+Dokumentasi rapat dan konsultasi
+dengan pihak terkait.
+</p>
+
+</div>
+
+
+<div class="documentation-card reveal">
+
+<div class="documentation-number">
+08
+</div>
+
+<h3>
+Penyusunan Dokumen
+</h3>
+
+<p
+data-id="Dokumentasi proses penyusunan dokumen lingkungan."
+data-en="Environmental document preparation documentation."
+>
+Dokumentasi proses penyusunan
+dokumen lingkungan.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ARTIKEL / INSIGHT
+========================================================= -->
+
+<section
+class="section insight"
+id="insight"
+>
+
+<div class="container">
+
+
+<div
+class="section-label"
+data-id="ARTIKEL / INSIGHT LINGKUNGAN"
+data-en="ENVIRONMENTAL INSIGHT"
+>
+ARTIKEL / INSIGHT LINGKUNGAN
+</div>
+
+
+<h2
+class="section-title"
+data-id="Informasi lingkungan yang mudah dipahami."
+data-en="Environmental insights made easier to understand."
+>
+Informasi lingkungan
+yang mudah dipahami.
+</h2>
+
+
+<p
+class="section-description"
+data-id="Bagian insight dapat digunakan untuk berbagi informasi, edukasi, dan perkembangan isu lingkungan."
+data-en="The insight section can be used to share information, education, and environmental developments."
+>
+
+Bagian insight dapat digunakan untuk berbagi
+informasi, edukasi, dan perkembangan isu lingkungan.
+
+</p>
+
+
+
+<div class="insight-grid">
+
+
+<div class="insight-card reveal">
+
+<div class="insight-category">
+ENVIRONMENT
+</div>
+
+<h3>
+Apa Itu AMDAL?
+</h3>
+
+<p
+data-id="Artikel edukasi mengenai pengertian dan fungsi AMDAL."
+data-en="Educational article about the definition and function of AMDAL."
+>
+Artikel edukasi mengenai pengertian
+dan fungsi AMDAL.
+</p>
+
+</div>
+
+
+<div class="insight-card reveal">
+
+<div class="insight-category">
+ENVIRONMENT
+</div>
+
+<h3>
+Perbedaan AMDAL dan UKL-UPL
+</h3>
+
+<p
+data-id="Pembahasan mengenai perbedaan dokumen lingkungan."
+data-en="Discussion about the differences between environmental documents."
+>
+Pembahasan mengenai perbedaan
+dokumen lingkungan.
+</p>
+
+</div>
+
+
+<div class="insight-card reveal">
+
+<div class="insight-category">
+MONITORING
+</div>
+
+<h3>
+Pentingnya Pemantauan Lingkungan
+</h3>
+
+<p
+data-id="Informasi mengenai pentingnya pemantauan kualitas lingkungan."
+data-en="Information about the importance of environmental quality monitoring."
+>
+Informasi mengenai pentingnya pemantauan
+kualitas lingkungan.
+</p>
+
+</div>
+
+
+<div class="insight-card reveal">
+
+<div class="insight-category">
+WASTE
+</div>
+
+<h3>
+Pengelolaan Limbah Industri
+</h3>
+
+<p
+data-id="Pembahasan mengenai pengelolaan limbah dalam kegiatan industri."
+data-en="Discussion about waste management in industrial activities."
+>
+Pembahasan mengenai pengelolaan limbah
+dalam kegiatan industri.
+</p>
+
+</div>
+
+
+<div class="insight-card reveal">
+
+<div class="insight-category">
+SUSTAINABILITY
+</div>
+
+<h3>
+Ekonomi Sirkular
+</h3>
+
+<p
+data-id="Insight mengenai konsep ekonomi sirkular."
+data-en="Insight about the circular economy concept."
+>
+Insight mengenai konsep ekonomi sirkular.
+</p>
+
+</div>
+
+
+<div class="insight-card reveal">
+
+<div class="insight-category">
+ESG
+</div>
+
+<h3>
+Sustainability & ESG
+</h3>
+
+<p
+data-id="Pembahasan mengenai sustainability dan ESG."
+data-en="Discussion about sustainability and ESG."
+>
+Pembahasan mengenai sustainability
+dan ESG.
+</p>
+
+</div>
+
+
+<div class="insight-card reveal">
+
+<div class="insight-category">
+REGULATION
+</div>
+
+<h3>
+Perubahan Regulasi Lingkungan
+</h3>
+
+<p
+data-id="Informasi mengenai perkembangan regulasi lingkungan."
+data-en="Information about environmental regulatory developments."
+>
+Informasi mengenai perkembangan
+regulasi lingkungan.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DOKUMEN & SERTIFIKASI
+========================================================= -->
+
+<section
+class="section documents"
+id="documents"
+>
+
+<div class="container">
+
+
+<div
+class="section-label"
+data-id="DOKUMEN & SERTIFIKASI"
+data-en="DOCUMENTS & CERTIFICATIONS"
+>
+DOKUMEN & SERTIFIKASI
+</div>
+
+
+<h2
+class="section-title"
+data-id="Dokumen perusahaan dan kompetensi."
+data-en="Company documents and competencies."
+>
+Dokumen perusahaan
+dan kompetensi.
+</h2>
+
+
+<p
+class="section-description"
+data-id="Dokumen yang bersifat sensitif dapat ditampilkan secara terbatas tanpa menampilkan seluruh nomor dokumen."
+data-en="Sensitive documents can be presented selectively without displaying complete document numbers."
+>
+
+Dokumen yang bersifat sensitif dapat ditampilkan
+secara terbatas tanpa menampilkan seluruh nomor dokumen.
+
+</p>
+
+
+
+<div class="document-grid">
+
+
+<div class="document-card reveal">
+
+<h3>
+NIB
+</h3>
+
+<p
+data-id="Nomor dan informasi NIB akan ditampilkan sesuai dokumen resmi."
+data-en="NIB information will be displayed based on the official document."
+>
+Nomor dan informasi NIB akan ditampilkan
+sesuai dokumen resmi.
+</p>
+
+<span class="document-status">
+AVAILABLE SOON
+</span>
+
+</div>
+
+
+<div class="document-card reveal">
+
+<h3>
+NPWP Perusahaan
+</h3>
+
+<p
+data-id="Informasi NPWP dapat ditampilkan secara terbatas untuk menjaga keamanan data."
+data-en="Tax identification information can be displayed selectively for data security."
+>
+Informasi NPWP dapat ditampilkan secara
+terbatas untuk menjaga keamanan data.
+</p>
+
+<span class="document-status">
+PROTECTED
+</span>
+
+</div>
+
+
+<div class="document-card reveal">
+
+<h3>
+Sertifikat Kompetensi
+</h3>
+
+<p
+data-id="Sertifikat kompetensi tenaga ahli dapat ditampilkan sesuai izin dan dokumen yang tersedia."
+data-en="Expert competency certificates can be displayed according to available documents and permissions."
+>
+Sertifikat kompetensi tenaga ahli dapat
+ditampilkan sesuai izin dan dokumen
+yang tersedia.
+</p>
+
+<span class="document-status">
+AVAILABLE SOON
+</span>
+
+</div>
+
+
+<div class="document-card reveal">
+
+<h3>
+Sertifikat Badan Usaha
+</h3>
+
+<p
+data-id="Ditampilkan jika dokumen sertifikat badan usaha tersedia."
+data-en="Displayed if the business entity certificate is available."
+>
+Ditampilkan jika dokumen sertifikat
+badan usaha tersedia.
+</p>
+
+<span class="document-status">
+IF AVAILABLE
+</span>
+
+</div>
+
+
+<div class="document-card reveal">
+
+<h3>
+Sertifikat Pelatihan
+</h3>
+
+<p
+data-id="Dokumen pelatihan dan kompetensi pendukung dapat ditampilkan."
+data-en="Training and supporting competency documents can be displayed."
+>
+Dokumen pelatihan dan kompetensi
+pendukung dapat ditampilkan.
+</p>
+
+<span class="document-status">
+AVAILABLE SOON
+</span>
+
+</div>
+
+
+<div class="document-card reveal">
+
+<h3>
+Dokumen Legalitas Lain
+</h3>
+
+<p
+data-id="Dokumen legalitas lainnya dapat ditambahkan sesuai kebutuhan."
+data-en="Other legal documents can be added as needed."
+>
+Dokumen legalitas lainnya dapat
+ditambahkan sesuai kebutuhan.
+</p>
+
+<span class="document-status">
+AVAILABLE SOON
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MITRA / KLIEN
+========================================================= -->
+
+<section
+class="section clients"
+id="clients"
+>
+
+<div class="container">
+
+
+<div
+class="section-label"
+data-id="MITRA / KLIEN"
+data-en="PARTNERS / CLIENTS"
+>
+MITRA / KLIEN
+</div>
+
+
+<h2
+class="section-title"
+data-id="Mitra yang telah bekerja sama."
+data-en="Partners we have worked with."
+>
+Mitra yang telah
+bekerja sama.
+</h2>
+
+
+<p
+class="section-description"
+data-id="Logo atau nama perusahaan/instansi dapat ditampilkan setelah mendapatkan izin untuk publikasi."
+data-en="Company or institution logos and names can be displayed after receiving permission for publication."
+>
+
+Logo atau nama perusahaan/instansi dapat
+ditampilkan setelah mendapatkan izin untuk publikasi.
+
+</p>
+
+
+
+<div class="client-grid">
+
+
+<div class="client-card">
+MITRA / KLIEN
+</div>
+
+<div class="client-card">
+MITRA / KLIEN
+</div>
+
+<div class="client-card">
+MITRA / KLIEN
+</div>
+
+<div class="client-card">
+MITRA / KLIEN
+</div>
 
 </div>
 
@@ -2953,36 +4179,34 @@ lingkup pekerjaan yang disepakati.
 
 <div class="container">
 
-<div class="cta-box reveal">
+<div class="cta-box">
 
 
 <div>
 
 <div class="section-label">
-
 SUSTAINING FUTURE TOGETHER
-
 </div>
 
 
 <h2
-data-id="Mari membangun masa depan yang berkelanjutan bersama."
-data-en="Let's build a sustainable future together."
+data-id="Mari membangun solusi yang lebih baik bersama."
+data-en="Let's build better solutions together."
 >
 
-Mari membangun masa depan
-yang berkelanjutan bersama.
+Mari membangun solusi
+yang lebih baik bersama.
 
 </h2>
 
 
 <p
-data-id="Ceritakan kebutuhan proyek Anda kepada kami. Mari mulai dengan diskusi sederhana."
-data-en="Tell us about your project needs. Let's start with a simple conversation."
+data-id="Ceritakan kebutuhan proyek Anda kepada LABAN Environment Global."
+data-en="Tell LABAN Environment Global about your project needs."
 >
 
-Ceritakan kebutuhan proyek Anda kepada kami.
-Mari mulai dengan diskusi sederhana.
+Ceritakan kebutuhan proyek Anda
+kepada LABAN Environment Global.
 
 </p>
 
@@ -2996,11 +4220,11 @@ href="https://wa.me/6281299119884?text=Halo%20LABAN%20Environment%20Global%2C%20
 target="_blank"
 rel="noopener"
 class="btn"
-data-id="Mulai Konsultasi"
-data-en="Start Consultation"
+data-id="Hubungi Kami"
+data-en="Contact Us"
 >
 
-Mulai Konsultasi →
+Hubungi Kami →
 
 </a>
 
@@ -3016,7 +4240,7 @@ Mulai Konsultasi →
 
 
 <!-- =========================================================
-     CONTACT
+     KONTAK
 ========================================================= -->
 
 <section
@@ -3029,7 +4253,7 @@ id="contact"
 <div class="contact-grid">
 
 
-<div class="contact-info reveal">
+<div class="contact-info">
 
 
 <div
@@ -3053,13 +4277,13 @@ dengan LABAN.
 
 
 <p
-data-id="Untuk kebutuhan informasi, konsultasi, maupun pembahasan mengenai proyek, silakan hubungi kami melalui kontak berikut."
-data-en="For information, consultation, or project discussions, please contact us through the following channels."
+data-id="Untuk kebutuhan informasi, konsultasi, maupun pembahasan proyek, silakan hubungi kami."
+data-en="For information, consultation, or project discussions, please contact us."
 >
 
-Untuk kebutuhan informasi, konsultasi, maupun
-pembahasan mengenai proyek, silakan hubungi
-kami melalui kontak berikut.
+Untuk kebutuhan informasi, konsultasi,
+maupun pembahasan proyek, silakan
+hubungi kami.
 
 </p>
 
@@ -3070,16 +4294,16 @@ kami melalui kontak berikut.
 <div class="contact-item">
 
 <div class="contact-icon">
-P
+A
 </div>
 
 <div>
 
 <strong
-data-id="ALAMAT"
-data-en="ADDRESS"
+data-id="ALAMAT KANTOR"
+data-en="OFFICE ADDRESS"
 >
-ALAMAT
+ALAMAT KANTOR
 </strong>
 
 <span>
@@ -3098,16 +4322,13 @@ Cipocok - Kota Serang
 <div class="contact-item">
 
 <div class="contact-icon">
-T
+W
 </div>
 
 <div>
 
-<strong
-data-id="TELEPON"
-data-en="PHONE"
->
-TELEPON
+<strong>
+WHATSAPP
 </strong>
 
 <span>
@@ -3140,22 +4361,49 @@ cvlaban71@gmail.com
 </div>
 
 
+<div class="contact-item">
+
+<div class="contact-icon">
+M
+</div>
+
+<div>
+
+<strong
+data-id="MEDIA SOSIAL"
+data-en="SOCIAL MEDIA"
+>
+MEDIA SOSIAL
+</strong>
+
+<span
+data-id="Instagram / LinkedIn akan ditambahkan setelah akun resmi tersedia."
+data-en="Instagram / LinkedIn will be added once the official accounts are available."
+>
+Instagram / LinkedIn akan ditambahkan
+setelah akun resmi tersedia.
+</span>
+
+</div>
+
 </div>
 
 
 </div>
 
+</div>
 
 
-<div class="contact-card reveal">
+
+<div class="contact-card">
 
 
 <h3
-data-id="Mari mulai percakapan."
-data-en="Start a conversation."
+data-id="Mulai konsultasi."
+data-en="Start a consultation."
 >
 
-Mari mulai percakapan.
+Mulai konsultasi.
 
 </h3>
 
@@ -3180,9 +4428,7 @@ target="_blank"
 rel="noopener"
 class="contact-button whatsapp"
 >
-
 WhatsApp
-
 </a>
 
 
@@ -3190,9 +4436,17 @@ WhatsApp
 href="mailto:cvlaban71@gmail.com"
 class="contact-button email"
 >
-
 Email
+</a>
 
+
+<a
+href="https://www.google.com/maps/search/?api=1&query=Komp.%20Permata%20Hijau%20Blok%20N%20No.%2005%20Banjar%20Agung%20Cipocok%20Kota%20Serang"
+target="_blank"
+rel="noopener"
+class="contact-button maps"
+>
+Google Maps
 </a>
 
 
@@ -3218,9 +4472,7 @@ color:#063d27;
 margin-bottom:4px;
 "
 >
-
 LABAN ENVIRONMENT GLOBAL
-
 </strong>
 
 Sustaining Future Together
@@ -3284,8 +4536,9 @@ Environment • Engineering • Consultant
 
 <br><br>
 
-Professional approach for environmental,
-engineering, and consulting needs.
+KSB. Komp. Permata Hijau Blok N No. 05
+RT 002 RW 008, Kel. Banjar Agung,
+Cipocok - Kota Serang
 
 </p>
 
@@ -3306,37 +4559,15 @@ NAVIGASI
 
 <div class="footer-links">
 
-<a
-href="#home"
-data-id="Beranda"
-data-en="Home"
->
-Beranda
-</a>
+<a href="#home">Home</a>
 
-<a
-href="#about"
-data-id="Tentang"
-data-en="About"
->
-Tentang
-</a>
+<a href="#about">Tentang Kami</a>
 
-<a
-href="#services"
-data-id="Layanan"
-data-en="Services"
->
-Layanan
-</a>
+<a href="#services">Layanan</a>
 
-<a
-href="#process"
-data-id="Proses"
-data-en="Process"
->
-Proses
-</a>
+<a href="#experts">Tenaga Ahli</a>
+
+<a href="#portfolio">Portofolio</a>
 
 </div>
 
@@ -3373,6 +4604,14 @@ rel="noopener"
 WhatsApp
 </a>
 
+<a
+href="#contact"
+data-id="Formulir Konsultasi"
+data-en="Consultation Form"
+>
+Formulir Konsultasi
+</a>
+
 </div>
 
 </div>
@@ -3394,9 +4633,7 @@ All rights reserved.
 </span>
 
 <span>
-
 Sustaining Future Together
-
 </span>
 
 </div>
@@ -3418,9 +4655,7 @@ rel="noopener"
 class="whatsapp-float"
 aria-label="WhatsApp"
 >
-
 W
-
 </a>
 
 
@@ -3430,7 +4665,6 @@ W
 ========================================================= -->
 
 <script>
-
 
 /* =========================================================
    MOBILE MENU
@@ -3453,26 +4687,24 @@ function(){
         navMenu.classList.contains("active")
     ){
 
-        menuToggle.innerHTML="×";
+        menuToggle.innerHTML = "×";
 
     }else{
 
-        menuToggle.innerHTML="☰";
+        menuToggle.innerHTML = "☰";
 
     }
 
-}
-);
+});
 
 
 /* =========================================================
-   CLOSE MOBILE MENU
+   CLOSE MENU AFTER CLICK
 ========================================================= */
 
 document
 .querySelectorAll(".nav-menu > a")
-.forEach(
-function(link){
+.forEach(function(link){
 
     link.addEventListener(
     "click",
@@ -3480,17 +4712,15 @@ function(link){
 
         navMenu.classList.remove("active");
 
-        menuToggle.innerHTML="☰";
+        menuToggle.innerHTML = "☰";
 
-    }
-    );
+    });
 
-}
-);
+});
 
 
 /* =========================================================
-   LANGUAGE SYSTEM
+   LANGUAGE
 ========================================================= */
 
 const languageButtons =
@@ -3514,17 +4744,14 @@ function changeLanguage(language){
             "data-" + language
         );
 
-        if(
-            translation
-        ){
+        if(translation){
 
             element.innerHTML =
             translation;
 
         }
 
-    }
-    );
+    });
 
 
     languageButtons.forEach(
@@ -3545,8 +4772,7 @@ function changeLanguage(language){
 
         }
 
-    }
-    );
+    });
 
 
     document.documentElement.lang =
@@ -3561,10 +4787,6 @@ function changeLanguage(language){
 }
 
 
-/* =========================================================
-   LANGUAGE BUTTON
-========================================================= */
-
 languageButtons.forEach(
 function(button){
 
@@ -3576,15 +4798,13 @@ function(button){
             button.dataset.lang
         );
 
-    }
-    );
+    });
 
-}
-);
+});
 
 
 /* =========================================================
-   LOAD SAVED LANGUAGE
+   LOAD LANGUAGE
 ========================================================= */
 
 const savedLanguage =
@@ -3641,14 +4861,12 @@ function(entries){
 
         }
 
-    }
-    );
+    });
 
 },
 {
     threshold:.1
-}
-);
+});
 
 
 revealElements.forEach(
@@ -3658,19 +4876,17 @@ function(element){
         element
     );
 
-}
-);
+});
 
 
 /* =========================================================
-   CURRENT YEAR
+   YEAR
 ========================================================= */
 
 document.getElementById(
 "year"
 ).textContent =
 new Date().getFullYear();
-
 
 </script>
 
