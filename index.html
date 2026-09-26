@@ -1,16 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>LABAN Environment Global</title>
 
-<meta
-name="description"
-content="LABAN Environment Global - Environment, Engineering & Consultant."
+<!-- =====================================================
+     FAVICON / LOGO TAB BROWSER
+===================================================== -->
+
+<link
+    rel="icon"
+    type="image/jpeg"
+    href="labanlogoterupdate.jpeg"
 >
+
+<link
+    rel="shortcut icon"
+    type="image/jpeg"
+    href="labanlogoterupdate.jpeg"
+>
+
+<!-- =====================================================
+     WEBSITE DESCRIPTION
+===================================================== -->
+
+<meta
+    name="description"
+    content="LABAN Environment Global - Environment, Engineering & Consultant."
+>
+
+<meta
+    name="theme-color"
+    content="#08783f"
+>
+
 
 <style>
 
@@ -29,10 +57,18 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
     color:#18372a;
+
     background:#ffffff;
+
     line-height:1.6;
+
     overflow-x:hidden;
 }
 
@@ -56,14 +92,23 @@ button{
 ========================================================= */
 
 :root{
+
     --green:#08783f;
+
     --dark:#063d27;
+
     --lime:#9bd63b;
+
     --soft:#eef7ef;
+
     --text:#18372a;
+
     --muted:#66756d;
+
     --border:#e2e9e4;
+
     --white:#ffffff;
+
     --container:1180px;
 }
 
@@ -73,7 +118,9 @@ button{
 ========================================================= */
 
 .container{
-    width:min(
+
+    width:
+    min(
         var(--container),
         calc(100% - 48px)
     );
@@ -83,33 +130,49 @@ button{
 
 
 /* =========================================================
-   SECTIONS
+   SECTION
 ========================================================= */
 
 .section{
+
     padding:100px 0;
 }
 
 .section-label{
+
     color:var(--green);
+
     font-size:11px;
+
     font-weight:900;
+
     letter-spacing:2px;
+
     margin-bottom:18px;
 }
 
 .section-title{
+
     color:var(--dark);
-    font-size:clamp(38px,4vw,55px);
+
+    font-size:
+    clamp(38px,4vw,55px);
+
     line-height:1.08;
+
     letter-spacing:-2px;
+
     margin-bottom:20px;
 }
 
 .section-description{
+
     max-width:650px;
+
     color:var(--muted);
+
     font-size:15px;
+
     line-height:1.85;
 }
 
@@ -119,9 +182,13 @@ button{
 ========================================================= */
 
 .btn{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:10px;
 
     min-height:50px;
@@ -131,29 +198,40 @@ button{
     border-radius:5px;
 
     font-size:13px;
+
     font-weight:700;
 
     transition:.2s ease;
 }
 
 .btn-primary{
+
     color:white;
+
     background:var(--green);
 }
 
 .btn-primary:hover{
+
     background:var(--dark);
+
     transform:translateY(-2px);
 }
 
 .btn-outline{
+
     color:var(--green);
+
     background:white;
-    border:1px solid #cfdad3;
+
+    border:
+    1px solid #cfdad3;
 }
 
 .btn-outline:hover{
+
     background:var(--soft);
+
     border-color:var(--green);
 }
 
@@ -163,26 +241,32 @@ button{
 ========================================================= */
 
 header{
+
     position:fixed;
 
     top:0;
     left:0;
 
     width:100%;
+
     height:82px;
 
     z-index:1000;
 
     background:white;
 
-    border-bottom:1px solid #edf0ee;
+    border-bottom:
+    1px solid #edf0ee;
 }
 
 .navbar{
+
     height:82px;
 
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
 
     gap:30px;
@@ -194,27 +278,36 @@ header{
 ========================================================= */
 
 .brand{
+
     display:flex;
+
     align-items:center;
+
     gap:13px;
 }
 
 .brand-logo{
+
     width:58px;
+
     height:58px;
 
     object-fit:contain;
 }
 
 .brand-text{
+
     display:flex;
+
     flex-direction:column;
 }
 
 .brand-name{
+
     color:var(--dark);
 
     font-size:23px;
+
     font-weight:900;
 
     letter-spacing:1px;
@@ -223,9 +316,11 @@ header{
 }
 
 .brand-subtitle{
+
     color:var(--green);
 
     font-size:9px;
+
     font-weight:800;
 
     letter-spacing:1.5px;
@@ -239,25 +334,32 @@ header{
 ========================================================= */
 
 .nav-menu{
+
     display:flex;
+
     align-items:center;
+
     gap:30px;
 }
 
 .nav-menu > a{
+
     color:#45554d;
 
     font-size:13px;
+
     font-weight:700;
 
     transition:.2s ease;
 }
 
 .nav-menu > a:hover{
+
     color:var(--green);
 }
 
 .nav-contact{
+
     color:white !important;
 
     background:var(--green);
@@ -268,6 +370,7 @@ header{
 }
 
 .nav-contact:hover{
+
     background:var(--dark);
 }
 
@@ -277,12 +380,15 @@ header{
 ========================================================= */
 
 .language-switcher{
+
     display:flex;
+
     align-items:center;
 
     padding:4px;
 
-    border:1px solid #dfe7e1;
+    border:
+    1px solid #dfe7e1;
 
     border-radius:30px;
 
@@ -290,6 +396,7 @@ header{
 }
 
 .language-btn{
+
     border:none;
 
     background:transparent;
@@ -301,17 +408,26 @@ header{
     border-radius:20px;
 
     font-size:11px;
+
     font-weight:800;
 
     cursor:pointer;
 }
 
 .language-btn.active{
+
     background:var(--green);
+
     color:white;
 }
 
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
 .menu-toggle{
+
     display:none;
 
     border:none;
@@ -331,17 +447,21 @@ header{
 ========================================================= */
 
 .hero{
+
     padding-top:82px;
 
     min-height:720px;
 
     display:flex;
+
     align-items:center;
 
-    border-bottom:1px solid #edf0ee;
+    border-bottom:
+    1px solid #edf0ee;
 }
 
 .hero-grid{
+
     display:grid;
 
     grid-template-columns:
@@ -353,6 +473,7 @@ header{
 }
 
 .hero-content{
+
     padding:75px 0;
 }
 
@@ -362,6 +483,7 @@ header{
 ========================================================= */
 
 .hero-slogan{
+
     display:block;
 
     color:var(--green);
@@ -381,6 +503,7 @@ header{
 ========================================================= */
 
 .hero-badge{
+
     display:inline-block;
 
     padding:9px 14px;
@@ -406,6 +529,7 @@ header{
 ========================================================= */
 
 .hero h1{
+
     color:var(--dark);
 
     font-size:
@@ -421,10 +545,12 @@ header{
 }
 
 .hero h1 span{
+
     color:var(--green);
 }
 
 .hero-tagline{
+
     color:var(--green);
 
     font-size:20px;
@@ -435,6 +561,7 @@ header{
 }
 
 .hero-description{
+
     max-width:650px;
 
     color:var(--muted);
@@ -447,6 +574,7 @@ header{
 }
 
 .hero-actions{
+
     display:flex;
 
     gap:12px;
@@ -460,28 +588,33 @@ header{
 ========================================================= */
 
 .hero-visual{
+
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     min-height:500px;
 }
 
 .hero-logo-box{
+
     width:100%;
 
     max-width:480px;
 
     padding:65px 55px;
 
-    border:1px solid var(--border);
+    border:
+    1px solid var(--border);
 
     background:white;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     box-shadow:
@@ -489,6 +622,7 @@ header{
 }
 
 .hero-logo{
+
     width:100%;
 
     max-width:330px;
@@ -504,12 +638,15 @@ header{
 ========================================================= */
 
 .company-strip{
-    border-bottom:1px solid var(--border);
+
+    border-bottom:
+    1px solid var(--border);
 
     background:#fafcfb;
 }
 
 .company-strip-grid{
+
     display:grid;
 
     grid-template-columns:
@@ -517,18 +654,22 @@ header{
 }
 
 .company-strip-item{
+
     padding:27px 20px;
 
     text-align:center;
 
-    border-right:1px solid var(--border);
+    border-right:
+    1px solid var(--border);
 }
 
 .company-strip-item:last-child{
+
     border-right:none;
 }
 
 .company-strip-code{
+
     color:var(--green);
 
     font-size:22px;
@@ -539,6 +680,7 @@ header{
 }
 
 .company-strip-title{
+
     color:#65746d;
 
     font-size:11px;
@@ -552,10 +694,12 @@ header{
 ========================================================= */
 
 .about{
+
     background:white;
 }
 
 .about-grid{
+
     display:grid;
 
     grid-template-columns:
@@ -567,19 +711,23 @@ header{
 }
 
 .about-logo-area{
+
     min-height:450px;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
-    border:1px solid var(--border);
+    border:
+    1px solid var(--border);
 
     background:#f8fbf8;
 }
 
 .about-logo{
+
     width:280px;
 
     max-width:75%;
@@ -588,6 +736,7 @@ header{
 }
 
 .about-content h2{
+
     color:var(--dark);
 
     font-size:
@@ -601,6 +750,7 @@ header{
 }
 
 .about-content p{
+
     color:var(--muted);
 
     font-size:14px;
@@ -611,6 +761,7 @@ header{
 }
 
 .about-points{
+
     display:grid;
 
     grid-template-columns:
@@ -622,14 +773,17 @@ header{
 }
 
 .about-point{
+
     padding:18px;
 
-    border:1px solid var(--border);
+    border:
+    1px solid var(--border);
 
     background:white;
 }
 
 .about-point strong{
+
     display:block;
 
     color:var(--dark);
@@ -640,6 +794,7 @@ header{
 }
 
 .about-point span{
+
     color:var(--muted);
 
     font-size:10px;
@@ -653,14 +808,18 @@ header{
 ========================================================= */
 
 .services{
+
     background:#f8faf8;
 
-    border-top:1px solid var(--border);
+    border-top:
+    1px solid var(--border);
 
-    border-bottom:1px solid var(--border);
+    border-bottom:
+    1px solid var(--border);
 }
 
 .services-heading{
+
     display:flex;
 
     justify-content:space-between;
@@ -673,6 +832,7 @@ header{
 }
 
 .services-grid{
+
     display:grid;
 
     grid-template-columns:
@@ -682,9 +842,11 @@ header{
 }
 
 .service-card{
+
     background:white;
 
-    border:1px solid var(--border);
+    border:
+    1px solid var(--border);
 
     padding:31px;
 
@@ -694,6 +856,7 @@ header{
 }
 
 .service-card:hover{
+
     border-color:#b8cfc0;
 
     transform:translateY(-4px);
@@ -703,6 +866,7 @@ header{
 }
 
 .service-number{
+
     color:#9fca77;
 
     font-size:12px;
@@ -713,12 +877,15 @@ header{
 }
 
 .service-icon{
+
     width:45px;
+
     height:45px;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     background:var(--soft);
@@ -733,6 +900,7 @@ header{
 }
 
 .service-card h3{
+
     color:var(--dark);
 
     font-size:19px;
@@ -743,6 +911,7 @@ header{
 }
 
 .service-card p{
+
     color:var(--muted);
 
     font-size:11px;
@@ -756,24 +925,29 @@ header{
 ========================================================= */
 
 .approach{
+
     background:var(--dark);
 
     color:white;
 }
 
 .approach .section-label{
+
     color:var(--lime);
 }
 
 .approach .section-title{
+
     color:white;
 }
 
 .approach .section-description{
+
     color:rgba(255,255,255,.65);
 }
 
 .approach-grid{
+
     display:grid;
 
     grid-template-columns:
@@ -789,21 +963,26 @@ header{
 }
 
 .approach-card{
-    padding:35px 35px 35px 0;
+
+    padding:
+    35px 35px 35px 0;
 
     border-right:
     1px solid rgba(255,255,255,.12);
 }
 
 .approach-card:not(:first-child){
+
     padding-left:35px;
 }
 
 .approach-card:last-child{
+
     border-right:none;
 }
 
 .approach-card span{
+
     color:var(--lime);
 
     font-size:10px;
@@ -814,12 +993,14 @@ header{
 }
 
 .approach-card h3{
+
     font-size:21px;
 
     margin:18px 0 10px;
 }
 
 .approach-card p{
+
     color:rgba(255,255,255,.57);
 
     font-size:11px;
@@ -833,6 +1014,7 @@ header{
 ========================================================= */
 
 .process-grid{
+
     margin-top:55px;
 
     display:grid;
@@ -842,22 +1024,28 @@ header{
 }
 
 .process-card{
+
     padding-right:45px;
 }
 
 .process-card:not(:last-child){
-    border-right:1px solid var(--border);
+
+    border-right:
+    1px solid var(--border);
 
     margin-right:35px;
 }
 
 .process-number{
+
     width:45px;
+
     height:45px;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     background:var(--green);
@@ -872,6 +1060,7 @@ header{
 }
 
 .process-card h3{
+
     color:var(--dark);
 
     font-size:18px;
@@ -880,6 +1069,7 @@ header{
 }
 
 .process-card p{
+
     color:var(--muted);
 
     font-size:11px;
@@ -895,10 +1085,13 @@ header{
 ========================================================= */
 
 .cta{
-    padding:0 0 105px;
+
+    padding:
+    0 0 105px;
 }
 
 .cta-box{
+
     background:var(--green);
 
     color:white;
@@ -915,10 +1108,12 @@ header{
 }
 
 .cta-box .section-label{
+
     color:var(--lime);
 }
 
 .cta-box h2{
+
     max-width:730px;
 
     font-size:
@@ -930,6 +1125,7 @@ header{
 }
 
 .cta-box p{
+
     color:rgba(255,255,255,.65);
 
     font-size:13px;
@@ -940,16 +1136,19 @@ header{
 }
 
 .cta-button{
+
     flex-shrink:0;
 }
 
 .cta-button .btn{
+
     background:white;
 
     color:var(--green);
 }
 
 .cta-button .btn:hover{
+
     background:var(--lime);
 
     color:var(--dark);
@@ -961,12 +1160,15 @@ header{
 ========================================================= */
 
 .contact{
+
     background:#f8faf8;
 
-    border-top:1px solid var(--border);
+    border-top:
+    1px solid var(--border);
 }
 
 .contact-grid{
+
     display:grid;
 
     grid-template-columns:
@@ -976,6 +1178,7 @@ header{
 }
 
 .contact-info h2{
+
     color:var(--dark);
 
     font-size:
@@ -989,6 +1192,7 @@ header{
 }
 
 .contact-info > p{
+
     color:var(--muted);
 
     font-size:14px;
@@ -1001,6 +1205,7 @@ header{
 }
 
 .contact-list{
+
     display:flex;
 
     flex-direction:column;
@@ -1009,6 +1214,7 @@ header{
 }
 
 .contact-item{
+
     display:flex;
 
     align-items:flex-start;
@@ -1017,7 +1223,9 @@ header{
 }
 
 .contact-icon{
+
     width:40px;
+
     height:40px;
 
     flex-shrink:0;
@@ -1025,6 +1233,7 @@ header{
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     background:var(--soft);
@@ -1037,6 +1246,7 @@ header{
 }
 
 .contact-item strong{
+
     display:block;
 
     color:var(--dark);
@@ -1049,6 +1259,7 @@ header{
 }
 
 .contact-item span{
+
     color:var(--muted);
 
     font-size:11px;
@@ -1057,14 +1268,17 @@ header{
 }
 
 .contact-card{
+
     background:white;
 
-    border:1px solid var(--border);
+    border:
+    1px solid var(--border);
 
     padding:40px;
 }
 
 .contact-card h3{
+
     color:var(--dark);
 
     font-size:25px;
@@ -1073,6 +1287,7 @@ header{
 }
 
 .contact-card > p{
+
     color:var(--muted);
 
     font-size:12px;
@@ -1081,6 +1296,7 @@ header{
 }
 
 .contact-buttons{
+
     display:grid;
 
     grid-template-columns:
@@ -1090,11 +1306,13 @@ header{
 }
 
 .contact-button{
+
     min-height:55px;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     gap:9px;
@@ -1103,22 +1321,26 @@ header{
 
     font-weight:800;
 
-    border:1px solid var(--border);
+    border:
+    1px solid var(--border);
 
     transition:.2s ease;
 }
 
 .contact-button:hover{
+
     transform:translateY(-2px);
 }
 
 .whatsapp{
+
     background:#edf9ee;
 
     color:#16763a;
 }
 
 .email{
+
     background:#f3f7f4;
 
     color:var(--green);
@@ -1130,6 +1352,7 @@ header{
 ========================================================= */
 
 footer{
+
     background:#062c1d;
 
     color:white;
@@ -1139,6 +1362,7 @@ footer{
 }
 
 .footer-grid{
+
     display:grid;
 
     grid-template-columns:
@@ -1153,6 +1377,7 @@ footer{
 }
 
 .footer-brand{
+
     display:flex;
 
     align-items:center;
@@ -1163,13 +1388,16 @@ footer{
 }
 
 .footer-logo{
+
     width:60px;
+
     height:60px;
 
     object-fit:contain;
 }
 
 .footer-brand-name{
+
     font-size:16px;
 
     font-weight:900;
@@ -1178,6 +1406,7 @@ footer{
 }
 
 .footer-description{
+
     color:rgba(255,255,255,.55);
 
     max-width:430px;
@@ -1188,6 +1417,7 @@ footer{
 }
 
 .footer-title{
+
     color:var(--lime);
 
     font-size:10px;
@@ -1200,6 +1430,7 @@ footer{
 }
 
 .footer-links{
+
     display:flex;
 
     flex-direction:column;
@@ -1208,6 +1439,7 @@ footer{
 }
 
 .footer-links a{
+
     color:rgba(255,255,255,.58);
 
     font-size:11px;
@@ -1216,10 +1448,12 @@ footer{
 }
 
 .footer-links a:hover{
+
     color:var(--lime);
 }
 
 .footer-bottom{
+
     padding-top:23px;
 
     display:flex;
@@ -1237,17 +1471,21 @@ footer{
 ========================================================= */
 
 .whatsapp-float{
+
     position:fixed;
 
     right:22px;
+
     bottom:22px;
 
     width:55px;
+
     height:55px;
 
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     background:#18b957;
@@ -1268,10 +1506,11 @@ footer{
 
 
 /* =========================================================
-   SIMPLE ANIMATION
+   ANIMATION
 ========================================================= */
 
 .reveal{
+
     opacity:0;
 
     transform:translateY(15px);
@@ -1282,6 +1521,7 @@ footer{
 }
 
 .reveal.active{
+
     opacity:1;
 
     transform:translateY(0);
@@ -1295,10 +1535,12 @@ footer{
 @media(max-width:1050px){
 
     .nav-menu{
+
         gap:18px;
     }
 
     .hero-grid{
+
         grid-template-columns:
         1fr .8fr;
 
@@ -1306,6 +1548,7 @@ footer{
     }
 
     .about-grid{
+
         grid-template-columns:
         1fr 1fr;
 
@@ -1313,11 +1556,13 @@ footer{
     }
 
     .services-grid{
+
         grid-template-columns:
         repeat(2,1fr);
     }
 
     .contact-grid{
+
         grid-template-columns:
         1fr 1fr;
 
@@ -1334,32 +1579,40 @@ footer{
 @media(max-width:800px){
 
     .container{
+
         width:
         calc(100% - 30px);
     }
 
     header{
+
         height:72px;
     }
 
     .navbar{
+
         height:72px;
     }
 
     .brand-logo{
+
         width:48px;
+
         height:48px;
     }
 
     .brand-text{
+
         display:none;
     }
 
     .menu-toggle{
+
         display:block;
     }
 
     .nav-menu{
+
         display:none;
 
         position:absolute;
@@ -1367,6 +1620,7 @@ footer{
         top:78px;
 
         left:15px;
+
         right:15px;
 
         background:white;
@@ -1387,43 +1641,51 @@ footer{
     }
 
     .nav-menu.active{
+
         display:flex;
     }
 
     .nav-menu > a{
+
         padding:12px 13px;
     }
 
     .nav-contact{
+
         text-align:center;
 
         margin-top:5px;
     }
 
     .language-switcher{
+
         justify-content:center;
 
         margin:8px 0;
     }
 
     .hero{
+
         padding-top:72px;
 
         min-height:auto;
     }
 
     .hero-grid{
+
         grid-template-columns:1fr;
 
         gap:20px;
     }
 
     .hero-content{
+
         padding:
         65px 0 20px;
     }
 
     .hero h1{
+
         font-size:
         clamp(48px,13vw,68px);
 
@@ -1431,10 +1693,12 @@ footer{
     }
 
     .hero-description{
+
         font-size:14px;
     }
 
     .hero-visual{
+
         min-height:auto;
 
         padding:
@@ -1442,19 +1706,23 @@ footer{
     }
 
     .hero-logo-box{
+
         padding:
         45px 30px;
     }
 
     .hero-logo{
+
         max-width:260px;
     }
 
     .company-strip-grid{
+
         grid-template-columns:1fr;
     }
 
     .company-strip-item{
+
         border-right:none;
 
         border-bottom:
@@ -1462,50 +1730,61 @@ footer{
     }
 
     .company-strip-item:last-child{
+
         border-bottom:none;
     }
 
     .section{
+
         padding:75px 0;
     }
 
     .about-grid{
+
         grid-template-columns:1fr;
 
         gap:35px;
     }
 
     .about-logo-area{
+
         min-height:330px;
     }
 
     .about-logo{
+
         width:220px;
     }
 
     .about-points{
+
         grid-template-columns:1fr;
     }
 
     .services-heading{
+
         display:block;
 
         margin-bottom:35px;
     }
 
     .services-heading .section-description{
+
         margin-top:20px;
     }
 
     .services-grid{
+
         grid-template-columns:1fr;
     }
 
     .approach-grid{
+
         grid-template-columns:1fr;
     }
 
     .approach-card{
+
         padding:
         30px 0;
 
@@ -1516,24 +1795,29 @@ footer{
     }
 
     .approach-card:not(:first-child){
+
         padding-left:0;
     }
 
     .approach-card:last-child{
+
         border-bottom:none;
     }
 
     .process-grid{
+
         grid-template-columns:1fr;
 
         gap:35px;
     }
 
     .process-card{
+
         padding-right:0;
     }
 
     .process-card:not(:last-child){
+
         border-right:none;
 
         border-bottom:
@@ -1545,10 +1829,12 @@ footer{
     }
 
     .cta{
+
         padding-bottom:75px;
     }
 
     .cta-box{
+
         display:block;
 
         padding:
@@ -1556,26 +1842,31 @@ footer{
     }
 
     .cta-button{
+
         margin-top:28px;
     }
 
     .contact-grid{
+
         grid-template-columns:1fr;
 
         gap:40px;
     }
 
     .contact-buttons{
+
         grid-template-columns:1fr;
     }
 
     .footer-grid{
+
         grid-template-columns:1fr;
 
         gap:35px;
     }
 
     .footer-bottom{
+
         flex-direction:column;
 
         gap:10px;
@@ -1591,27 +1882,32 @@ footer{
 @media(max-width:450px){
 
     .hero h1{
+
         font-size:48px;
 
         letter-spacing:-2.5px;
     }
 
     .hero-slogan{
+
         font-size:9px;
 
         letter-spacing:2px;
     }
 
     .hero-badge{
+
         font-size:9px;
     }
 
     .hero-logo-box{
+
         padding:
         35px 20px;
     }
 
     .section-title{
+
         font-size:37px;
     }
 
@@ -1665,6 +1961,8 @@ ENVIRONMENT GLOBAL
 <button
 class="menu-toggle"
 id="menuToggle"
+type="button"
+aria-label="Menu"
 >
 ☰
 </button>
@@ -1745,6 +2043,7 @@ EN
 <a
 href="https://wa.me/6281299119884"
 target="_blank"
+rel="noopener"
 class="nav-contact"
 data-id="Konsultasi"
 data-en="Consultation"
@@ -1789,8 +2088,10 @@ SUSTAINING FUTURE TOGETHER
 
 <div class="hero-badge">
 
-ENVIRONMENT&nbsp;&nbsp;&nbsp;
-ENGINEERING&nbsp;&nbsp;&nbsp;
+ENVIRONMENT
+&nbsp;&nbsp;&nbsp;
+ENGINEERING
+&nbsp;&nbsp;&nbsp;
 CONSULTANT
 
 </div>
@@ -2693,6 +2994,7 @@ Mari mulai dengan diskusi sederhana.
 <a
 href="https://wa.me/6281299119884?text=Halo%20LABAN%20Environment%20Global%2C%20saya%20ingin%20berkonsultasi."
 target="_blank"
+rel="noopener"
 class="btn"
 data-id="Mulai Konsultasi"
 data-en="Start Consultation"
@@ -2875,6 +3177,7 @@ menghubungi LABAN Environment Global.
 <a
 href="https://wa.me/6281299119884"
 target="_blank"
+rel="noopener"
 class="contact-button whatsapp"
 >
 
@@ -3065,6 +3368,7 @@ cvlaban71@gmail.com
 <a
 href="https://wa.me/6281299119884"
 target="_blank"
+rel="noopener"
 >
 WhatsApp
 </a>
@@ -3081,13 +3385,18 @@ WhatsApp
 <div class="footer-bottom">
 
 <span>
-© <span id="year"></span>
+
+©
+<span id="year"></span>
 LABAN Environment Global.
 All rights reserved.
+
 </span>
 
 <span>
+
 Sustaining Future Together
+
 </span>
 
 </div>
@@ -3099,16 +3408,19 @@ Sustaining Future Together
 
 
 <!-- =========================================================
-     WHATSAPP
+     FLOATING WHATSAPP
 ========================================================= -->
 
 <a
 href="https://wa.me/6281299119884"
 target="_blank"
+rel="noopener"
 class="whatsapp-float"
 aria-label="WhatsApp"
 >
+
 W
+
 </a>
 
 
@@ -3118,6 +3430,7 @@ W
 ========================================================= -->
 
 <script>
+
 
 /* =========================================================
    MOBILE MENU
@@ -3271,7 +3584,7 @@ function(button){
 
 
 /* =========================================================
-   LOAD LANGUAGE
+   LOAD SAVED LANGUAGE
 ========================================================= */
 
 const savedLanguage =
@@ -3358,8 +3671,10 @@ document.getElementById(
 ).textContent =
 new Date().getFullYear();
 
+
 </script>
 
 
 </body>
+
 </html>
