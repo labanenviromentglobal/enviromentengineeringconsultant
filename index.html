@@ -2254,6 +2254,204 @@ html,body{
     }
 }
 
+
+
+/* =========================================================
+   HERO FINAL — SPLIT PHOTO / TEXT BLEND
+   RIGHT SIDE = CLEAR PHOTO
+   LEFT SIDE = SOFT BLEND BEHIND TEXT
+   ========================================================= */
+
+.hero{
+    position:relative !important;
+    overflow:hidden !important;
+    min-height:calc(100vh - 78px) !important;
+    isolation:isolate !important;
+}
+
+/* Full-width photographic layer */
+.hero-visual{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    z-index:0 !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+}
+
+.hero-visual .hero-slider{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:#dce8e0 !important;
+    overflow:hidden !important;
+}
+
+/* Every slide occupies the complete hero */
+.hero-slide{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:scale(1.01) !important;
+    transition:
+        opacity .85s ease,
+        transform 5s ease !important;
+}
+
+.hero-slide.active{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:scale(1) !important;
+}
+
+.hero-slide img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+
+    /* Keep the important activity/detail toward the right */
+    object-position:68% center !important;
+
+    /* Clear, natural photo */
+    filter:
+        saturate(.92)
+        contrast(1.04)
+        brightness(1.02) !important;
+
+    opacity:1 !important;
+}
+
+/*
+   THE IMPORTANT PART:
+   The right ~55% is deliberately CLEAR.
+   The left gradually blends into the white page.
+*/
+.hero-slider::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:4 !important;
+    pointer-events:none !important;
+
+    background:
+        linear-gradient(
+            90deg,
+
+            /* text area: white */
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,1) 25%,
+
+            /* gradual blend */
+            rgba(255,255,255,.96) 32%,
+            rgba(255,255,255,.82) 40%,
+            rgba(255,255,255,.56) 47%,
+            rgba(255,255,255,.25) 54%,
+
+            /* photo area: clear */
+            rgba(255,255,255,.05) 61%,
+            rgba(255,255,255,0) 67%,
+            rgba(255,255,255,0) 100%
+        ) !important;
+}
+
+/* Very subtle top/bottom atmosphere only */
+.hero-slider::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:5 !important;
+    pointer-events:none !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.08) 0%,
+            rgba(255,255,255,0) 18%,
+            rgba(255,255,255,0) 86%,
+            rgba(255,255,255,.05) 100%
+        ) !important;
+}
+
+/* Text always stays crisp above the image */
+.hero-content{
+    position:relative !important;
+    z-index:10 !important;
+}
+
+/* Keep slide controls visible but understated */
+.slider-counter{
+    position:relative !important;
+    z-index:12 !important;
+    opacity:.9 !important;
+}
+
+.slider-progress{
+    position:relative !important;
+    z-index:12 !important;
+    opacity:.78 !important;
+}
+
+/* No documentation caption on the Home hero */
+.hero-slider-info{
+    display:none !important;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+@media(max-width:1100px){
+    .hero-slide img{
+        object-position:72% center !important;
+    }
+
+    .hero-slider::after{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,1) 0%,
+                rgba(255,255,255,1) 27%,
+                rgba(255,255,255,.94) 38%,
+                rgba(255,255,255,.68) 48%,
+                rgba(255,255,255,.25) 59%,
+                rgba(255,255,255,0) 70%,
+                rgba(255,255,255,0) 100%
+            ) !important;
+    }
+}
+
+@media(max-width:900px){
+    .hero{
+        min-height:760px !important;
+    }
+
+    .hero-slide img{
+        object-position:72% center !important;
+    }
+
+    .hero-slider::after{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,1) 0%,
+                rgba(255,255,255,.98) 34%,
+                rgba(255,255,255,.78) 49%,
+                rgba(255,255,255,.30) 64%,
+                rgba(255,255,255,0) 78%,
+                rgba(255,255,255,0) 100%
+            ) !important;
+    }
+}
+
 </style>
 
 </head>
