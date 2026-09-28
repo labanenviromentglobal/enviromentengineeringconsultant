@@ -2123,6 +2123,137 @@ html,body{
     }
 }
 
+
+
+/* =========================================================
+   HERO — CLEAR SLIDE PHOTOGRAPHY
+   Each documentation image is intentionally visible.
+   ========================================================= */
+
+.hero{
+    position:relative !important;
+    overflow:hidden !important;
+    min-height:calc(100vh - 78px) !important;
+}
+
+.hero-visual{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    z-index:0 !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+}
+
+.hero-visual .hero-slider{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:#dfeae3 !important;
+}
+
+.hero-slide{
+    position:absolute !important;
+    inset:0 !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:scale(1.015) !important;
+    transition:opacity .9s ease, transform 4.8s ease !important;
+}
+
+.hero-slide.active{
+    opacity:.72 !important;
+    visibility:visible !important;
+    transform:scale(1) !important;
+}
+
+.hero-slide img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    filter:saturate(.88) contrast(1.02) brightness(1.02) !important;
+}
+
+/* Readability is concentrated on the left.
+   The right side stays visibly photographic. */
+.hero-slider::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:2 !important;
+    pointer-events:none !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.96) 0%,
+            rgba(255,255,255,.84) 22%,
+            rgba(255,255,255,.48) 42%,
+            rgba(255,255,255,.10) 63%,
+            rgba(255,255,255,.00) 78%
+        ) !important;
+}
+
+.hero-slider::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:3 !important;
+    pointer-events:none !important;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.08) 0%,
+            rgba(255,255,255,0) 24%,
+            rgba(255,255,255,.04) 100%
+        ) !important;
+}
+
+/* Keep the hero content clearly above the photography. */
+.hero-content{
+    position:relative !important;
+    z-index:10 !important;
+}
+
+.slider-counter{
+    z-index:8 !important;
+    opacity:.88 !important;
+}
+
+.slider-progress{
+    z-index:8 !important;
+    opacity:.78 !important;
+}
+
+/* On narrower screens, retain enough image visibility while
+   keeping the headline readable. */
+@media(max-width:900px){
+    .hero{
+        min-height:760px !important;
+    }
+
+    .hero-slide.active{
+        opacity:.56 !important;
+    }
+
+    .hero-slider::after{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,.95) 0%,
+                rgba(255,255,255,.78) 48%,
+                rgba(255,255,255,.24) 100%
+            ) !important;
+    }
+}
+
 </style>
 
 </head>
