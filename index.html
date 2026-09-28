@@ -213,17 +213,29 @@ header{
     border:1px solid #dfe7e1;
     border-radius:30px;
     background:#f7faf7;
+    position:relative;
+    z-index:10001;
+    pointer-events:auto;
 }
 
 .language-btn{
     border:none;
     background:transparent;
     color:#718078;
-    padding:6px 9px;
+    padding:6px 10px;
     border-radius:20px;
     font-size:9px;
     font-weight:900;
     cursor:pointer;
+    position:relative;
+    z-index:10002;
+    pointer-events:auto !important;
+    user-select:none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+.language-btn:hover{
+    color:var(--green);
 }
 
 .language-btn.active{
@@ -1765,15 +1777,15 @@ footer{
             <a href="#contact" class="nav-contact">Kontak</a>
 
             <div class="mobile-language">
-                <button class="language-btn active" id="mobileLangID" type="button">ID</button>
-                <button class="language-btn" id="mobileLangEN" type="button">EN</button>
+                <button class="language-btn active" id="mobileLangID" type="button" onclick="window.setLEGLanguage('id'); return false;">ID</button>
+                <button class="language-btn" id="mobileLangEN" type="button" onclick="window.setLEGLanguage('en'); return false;">EN</button>
             </div>
 
         </nav>
 
         <div class="language-switcher">
-            <button class="language-btn active" id="langID" type="button">ID</button>
-            <button class="language-btn" id="langEN" type="button">EN</button>
+            <button class="language-btn active" id="langID" type="button" onclick="window.setLEGLanguage('id'); return false;">ID</button>
+            <button class="language-btn" id="langEN" type="button" onclick="window.setLEGLanguage('en'); return false;">EN</button>
         </div>
     </div>
 </header>
@@ -2992,6 +3004,8 @@ const translations = {
 };
 
 const languageOriginals = new WeakMap();
+window.LEG_TRANSLATIONS = translations;
+window.LEG_LANGUAGE_ORIGINALS = languageOriginals;
 
 function collectTextNodes(root){
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
@@ -3129,6 +3143,93 @@ document.querySelectorAll(".language-btn").forEach(btn => {
         <img class="document-modal-image" id="documentModalImage" src="" alt="">
     </div>
 </div>
+
+
+/* HARDENED LANGUAGE SWITCH — DIRECT CLICK SUPPORT */
+window.setLEGLanguage = function(lang){
+    try{
+        const dict = window.LEG_TRANSLATIONS || {};
+        const originals = window.LEG_LANGUAGE_ORIGINALS || new WeakMap();
+
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT
+        );
+
+        const nodes = [];
+        let node;
+
+        while(node = walker.nextNode()){
+            const parent = node.parentElement;
+            if(!parent) continue;
+            if(["SCRIPT","STYLE","NOSCRIPT"].includes(parent.tagName)) continue;
+            if(parent.closest(".language-switcher, .mobile-language")) continue;
+            if(node.textContent.trim()) nodes.push(node);
+        }
+
+        nodes.forEach(textNode => {
+            if(!originals.has(textNode)){
+                originals.set(textNode, textNode.textContent);
+            }
+
+            const original = originals.get(textNode);
+            const clean = original.trim();
+
+            if(lang === "en"){
+                if(dict[clean]){
+                    textNode.textContent = original.replace(clean, dict[clean]);
+                }
+            }else{
+                textNode.textContent = original;
+            }
+        });
+
+        document.documentElement.lang = lang === "en" ? "en" : "id";
+
+        const buttons = [
+            document.getElementById("langID"),
+            document.getElementById("langEN"),
+            document.getElementById("mobileLangID"),
+            document.getElementById("mobileLangEN")
+        ];
+
+        buttons.forEach(button => {
+            if(!button) return;
+            button.classList.toggle("active",
+                (lang === "en" && button.id.toLowerCase().includes("en")) ||
+                (lang === "id" && button.id.toLowerCase().includes("id"))
+            );
+        });
+
+        // Keep the current hero image title synchronized.
+        if(typeof currentSlide !== "undefined"){
+            const title = document.getElementById("slideTitle");
+            if(title && typeof slideTitlesEN !== "undefined" && typeof slideTitlesID !== "undefined"){
+                title.textContent = lang === "en"
+                    ? slideTitlesEN[currentSlide]
+                    : slideTitlesID[currentSlide];
+            }
+        }
+
+        try{
+            localStorage.setItem("leg-language", lang);
+        }catch(e){}
+
+        return false;
+    }catch(error){
+        console.error("LEG language switch error:", error);
+        return false;
+    }
+};
+
+window.addEventListener("DOMContentLoaded", function(){
+    try{
+        const saved = localStorage.getItem("leg-language");
+        if(saved === "en"){
+            window.setLEGLanguage("en");
+        }
+    }catch(e){}
+});
 
 </body>
 </html>
