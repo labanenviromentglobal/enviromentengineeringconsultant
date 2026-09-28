@@ -24,7 +24,8 @@
     --border:#e1e9e4;
     --white:#fff;
     --container:1180px;
-    --shadow:0 20px 60px rgba(7,55,35,.09);
+    --shadow:0 30px 80px rgba(7,55,35,.12);
+    --shadow-soft:0 14px 40px rgba(7,55,35,.075);
 }
 
 *{
@@ -79,9 +80,9 @@ button{
 
 .section-title{
     color:var(--dark);
-    font-size:clamp(38px,4vw,58px);
-    line-height:1.04;
-    letter-spacing:-2.7px;
+    font-size:clamp(39px,4vw,58px);
+    line-height:1.02;
+    letter-spacing:-2.9px;
     margin-bottom:20px;
 }
 
@@ -103,6 +104,7 @@ button{
     font-weight:800;
     transition:.25s ease;
     cursor:pointer;
+    box-shadow:0 7px 18px rgba(7,55,35,.06);
 }
 
 .btn-primary{
@@ -133,9 +135,10 @@ header{
     inset:0 0 auto;
     height:82px;
     z-index:1000;
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid #edf0ee;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(20px) saturate(130%);
+    border-bottom:1px solid rgba(8,47,34,.06);
+    box-shadow:0 8px 30px rgba(7,55,35,.035);
 }
 
 .navbar{
@@ -149,14 +152,17 @@ header{
 .brand{
     display:flex;
     align-items:center;
-    gap:11px;
+    gap:12px;
     flex-shrink:0;
+    position:relative;
 }
 
 .brand-logo{
-    width:53px;
-    height:53px;
+    width:56px;
+    height:56px;
     object-fit:contain;
+    filter:drop-shadow(0 6px 12px rgba(8,120,63,.10));
+    transition:.25s ease;
 }
 
 .brand-text{
@@ -191,7 +197,9 @@ header{
     font-size:10.5px;
     font-weight:800;
     white-space:nowrap;
-    transition:.2s;
+    transition:.22s ease;
+    padding:8px 9px;
+    border-radius:8px;
 }
 
 .nav-menu a:hover{
@@ -246,17 +254,23 @@ header{
 /* HERO */
 .hero{
     padding-top:82px;
-    min-height:760px;
+    min-height:780px;
+    position:relative;
+    isolation:isolate;
     display:flex;
     align-items:center;
     border-bottom:1px solid #edf0ee;
     overflow:hidden;
+    background:
+        radial-gradient(circle at 86% 25%, rgba(8,120,63,.075), transparent 28%),
+        radial-gradient(circle at 4% 90%, rgba(155,214,59,.08), transparent 24%),
+        linear-gradient(180deg,#fff 0%,#fff 68%,#f8fbf9 100%);
 }
 
 .hero-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:65px;
+    gap:78px;
     align-items:center;
 }
 
@@ -265,31 +279,39 @@ header{
 }
 
 .hero-slogan{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
     color:var(--green);
-    font-size:11px;
+    font-size:10px;
     font-weight:900;
-    letter-spacing:3px;
-    margin-bottom:24px;
+    letter-spacing:2.5px;
+    margin-bottom:20px;
 }
 
+
+
 .hero-badge{
-    display:inline-block;
-    padding:8px 13px;
-    margin-bottom:21px;
-    background:var(--soft);
+    display:inline-flex;
+    align-items:center;
+    padding:8px 12px;
+    margin-bottom:20px;
+    background:rgba(8,120,63,.075);
     color:var(--green);
-    font-size:9px;
+    font-size:8.5px;
     font-weight:900;
-    letter-spacing:.8px;
-    border-radius:3px;
+    letter-spacing:1px;
+    border-radius:999px;
+    border:1px solid rgba(8,120,63,.08);
 }
 
 .hero h1{
     color:var(--dark);
-    font-size:clamp(50px,6vw,78px);
-    line-height:.98;
-    letter-spacing:-4px;
-    margin-bottom:25px;
+    font-size:clamp(54px,6.2vw,82px);
+    line-height:.94;
+    letter-spacing:-5px;
+    margin-bottom:24px;
+    max-width:700px;
 }
 
 .hero h1 span{
@@ -328,19 +350,20 @@ header{
 
 .hero-slider{
     position:relative;
-    width:min(100%,520px);
-    height:535px;
+    width:min(100%,535px);
+    height:555px;
     overflow:hidden;
     background:#eaf2ed;
-    border:1px solid var(--border);
+    border:1px solid rgba(8,120,63,.11);
     box-shadow:var(--shadow);
+    border-radius:18px;
 }
 
 .hero-slide{
     position:absolute;
     inset:0;
     opacity:0;
-    transform:scale(1.035);
+    transform:scale(1.045);
     transition:opacity 1.2s ease, transform 5.5s ease;
 }
 
@@ -361,8 +384,8 @@ header{
     position:absolute;
     inset:0;
     background:
-        linear-gradient(180deg,rgba(255,255,255,.17),rgba(6,61,39,.30)),
-        linear-gradient(90deg,rgba(8,120,63,.10),transparent 55%);
+        linear-gradient(180deg,rgba(255,255,255,.20),rgba(6,61,39,.28)),
+        linear-gradient(90deg,rgba(8,120,63,.12),transparent 58%);
 }
 
 .hero-slider-info{
@@ -372,9 +395,11 @@ header{
     right:25px;
     bottom:24px;
     padding:18px 20px;
-    background:rgba(255,255,255,.78);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,.72);
+    background:rgba(255,255,255,.84);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.68);
+    box-shadow:0 14px 34px rgba(6,61,39,.12);
+    border-radius:13px;
 }
 
 .hero-slider-info small{
@@ -404,7 +429,7 @@ header{
     width:7px;
     height:7px;
     border:0;
-    border-radius:50%;
+    border-radius:999px;
     background:rgba(255,255,255,.55);
     cursor:pointer;
     transition:.2s;
@@ -429,8 +454,9 @@ header{
 
 .company-strip-item{
     text-align:center;
-    padding:25px 20px;
+    padding:27px 20px;
     border-right:1px solid var(--border);
+    transition:.2s ease;
 }
 
 .company-strip-item:last-child{
@@ -470,6 +496,7 @@ header{
     border:1px solid var(--border);
     position:relative;
     overflow:hidden;
+    border-radius:18px;
 }
 
 .about-logo-area::before{
@@ -548,6 +575,7 @@ header{
     background:#fff;
     border:1px solid var(--border);
     padding:34px;
+    border-radius:16px;
 }
 
 .vm-card h3{
@@ -578,6 +606,7 @@ header{
     background:#fff;
     border:1px solid var(--border);
     padding:27px;
+    border-radius:14px;
 }
 
 .plan-card .number{
@@ -624,13 +653,15 @@ header{
     border:1px solid var(--border);
     padding:28px;
     min-height:235px;
-    transition:.25s ease;
+    transition:.28s ease;
+    position:relative;
+    overflow:hidden;
 }
 
 .service-card:hover{
     border-color:#b8cfc0;
-    transform:translateY(-4px);
-    box-shadow:var(--shadow);
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-soft);
 }
 
 .service-number{
@@ -684,6 +715,7 @@ header{
     border:1px solid var(--border);
     padding:29px;
     min-height:245px;
+    border-radius:15px;
 }
 
 .expert-placeholder{
@@ -734,9 +766,11 @@ header{
     border:1px solid var(--border);
     padding:25px;
     display:flex;
+    border-radius:14px;
     gap:18px;
     align-items:flex-start;
-    transition:.2s;
+    transition:.25s ease;
+    background:linear-gradient(180deg,#fff,#fbfdfb);
 }
 
 .scope-card:hover{
@@ -781,6 +815,7 @@ header{
     background:#fff;
     border:1px solid var(--border);
     overflow:hidden;
+    border-radius:15px;
 }
 
 .documentation-image{
@@ -877,6 +912,197 @@ header{
     font-weight:900;
 }
 
+
+/* LEGAL DOCUMENT GALLERY */
+.document-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:48px;
+}
+
+.document-visual-card{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.11);
+    border-radius:16px;
+    overflow:hidden;
+    transition:.28s ease;
+}
+
+.document-visual-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(155,214,59,.30);
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.document-preview{
+    height:310px;
+    background:#f2f5f2;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.document-preview img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    background:#f2f5f2;
+    transition:.35s ease;
+}
+
+.document-visual-card:hover .document-preview img{
+    transform:scale(1.025);
+}
+
+.document-overlay{
+    position:absolute;
+    inset:auto 14px 14px;
+    padding:10px 12px;
+    background:rgba(6,44,29,.88);
+    color:#fff;
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:1.3px;
+    opacity:0;
+    transform:translateY(8px);
+    transition:.25s ease;
+    text-align:center;
+    border-radius:8px;
+}
+
+.document-visual-card:hover .document-overlay{
+    opacity:1;
+    transform:none;
+}
+
+.document-visual-info{
+    min-height:92px;
+    padding:18px 18px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.document-visual-info small{
+    display:block;
+    color:var(--lime);
+    font-size:7.5px;
+    font-weight:900;
+    letter-spacing:1.3px;
+    margin-bottom:5px;
+}
+
+.document-visual-info h3{
+    color:#fff;
+    font-size:15px;
+}
+
+.document-open{
+    width:36px;
+    height:36px;
+    flex:0 0 36px;
+    border:1px solid rgba(255,255,255,.17);
+    border-radius:50%;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+    font-size:19px;
+    line-height:1;
+    transition:.22s ease;
+}
+
+.document-open:hover{
+    background:var(--lime);
+    color:var(--dark);
+    border-color:var(--lime);
+    transform:rotate(90deg);
+}
+
+/* DOCUMENT LIGHTBOX */
+.document-modal{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    background:rgba(2,19,13,.88);
+    backdrop-filter:blur(12px);
+}
+
+.document-modal.open{
+    display:flex;
+}
+
+.document-modal-inner{
+    width:min(1100px,96vw);
+    max-height:92vh;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.document-modal-title{
+    width:100%;
+    color:#fff;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:12px;
+    text-align:left;
+}
+
+.document-modal-image{
+    max-width:100%;
+    max-height:78vh;
+    object-fit:contain;
+    border-radius:10px;
+    box-shadow:0 30px 90px rgba(0,0,0,.45);
+    background:#fff;
+}
+
+.document-modal-close{
+    position:absolute;
+    right:-5px;
+    top:-48px;
+    width:36px;
+    height:36px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    cursor:pointer;
+    font-size:19px;
+}
+
+.document-modal-close:hover{
+    background:#fff;
+    color:var(--dark);
+}
+
+@media(max-width:900px){
+    .document-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:620px){
+    .document-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .document-preview{
+        height:360px;
+    }
+
+    .document-modal{
+        padding:18px;
+    }
+}
+
 /* CONTACT */
 .contact{
     background:var(--soft-2);
@@ -962,6 +1188,7 @@ header{
     border:1px solid var(--border);
     padding:38px;
     box-shadow:var(--shadow);
+    border-radius:18px;
 }
 
 .contact-card h3{
@@ -1036,9 +1263,13 @@ header{
 }
 
 .cta-box{
-    background:var(--green);
+    background:
+        radial-gradient(circle at 85% 15%, rgba(155,214,59,.15), transparent 25%),
+        linear-gradient(135deg,#08783f 0%,#076b38 100%);
     color:#fff;
-    padding:58px;
+    padding:60px;
+    border-radius:20px;
+    box-shadow:0 25px 65px rgba(8,120,63,.18);
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -1357,7 +1588,7 @@ footer{
     <div class="container navbar">
 
         <a href="#home" class="brand">
-            <img class="brand-logo" src="CV LEG LOGO.png" alt="CV. Laban Environment Global">
+            <img class="brand-logo" src="LOGONYAPAKEYANGINI.png" alt="CV. Laban Environment Global">
             <span class="brand-text">
                 <span class="brand-name">CV. LEG</span>
                 <span class="brand-subtitle">LABAN ENVIRONMENT GLOBAL</span>
@@ -1474,7 +1705,7 @@ footer{
     <div class="container about-grid">
 
         <div class="about-logo-area reveal">
-            <img class="about-logo" src="CV LEG LOGO.png" alt="Logo CV. Laban Environment Global">
+            <img class="about-logo" src="LOGONYAPAKEYANGINI.png" alt="Logo CV. Laban Environment Global">
         </div>
 
         <div class="about-content reveal">
@@ -1842,46 +2073,107 @@ footer{
         <div class="section-label">07 / Legal</div>
         <h2 class="section-title">Legalitas Perusahaan</h2>
         <p class="section-description">
-            Data legalitas yang tercantum pada Company Profile CV. Laban Environment Global.
+            Dokumen legalitas perusahaan ditampilkan secara visual untuk memudahkan
+            pengunjung mengenali kelengkapan administrasi CV. Laban Environment Global.
         </p>
 
-        <div class="document-grid">
+        <div class="document-gallery">
 
-            <div class="document-card reveal">
-                <h3>Akta Pendirian</h3>
-                <p>Akta Pendirian CV dengan Notaris Tatu Afifah, SH. M.Kn. Nomor Akte 1, tanggal 15 Oktober 2020.</p>
-                <span class="document-status">LEGAL DOCUMENT</span>
-            </div>
+            <article class="document-visual-card reveal">
+                <div class="document-preview">
+                    <img src="NIB.png" alt="NIB CV. Laban Environment Global" loading="lazy">
+                    <div class="document-overlay">
+                        <span>VIEW DOCUMENT</span>
+                    </div>
+                </div>
+                <div class="document-visual-info">
+                    <div>
+                        <small>LEGAL DOCUMENT</small>
+                        <h3>Nomor Induk Berusaha</h3>
+                    </div>
+                    <button class="document-open" data-doc="NIB.png" data-title="Nomor Induk Berusaha" aria-label="Lihat NIB">+</button>
+                </div>
+            </article>
 
-            <div class="document-card reveal">
-                <h3>SK Kemenkumham</h3>
-                <p>SK Menteri Hukum dan Hak Azasi Manusia R.I. Nomor AHU-457.AH.02.01 Tahun 2014 tanggal 17 Juni 2014.</p>
-                <span class="document-status">LEGAL DOCUMENT</span>
-            </div>
+            <article class="document-visual-card reveal">
+                <div class="document-preview">
+                    <img src="NPWP.png" alt="NPWP CV. Laban Environment Global" loading="lazy">
+                    <div class="document-overlay">
+                        <span>VIEW DOCUMENT</span>
+                    </div>
+                </div>
+                <div class="document-visual-info">
+                    <div>
+                        <small>TAX DOCUMENT</small>
+                        <h3>NPWP</h3>
+                    </div>
+                    <button class="document-open" data-doc="NPWP.png" data-title="NPWP" aria-label="Lihat NPWP">+</button>
+                </div>
+            </article>
 
-            <div class="document-card reveal">
-                <h3>Nomor Induk Berusaha</h3>
-                <p>NIB 0226010120483 sebagai identitas pelaku usaha.</p>
-                <span class="document-status">NIB</span>
-            </div>
+            <article class="document-visual-card reveal">
+                <div class="document-preview">
+                    <img src="IZIN LINGKUNGAN.png" alt="Izin Lingkungan" loading="lazy">
+                    <div class="document-overlay">
+                        <span>VIEW DOCUMENT</span>
+                    </div>
+                </div>
+                <div class="document-visual-info">
+                    <div>
+                        <small>PERMIT</small>
+                        <h3>Izin Lingkungan</h3>
+                    </div>
+                    <button class="document-open" data-doc="IZIN LINGKUNGAN.png" data-title="Izin Lingkungan" aria-label="Lihat Izin Lingkungan">+</button>
+                </div>
+            </article>
 
-            <div class="document-card reveal">
-                <h3>NPWP</h3>
-                <p>Nomor Pokok Wajib Pajak tercantum dalam data administrasi perusahaan.</p>
-                <span class="document-status">TAX ID</span>
-            </div>
+            <article class="document-visual-card reveal">
+                <div class="document-preview">
+                    <img src="IZIN LOKASI.png" alt="Izin Lokasi" loading="lazy">
+                    <div class="document-overlay">
+                        <span>VIEW DOCUMENT</span>
+                    </div>
+                </div>
+                <div class="document-visual-info">
+                    <div>
+                        <small>PERMIT</small>
+                        <h3>Izin Lokasi</h3>
+                    </div>
+                    <button class="document-open" data-doc="IZIN LOKASI.png" data-title="Izin Lokasi" aria-label="Lihat Izin Lokasi">+</button>
+                </div>
+            </article>
 
-            <div class="document-card reveal">
-                <h3>Izin Lokasi</h3>
-                <p>Dokumen izin lokasi diterbitkan oleh Pemerintah Kota Serang.</p>
-                <span class="document-status">PERMIT</span>
-            </div>
+            <article class="document-visual-card reveal">
+                <div class="document-preview">
+                    <img src="IZIN USAHA.png" alt="Izin Usaha" loading="lazy">
+                    <div class="document-overlay">
+                        <span>VIEW DOCUMENT</span>
+                    </div>
+                </div>
+                <div class="document-visual-info">
+                    <div>
+                        <small>PERMIT</small>
+                        <h3>Izin Usaha</h3>
+                    </div>
+                    <button class="document-open" data-doc="IZIN USAHA.png" data-title="Izin Usaha" aria-label="Lihat Izin Usaha">+</button>
+                </div>
+            </article>
 
-            <div class="document-card reveal">
-                <h3>Izin Usaha & Lingkungan</h3>
-                <p>Dokumen izin usaha jasa konstruksi dan izin lingkungan perusahaan.</p>
-                <span class="document-status">PERMIT</span>
-            </div>
+            <article class="document-visual-card reveal">
+                <div class="document-preview">
+                    <img src="SK DOMISILI.png" alt="SK Domisili" loading="lazy">
+                    <div class="document-overlay">
+                        <span>VIEW DOCUMENT</span>
+                    </div>
+                </div>
+                <div class="document-visual-info">
+                    <div>
+                        <small>ADMINISTRATIVE</small>
+                        <h3>SK Domisili</h3>
+                    </div>
+                    <button class="document-open" data-doc="SK DOMISILI.png" data-title="SK Domisili" aria-label="Lihat SK Domisili">+</button>
+                </div>
+            </article>
 
         </div>
     </div>
@@ -1991,7 +2283,7 @@ footer{
 
             <div>
                 <div class="footer-brand">
-                    <img class="footer-logo" src="CV LEG LOGO.png" alt="CV. Laban Environment Global">
+                    <img class="footer-logo" src="LOGONYAPAKEYANGINI.png" alt="CV. Laban Environment Global">
                     <div class="footer-brand-name">CV. Laban Environment Global</div>
                 </div>
 
@@ -2110,6 +2402,52 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealElements.forEach(el => revealObserver.observe(el));
 
+
+/* LEGAL DOCUMENT VIEWER */
+const documentModal = document.getElementById("documentModal");
+const documentModalImage = document.getElementById("documentModalImage");
+const documentModalTitle = document.getElementById("documentModalTitle");
+const documentModalClose = document.getElementById("documentModalClose");
+
+document.querySelectorAll(".document-open").forEach(button => {
+    button.addEventListener("click", () => {
+        documentModalImage.src = button.dataset.doc;
+        documentModalImage.alt = button.dataset.title;
+        documentModalTitle.textContent = button.dataset.title;
+        documentModal.classList.add("open");
+        documentModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    });
+});
+
+document.querySelectorAll(".document-preview").forEach(preview => {
+    preview.addEventListener("click", () => {
+        const button = preview.parentElement.querySelector(".document-open");
+        if(button) button.click();
+    });
+});
+
+function closeDocumentModal(){
+    documentModal.classList.remove("open");
+    documentModal.setAttribute("aria-hidden", "true");
+    documentModalImage.src = "";
+    document.body.style.overflow = "";
+}
+
+documentModalClose.addEventListener("click", closeDocumentModal);
+
+documentModal.addEventListener("click", (event) => {
+    if(event.target === documentModal){
+        closeDocumentModal();
+    }
+});
+
+document.addEventListener("keydown", (event) => {
+    if(event.key === "Escape" && documentModal.classList.contains("open")){
+        closeDocumentModal();
+    }
+});
+
 /* YEAR */
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -2123,6 +2461,16 @@ document.querySelectorAll(".language-btn").forEach(btn => {
     });
 });
 </script>
+
+
+<!-- LEGAL DOCUMENT VIEWER -->
+<div class="document-modal" id="documentModal" aria-hidden="true">
+    <div class="document-modal-inner">
+        <div class="document-modal-title" id="documentModalTitle"></div>
+        <button class="document-modal-close" id="documentModalClose" aria-label="Tutup">×</button>
+        <img class="document-modal-image" id="documentModalImage" src="" alt="">
+    </div>
+</div>
 
 </body>
 </html>
