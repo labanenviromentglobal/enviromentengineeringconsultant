@@ -1,4896 +1,808 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>LABAN Environment Global</title>
-
-<!-- FAVICON -->
-<link
-    rel="icon"
-    type="image/jpeg"
-    href="labanlogoterupdate.jpeg"
->
-
-<link
-    rel="shortcut icon"
-    type="image/jpeg"
-    href="labanlogoterupdate.jpeg"
->
-
-<meta
-    name="description"
-    content="LABAN Environment Global - Environment, Engineering & Consultant."
->
-
-<meta
-    name="theme-color"
-    content="#08783f"
->
-
+<title>CV. Laban Environment Global | Company Profile</title>
+<meta name="description" content="Company Profile CV. Laban Environment Global (LEG) - Konsultasi, perencanaan, pengawasan, konstruksi, lingkungan dan engineering.">
+<meta name="theme-color" content="#08783f">
+<link rel="icon" type="image/jpeg" href="labanlogoterupdate.jpeg">
 
 <style>
-
-/* =========================================================
-   RESET
-========================================================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
-    color:#18372a;
-    background:#fff;
-
-    line-height:1.6;
-
-    overflow-x:hidden;
-}
-
-img{
-    max-width:100%;
-    display:block;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-button{
-    font-family:inherit;
-}
-
-
-/* =========================================================
-   VARIABLES
-========================================================= */
-
 :root{
-
-    --green:#08783f;
-
-    --dark:#063d27;
-
-    --lime:#9bd63b;
-
-    --soft:#eef7ef;
-
-    --text:#18372a;
-
-    --muted:#66756d;
-
-    --border:#e2e9e4;
-
-    --white:#fff;
-
-    --container:1180px;
+  --green:#08783f;
+  --green2:#0aae57;
+  --dark:#102a21;
+  --navy:#223044;
+  --lime:#9bd63b;
+  --soft:#eef8f1;
+  --soft2:#f7faf8;
+  --text:#18372a;
+  --muted:#66756d;
+  --line:#e1e9e4;
+  --white:#fff;
+  --container:1180px;
+  --shadow:0 20px 60px rgba(16,42,33,.08);
 }
-
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
-.container{
-
-    width:
-    min(
-        var(--container),
-        calc(100% - 48px)
-    );
-
-    margin:auto;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:#fff;
+  line-height:1.6;
+  overflow-x:hidden;
 }
-
-.section{
-
-    padding:100px 0;
-}
-
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+button{font:inherit}
+.container{width:min(var(--container),calc(100% - 42px));margin:auto}
+.section{padding:96px 0}
 .section-label{
-
-    color:var(--green);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    letter-spacing:2px;
-
-    margin-bottom:18px;
+  color:var(--green);font-size:11px;font-weight:900;
+  letter-spacing:2.5px;margin-bottom:15px
 }
-
 .section-title{
-
-    color:var(--dark);
-
-    font-size:
-    clamp(38px,4vw,56px);
-
-    line-height:1.05;
-
-    letter-spacing:-2px;
-
-    margin-bottom:20px;
+  color:var(--dark);font-size:clamp(38px,4vw,58px);
+  line-height:1.02;letter-spacing:-2.8px;margin-bottom:18px
 }
-
 .section-description{
-
-    max-width:680px;
-
-    color:var(--muted);
-
-    font-size:14px;
-
-    line-height:1.9;
+  max-width:720px;color:var(--muted);font-size:14px;line-height:1.9
 }
-
-
-/* =========================================================
-   BUTTON
-========================================================= */
-
 .btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:10px;
-
-    min-height:50px;
-
-    padding:
-    0 24px;
-
-    border-radius:5px;
-
-    font-size:13px;
-
-    font-weight:800;
-
-    transition:.2s ease;
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  min-height:50px;padding:0 22px;border-radius:5px;
+  font-size:12px;font-weight:900;transition:.22s ease
 }
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{background:var(--dark);transform:translateY(-2px)}
+.btn-outline{background:#fff;color:var(--green);border:1px solid #cbd9d0}
+.btn-outline:hover{background:var(--soft);border-color:var(--green);transform:translateY(-2px)}
 
-.btn-primary{
-
-    background:var(--green);
-
-    color:white;
-}
-
-.btn-primary:hover{
-
-    background:var(--dark);
-
-    transform:translateY(-2px);
-}
-
-.btn-outline{
-
-    background:white;
-
-    color:var(--green);
-
-    border:
-    1px solid #cad8cf;
-}
-
-.btn-outline:hover{
-
-    background:var(--soft);
-
-    border-color:var(--green);
-}
-
-
-/* =========================================================
-   HEADER
-========================================================= */
-
+/* HEADER */
 header{
-
-    position:fixed;
-
-    top:0;
-    left:0;
-
-    width:100%;
-
-    height:82px;
-
-    z-index:1000;
-
-    background:white;
-
-    border-bottom:
-    1px solid #edf0ee;
+  position:fixed;inset:0 0 auto;height:82px;z-index:1000;
+  background:rgba(255,255,255,.96);backdrop-filter:blur(12px);
+  border-bottom:1px solid #edf1ee
 }
-
-.navbar{
-
-    height:82px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:25px;
+.navbar{height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.brand-logo{width:54px;height:54px;object-fit:contain}
+.brand-text{display:flex;flex-direction:column}
+.brand-name{font-size:20px;font-weight:900;letter-spacing:.8px;color:var(--dark);line-height:1}
+.brand-subtitle{font-size:8px;font-weight:900;letter-spacing:1.5px;color:var(--green);margin-top:6px}
+.nav-menu{display:flex;align-items:center;gap:15px}
+.nav-menu>a{
+  color:#45554d;font-size:10.5px;font-weight:900;white-space:nowrap;transition:.2s
 }
-
-
-/* =========================================================
-   BRAND
-========================================================= */
-
-.brand{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    flex-shrink:0;
-}
-
-.brand-logo{
-
-    width:55px;
-
-    height:55px;
-
-    object-fit:contain;
-}
-
-.brand-text{
-
-    display:flex;
-
-    flex-direction:column;
-}
-
-.brand-name{
-
-    color:var(--dark);
-
-    font-size:21px;
-
-    font-weight:900;
-
-    letter-spacing:1px;
-
-    line-height:1;
-}
-
-.brand-subtitle{
-
-    color:var(--green);
-
-    font-size:8px;
-
-    font-weight:800;
-
-    letter-spacing:1.4px;
-
-    margin-top:6px;
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-
-.nav-menu{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:19px;
-}
-
-.nav-menu > a{
-
-    color:#45554d;
-
-    font-size:11px;
-
-    font-weight:800;
-
-    white-space:nowrap;
-
-    transition:.2s;
-}
-
-.nav-menu > a:hover{
-
-    color:var(--green);
-}
-
-
-/* =========================================================
-   LANGUAGE
-========================================================= */
-
+.nav-menu>a:hover{color:var(--green)}
 .language-switcher{
-
-    display:flex;
-
-    align-items:center;
-
-    padding:3px;
-
-    border:
-    1px solid #dfe7e1;
-
-    border-radius:30px;
-
-    background:#f7faf7;
+  display:flex;align-items:center;padding:3px;border:1px solid #dfe7e1;
+  border-radius:30px;background:#f7faf7;margin-left:4px
 }
-
 .language-btn{
-
-    border:none;
-
-    background:transparent;
-
-    color:#718078;
-
-    padding:
-    6px 9px;
-
-    border-radius:20px;
-
-    font-size:10px;
-
-    font-weight:900;
-
-    cursor:pointer;
+  border:0;background:transparent;color:#718078;padding:6px 9px;
+  border-radius:20px;font-size:9px;font-weight:900;cursor:pointer
 }
+.language-btn.active{background:var(--green);color:#fff}
+.menu-toggle{display:none;border:0;background:none;color:var(--green);font-size:25px;cursor:pointer}
 
-.language-btn.active{
-
-    background:var(--green);
-
-    color:white;
-}
-
-
-/* =========================================================
-   CONTACT HEADER
-========================================================= */
-
-.nav-contact{
-
-    color:white !important;
-
-    background:var(--green);
-
-    padding:
-    11px 17px;
-
-    border-radius:5px;
-}
-
-.nav-contact:hover{
-
-    background:var(--dark);
-}
-
-
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-.menu-toggle{
-
-    display:none;
-
-    border:none;
-
-    background:none;
-
-    color:var(--green);
-
-    font-size:25px;
-
-    cursor:pointer;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.hero{
-
-    padding-top:82px;
-
-    min-height:730px;
-
-    display:flex;
-
-    align-items:center;
-
-    border-bottom:
-    1px solid #edf0ee;
-}
-
-.hero-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    1.1fr .9fr;
-
-    gap:75px;
-
-    align-items:center;
-}
-
-.hero-content{
-
-    padding:
-    75px 0;
-}
-
-.hero-slogan{
-
-    color:var(--green);
-
-    font-size:12px;
-
-    font-weight:900;
-
-    letter-spacing:3px;
-
-    margin-bottom:27px;
-}
-
+/* HERO */
+.hero{padding-top:82px;min-height:720px;display:flex;align-items:center;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:70px;align-items:center}
+.hero-content{padding:75px 0}
+.hero-slogan{color:var(--green);font-size:11px;font-weight:900;letter-spacing:3px;margin-bottom:23px}
 .hero-badge{
-
-    display:inline-block;
-
-    padding:
-    9px 14px;
-
-    margin-bottom:23px;
-
-    background:var(--soft);
-
-    color:var(--green);
-
-    font-size:10px;
-
-    font-weight:900;
-
-    letter-spacing:.6px;
-
-    border-radius:3px;
+  display:inline-block;padding:9px 13px;margin-bottom:22px;background:var(--soft);
+  color:var(--green);font-size:9px;font-weight:900;letter-spacing:.8px;border-radius:3px
 }
-
-.hero h1{
-
-    color:var(--dark);
-
-    font-size:
-    clamp(53px,6vw,78px);
-
-    line-height:.98;
-
-    letter-spacing:-4px;
-
-    margin-bottom:27px;
-}
-
-.hero h1 span{
-
-    color:var(--green);
-}
-
-.hero-tagline{
-
-    color:var(--green);
-
-    font-size:19px;
-
-    font-weight:900;
-
-    margin-bottom:15px;
-}
-
-.hero-description{
-
-    max-width:650px;
-
-    color:var(--muted);
-
-    font-size:15px;
-
-    line-height:1.9;
-
-    margin-bottom:30px;
-}
-
-.hero-actions{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:11px;
-}
-
-
-/* =========================================================
-   HERO IMAGE
-========================================================= */
-
-.hero-visual{
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    min-height:500px;
-}
-
+.hero h1{font-size:clamp(52px,6vw,78px);line-height:.96;letter-spacing:-4px;color:var(--dark);margin-bottom:24px}
+.hero h1 span{color:var(--green)}
+.hero-tagline{font-size:18px;font-weight:900;color:var(--green);margin-bottom:13px}
+.hero-description{max-width:650px;color:var(--muted);font-size:14px;line-height:1.9;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px}
+.hero-visual{display:flex;justify-content:center;align-items:center;min-height:470px}
 .hero-logo-box{
-
-    width:100%;
-
-    max-width:470px;
-
-    padding:
-    65px 55px;
-
-    border:
-    1px solid var(--border);
-
-    background:white;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    box-shadow:
-    0 18px 50px rgba(6,61,39,.07);
+  width:100%;max-width:500px;padding:68px 55px;background:#fff;
+  border:1px solid var(--line);box-shadow:var(--shadow);position:relative;overflow:hidden
 }
-
-.hero-logo{
-
-    width:100%;
-
-    max-width:330px;
-
-    object-fit:contain;
+.hero-logo-box:before{
+  content:"";position:absolute;width:240px;height:240px;border-radius:50%;
+  background:var(--soft);right:-80px;top:-90px
 }
+.hero-logo{width:100%;max-width:340px;object-fit:contain;position:relative;z-index:1;margin:auto}
 
+/* STRIP */
+.company-strip{background:var(--soft2);border-bottom:1px solid var(--line)}
+.company-strip-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.company-strip-item{text-align:center;padding:24px 18px;border-right:1px solid var(--line)}
+.company-strip-item:last-child{border-right:0}
+.company-strip-code{color:var(--green);font-size:20px;font-weight:900}
+.company-strip-title{color:var(--muted);font-size:10px;font-weight:800}
 
-/* =========================================================
-   COMPANY STRIP
-========================================================= */
-
-.company-strip{
-
-    background:#fafcfb;
-
-    border-bottom:
-    1px solid var(--border);
-}
-
-.company-strip-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-}
-
-.company-strip-item{
-
-    text-align:center;
-
-    padding:
-    25px 20px;
-
-    border-right:
-    1px solid var(--border);
-}
-
-.company-strip-item:last-child{
-
-    border-right:none;
-}
-
-.company-strip-code{
-
-    color:var(--green);
-
-    font-size:21px;
-
-    font-weight:900;
-}
-
-.company-strip-title{
-
-    color:var(--muted);
-
-    font-size:10px;
-
-    font-weight:700;
-}
-
-
-/* =========================================================
-   ABOUT
-========================================================= */
-
-.about{
-
-    background:white;
-}
-
-.about-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    .8fr 1.2fr;
-
-    gap:80px;
-
-    align-items:center;
-}
-
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:75px;align-items:center}
 .about-logo-area{
-
-    min-height:430px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#f8fbf8;
-
-    border:
-    1px solid var(--border);
+  min-height:420px;display:flex;align-items:center;justify-content:center;
+  background:var(--soft2);border:1px solid var(--line);position:relative;overflow:hidden
 }
-
-.about-logo{
-
-    width:280px;
-
-    max-width:75%;
-
-    object-fit:contain;
+.about-logo-area:after{
+  content:"LEG";position:absolute;right:-22px;bottom:-48px;
+  font-size:170px;font-weight:900;color:rgba(8,120,63,.045);letter-spacing:-10px
 }
-
-.about-content h2{
-
-    color:var(--dark);
-
-    font-size:
-    clamp(37px,4vw,53px);
-
-    line-height:1.08;
-
-    letter-spacing:-2px;
-
-    margin-bottom:23px;
-}
-
-.about-content p{
-
-    color:var(--muted);
-
-    font-size:13px;
-
-    line-height:1.9;
-
-    margin-bottom:14px;
-}
-
-
-/* =========================================================
-   COMPANY INFORMATION
-========================================================= */
-
-.info-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(2,1fr);
-
-    gap:13px;
-
-    margin-top:28px;
-}
-
-.info-card{
-
-    padding:20px;
-
-    background:#fff;
-
-    border:
-    1px solid var(--border);
-}
-
-.info-card strong{
-
-    display:block;
-
-    color:var(--dark);
-
-    font-size:12px;
-
-    margin-bottom:6px;
-}
-
-.info-card span{
-
-    color:var(--muted);
-
-    font-size:10px;
-
-    line-height:1.7;
-}
-
-
-/* =========================================================
-   VISION MISSION
-========================================================= */
-
-.vm-section{
-
-    background:#f8faf8;
-
-    border-top:
-    1px solid var(--border);
-
-    border-bottom:
-    1px solid var(--border);
-}
-
-.vm-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    1fr 1fr;
-
-    gap:18px;
-
-    margin-top:45px;
-}
-
-.vm-card{
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    padding:35px;
-}
-
-.vm-card h3{
-
-    color:var(--dark);
-
-    font-size:22px;
-
-    margin-bottom:13px;
-}
-
-.vm-card p,
-.vm-card li{
-
-    color:var(--muted);
-
-    font-size:12px;
-
-    line-height:1.8;
-}
-
-.vm-card ul{
-
-    padding-left:18px;
-}
-
-
-/* =========================================================
-   SERVICES
-========================================================= */
-
-.services{
-
-    background:white;
-}
-
-.services-heading{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:flex-end;
-
-    gap:50px;
-
-    margin-bottom:48px;
-}
-
-.services-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:17px;
-}
-
-.service-card{
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    padding:28px;
-
-    min-height:240px;
-
-    transition:.2s ease;
-}
-
-.service-card:hover{
-
-    border-color:#b8cfc0;
-
-    transform:translateY(-4px);
-
-    box-shadow:
-    0 12px 35px rgba(6,61,39,.06);
-}
-
-.service-number{
-
-    color:#9fca77;
-
-    font-size:11px;
-
-    font-weight:900;
-
-    margin-bottom:22px;
-}
-
-.service-icon{
-
-    width:43px;
-
-    height:43px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:var(--soft);
-
-    color:var(--green);
-
-    font-size:11px;
-
-    font-weight:900;
-
-    margin-bottom:20px;
-}
-
-.service-card h3{
-
-    color:var(--dark);
-
-    font-size:17px;
-
-    margin-bottom:9px;
-}
-
-.service-card p{
-
-    color:var(--muted);
-
-    font-size:10.5px;
-
-    line-height:1.8;
-}
-
-
-/* =========================================================
-   EXPERT TEAM
-========================================================= */
-
-.experts{
-
-    background:#f8faf8;
-
-    border-top:
-    1px solid var(--border);
-
-    border-bottom:
-    1px solid var(--border);
-}
-
-.expert-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:17px;
-
-    margin-top:48px;
-}
-
-.expert-card{
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    padding:30px;
-
-    min-height:260px;
-}
-
-.expert-placeholder{
-
-    width:62px;
-
-    height:62px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:var(--soft);
-
-    color:var(--green);
-
-    font-size:20px;
-
-    font-weight:900;
-
-    margin-bottom:22px;
-}
-
-.expert-card h3{
-
-    color:var(--dark);
-
-    font-size:18px;
-
-    margin-bottom:7px;
-}
-
-.expert-card .role{
-
-    color:var(--green);
-
-    font-size:10px;
-
-    font-weight:800;
-
-    margin-bottom:14px;
-}
-
-.expert-card p{
-
-    color:var(--muted);
-
-    font-size:10.5px;
-
-    line-height:1.8;
-}
-
-.empty-note{
-
-    margin-top:20px;
-
-    color:#829087;
-
-    font-size:10px;
-}
-
-
-/* =========================================================
-   PORTFOLIO
-========================================================= */
-
-.portfolio{
-
-    background:white;
-}
-
-.portfolio-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:17px;
-
-    margin-top:48px;
-}
-
-.portfolio-card{
-
-    border:
-    1px solid var(--border);
-
-    background:white;
-
-    overflow:hidden;
-}
-
+.about-logo{width:285px;max-width:72%;object-fit:contain;position:relative;z-index:1}
+.about-content h2{font-size:clamp(36px,4vw,54px);line-height:1.04;letter-spacing:-2.5px;color:var(--dark);margin-bottom:21px}
+.about-content p{font-size:13px;line-height:1.9;color:var(--muted);margin-bottom:13px}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:25px}
+.info-card{padding:19px;background:#fff;border:1px solid var(--line)}
+.info-card strong{display:block;color:var(--dark);font-size:11px;margin-bottom:5px}
+.info-card span{color:var(--muted);font-size:10px;line-height:1.7}
+
+/* VISION */
+.vm-section{background:var(--soft2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vm-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:42px}
+.vm-card{background:#fff;border:1px solid var(--line);padding:31px}
+.vm-card h3{font-size:21px;color:var(--dark);margin-bottom:12px}
+.vm-card p,.vm-card li{font-size:12px;line-height:1.85;color:var(--muted)}
+.vm-card ul{padding-left:18px}
+.vm-card.featured{background:var(--dark);border-color:var(--dark)}
+.vm-card.featured h3{color:#fff}
+.vm-card.featured p,.vm-card.featured li{color:rgba(255,255,255,.7)}
+.vm-card .eyebrow{color:var(--green);font-size:9px;font-weight:900;letter-spacing:1.5px;margin-bottom:9px}
+
+/* COMPANY DATA */
+.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:45px}
+.data-card{border:1px solid var(--line);background:#fff;padding:28px}
+.data-card h3{font-size:18px;color:var(--dark);margin-bottom:17px}
+.data-list{display:grid;gap:10px}
+.data-row{display:grid;grid-template-columns:150px 1fr;gap:12px;padding-bottom:9px;border-bottom:1px dashed #e5ebe7}
+.data-row:last-child{border-bottom:0}
+.data-row b{font-size:10px;color:var(--dark)}
+.data-row span{font-size:10.5px;color:var(--muted);line-height:1.65}
+
+/* SERVICES */
+.services-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:50px;margin-bottom:45px}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.service-card{border:1px solid var(--line);background:#fff;padding:27px;min-height:220px;transition:.22s}
+.service-card:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#b8cfc0}
+.service-number{color:#9fca77;font-size:10px;font-weight:900;margin-bottom:18px}
+.service-icon{width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--soft);color:var(--green);font-size:10px;font-weight:900;margin-bottom:18px}
+.service-card h3{font-size:16px;color:var(--dark);margin-bottom:8px}
+.service-card p{font-size:10.5px;line-height:1.8;color:var(--muted)}
+
+/* TEAM */
+.experts{background:var(--soft2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.expert-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:45px}
+.expert-card{background:#fff;border:1px solid var(--line);padding:25px;min-height:250px}
+.expert-placeholder{width:55px;height:55px;display:flex;align-items:center;justify-content:center;background:var(--soft);color:var(--green);font-size:16px;font-weight:900;margin-bottom:19px}
+.expert-card h3{font-size:15px;color:var(--dark);margin-bottom:5px}
+.expert-card .role{font-size:9px;font-weight:900;color:var(--green);margin-bottom:11px}
+.expert-card p{font-size:10px;line-height:1.75;color:var(--muted)}
+
+/* SCOPE */
+.scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:45px}
+.scope-card{border:1px solid var(--line);padding:27px;background:#fff}
+.scope-card .scope-no{color:var(--green);font-size:10px;font-weight:900;margin-bottom:15px}
+.scope-card h3{font-size:16px;color:var(--dark);margin-bottom:8px}
+.scope-card p{font-size:10.5px;color:var(--muted);line-height:1.8}
+
+/* DOCUMENTATION */
+.documentation{background:var(--soft2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.documentation-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:45px}
+.documentation-card{min-height:160px;background:#fff;border:1px solid var(--line);padding:22px}
+.documentation-number{color:var(--green);font-size:10px;font-weight:900;margin-bottom:22px}
+.documentation-card h3{font-size:14px;color:var(--dark);margin-bottom:7px}
+.documentation-card p{font-size:10px;line-height:1.7;color:var(--muted)}
+
+/* LEGAL */
+.documents{background:var(--dark);color:#fff}
+.documents .section-label{color:var(--lime)}
+.documents .section-title{color:#fff}
+.documents .section-description{color:rgba(255,255,255,.65)}
+.document-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:45px}
+.document-card{border:1px solid rgba(255,255,255,.12);padding:26px;background:rgba(255,255,255,.035)}
+.document-card h3{font-size:15px;color:#fff;margin-bottom:8px}
+.document-card p{font-size:10.5px;line-height:1.75;color:rgba(255,255,255,.6)}
+.document-status{display:inline-block;margin-top:15px;padding:5px 9px;background:rgba(155,214,59,.1);color:var(--lime);font-size:8px;font-weight:900}
+
+/* PORTFOLIO / PHOTO STORY */
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:45px}
+.portfolio-card{border:1px solid var(--line);background:#fff;overflow:hidden}
 .portfolio-image{
-
-    height:210px;
-
-    background:#eef4ef;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:#7a897f;
-
-    font-size:11px;
-
-    text-align:center;
-}
-
-.portfolio-content{
-
-    padding:23px;
-}
-
-.portfolio-year{
-
-    color:var(--green);
-
-    font-size:10px;
-
-    font-weight:900;
-
-    margin-bottom:7px;
-}
-
-.portfolio-card h3{
-
-    color:var(--dark);
-
-    font-size:17px;
-
-    margin-bottom:8px;
-}
-
-.portfolio-card p{
-
-    color:var(--muted);
-
-    font-size:10.5px;
-
-    line-height:1.8;
-}
-
-
-/* =========================================================
-   DOCUMENTATION
-========================================================= */
-
-.documentation{
-
-    background:#f8faf8;
-
-    border-top:
-    1px solid var(--border);
-
-    border-bottom:
-    1px solid var(--border);
-}
-
-.documentation-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:14px;
-
-    margin-top:48px;
-}
-
-.documentation-card{
-
-    min-height:180px;
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    padding:23px;
-}
-
-.documentation-number{
-
-    color:var(--green);
-
-    font-size:10px;
-
-    font-weight:900;
-
-    margin-bottom:25px;
-}
-
-.documentation-card h3{
-
-    color:var(--dark);
-
-    font-size:14px;
-
-    margin-bottom:7px;
-}
-
-.documentation-card p{
-
-    color:var(--muted);
-
-    font-size:10px;
-
-    line-height:1.7;
-}
-
-
-/* =========================================================
-   INSIGHT
-========================================================= */
-
-.insight{
-
-    background:white;
-}
-
-.insight-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:17px;
-
-    margin-top:48px;
-}
-
-.insight-card{
-
-    border:
-    1px solid var(--border);
-
-    padding:27px;
-
-    background:white;
-
-    transition:.2s;
-}
-
-.insight-card:hover{
-
-    transform:translateY(-3px);
-
-    box-shadow:
-    0 10px 30px rgba(6,61,39,.06);
-}
-
-.insight-category{
-
-    color:var(--green);
-
-    font-size:9px;
-
-    font-weight:900;
-
-    letter-spacing:1px;
-
-    margin-bottom:17px;
-}
-
-.insight-card h3{
-
-    color:var(--dark);
-
-    font-size:18px;
-
-    line-height:1.3;
-
-    margin-bottom:10px;
-}
-
-.insight-card p{
-
-    color:var(--muted);
-
-    font-size:10.5px;
-
-    line-height:1.8;
-}
-
-
-/* =========================================================
-   DOCUMENTS
-========================================================= */
-
-.documents{
-
-    background:var(--dark);
-
-    color:white;
-}
-
-.documents .section-label{
-
-    color:var(--lime);
-}
-
-.documents .section-title{
-
-    color:white;
-}
-
-.documents .section-description{
-
-    color:rgba(255,255,255,.62);
-}
-
-.document-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:15px;
-
-    margin-top:48px;
-}
-
-.document-card{
-
-    border:
-    1px solid rgba(255,255,255,.12);
-
-    padding:28px;
-
-    background:
-    rgba(255,255,255,.035);
-}
-
-.document-card h3{
-
-    color:white;
-
-    font-size:16px;
-
-    margin-bottom:8px;
-}
-
-.document-card p{
-
-    color:rgba(255,255,255,.53);
-
-    font-size:10.5px;
-
-    line-height:1.8;
-}
-
-.document-status{
-
-    display:inline-block;
-
-    margin-top:18px;
-
-    padding:
-    5px 9px;
-
-    background:
-    rgba(155,214,59,.1);
-
-    color:var(--lime);
-
-    font-size:9px;
-
-    font-weight:900;
-}
-
-
-/* =========================================================
-   CLIENTS
-========================================================= */
-
-.clients{
-
-    background:white;
-}
-
-.client-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    repeat(4,1fr);
-
-    gap:14px;
-
-    margin-top:48px;
-}
-
-.client-card{
-
-    min-height:130px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    padding:20px;
-
-    border:
-    1px solid var(--border);
-
-    color:#7a887f;
-
-    font-size:11px;
-
-    font-weight:700;
-}
-
-
-/* =========================================================
-   CONTACT
-========================================================= */
-
-.contact{
-
-    background:#f8faf8;
-
-    border-top:
-    1px solid var(--border);
-}
-
-.contact-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    .9fr 1.1fr;
-
-    gap:75px;
-}
-
-.contact-info h2{
-
-    color:var(--dark);
-
-    font-size:
-    clamp(37px,4vw,53px);
-
-    line-height:1.08;
-
-    letter-spacing:-2px;
-
-    margin-bottom:20px;
-}
-
-.contact-info > p{
-
-    color:var(--muted);
-
-    font-size:13px;
-
-    line-height:1.8;
-
-    max-width:500px;
-
-    margin-bottom:30px;
-}
-
-.contact-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-}
-
-.contact-item{
-
-    display:flex;
-
-    gap:13px;
-
-    align-items:flex-start;
-}
-
-.contact-icon{
-
-    width:40px;
-
-    height:40px;
-
-    flex-shrink:0;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:var(--soft);
-
-    color:var(--green);
-
-    font-size:12px;
-
-    font-weight:900;
-}
-
-.contact-item strong{
-
-    display:block;
-
-    color:var(--dark);
-
-    font-size:10px;
-
-    letter-spacing:.6px;
-
-    margin-bottom:3px;
-}
-
-.contact-item span{
-
-    color:var(--muted);
-
-    font-size:11px;
-
-    line-height:1.7;
-}
-
-.contact-card{
-
-    background:white;
-
-    border:
-    1px solid var(--border);
-
-    padding:40px;
-}
-
-.contact-card h3{
-
-    color:var(--dark);
-
-    font-size:25px;
-
-    margin-bottom:8px;
-}
-
-.contact-card > p{
-
-    color:var(--muted);
-
-    font-size:12px;
-
-    margin-bottom:24px;
-}
-
-.contact-buttons{
-
-    display:grid;
-
-    grid-template-columns:
-    1fr 1fr;
-
-    gap:11px;
-}
-
-.contact-button{
-
-    min-height:55px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:12px;
-
-    font-weight:800;
-
-    border:
-    1px solid var(--border);
-
-    transition:.2s;
-}
-
-.contact-button:hover{
-
-    transform:translateY(-2px);
-}
-
-.whatsapp{
-
-    background:#edf9ee;
-
-    color:#16763a;
-}
-
-.email{
-
-    background:#f3f7f4;
-
-    color:var(--green);
-}
-
-.maps{
-
-    margin-top:12px;
-
-    width:100%;
-
-    background:var(--green);
-
-    color:white;
-}
-
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.cta{
-
-    padding:
-    0 0 100px;
-
-    background:#f8faf8;
-}
-
-.cta-box{
-
-    background:var(--green);
-
-    color:white;
-
-    padding:60px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    gap:50px;
-}
-
-.cta-box .section-label{
-
-    color:var(--lime);
-}
-
-.cta-box h2{
-
-    max-width:730px;
-
-    font-size:
-    clamp(34px,4vw,51px);
-
-    line-height:1.08;
-
-    letter-spacing:-2px;
-}
-
-.cta-box p{
-
-    color:rgba(255,255,255,.65);
-
-    font-size:12px;
-
-    margin-top:12px;
-}
-
-.cta-button{
-
-    flex-shrink:0;
-}
-
-.cta-button .btn{
-
-    background:white;
-
-    color:var(--green);
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer{
-
-    background:#062c1d;
-
-    color:white;
-
-    padding:
-    55px 0 25px;
-}
-
-.footer-grid{
-
-    display:grid;
-
-    grid-template-columns:
-    1.3fr .7fr .7fr;
-
-    gap:60px;
-
-    padding-bottom:40px;
-
-    border-bottom:
-    1px solid rgba(255,255,255,.1);
-}
-
-.footer-brand{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    margin-bottom:18px;
-}
-
-.footer-logo{
-
-    width:60px;
-
-    height:60px;
-
-    object-fit:contain;
-}
-
-.footer-brand-name{
-
-    font-size:15px;
-
-    font-weight:900;
-}
-
-.footer-description{
-
-    color:rgba(255,255,255,.55);
-
-    max-width:430px;
-
-    font-size:10.5px;
-
-    line-height:1.8;
-}
-
-.footer-title{
-
-    color:var(--lime);
-
-    font-size:10px;
-
-    font-weight:900;
-
-    letter-spacing:1.5px;
-
-    margin-bottom:16px;
-}
-
-.footer-links{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:10px;
-}
-
-.footer-links a{
-
-    color:rgba(255,255,255,.58);
-
-    font-size:10.5px;
-
-    transition:.2s;
-}
-
-.footer-links a:hover{
-
-    color:var(--lime);
-}
-
-.footer-bottom{
-
-    padding-top:23px;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    color:rgba(255,255,255,.35);
-
-    font-size:9.5px;
-}
-
-
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-.whatsapp-float{
-
-    position:fixed;
-
-    right:22px;
-
-    bottom:22px;
-
-    width:54px;
-
-    height:54px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    background:#18b957;
-
-    color:white;
-
-    border-radius:50%;
-
-    font-size:17px;
-
-    font-weight:900;
-
-    z-index:900;
-
-    box-shadow:
-    0 8px 25px rgba(24,185,87,.25);
-}
-
-
-/* =========================================================
-   REVEAL
-========================================================= */
-
-.reveal{
-
-    opacity:0;
-
-    transform:translateY(15px);
-
-    transition:
-    opacity .5s ease,
-    transform .5s ease;
-}
-
-.reveal.active{
-
-    opacity:1;
-
-    transform:translateY(0);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media(max-width:1150px){
-
-    .nav-menu{
-
-        gap:12px;
-    }
-
-    .nav-menu > a{
-
-        font-size:10px;
-    }
-
-    .hero-grid{
-
-        gap:45px;
-    }
-
+  height:205px;background:linear-gradient(135deg,#e9f3ec,#f8fbf9);
+  display:flex;align-items:center;justify-content:center;color:#74847b;font-size:11px;text-align:center
+}
+.portfolio-content{padding:22px}
+.portfolio-year{font-size:9px;font-weight:900;color:var(--green);margin-bottom:6px}
+.portfolio-card h3{font-size:16px;color:var(--dark);margin-bottom:7px}
+.portfolio-card p{font-size:10.5px;line-height:1.8;color:var(--muted)}
+
+/* INSIGHT */
+.insight{background:#fff}
+.insight-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:45px}
+.insight-card{border:1px solid var(--line);padding:25px;background:#fff;transition:.2s}
+.insight-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.insight-category{font-size:8.5px;font-weight:900;letter-spacing:1px;color:var(--green);margin-bottom:15px}
+.insight-card h3{font-size:17px;line-height:1.3;color:var(--dark);margin-bottom:8px}
+.insight-card p{font-size:10.5px;line-height:1.8;color:var(--muted)}
+
+/* CONTACT */
+.contact{background:var(--soft2);border-top:1px solid var(--line)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.contact-info h2{font-size:clamp(37px,4vw,54px);line-height:1.04;letter-spacing:-2.5px;color:var(--dark);margin-bottom:17px}
+.contact-info>p{font-size:13px;line-height:1.8;color:var(--muted);max-width:520px;margin-bottom:27px}
+.contact-item{display:flex;gap:13px;align-items:flex-start}
+.contact-icon{width:42px;height:42px;flex-shrink:0;display:flex;align-items:center;justify-content:center;background:var(--soft);color:var(--green);font-size:12px;font-weight:900}
+.contact-item strong{display:block;font-size:9.5px;letter-spacing:.7px;color:var(--dark);margin-bottom:3px}
+.contact-item span{font-size:12px;line-height:1.7;color:var(--muted)}
+.contact-card{background:#fff;border:1px solid var(--line);padding:38px}
+.contact-card h3{font-size:25px;color:var(--dark);margin-bottom:8px}
+.contact-card>p{font-size:12px;color:var(--muted);margin-bottom:23px}
+.email-contact{
+  display:flex;align-items:center;justify-content:space-between;gap:15px;
+  min-height:62px;padding:0 18px;border:1px solid #dce7e0;background:var(--soft);
+  color:var(--green);font-size:12px;font-weight:900;transition:.2s
+}
+.email-contact:hover{transform:translateY(-2px);border-color:var(--green);background:#e8f5ec}
+.email-contact small{font-size:9px;color:#6e7c75;font-weight:700}
+
+/* CTA */
+.cta{padding:0 0 90px;background:var(--soft2)}
+.cta-box{background:var(--green);color:#fff;padding:55px;display:flex;justify-content:space-between;align-items:center;gap:45px}
+.cta-box .section-label{color:var(--lime)}
+.cta-box h2{max-width:720px;font-size:clamp(32px,4vw,50px);line-height:1.06;letter-spacing:-2px}
+.cta-box p{color:rgba(255,255,255,.68);font-size:12px;margin-top:10px}
+.cta-button .btn{background:#fff;color:var(--green)}
+
+/* FOOTER */
+footer{background:#062c1d;color:#fff;padding:52px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1.3fr .7fr .7fr;gap:55px;padding-bottom:38px;border-bottom:1px solid rgba(255,255,255,.1)}
+.footer-brand{display:flex;align-items:center;gap:11px;margin-bottom:17px}
+.footer-logo{width:58px;height:58px;object-fit:contain}
+.footer-brand-name{font-size:14px;font-weight:900}
+.footer-description{max-width:440px;color:rgba(255,255,255,.56);font-size:10.5px;line-height:1.8}
+.footer-title{color:var(--lime);font-size:9px;font-weight:900;letter-spacing:1.5px;margin-bottom:15px}
+.footer-links{display:flex;flex-direction:column;gap:9px}
+.footer-links a{font-size:10px;color:rgba(255,255,255,.65);transition:.2s}
+.footer-links a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;gap:20px;padding-top:21px;color:rgba(255,255,255,.38);font-size:9px}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.active{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:1050px){
+  .nav-menu{gap:10px}
+  .nav-menu>a{font-size:9.5px}
+  .hero-grid{gap:45px}
+  .expert-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:820px){
+  .section{padding:75px 0}
+  header,.navbar{height:74px}
+  .brand-logo{width:48px;height:48px}
+  .brand-name{font-size:17px}
+  .brand-subtitle{font-size:7px}
+  .menu-toggle{display:block}
+  .nav-menu{
+    position:absolute;top:74px;left:0;right:0;display:none;flex-direction:column;
+    align-items:stretch;gap:0;background:#fff;border-bottom:1px solid var(--line);
+    box-shadow:0 15px 35px rgba(0,0,0,.06);padding:8px 21px 18px
+  }
+  .nav-menu.active{display:flex}
+  .nav-menu>a{padding:11px 0;font-size:11px;border-bottom:1px solid #f0f3f1}
+  .language-switcher{margin:12px 0 0;width:max-content}
+  .hero{padding-top:74px;min-height:auto}
+  .hero-grid,.about-grid,.contact-grid,.data-grid{grid-template-columns:1fr}
+  .hero-content{padding:65px 0 20px}
+  .hero-visual{min-height:auto;padding:20px 0 65px}
+  .hero-logo-box{max-width:430px}
+  .company-strip-grid{grid-template-columns:1fr}
+  .company-strip-item{border-right:0;border-bottom:1px solid var(--line)}
+  .company-strip-item:last-child{border-bottom:0}
+  .about-logo-area{min-height:330px}
+  .vm-grid,.services-grid,.scope-grid,.portfolio-grid,.insight-grid,.document-grid{grid-template-columns:1fr 1fr}
+  .documentation-grid{grid-template-columns:1fr 1fr}
+  .services-heading{display:block}
+  .services-heading .section-description{margin-top:18px}
+  .cta-box{padding:42px 28px;display:block}
+  .cta-button{margin-top:25px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-grid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .container{width:min(var(--container),calc(100% - 28px))}
+  .section{padding:62px 0}
+  .hero h1{font-size:51px;letter-spacing:-3px}
+  .section-title{font-size:40px}
+  .info-grid,.vm-grid,.services-grid,.expert-grid,.scope-grid,.documentation-grid,.portfolio-grid,.insight-grid,.document-grid{grid-template-columns:1fr}
+  .data-row{grid-template-columns:115px 1fr}
+  .contact-card{padding:26px}
+  .email-contact{display:block;padding:15px}
+  .email-contact small{display:block;margin-top:5px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-grid>div:first-child{grid-column:auto}
+  .footer-bottom{flex-direction:column}
 }
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:850px){
-
-    .container{
-
-        width:
-        calc(100% - 30px);
-    }
-
-    header{
-
-        height:72px;
-    }
-
-    .navbar{
-
-        height:72px;
-    }
-
-    .brand-logo{
-
-        width:48px;
-
-        height:48px;
-    }
-
-    .brand-text{
-
-        display:none;
-    }
-
-    .menu-toggle{
-
-        display:block;
-    }
-
-    .nav-menu{
-
-        display:none;
-
-        position:absolute;
-
-        top:76px;
-
-        left:15px;
-
-        right:15px;
-
-        padding:15px;
-
-        background:white;
-
-        border:
-        1px solid var(--border);
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-        gap:2px;
-
-        box-shadow:
-        0 15px 40px rgba(0,0,0,.08);
-    }
-
-    .nav-menu.active{
-
-        display:flex;
-    }
-
-    .nav-menu > a{
-
-        padding:
-        11px 13px;
-
-        font-size:12px;
-    }
-
-    .language-switcher{
-
-        justify-content:center;
-
-        margin:7px 0;
-    }
-
-    .nav-contact{
-
-        text-align:center;
-    }
-
-    .hero{
-
-        padding-top:72px;
-
-        min-height:auto;
-    }
-
-    .hero-grid{
-
-        grid-template-columns:1fr;
-
-        gap:15px;
-    }
-
-    .hero-content{
-
-        padding:
-        65px 0 20px;
-    }
-
-    .hero h1{
-
-        font-size:
-        clamp(47px,13vw,68px);
-
-        letter-spacing:-3px;
-    }
-
-    .hero-visual{
-
-        min-height:auto;
-
-        padding:
-        20px 0 65px;
-    }
-
-    .hero-logo-box{
-
-        padding:
-        45px 30px;
-    }
-
-    .hero-logo{
-
-        max-width:250px;
-    }
-
-    .company-strip-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .company-strip-item{
-
-        border-right:none;
-
-        border-bottom:
-        1px solid var(--border);
-    }
-
-    .company-strip-item:last-child{
-
-        border-bottom:none;
-    }
-
-    .section{
-
-        padding:75px 0;
-    }
-
-    .about-grid{
-
-        grid-template-columns:1fr;
-
-        gap:35px;
-    }
-
-    .about-logo-area{
-
-        min-height:330px;
-    }
-
-    .info-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .vm-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .services-heading{
-
-        display:block;
-    }
-
-    .services-heading .section-description{
-
-        margin-top:20px;
-    }
-
-    .services-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .expert-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .portfolio-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .documentation-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .insight-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .document-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .client-grid{
-
-        grid-template-columns:
-        repeat(2,1fr);
-    }
-
-    .contact-grid{
-
-        grid-template-columns:1fr;
-
-        gap:40px;
-    }
-
-    .cta-box{
-
-        display:block;
-
-        padding:
-        45px 28px;
-    }
-
-    .cta-button{
-
-        margin-top:27px;
-    }
-
-    .footer-grid{
-
-        grid-template-columns:1fr;
-
-        gap:35px;
-    }
-
-    .footer-bottom{
-
-        flex-direction:column;
-
-        gap:10px;
-    }
-
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media(max-width:480px){
-
-    .hero h1{
-
-        font-size:47px;
-
-        letter-spacing:-2.5px;
-    }
-
-    .hero-slogan{
-
-        font-size:9px;
-
-        letter-spacing:2px;
-    }
-
-    .hero-badge{
-
-        font-size:8.5px;
-    }
-
-    .documentation-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .client-grid{
-
-        grid-template-columns:1fr;
-    }
-
-    .contact-buttons{
-
-        grid-template-columns:1fr;
-    }
-
-}
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================================================
-     HEADER
-========================================================= -->
-
 <header>
+  <div class="container navbar">
+    <a class="brand" href="#home" aria-label="CV Laban Environment Global">
+      <img src="labanlogoterupdate.jpeg" alt="CV Laban Environment Global" class="brand-logo">
+      <div class="brand-text">
+        <span class="brand-name">CV. LEG</span>
+        <span class="brand-subtitle">LABAN ENVIRONMENT GLOBAL</span>
+      </div>
+    </a>
 
-<div class="container">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Buka menu">☰</button>
 
-<nav class="navbar">
+    <nav class="nav-menu" id="navMenu">
+      <a href="#home" data-id="Beranda" data-en="Home">Beranda</a>
+      <a href="#about" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a>
+      <a href="#services" data-id="Layanan" data-en="Services">Layanan</a>
+      <a href="#experts" data-id="Pengurus" data-en="Management">Pengurus</a>
+      <a href="#scope" data-id="Ruang Lingkup" data-en="Scope">Ruang Lingkup</a>
+      <a href="#documentation" data-id="Dokumentasi" data-en="Documentation">Dokumentasi</a>
+      <a href="#documents" data-id="Legalitas" data-en="Legal">Legalitas</a>
+      <a href="#contact" data-id="Kontak" data-en="Contact">Kontak</a>
 
-
-<a
-href="#home"
-class="brand"
->
-
-<img
-src="labanlogoterupdate.jpeg"
-alt="LABAN Environment Global"
-class="brand-logo"
->
-
-<div class="brand-text">
-
-<span class="brand-name">
-LABAN
-</span>
-
-<span class="brand-subtitle">
-ENVIRONMENT GLOBAL
-</span>
-
-</div>
-
-</a>
-
-
-<button
-class="menu-toggle"
-id="menuToggle"
-type="button"
->
-☰
-</button>
-
-
-<div
-class="nav-menu"
-id="navMenu"
->
-
-
-<a
-href="#home"
-data-id="Beranda"
-data-en="Home"
->
-Beranda
-</a>
-
-
-<a
-href="#about"
-data-id="Tentang Kami"
-data-en="About Us"
->
-Tentang Kami
-</a>
-
-
-<a
-href="#services"
-data-id="Layanan"
-data-en="Services"
->
-Layanan
-</a>
-
-
-<a
-href="#experts"
-data-id="Tenaga Ahli"
-data-en="Experts"
->
-Tenaga Ahli
-</a>
-
-
-<a
-href="#portfolio"
-data-id="Portofolio"
-data-en="Portfolio"
->
-Portofolio
-</a>
-
-
-<a
-href="#documentation"
-data-id="Dokumentasi"
-data-en="Documentation"
->
-Dokumentasi
-</a>
-
-
-<a
-href="#insight"
-data-id="Insight"
-data-en="Insight"
->
-Insight
-</a>
-
-
-<a
-href="#documents"
-data-id="Dokumen"
-data-en="Documents"
->
-Dokumen
-</a>
-
-
-<a
-href="#clients"
-data-id="Mitra"
-data-en="Partners"
->
-Mitra
-</a>
-
-
-<a
-href="#contact"
-data-id="Kontak"
-data-en="Contact"
->
-Kontak
-</a>
-
-
-<div class="language-switcher">
-
-<button
-class="language-btn active"
-data-lang="id"
-type="button"
->
-ID
-</button>
-
-<button
-class="language-btn"
-data-lang="en"
-type="button"
->
-EN
-</button>
-
-</div>
-
-
-</div>
-
-</nav>
-
-</div>
-
+      <div class="language-switcher">
+        <button class="language-btn active" data-lang="id" type="button">ID</button>
+        <button class="language-btn" data-lang="en" type="button">EN</button>
+      </div>
+    </nav>
+  </div>
 </header>
 
+<main>
 
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content reveal">
+        <div class="hero-slogan">SUSTAINING FUTURE TOGETHER</div>
+        <div class="hero-badge">ENVIRONMENT &nbsp; • &nbsp; ENGINEERING &nbsp; • &nbsp; CONSULTANT</div>
 
-<!-- =========================================================
-     HOME
-========================================================= -->
+        <h1>Building <span>Better</span> Solutions.</h1>
 
-<section
-class="hero"
-id="home"
->
+        <div class="hero-tagline">CV. LABAN ENVIRONMENT GLOBAL (LEG)</div>
 
-<div class="container">
+        <p class="hero-description"
+          data-id="Laban Environment Global merupakan perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, berkualitas dan dapat diterapkan."
+          data-en="Laban Environment Global is a consulting, planning, supervision and construction services company supported by experienced experts from various disciplines to deliver professional, high-quality and applicable services.">
+          Laban Environment Global merupakan perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, berkualitas dan dapat diterapkan.
+        </p>
 
-<div class="hero-grid">
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary" data-id="Lihat Layanan →" data-en="View Services →">Lihat Layanan →</a>
+          <a href="#contact" class="btn btn-outline" data-id="Hubungi via Email" data-en="Contact via Email">Hubungi via Email</a>
+        </div>
+      </div>
 
-
-<div class="hero-content reveal">
-
-
-<div class="hero-slogan">
-
-SUSTAINING FUTURE TOGETHER
-
-</div>
-
-
-<div class="hero-badge">
-
-ENVIRONMENT
-&nbsp;&nbsp;&nbsp;
-ENGINEERING
-&nbsp;&nbsp;&nbsp;
-CONSULTANT
-
-</div>
-
-
-<h1>
-
-Building
-
-<span>
-Better
-</span>
-
-Solutions.
-
-</h1>
-
-
-<div class="hero-tagline">
-
-LABAN ENVIRONMENT GLOBAL
-
-</div>
-
-
-<p
-class="hero-description"
-data-id="Menghadirkan pendekatan profesional dalam bidang lingkungan, engineering, dan konsultasi untuk membantu kebutuhan proyek secara terarah, efektif, dan berkelanjutan."
-data-en="Providing a professional approach in environment, engineering, and consulting to support project needs in a structured, effective, and sustainable way."
->
-
-Menghadirkan pendekatan profesional dalam bidang
-lingkungan, engineering, dan konsultasi untuk membantu
-kebutuhan proyek secara terarah, efektif, dan berkelanjutan.
-
-</p>
-
-
-<div class="hero-actions">
-
-
-<a
-href="#services"
-class="btn btn-primary"
-data-id="Lihat Layanan"
-data-en="View Services"
->
-Lihat Layanan →
-</a>
-
-
-<a
-href="#contact"
-class="btn btn-outline"
-data-id="Hubungi Kami"
-data-en="Contact Us"
->
-Hubungi Kami
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-<div class="hero-visual reveal">
-
-<div class="hero-logo-box">
-
-<img
-src="labanlogoterupdate.jpeg"
-alt="LABAN Environment Global"
-class="hero-logo"
->
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
+      <div class="hero-visual reveal">
+        <div class="hero-logo-box">
+          <img src="labanlogoterupdate.jpeg" alt="Logo CV. Laban Environment Global" class="hero-logo">
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-
-
-<!-- =========================================================
-     HOME SERVICE STRIP
-========================================================= -->
 
 <section class="company-strip">
-
-<div class="container">
-
-<div class="company-strip-grid">
-
-
-<div class="company-strip-item">
-
-<div class="company-strip-code">
-ENV
-</div>
-
-<div
-class="company-strip-title"
-data-id="Lingkungan"
-data-en="Environment"
->
-Lingkungan
-</div>
-
-</div>
-
-
-<div class="company-strip-item">
-
-<div class="company-strip-code">
-ENG
-</div>
-
-<div
-class="company-strip-title"
-data-id="Engineering"
-data-en="Engineering"
->
-Engineering
-</div>
-
-</div>
-
-
-<div class="company-strip-item">
-
-<div class="company-strip-code">
-CON
-</div>
-
-<div
-class="company-strip-title"
-data-id="Konsultasi"
-data-en="Consulting"
->
-Konsultasi
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div class="company-strip-grid">
+      <div class="company-strip-item"><div class="company-strip-code">2020</div><div class="company-strip-title" data-id="Tahun Berdiri" data-en="Established">Tahun Berdiri</div></div>
+      <div class="company-strip-item"><div class="company-strip-code">CV</div><div class="company-strip-title" data-id="Bentuk Perusahaan" data-en="Business Entity">Bentuk Perusahaan</div></div>
+      <div class="company-strip-item"><div class="company-strip-code">PMDN</div><div class="company-strip-title" data-id="Status Penanaman Modal" data-en="Investment Status">Status Penanaman Modal</div></div>
+    </div>
+  </div>
 </section>
 
+<section class="section about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-logo-area reveal">
+        <img src="labanlogoterupdate.jpeg" alt="Logo LABAN Environment Global" class="about-logo">
+      </div>
 
+      <div class="about-content reveal">
+        <div class="section-label" data-id="TENTANG KAMI" data-en="ABOUT US">TENTANG KAMI</div>
+        <h2>CV. Laban Environment Global</h2>
 
-<!-- =========================================================
-     TENTANG KAMI
-========================================================= -->
+        <p data-id="<strong>LABAN ENVIRONMENT GLOBAL</strong> adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang dipersiapkan secara profesional dengan dukungan tenaga ahli berbagai disiplin ilmu yang berpengalaman."
+           data-en="<strong>LABAN ENVIRONMENT GLOBAL</strong> is a professional consulting, planning, supervision and construction services company supported by experienced experts from various disciplines.">
+          <strong>LABAN ENVIRONMENT GLOBAL</strong> adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang dipersiapkan secara profesional dengan dukungan tenaga ahli berbagai disiplin ilmu yang berpengalaman.
+        </p>
 
-<section
-class="section about"
-id="about"
->
+        <p data-id="Perusahaan didirikan pada 15 Oktober 2020 berdasarkan Akta Pendirian Notaris Tatu Afifah, SH. M.Kn No. 1 Tahun 2020 di Kota Serang."
+           data-en="The company was established on October 15, 2020 based on Deed of Establishment No. 1 of 2020 before Notary Tatu Afifah, SH. M.Kn in Serang City.">
+          Perusahaan didirikan pada 15 Oktober 2020 berdasarkan Akta Pendirian Notaris Tatu Afifah, SH. M.Kn No. 1 Tahun 2020 di Kota Serang.
+        </p>
 
-<div class="container">
-
-<div class="about-grid">
-
-
-<div class="about-logo-area reveal">
-
-<img
-src="labanlogoterupdate.jpeg"
-alt="LABAN Environment Global"
-class="about-logo"
->
-
-</div>
-
-
-<div class="about-content reveal">
-
-
-<div
-class="section-label"
-data-id="TENTANG KAMI"
-data-en="ABOUT US"
->
-TENTANG KAMI
-</div>
-
-
-<h2>
-
-LABAN Environment
-Global
-
-</h2>
-
-
-<p
-data-id="<strong>LABAN ENVIRONMENT GLOBAL</strong> merupakan perusahaan dengan fokus pada bidang Environment, Engineering, dan Consultant."
-data-en="<strong>LABAN ENVIRONMENT GLOBAL</strong> is a company focused on Environment, Engineering, and Consulting."
->
-
-<strong>
-LABAN ENVIRONMENT GLOBAL
-</strong>
-
-merupakan perusahaan dengan fokus pada bidang
-Environment, Engineering, dan Consultant.
-
-</p>
-
-
-<p
-data-id="Kami mengembangkan pendekatan kerja yang mengutamakan kebutuhan klien, pemahaman kondisi proyek, serta penyusunan solusi yang sistematis dan dapat diterapkan."
-data-en="We develop a working approach that prioritizes client needs, project conditions, and systematic and applicable solutions."
->
-
-Kami mengembangkan pendekatan kerja yang
-mengutamakan kebutuhan klien, pemahaman kondisi
-proyek, serta penyusunan solusi yang sistematis
-dan dapat diterapkan.
-
-</p>
-
-
-<div class="info-grid">
-
-
-<div class="info-card">
-
-<strong
-data-id="Profil"
-data-en="Company Profile"
->
-Profil
-</strong>
-
-<span
-data-id="Informasi mengenai profil dan ruang lingkup CV Laban."
-data-en="Information about LABAN's profile and scope of work."
->
-Informasi mengenai profil dan ruang lingkup
-CV Laban.
-</span>
-
-</div>
-
-
-<div class="info-card">
-
-<strong
-data-id="Sejarah Singkat"
-data-en="Brief History"
->
-Sejarah Singkat
-</strong>
-
-<span
-data-id="Bagian ini akan memuat perjalanan dan perkembangan perusahaan."
-data-en="This section will contain the company's journey and development."
->
-Bagian ini akan memuat perjalanan dan
-perkembangan perusahaan.
-</span>
-
-</div>
-
-
-<div class="info-card">
-
-<strong
-data-id="Visi & Misi"
-data-en="Vision & Mission"
->
-Visi & Misi
-</strong>
-
-<span
-data-id="Arah dan tujuan perusahaan dalam menjalankan kegiatan."
-data-en="The company's direction and objectives."
->
-Arah dan tujuan perusahaan dalam menjalankan
-kegiatan.
-</span>
-
-</div>
-
-
-<div class="info-card">
-
-<strong
-data-id="Legalitas"
-data-en="Legal"
->
-Legalitas
-</strong>
-
-<span
-data-id="Informasi legalitas perusahaan akan ditampilkan sesuai dokumen yang tersedia."
-data-en="Company legal information will be displayed based on available documents."
->
-Informasi legalitas perusahaan akan ditampilkan
-sesuai dokumen yang tersedia.
-</span>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</div>
-
-</div>
-
+        <div class="info-grid">
+          <div class="info-card"><strong data-id="Fokus Usaha" data-en="Business Focus">Fokus Usaha</strong><span data-id="Environment, Engineering, Konsultasi dan Konstruksi" data-en="Environment, Engineering, Consulting and Construction">Environment, Engineering, Konsultasi dan Konstruksi</span></div>
+          <div class="info-card"><strong data-id="Tahun Berdiri" data-en="Established">Tahun Berdiri</strong><span>15 Oktober 2020</span></div>
+          <div class="info-card"><strong data-id="Status" data-en="Status">Status</strong><span data-id="Pusat" data-en="Head Office">Pusat</span></div>
+          <div class="info-card"><strong data-id="Alamat" data-en="Address">Alamat</strong><span>KSB. Komp. Permata Hijau Blok N No. 05, RT 002 RW 008, Kel. Banjar Agung, Cipocok, Kota Serang</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
-
-
-
-<!-- =========================================================
-     VISI MISI
-========================================================= -->
 
 <section class="section vm-section">
+  <div class="container">
+    <div class="section-label" data-id="VISI & MISI" data-en="VISION & MISSION">VISI & MISI</div>
+    <h2 class="section-title" data-id="Arah perusahaan dalam membangun layanan yang berkualitas dan terpercaya." data-en="Our direction toward quality and trusted services.">Arah perusahaan dalam membangun layanan yang berkualitas dan terpercaya.</h2>
 
-<div class="container">
+    <div class="vm-grid">
+      <div class="vm-card featured">
+        <div class="eyebrow">VISION</div>
+        <h3 data-id="Visi" data-en="Vision">Visi</h3>
+        <p data-id="Menjadi perusahaan konsultan nasional yang berkualitas dan terpercaya serta berdaya saing di Indonesia dan mendapatkan pengakuan internasional."
+           data-en="To become a quality and trusted national consulting company with competitiveness in Indonesia and international recognition.">
+          Menjadi perusahaan konsultan nasional yang berkualitas dan terpercaya serta berdaya saing di Indonesia dan mendapatkan pengakuan internasional.
+        </p>
+      </div>
 
+      <div class="vm-card">
+        <div class="eyebrow">MISSION</div>
+        <h3 data-id="Misi" data-en="Mission">Misi</h3>
+        <p data-id="Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu serta menciptakan iklim kerja yang kondusif untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan."
+           data-en="To provide excellent, high-quality and timely services while creating a conducive working environment to produce optimal services without neglecting usefulness.">
+          Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu serta menciptakan iklim kerja yang kondusif untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan.
+        </p>
+      </div>
 
-<div
-class="section-label"
-data-id="VISI & MISI"
-data-en="VISION & MISSION"
->
-VISI & MISI
-</div>
+      <div class="vm-card">
+        <div class="eyebrow">SHORT TERM</div>
+        <h3 data-id="Rencana Jangka Pendek" data-en="Short-Term Plan">Rencana Jangka Pendek</h3>
+        <p>Membangun kerjasama kemitraan usaha secara profesional dan proporsional dengan badan, instansi/institusi, dan lembaga terkait guna berperan serta pada program pembangunan nasional.</p>
+        <p style="margin-top:10px">Memperkenalkan produk perusahaan serta penyusunan program manajemen, keuangan dan administrasi perusahaan yang efektif dan realistis, sejalan dengan perkembangan dunia usaha.</p>
+      </div>
 
-
-<h2
-class="section-title"
-data-id="Arah kami dalam membangun solusi."
-data-en="Our direction in building solutions."
->
-Arah kami dalam
-membangun solusi.
-</h2>
-
-
-<div class="vm-grid">
-
-
-<div class="vm-card">
-
-<h3
-data-id="Visi"
-data-en="Vision"
->
-Visi
-</h3>
-
-<p
-data-id="Visi perusahaan akan ditampilkan berdasarkan dokumen resmi CV Laban."
-data-en="The company's vision will be displayed based on LABAN's official documents."
->
-
-Visi perusahaan akan ditampilkan berdasarkan
-dokumen resmi CV Laban.
-
-</p>
-
-</div>
-
-
-<div class="vm-card">
-
-<h3
-data-id="Misi"
-data-en="Mission"
->
-Misi
-</h3>
-
-<p
-data-id="Misi perusahaan akan ditampilkan berdasarkan dokumen resmi CV Laban."
-data-en="The company's mission will be displayed based on LABAN's official documents."
->
-
-Misi perusahaan akan ditampilkan berdasarkan
-dokumen resmi CV Laban.
-
-</p>
-
-</div>
-
-
-<div class="vm-card">
-
-<h3
-data-id="Nilai-Nilai Perusahaan"
-data-en="Company Values"
->
-Nilai-Nilai Perusahaan
-</h3>
-
-<p
-data-id="Nilai perusahaan akan ditampilkan sesuai profil resmi perusahaan."
-data-en="Company values will be displayed according to the official company profile."
->
-
-Nilai perusahaan akan ditampilkan sesuai
-profil resmi perusahaan.
-
-</p>
-
-</div>
-
-
-<div class="vm-card">
-
-<h3
-data-id="Legalitas Perusahaan"
-data-en="Company Legality"
->
-Legalitas Perusahaan
-</h3>
-
-<p
-data-id="Dokumen legalitas dapat ditampilkan setelah data dan dokumen resmi tersedia."
-data-en="Legal documents can be displayed once official data and documents are available."
->
-
-Dokumen legalitas dapat ditampilkan setelah
-data dan dokumen resmi tersedia.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
+      <div class="vm-card">
+        <div class="eyebrow">MEDIUM & LONG TERM</div>
+        <h3 data-id="Rencana Jangka Menengah & Panjang" data-en="Medium & Long-Term Plans">Rencana Jangka Menengah & Panjang</h3>
+        <p><strong>Menengah:</strong> Mengembangkan dan memperkenalkan perusahaan jasa konsultasi dan konstruksi untuk bersaing ke taraf internasional.</p>
+        <p style="margin-top:10px"><strong>Panjang:</strong> Menekankan kualitas produk jasa yang dihasilkan untuk memperkuat posisi dasar dan menentukan peluang-peluang bisnis yang ada.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================================
-     LAYANAN
-========================================================= -->
-
-<section
-class="section services"
-id="services"
->
-
-<div class="container">
-
-
-<div class="services-heading">
-
-
-<div>
-
-<div
-class="section-label"
-data-id="LAYANAN"
-data-en="SERVICES"
->
-LAYANAN
-</div>
-
-<h2
-class="section-title"
-data-id="Solusi lingkungan yang terarah."
-data-en="Structured environmental solutions."
->
-Solusi lingkungan
-yang terarah.
-</h2>
-
-</div>
-
-
-<p
-class="section-description"
-data-id="Layanan dapat disesuaikan dengan kebutuhan kegiatan, proyek, serta ruang lingkup pekerjaan."
-data-en="Services can be tailored to project needs, activities, and scope of work."
->
-
-Layanan dapat disesuaikan dengan kebutuhan
-kegiatan, proyek, serta ruang lingkup pekerjaan.
-
-</p>
-
-
-</div>
-
-
-
-<div class="services-grid">
-
-
-<div class="service-card reveal">
-
-<div class="service-number">01</div>
-
-<div class="service-icon">01</div>
-
-<h3>
-Penyusunan Dokumen Lingkungan
-</h3>
-
-<p
-data-id="Penyusunan dokumen lingkungan sesuai kebutuhan dan ruang lingkup kegiatan."
-data-en="Preparation of environmental documents according to project requirements and scope."
->
-
-Penyusunan dokumen lingkungan sesuai
-kebutuhan dan ruang lingkup kegiatan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">02</div>
-
-<div class="service-icon">02</div>
-
-<h3>
-AMDAL
-</h3>
-
-<p
-data-id="Layanan penyusunan dan pendampingan terkait AMDAL sesuai kebutuhan kegiatan."
-data-en="AMDAL preparation and assistance according to project requirements."
->
-
-Layanan penyusunan dan pendampingan
-terkait AMDAL sesuai kebutuhan kegiatan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">03</div>
-
-<div class="service-icon">03</div>
-
-<h3>
-UKL-UPL
-</h3>
-
-<p
-data-id="Pendampingan dan penyusunan UKL-UPL sesuai ruang lingkup kegiatan."
-data-en="UKL-UPL preparation and assistance according to project scope."
->
-
-Pendampingan dan penyusunan UKL-UPL
-sesuai ruang lingkup kegiatan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">04</div>
-
-<div class="service-icon">04</div>
-
-<h3>
-SPPL
-</h3>
-
-<p
-data-id="Pendampingan kebutuhan SPPL sesuai karakteristik kegiatan."
-data-en="Assistance for SPPL requirements based on project characteristics."
->
-
-Pendampingan kebutuhan SPPL sesuai
-karakteristik kegiatan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">05</div>
-
-<div class="service-icon">05</div>
-
-<h3>
-ANDAL
-</h3>
-
-<p
-data-id="Kajian dan penyusunan aspek ANDAL sesuai ruang lingkup pekerjaan."
-data-en="Assessment and preparation of ANDAL aspects according to the scope of work."
->
-
-Kajian dan penyusunan aspek ANDAL
-sesuai ruang lingkup pekerjaan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">06</div>
-
-<div class="service-icon">06</div>
-
-<h3>
-RKL-RPL
-</h3>
-
-<p
-data-id="Penyusunan rencana pengelolaan dan pemantauan lingkungan."
-data-en="Preparation of environmental management and monitoring plans."
->
-
-Penyusunan rencana pengelolaan dan
-pemantauan lingkungan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">07</div>
-
-<div class="service-icon">07</div>
-
-<h3>
-Kajian Lingkungan
-</h3>
-
-<p
-data-id="Kajian terhadap aspek lingkungan sesuai kebutuhan proyek."
-data-en="Environmental assessments based on project requirements."
->
-
-Kajian terhadap aspek lingkungan sesuai
-kebutuhan proyek.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">08</div>
-
-<div class="service-icon">08</div>
-
-<h3>
-Pemantauan Kualitas Lingkungan
-</h3>
-
-<p
-data-id="Pemantauan aspek kualitas lingkungan sesuai kebutuhan kegiatan."
-data-en="Environmental quality monitoring according to project requirements."
->
-
-Pemantauan aspek kualitas lingkungan
-sesuai kebutuhan kegiatan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">09</div>
-
-<div class="service-icon">09</div>
-
-<h3>
-Konsultasi & Perizinan Lingkungan
-</h3>
-
-<p
-data-id="Konsultasi dan pendampingan terkait kebutuhan perizinan lingkungan."
-data-en="Consulting and assistance related to environmental licensing requirements."
->
-
-Konsultasi dan pendampingan terkait
-kebutuhan perizinan lingkungan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">10</div>
-
-<div class="service-icon">10</div>
-
-<h3>
-Pengelolaan Limbah
-</h3>
-
-<p
-data-id="Pendekatan dan konsultasi terkait pengelolaan limbah sesuai kebutuhan."
-data-en="Approaches and consulting related to waste management."
->
-
-Pendekatan dan konsultasi terkait
-pengelolaan limbah sesuai kebutuhan.
-
-</p>
-
-</div>
-
-
-<div class="service-card reveal">
-
-<div class="service-number">11</div>
-
-<div class="service-icon">11</div>
-
-<h3>
-Kajian Sustainability
-</h3>
-
-<p
-data-id="Kajian keberlanjutan untuk mendukung kebutuhan pengembangan kegiatan."
-data-en="Sustainability assessments supporting project development needs."
->
-
-Kajian keberlanjutan untuk mendukung
-kebutuhan pengembangan kegiatan.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
+<section class="section" id="company-data">
+  <div class="container">
+    <div class="section-label" data-id="DATA PERUSAHAAN" data-en="COMPANY DATA">DATA PERUSAHAAN</div>
+    <h2 class="section-title" data-id="Profil administrasi dan legal perusahaan." data-en="Company administration and legal profile.">Profil administrasi dan legal perusahaan.</h2>
+    <p class="section-description" data-id="Informasi berikut disusun berdasarkan Company Profile LEG 2023 dan dokumen legalitas yang tercantum di dalamnya." data-en="The following information is based on the LEG 2023 Company Profile and the legal documents included in it.">Informasi berikut disusun berdasarkan Company Profile LEG 2023 dan dokumen legalitas yang tercantum di dalamnya.</p>
+
+    <div class="data-grid">
+      <div class="data-card reveal">
+        <h3>Administrasi Perusahaan</h3>
+        <div class="data-list">
+          <div class="data-row"><b>Nama</b><span>CV. Laban Environment Global (LEG)</span></div>
+          <div class="data-row"><b>Bentuk</b><span>CV</span></div>
+          <div class="data-row"><b>Alamat</b><span>Permata Hijau Blok N, Kota Serang Baru (KSB)</span></div>
+          <div class="data-row"><b>Status</b><span>Pusat</span></div>
+          <div class="data-row"><b>Notaris</b><span>TATU AFIFAH, SH. M.Kn</span></div>
+          <div class="data-row"><b>Nomor Akte</b><span>1</span></div>
+          <div class="data-row"><b>Tanggal Berdiri</b><span>15 Oktober 2020</span></div>
+          <div class="data-row"><b>SK Kemenkumham</b><span>AHU-457.AH.02.01 Tahun 2014, tanggal 17 Juni 2014</span></div>
+        </div>
+      </div>
+
+      <div class="data-card reveal">
+        <h3>Pengurus Perusahaan</h3>
+        <div class="data-list">
+          <div class="data-row"><b>Nama</b><span>Dr. Anis Masyruroh, S.T., M.T</span></div>
+          <div class="data-row"><b>Jabatan</b><span>Direktur / Pemilik / Penanggung Jawab Perusahaan</span></div>
+          <div class="data-row"><b>Alamat</b><span>Permata Hijau Blok N, Kota Serang Baru (KSB)</span></div>
+        </div>
+      </div>
+
+      <div class="data-card reveal">
+        <h3>Identitas Perizinan</h3>
+        <div class="data-list">
+          <div class="data-row"><b>NIB</b><span>0226010120483</span></div>
+          <div class="data-row"><b>NPWP</b><span>96.306.890.3-401.000</span></div>
+          <div class="data-row"><b>Domisili</b><span>500/122-EKBANG/X/2020</span></div>
+          <div class="data-row"><b>Status Modal</b><span>PMDN</span></div>
+          <div class="data-row"><b>Kode KBLI</b><span>71102</span></div>
+          <div class="data-row"><b>Nama KBLI</b><span>Aktivitas Keinsinyuran dan Konsultasi Teknis YBDI</span></div>
+        </div>
+      </div>
+
+      <div class="data-card reveal">
+        <h3>Divisi Perusahaan</h3>
+        <div class="data-list">
+          <div class="data-row"><b>Iroh Rahmawati, S.E., M.AK</b><span>Divisi Keuangan</span></div>
+          <div class="data-row"><b>dr. Hadiyani Nugraha</b><span>Divisi Master Plan RS</span></div>
+          <div class="data-row"><b>Shony Mandala, S.T., IAI</b><span>Divisi Arsitektur</span></div>
+          <div class="data-row"><b>Budiono, S.Kom</b><span>IT Support</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<section class="section services" id="services">
+  <div class="container">
+    <div class="services-heading">
+      <div>
+        <div class="section-label" data-id="LAYANAN" data-en="SERVICES">LAYANAN</div>
+        <h2 class="section-title" data-id="Layanan profesional LEG." data-en="LEG professional services.">Layanan profesional LEG.</h2>
+      </div>
+      <p class="section-description" data-id="Ruang lingkup pelayanan dalam dokumen mencakup perencanaan, dokumen lingkungan, konstruksi, pengelolaan air, pengelolaan sampah/limbah, serta penelitian dan kajian ilmiah." data-en="The documented service scope covers planning, environmental documents, construction, water management, waste management, research and scientific studies.">Ruang lingkup pelayanan dalam dokumen mencakup perencanaan, dokumen lingkungan, konstruksi, pengelolaan air, pengelolaan sampah/limbah, serta penelitian dan kajian ilmiah.</p>
+    </div>
 
-
-<!-- =========================================================
-     TENAGA AHLI
-========================================================= -->
-
-<section
-class="section experts"
-id="experts"
->
-
-<div class="container">
-
-
-<div
-class="section-label"
-data-id="TENAGA AHLI"
-data-en="EXPERT TEAM"
->
-TENAGA AHLI
-</div>
-
-
-<h2
-class="section-title"
-data-id="Tim dengan keahlian yang mendukung kebutuhan proyek."
-data-en="Expertise to support project needs."
->
-Tim dengan keahlian yang
-mendukung kebutuhan proyek.
-</h2>
-
-
-<p
-class="section-description"
-data-id="Profil tenaga ahli akan ditampilkan berdasarkan data dan dokumen kompetensi yang tersedia."
-data-en="Expert profiles will be displayed based on available professional and competency documentation."
->
-
-Profil tenaga ahli akan ditampilkan berdasarkan
-data dan dokumen kompetensi yang tersedia.
-
-</p>
-
-
-
-<div class="expert-grid">
-
-
-<div class="expert-card reveal">
-
-<div class="expert-placeholder">
-01
-</div>
-
-<h3
-data-id="Nama Tenaga Ahli"
-data-en="Expert Name"
->
-Nama Tenaga Ahli
-</h3>
-
-<div class="role">
-ENVIRONMENT / ENGINEERING
-</div>
-
-<p
-data-id="Keahlian, pendidikan, sertifikasi, dan pengalaman akan ditampilkan di bagian ini."
-data-en="Expertise, education, certifications, and experience will be displayed here."
->
-
-Keahlian, pendidikan, sertifikasi,
-dan pengalaman akan ditampilkan
-di bagian ini.
-
-</p>
-
-</div>
-
-
-<div class="expert-card reveal">
-
-<div class="expert-placeholder">
-02
-</div>
-
-<h3
-data-id="Nama Tenaga Ahli"
-data-en="Expert Name"
->
-Nama Tenaga Ahli
-</h3>
-
-<div class="role">
-CONSULTANT
-</div>
-
-<p
-data-id="Profil kompetensi dan pengalaman akan ditampilkan setelah data tersedia."
-data-en="Competency profile and experience will be displayed once the data is available."
->
-
-Profil kompetensi dan pengalaman
-akan ditampilkan setelah data tersedia.
-
-</p>
-
-</div>
-
-
-<div class="expert-card reveal">
-
-<div class="expert-placeholder">
-03
-</div>
-
-<h3
-data-id="Nama Tenaga Ahli"
-data-en="Expert Name"
->
-Nama Tenaga Ahli
-</h3>
-
-<div class="role">
-TECHNICAL
-</div>
-
-<p
-data-id="Informasi tenaga ahli akan disesuaikan dengan data resmi perusahaan."
-data-en="Expert information will be based on official company data."
->
-
-Informasi tenaga ahli akan disesuaikan
-dengan data resmi perusahaan.
-
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
+    <div class="services-grid">
+      <div class="service-card reveal"><div class="service-number">01</div><div class="service-icon">FS</div><h3>Feasibility Study</h3><p>Bagian dari lingkup perencanaan yang tercantum dalam profil perusahaan.</p></div>
+      <div class="service-card reveal"><div class="service-number">02</div><div class="service-icon">MP</div><h3>Master Plan</h3><p>Perencanaan dan penyusunan master plan sesuai kebutuhan kegiatan.</p></div>
+      <div class="service-card reveal"><div class="service-number">03</div><div class="service-icon">DED</div><h3>Detail Engineering Design</h3><p>Perencanaan teknis DED sebagai bagian dari layanan perencanaan.</p></div>
+      <div class="service-card reveal"><div class="service-number">04</div><div class="service-icon">ENV</div><h3>Dokumen Lingkungan</h3><p>AMDAL, UKL-UPL, KLHS dan DELH sesuai ruang lingkup pelayanan perusahaan.</p></div>
+      <div class="service-card reveal"><div class="service-number">05</div><div class="service-icon">ENG</div><h3>Konstruksi & Engineering</h3><p>Arsitektur, bangunan dan sipil dalam lingkup pekerjaan konstruksi.</p></div>
+      <div class="service-card reveal"><div class="service-number">06</div><div class="service-icon">WTR</div><h3>Pengelolaan Air</h3><p>Pengelolaan air bersih dan air limbah sesuai kebutuhan pekerjaan.</p></div>
+      <div class="service-card reveal"><div class="service-number">07</div><div class="service-icon">WST</div><h3>Pengelolaan Sampah</h3><p>Pengelolaan dan daur ulang serta pendekatan remediasi.</p></div>
+      <div class="service-card reveal"><div class="service-number">08</div><div class="service-icon">RSH</div><h3>Penelitian & Kajian</h3><p>Penelitian dan kajian ilmiah lainnya sesuai kebutuhan kegiatan.</p></div>
+      <div class="service-card reveal"><div class="service-number">09</div><div class="service-icon">CON</div><h3>Konsultasi</h3><p>Konsultasi profesional yang mendukung kebutuhan proyek dan pembangunan.</p></div>
+    </div>
+  </div>
 </section>
 
+<section class="section experts" id="experts">
+  <div class="container">
+    <div class="section-label" data-id="PENGURUS & DIVISI" data-en="MANAGEMENT & DIVISIONS">PENGURUS & DIVISI</div>
+    <h2 class="section-title" data-id="Tim yang mendukung kegiatan perusahaan." data-en="The team supporting company activities.">Tim yang mendukung kegiatan perusahaan.</h2>
+    <p class="section-description" data-id="Nama dan jabatan berikut diambil dari bagian Pengurus Perusahaan dan Divisi Perusahaan dalam dokumen." data-en="The names and positions below are taken from the Management and Company Divisions sections of the profile.">Nama dan jabatan berikut diambil dari bagian Pengurus Perusahaan dan Divisi Perusahaan dalam dokumen.</p>
 
-
-<!-- =========================================================
-     PORTFOLIO
-========================================================= -->
-
-<section
-class="section portfolio"
-id="portfolio"
->
-
-<div class="container">
-
-
-<div
-class="section-label"
-data-id="PORTOFOLIO / PENGALAMAN"
-data-en="PORTFOLIO / EXPERIENCE"
->
-PORTOFOLIO / PENGALAMAN
-</div>
-
-
-<h2
-class="section-title"
-data-id="Pengalaman yang akan terus berkembang."
-data-en="Experience that continues to grow."
->
-Pengalaman yang akan
-terus berkembang.
-</h2>
-
-
-<p
-class="section-description"
-data-id="Daftar proyek akan menampilkan nama kegiatan, tahun, lokasi, jenis pekerjaan, peran CV Laban, dan dokumentasi."
-data-en="Project entries will include project name, year, location, type of work, LABAN's role, and documentation."
->
-
-Daftar proyek akan menampilkan nama kegiatan,
-tahun, lokasi, jenis pekerjaan, peran CV Laban,
-dan dokumentasi.
-
-</p>
-
-
-
-<div class="portfolio-grid">
-
-
-<div class="portfolio-card reveal">
-
-<div class="portfolio-image">
-
-Dokumentasi Proyek
-
-</div>
-
-<div class="portfolio-content">
-
-<div class="portfolio-year">
-YEAR
-</div>
-
-<h3
-data-id="Nama Kegiatan / Proyek"
-data-en="Project Name"
->
-Nama Kegiatan / Proyek
-</h3>
-
-<p
-data-id="Lokasi dan jenis pekerjaan akan ditampilkan berdasarkan data proyek."
-data-en="Location and type of work will be displayed based on project data."
->
-
-Lokasi dan jenis pekerjaan akan ditampilkan
-berdasarkan data proyek.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="portfolio-card reveal">
-
-<div class="portfolio-image">
-
-Dokumentasi Proyek
-
-</div>
-
-<div class="portfolio-content">
-
-<div class="portfolio-year">
-YEAR
-</div>
-
-<h3
-data-id="Nama Kegiatan / Proyek"
-data-en="Project Name"
->
-Nama Kegiatan / Proyek
-</h3>
-
-<p
-data-id="Peran CV Laban dan informasi proyek akan ditampilkan di sini."
-data-en="LABAN's role and project information will be displayed here."
->
-
-Peran CV Laban dan informasi proyek
-akan ditampilkan di sini.
-
-</p>
-
-</div>
-
-</div>
-
-
-<div class="portfolio-card reveal">
-
-<div class="portfolio-image">
-
-Dokumentasi Proyek
-
-</div>
-
-<div class="portfolio-content">
-
-<div class="portfolio-year">
-YEAR
-</div>
-
-<h3
-data-id="Nama Kegiatan / Proyek"
-data-en="Project Name"
->
-Nama Kegiatan / Proyek
-</h3>
-
-<p
-data-id="Informasi proyek akan diperbarui berdasarkan portofolio resmi."
-data-en="Project information will be updated based on the official portfolio."
->
-
-Informasi proyek akan diperbarui berdasarkan
-portofolio resmi.
-
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
+    <div class="expert-grid">
+      <div class="expert-card reveal"><div class="expert-placeholder">01</div><h3>Dr. Anis Masyruroh, S.T., M.T</h3><div class="role">DIREKTUR</div><p>Pemilik / Direktur / Penanggung Jawab Perusahaan.</p></div>
+      <div class="expert-card reveal"><div class="expert-placeholder">02</div><h3>Iroh Rahmawati, S.E., M.AK</h3><div class="role">DIVISI KEUANGAN</div><p>Mendukung fungsi keuangan perusahaan.</p></div>
+      <div class="expert-card reveal"><div class="expert-placeholder">03</div><h3>dr. Hadiyani Nugraha</h3><div class="role">DIVISI MASTER PLAN RS</div><p>Mendukung kegiatan pada bidang master plan rumah sakit.</p></div>
+      <div class="expert-card reveal"><div class="expert-placeholder">04</div><h3>Shony Mandala, S.T., IAI</h3><div class="role">DIVISI ARSITEKTUR</div><p>Mendukung pekerjaan pada bidang arsitektur.</p></div>
+      <div class="expert-card reveal"><div class="expert-placeholder">05</div><h3>Budiono, S.Kom</h3><div class="role">IT SUPPORT</div><p>Mendukung kebutuhan teknologi informasi perusahaan.</p></div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================================
-     PROYEK & DOKUMENTASI
-========================================================= -->
-
-<section
-class="section documentation"
-id="documentation"
->
-
-<div class="container">
-
-
-<div
-class="section-label"
-data-id="PROYEK & DOKUMENTASI"
-data-en="PROJECTS & DOCUMENTATION"
->
-PROYEK & DOKUMENTASI
-</div>
-
-
-<h2
-class="section-title"
-data-id="Aktivitas lapangan dan proses pekerjaan."
-data-en="Field activities and project work."
->
-Aktivitas lapangan dan
-proses pekerjaan.
-</h2>
-
-
-<p
-class="section-description"
-data-id="Galeri ini dapat digunakan untuk menampilkan kegiatan sampling, survey, pengukuran, konsultasi, dan penyusunan dokumen."
-data-en="This gallery can showcase sampling, surveys, measurements, consultations, and document preparation activities."
->
-
-Galeri ini dapat digunakan untuk menampilkan
-kegiatan sampling, survey, pengukuran,
-konsultasi, dan penyusunan dokumen.
-
-</p>
-
-
-
-<div class="documentation-grid">
-
-
-<div class="documentation-card reveal">
-
-<div class="documentation-number">
-01
-</div>
-
-<h3>
-Sampling Lingkungan
-</h3>
-
-<p
-data-id="Dokumentasi kegiatan sampling lingkungan."
-data-en="Environmental sampling documentation."
->
-Dokumentasi kegiatan sampling lingkungan.
-</p>
-
-</div>
-
-
-<div class="documentation-card reveal">
-
-<div class="documentation-number">
-02
-</div>
-
-<h3>
-Survey Lapangan
-</h3>
-
-<p
-data-id="Dokumentasi kegiatan survey lapangan."
-data-en="Field survey documentation."
->
-Dokumentasi kegiatan survey lapangan.
-</p>
-
-</div>
-
-
-<div class="documentation-card reveal">
-
-<div class="documentation-number">
-03
-</div>
-
-<h3>
-Pengambilan Sampel Air
-</h3>
-
-<p
-data-id="Dokumentasi pengambilan sampel air."
-data-en="Water sampling documentation."
->
-Dokumentasi pengambilan sampel air.
-</p>
-
-</div>
-
-
-<div class="documentation-card reveal">
-
-<div class="documentation-number">
-04
-</div>
-
-<h3>
-Pengukuran Kualitas Udara
-</h3>
-
-<p
-data-id="Dokumentasi pengukuran kualitas udara."
-data-en="Air quality measurement documentation."
->
-Dokumentasi pengukuran kualitas udara.
-</p>
-
-</div>
-
-
-<div class="documentation-card reveal">
-
-<div class="documentation-number">
-05
-</div>
-
-<h3>
-Pengukuran Kebisingan
-</h3>
-
-<p
-data-id="Dokumentasi pengukuran kebisingan."
-data-en="Noise measurement documentation."
->
-Dokumentasi pengukuran kebisingan.
-</p>
-
-</div>
-
-
-<div class="documentation-card reveal">
-
-<div class="documentation-number">
-06
-</div>
-
-<h3>
-Survey Sosial
-</h3>
-
-<p
-data-id="Dokumentasi kegiatan survey sosial."
-data-en="Social survey documentation."
->
-Dokumentasi kegiatan survey sosial.
-</p>
-
-</div>
-
-
-<div class="documentation-card reveal">
-
-<div class="documentation-number">
-07
-</div>
-
-<h3>
-Rapat & Konsultasi
-</h3>
-
-<p
-data-id="Dokumentasi rapat dan konsultasi dengan pihak terkait."
-data-en="Meetings and consultation documentation."
->
-Dokumentasi rapat dan konsultasi
-dengan pihak terkait.
-</p>
-
-</div>
-
-
-<div class="documentation-card reveal">
-
-<div class="documentation-number">
-08
-</div>
-
-<h3>
-Penyusunan Dokumen
-</h3>
-
-<p
-data-id="Dokumentasi proses penyusunan dokumen lingkungan."
-data-en="Environmental document preparation documentation."
->
-Dokumentasi proses penyusunan
-dokumen lingkungan.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
+<section class="section" id="scope">
+  <div class="container">
+    <div class="section-label" data-id="LINGKUP PELAYANAN" data-en="SERVICE SCOPE">LINGKUP PELAYANAN</div>
+    <h2 class="section-title" data-id="Bidang pelayanan yang tercantum dalam Company Profile." data-en="Service areas documented in the Company Profile.">Bidang pelayanan yang tercantum dalam Company Profile.</h2>
+
+    <div class="scope-grid">
+      <div class="scope-card reveal"><div class="scope-no">01</div><h3>Perencanaan</h3><p>FS (Feasibility Study), MP (Master Plan), dan DED (Detail Engineering Design).</p></div>
+      <div class="scope-card reveal"><div class="scope-no">02</div><h3>Dokumen Lingkungan</h3><p>AMDAL, UKL, UPL, KLHS, dan DELH.</p></div>
+      <div class="scope-card reveal"><div class="scope-no">03</div><h3>Konstruksi</h3><p>Arsitektur, bangunan, dan sipil.</p></div>
+      <div class="scope-card reveal"><div class="scope-no">04</div><h3>Pengelolaan Air</h3><p>Air bersih dan air limbah.</p></div>
+      <div class="scope-card reveal"><div class="scope-no">05</div><h3>Sampah & Limbah</h3><p>Pengelolaan, daur ulang, dan remediasi.</p></div>
+      <div class="scope-card reveal"><div class="scope-no">06</div><h3>Penelitian & Kajian</h3><p>Penelitian dan kajian ilmiah lainnya sesuai kebutuhan.</p></div>
+    </div>
+  </div>
 </section>
 
+<section class="section portfolio" id="portfolio">
+  <div class="container">
+    <div class="section-label" data-id="PENGALAMAN LAPANGAN" data-en="FIELD EXPERIENCE">PENGALAMAN LAPANGAN</div>
+    <h2 class="section-title" data-id="Dokumentasi aktivitas perusahaan." data-en="Company activity documentation.">Dokumentasi aktivitas perusahaan.</h2>
+    <p class="section-description" data-id="Foto berikut merupakan dokumentasi yang terdapat di Company Profile LEG 2023. Gunakan file gambar yang tersedia di folder website jika ingin menampilkannya secara langsung." data-en="The photos below represent documentation included in the LEG 2023 Company Profile. Use the available image files in the website folder to display them directly.">Foto berikut merupakan dokumentasi yang terdapat di Company Profile LEG 2023. Gunakan file gambar yang tersedia di folder website jika ingin menampilkannya secara langsung.</p>
 
-
-<!-- =========================================================
-     ARTIKEL / INSIGHT
-========================================================= -->
-
-<section
-class="section insight"
-id="insight"
->
-
-<div class="container">
-
-
-<div
-class="section-label"
-data-id="ARTIKEL / INSIGHT LINGKUNGAN"
-data-en="ENVIRONMENTAL INSIGHT"
->
-ARTIKEL / INSIGHT LINGKUNGAN
-</div>
-
-
-<h2
-class="section-title"
-data-id="Informasi lingkungan yang mudah dipahami."
-data-en="Environmental insights made easier to understand."
->
-Informasi lingkungan
-yang mudah dipahami.
-</h2>
-
-
-<p
-class="section-description"
-data-id="Bagian insight dapat digunakan untuk berbagi informasi, edukasi, dan perkembangan isu lingkungan."
-data-en="The insight section can be used to share information, education, and environmental developments."
->
-
-Bagian insight dapat digunakan untuk berbagi
-informasi, edukasi, dan perkembangan isu lingkungan.
-
-</p>
-
-
-
-<div class="insight-grid">
-
-
-<div class="insight-card reveal">
-
-<div class="insight-category">
-ENVIRONMENT
-</div>
-
-<h3>
-Apa Itu AMDAL?
-</h3>
-
-<p
-data-id="Artikel edukasi mengenai pengertian dan fungsi AMDAL."
-data-en="Educational article about the definition and function of AMDAL."
->
-Artikel edukasi mengenai pengertian
-dan fungsi AMDAL.
-</p>
-
-</div>
-
-
-<div class="insight-card reveal">
-
-<div class="insight-category">
-ENVIRONMENT
-</div>
-
-<h3>
-Perbedaan AMDAL dan UKL-UPL
-</h3>
-
-<p
-data-id="Pembahasan mengenai perbedaan dokumen lingkungan."
-data-en="Discussion about the differences between environmental documents."
->
-Pembahasan mengenai perbedaan
-dokumen lingkungan.
-</p>
-
-</div>
-
-
-<div class="insight-card reveal">
-
-<div class="insight-category">
-MONITORING
-</div>
-
-<h3>
-Pentingnya Pemantauan Lingkungan
-</h3>
-
-<p
-data-id="Informasi mengenai pentingnya pemantauan kualitas lingkungan."
-data-en="Information about the importance of environmental quality monitoring."
->
-Informasi mengenai pentingnya pemantauan
-kualitas lingkungan.
-</p>
-
-</div>
-
-
-<div class="insight-card reveal">
-
-<div class="insight-category">
-WASTE
-</div>
-
-<h3>
-Pengelolaan Limbah Industri
-</h3>
-
-<p
-data-id="Pembahasan mengenai pengelolaan limbah dalam kegiatan industri."
-data-en="Discussion about waste management in industrial activities."
->
-Pembahasan mengenai pengelolaan limbah
-dalam kegiatan industri.
-</p>
-
-</div>
-
-
-<div class="insight-card reveal">
-
-<div class="insight-category">
-SUSTAINABILITY
-</div>
-
-<h3>
-Ekonomi Sirkular
-</h3>
-
-<p
-data-id="Insight mengenai konsep ekonomi sirkular."
-data-en="Insight about the circular economy concept."
->
-Insight mengenai konsep ekonomi sirkular.
-</p>
-
-</div>
-
-
-<div class="insight-card reveal">
-
-<div class="insight-category">
-ESG
-</div>
-
-<h3>
-Sustainability & ESG
-</h3>
-
-<p
-data-id="Pembahasan mengenai sustainability dan ESG."
-data-en="Discussion about sustainability and ESG."
->
-Pembahasan mengenai sustainability
-dan ESG.
-</p>
-
-</div>
-
-
-<div class="insight-card reveal">
-
-<div class="insight-category">
-REGULATION
-</div>
-
-<h3>
-Perubahan Regulasi Lingkungan
-</h3>
-
-<p
-data-id="Informasi mengenai perkembangan regulasi lingkungan."
-data-en="Information about environmental regulatory developments."
->
-Informasi mengenai perkembangan
-regulasi lingkungan.
-</p>
-
-</div>
-
-
-</div>
-
-</div>
-
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal"><div class="portfolio-image">Dokumentasi Survey / Pengukuran Lapangan</div><div class="portfolio-content"><div class="portfolio-year">FIELD ACTIVITY</div><h3>Survey & Pengukuran</h3><p>Aktivitas lapangan yang terdokumentasi dalam Company Profile.</p></div></div>
+      <div class="portfolio-card reveal"><div class="portfolio-image">Dokumentasi Aktivitas Lapangan</div><div class="portfolio-content"><div class="portfolio-year">FIELD ACTIVITY</div><h3>Survey Lokasi</h3><p>Dokumentasi kegiatan lapangan dan pengamatan kondisi lokasi.</p></div></div>
+      <div class="portfolio-card reveal"><div class="portfolio-image">Dokumentasi Kegiatan</div><div class="portfolio-content"><div class="portfolio-year">FIELD ACTIVITY</div><h3>Pengawasan & Kegiatan Teknis</h3><p>Aktivitas teknis yang ditampilkan dalam profil perusahaan.</p></div></div>
+    </div>
+  </div>
 </section>
 
+<section class="section documentation" id="documentation">
+  <div class="container">
+    <div class="section-label" data-id="DOKUMENTASI" data-en="DOCUMENTATION">DOKUMENTASI</div>
+    <h2 class="section-title" data-id="Aktivitas dan bukti pekerjaan perusahaan." data-en="Company activities and work documentation.">Aktivitas dan bukti pekerjaan perusahaan.</h2>
+    <p class="section-description" data-id="Bagian ini dapat digunakan untuk mengembangkan galeri dokumentasi dari foto Company Profile dan dokumentasi proyek lainnya." data-en="This section can be expanded into a documentation gallery using Company Profile photos and other project documentation.">Bagian ini dapat digunakan untuk mengembangkan galeri dokumentasi dari foto Company Profile dan dokumentasi proyek lainnya.</p>
 
-
-<!-- =========================================================
-     DOKUMEN & SERTIFIKASI
-========================================================= -->
-
-<section
-class="section documents"
-id="documents"
->
-
-<div class="container">
-
-
-<div
-class="section-label"
-data-id="DOKUMEN & SERTIFIKASI"
-data-en="DOCUMENTS & CERTIFICATIONS"
->
-DOKUMEN & SERTIFIKASI
-</div>
-
-
-<h2
-class="section-title"
-data-id="Dokumen perusahaan dan kompetensi."
-data-en="Company documents and competencies."
->
-Dokumen perusahaan
-dan kompetensi.
-</h2>
-
-
-<p
-class="section-description"
-data-id="Dokumen yang bersifat sensitif dapat ditampilkan secara terbatas tanpa menampilkan seluruh nomor dokumen."
-data-en="Sensitive documents can be presented selectively without displaying complete document numbers."
->
-
-Dokumen yang bersifat sensitif dapat ditampilkan
-secara terbatas tanpa menampilkan seluruh nomor dokumen.
-
-</p>
-
-
-
-<div class="document-grid">
-
-
-<div class="document-card reveal">
-
-<h3>
-NIB
-</h3>
-
-<p
-data-id="Nomor dan informasi NIB akan ditampilkan sesuai dokumen resmi."
-data-en="NIB information will be displayed based on the official document."
->
-Nomor dan informasi NIB akan ditampilkan
-sesuai dokumen resmi.
-</p>
-
-<span class="document-status">
-AVAILABLE SOON
-</span>
-
-</div>
-
-
-<div class="document-card reveal">
-
-<h3>
-NPWP Perusahaan
-</h3>
-
-<p
-data-id="Informasi NPWP dapat ditampilkan secara terbatas untuk menjaga keamanan data."
-data-en="Tax identification information can be displayed selectively for data security."
->
-Informasi NPWP dapat ditampilkan secara
-terbatas untuk menjaga keamanan data.
-</p>
-
-<span class="document-status">
-PROTECTED
-</span>
-
-</div>
-
-
-<div class="document-card reveal">
-
-<h3>
-Sertifikat Kompetensi
-</h3>
-
-<p
-data-id="Sertifikat kompetensi tenaga ahli dapat ditampilkan sesuai izin dan dokumen yang tersedia."
-data-en="Expert competency certificates can be displayed according to available documents and permissions."
->
-Sertifikat kompetensi tenaga ahli dapat
-ditampilkan sesuai izin dan dokumen
-yang tersedia.
-</p>
-
-<span class="document-status">
-AVAILABLE SOON
-</span>
-
-</div>
-
-
-<div class="document-card reveal">
-
-<h3>
-Sertifikat Badan Usaha
-</h3>
-
-<p
-data-id="Ditampilkan jika dokumen sertifikat badan usaha tersedia."
-data-en="Displayed if the business entity certificate is available."
->
-Ditampilkan jika dokumen sertifikat
-badan usaha tersedia.
-</p>
-
-<span class="document-status">
-IF AVAILABLE
-</span>
-
-</div>
-
-
-<div class="document-card reveal">
-
-<h3>
-Sertifikat Pelatihan
-</h3>
-
-<p
-data-id="Dokumen pelatihan dan kompetensi pendukung dapat ditampilkan."
-data-en="Training and supporting competency documents can be displayed."
->
-Dokumen pelatihan dan kompetensi
-pendukung dapat ditampilkan.
-</p>
-
-<span class="document-status">
-AVAILABLE SOON
-</span>
-
-</div>
-
-
-<div class="document-card reveal">
-
-<h3>
-Dokumen Legalitas Lain
-</h3>
-
-<p
-data-id="Dokumen legalitas lainnya dapat ditambahkan sesuai kebutuhan."
-data-en="Other legal documents can be added as needed."
->
-Dokumen legalitas lainnya dapat
-ditambahkan sesuai kebutuhan.
-</p>
-
-<span class="document-status">
-AVAILABLE SOON
-</span>
-
-</div>
-
-
-</div>
-
-</div>
-
+    <div class="documentation-grid">
+      <div class="documentation-card reveal"><div class="documentation-number">01</div><h3>Survey Lapangan</h3><p>Aktivitas survey dan pengamatan kondisi lapangan.</p></div>
+      <div class="documentation-card reveal"><div class="documentation-number">02</div><h3>Pengukuran</h3><p>Kegiatan pengukuran teknis pada lokasi pekerjaan.</p></div>
+      <div class="documentation-card reveal"><div class="documentation-number">03</div><h3>Aktivitas Lingkungan</h3><p>Dokumentasi kegiatan yang berkaitan dengan lingkungan.</p></div>
+      <div class="documentation-card reveal"><div class="documentation-number">04</div><h3>Pengawasan</h3><p>Kegiatan pengawasan pekerjaan sesuai kebutuhan proyek.</p></div>
+      <div class="documentation-card reveal"><div class="documentation-number">05</div><h3>Konsultasi</h3><p>Proses konsultasi dan koordinasi dengan pihak terkait.</p></div>
+      <div class="documentation-card reveal"><div class="documentation-number">06</div><h3>Penyusunan Dokumen</h3><p>Penyusunan dokumen teknis dan lingkungan.</p></div>
+      <div class="documentation-card reveal"><div class="documentation-number">07</div><h3>Perencanaan</h3><p>FS, MP dan DED sebagai bagian dari lingkup perencanaan.</p></div>
+      <div class="documentation-card reveal"><div class="documentation-number">08</div><h3>Kegiatan Teknis</h3><p>Aktivitas teknis sesuai bidang engineering dan konsultasi.</p></div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================================
-     MITRA / KLIEN
-========================================================= -->
-
-<section
-class="section clients"
-id="clients"
->
-
-<div class="container">
-
-
-<div
-class="section-label"
-data-id="MITRA / KLIEN"
-data-en="PARTNERS / CLIENTS"
->
-MITRA / KLIEN
-</div>
-
-
-<h2
-class="section-title"
-data-id="Mitra yang telah bekerja sama."
-data-en="Partners we have worked with."
->
-Mitra yang telah
-bekerja sama.
-</h2>
-
-
-<p
-class="section-description"
-data-id="Logo atau nama perusahaan/instansi dapat ditampilkan setelah mendapatkan izin untuk publikasi."
-data-en="Company or institution logos and names can be displayed after receiving permission for publication."
->
-
-Logo atau nama perusahaan/instansi dapat
-ditampilkan setelah mendapatkan izin untuk publikasi.
-
-</p>
-
-
-
-<div class="client-grid">
-
-
-<div class="client-card">
-MITRA / KLIEN
-</div>
-
-<div class="client-card">
-MITRA / KLIEN
-</div>
-
-<div class="client-card">
-MITRA / KLIEN
-</div>
-
-<div class="client-card">
-MITRA / KLIEN
-</div>
-
-</div>
-
-</div>
-
+<section class="section insight" id="insight">
+  <div class="container">
+    <div class="section-label" data-id="PROFIL PERUSAHAAN" data-en="COMPANY PROFILE">PROFIL PERUSAHAAN</div>
+    <h2 class="section-title" data-id="Informasi utama dalam satu tampilan." data-en="Key information in one view.">Informasi utama dalam satu tampilan.</h2>
+    <div class="insight-grid">
+      <div class="insight-card reveal"><div class="insight-category">ESTABLISHMENT</div><h3>Didirikan 15 Oktober 2020</h3><p>Dokumen menyebutkan pendirian perusahaan pada 15 Oktober 2020 di Kota Serang.</p></div>
+      <div class="insight-card reveal"><div class="insight-category">BUSINESS</div><h3>Konsultasi, Perencanaan & Konstruksi</h3><p>Perusahaan dipersiapkan sebagai penyedia jasa konsultasi, perencanaan, pengawasan dan konstruksi.</p></div>
+      <div class="insight-card reveal"><div class="insight-category">VISION</div><h3>Menuju Daya Saing Internasional</h3><p>Rencana jangka menengah perusahaan diarahkan untuk memperkenalkan jasa konsultasi dan konstruksi hingga taraf internasional.</p></div>
+      <div class="insight-card reveal"><div class="insight-category">QUALITY</div><h3>Fokus pada Kualitas Jasa</h3><p>Rencana jangka panjang menekankan kualitas produk jasa untuk memperkuat posisi dan peluang bisnis.</p></div>
+      <div class="insight-card reveal"><div class="insight-category">EXPERTISE</div><h3>Multi-disiplin</h3><p>Profil perusahaan menyebut dukungan tenaga ahli dari berbagai disiplin ilmu.</p></div>
+      <div class="insight-card reveal"><div class="insight-category">PARTNERSHIP</div><h3>Kemitraan Profesional</h3><p>Rencana jangka pendek mencakup pengembangan kerja sama kemitraan dengan badan, instansi/institusi dan lembaga terkait.</p></div>
+    </div>
+  </div>
 </section>
 
+<section class="section documents" id="documents">
+  <div class="container">
+    <div class="section-label" data-id="DOKUMEN & LEGALITAS" data-en="DOCUMENTS & LEGAL">DOKUMEN & LEGALITAS</div>
+    <h2 class="section-title" data-id="Legalitas perusahaan yang tercantum dalam dokumen." data-en="Company legal documents included in the profile.">Legalitas perusahaan yang tercantum dalam dokumen.</h2>
+    <p class="section-description" data-id="Nomor dokumen ditampilkan berdasarkan Company Profile yang dilampirkan. Untuk publikasi website, pastikan informasi legal yang bersifat sensitif memang ingin ditampilkan secara terbuka." data-en="Document numbers below are based on the attached Company Profile. For website publication, make sure sensitive legal information is intended for public display.">Nomor dokumen ditampilkan berdasarkan Company Profile yang dilampirkan. Untuk publikasi website, pastikan informasi legal yang bersifat sensitif memang ingin ditampilkan secara terbuka.</p>
 
-
-<!-- =========================================================
-     CTA
-========================================================= -->
+    <div class="document-grid">
+      <div class="document-card reveal"><h3>Akta Pendirian</h3><p>CV. Laban Environment Global (LEG), Nomor Akte 1, tanggal 15 Oktober 2020, Notaris Tatu Afifah, SH. M.Kn.</p><span class="document-status">TERCANTUM</span></div>
+      <div class="document-card reveal"><h3>SK Kemenkumham</h3><p>AHU-457.AH.02.01 Tahun 2014, tanggal 17 Juni 2014.</p><span class="document-status">TERCANTUM</span></div>
+      <div class="document-card reveal"><h3>NIB</h3><p>Nomor Induk Berusaha 0226010120483.</p><span class="document-status">TERCANTUM</span></div>
+      <div class="document-card reveal"><h3>NPWP</h3><p>Nomor NPWP 96.306.890.3-401.000.</p><span class="document-status">TERCANTUM</span></div>
+      <div class="document-card reveal"><h3>Surat Izin Lokasi</h3><p>Nomor 0226010120483, diterbitkan dalam dokumen perizinan perusahaan.</p><span class="document-status">TERCANTUM</span></div>
+      <div class="document-card reveal"><h3>Surat Izin Usaha</h3><p>Nomor 0226010120483 untuk Aktivitas Keinsinyuran dan Konsultasi Teknis YBDI.</p><span class="document-status">TERCANTUM</span></div>
+      <div class="document-card reveal"><h3>Surat Izin Lingkungan</h3><p>Nomor 0226010120483 dengan lokasi kegiatan di Kota Serang.</p><span class="document-status">TERCANTUM</span></div>
+      <div class="document-card reveal"><h3>Surat Keterangan Domisili</h3><p>Nomor 500/122-EKBANG/X/2020 dari Pemerintah Kota Serang.</p><span class="document-status">TERCANTUM</span></div>
+      <div class="document-card reveal"><h3>Company Profile</h3><p>Company Profile LEG 2023 sebagai sumber profil, rencana, struktur dan ruang lingkup pelayanan.</p><span class="document-status">2023</span></div>
+    </div>
+  </div>
+</section>
 
 <section class="cta">
-
-<div class="container">
-
-<div class="cta-box">
-
-
-<div>
-
-<div class="section-label">
-SUSTAINING FUTURE TOGETHER
-</div>
-
-
-<h2
-data-id="Mari membangun solusi yang lebih baik bersama."
-data-en="Let's build better solutions together."
->
-
-Mari membangun solusi
-yang lebih baik bersama.
-
-</h2>
-
-
-<p
-data-id="Ceritakan kebutuhan proyek Anda kepada LABAN Environment Global."
-data-en="Tell LABAN Environment Global about your project needs."
->
-
-Ceritakan kebutuhan proyek Anda
-kepada LABAN Environment Global.
-
-</p>
-
-</div>
-
-
-<div class="cta-button">
-
-<a
-href="https://wa.me/6281299119884?text=Halo%20LABAN%20Environment%20Global%2C%20saya%20ingin%20berkonsultasi."
-target="_blank"
-rel="noopener"
-class="btn"
-data-id="Hubungi Kami"
-data-en="Contact Us"
->
-
-Hubungi Kami →
-
-</a>
-
-</div>
-
-
-</div>
-
-</div>
-
+  <div class="container">
+    <div class="cta-box">
+      <div>
+        <div class="section-label">SUSTAINING FUTURE TOGETHER</div>
+        <h2 data-id="Mari membangun solusi yang lebih baik bersama." data-en="Let's build better solutions together.">Mari membangun solusi yang lebih baik bersama.</h2>
+        <p data-id="Untuk informasi dan pembahasan kebutuhan proyek, hubungi LEG melalui email resmi." data-en="For information and project discussions, contact LEG through the official email.">Untuk informasi dan pembahasan kebutuhan proyek, hubungi LEG melalui email resmi.</p>
+      </div>
+      <div class="cta-button"><a class="btn" href="mailto:laban.environment.global@gmail.com">Kirim Email →</a></div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================================
-     KONTAK
-========================================================= -->
-
-<section
-class="section contact"
-id="contact"
->
-
-<div class="container">
-
-<div class="contact-grid">
-
-
-<div class="contact-info">
-
-
-<div
-class="section-label"
-data-id="KONTAK"
-data-en="CONTACT"
->
-KONTAK
-</div>
-
-
-<h2
-data-id="Mari terhubung dengan LABAN."
-data-en="Let's connect with LABAN."
->
-
-Mari terhubung
-dengan LABAN.
-
-</h2>
-
-
-<p
-data-id="Untuk kebutuhan informasi, konsultasi, maupun pembahasan proyek, silakan hubungi kami."
-data-en="For information, consultation, or project discussions, please contact us."
->
-
-Untuk kebutuhan informasi, konsultasi,
-maupun pembahasan proyek, silakan
-hubungi kami.
-
-</p>
-
-
-<div class="contact-list">
-
-
-<div class="contact-item">
-
-<div class="contact-icon">
-A
-</div>
-
-<div>
-
-<strong
-data-id="ALAMAT KANTOR"
-data-en="OFFICE ADDRESS"
->
-ALAMAT KANTOR
-</strong>
-
-<span>
-
-KSB. Komp. Permata Hijau Blok N No. 05
-RT 002 RW 008, Kel. Banjar Agung,
-Cipocok - Kota Serang
-
-</span>
-
-</div>
-
-</div>
-
-
-<div class="contact-item">
-
-<div class="contact-icon">
-W
-</div>
-
-<div>
-
-<strong>
-WHATSAPP
-</strong>
-
-<span>
-0812 9911 9884
-</span>
-
-</div>
-
-</div>
-
-
-<div class="contact-item">
-
-<div class="contact-icon">
-@
-</div>
-
-<div>
-
-<strong>
-EMAIL
-</strong>
-
-<span>
-cvlaban71@gmail.com
-</span>
-
-</div>
-
-</div>
-
-
-<div class="contact-item">
-
-<div class="contact-icon">
-M
-</div>
-
-<div>
-
-<strong
-data-id="MEDIA SOSIAL"
-data-en="SOCIAL MEDIA"
->
-MEDIA SOSIAL
-</strong>
-
-<span
-data-id="Instagram / LinkedIn akan ditambahkan setelah akun resmi tersedia."
-data-en="Instagram / LinkedIn will be added once the official accounts are available."
->
-Instagram / LinkedIn akan ditambahkan
-setelah akun resmi tersedia.
-</span>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<div class="contact-card">
-
-
-<h3
-data-id="Mulai konsultasi."
-data-en="Start a consultation."
->
-
-Mulai konsultasi.
-
-</h3>
-
-
-<p
-data-id="Pilih channel yang paling nyaman untuk menghubungi LABAN Environment Global."
-data-en="Choose the channel that is most convenient for contacting LABAN Environment Global."
->
-
-Pilih channel yang paling nyaman untuk
-menghubungi LABAN Environment Global.
-
-</p>
-
-
-<div class="contact-buttons">
-
-
-<a
-href="https://wa.me/6281299119884"
-target="_blank"
-rel="noopener"
-class="contact-button whatsapp"
->
-WhatsApp
-</a>
-
-
-<a
-href="mailto:cvlaban71@gmail.com"
-class="contact-button email"
->
-Email
-</a>
-
-
-<a
-href="https://www.google.com/maps/search/?api=1&query=Komp.%20Permata%20Hijau%20Blok%20N%20No.%2005%20Banjar%20Agung%20Cipocok%20Kota%20Serang"
-target="_blank"
-rel="noopener"
-class="contact-button maps"
->
-Google Maps
-</a>
-
-
-</div>
-
-
-<div
-style="
-margin-top:25px;
-padding:18px;
-background:#f7faf7;
-border:1px solid #e3e9e5;
-font-size:11px;
-line-height:1.7;
-color:#66756d;
-"
->
-
-<strong
-style="
-display:block;
-color:#063d27;
-margin-bottom:4px;
-"
->
-LABAN ENVIRONMENT GLOBAL
-</strong>
-
-Sustaining Future Together
-
-<br>
-
-Environment | Engineering | Consultant
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</div>
-
+<section class="section contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-label" data-id="KONTAK" data-en="CONTACT">KONTAK</div>
+        <h2 data-id="Mari terhubung dengan LEG." data-en="Let's connect with LEG.">Mari terhubung dengan LEG.</h2>
+        <p data-id="Untuk kebutuhan informasi, konsultasi, maupun pembahasan proyek, silakan hubungi CV. Laban Environment Global melalui email resmi."
+           data-en="For information, consultation or project discussions, please contact CV. Laban Environment Global through the official email.">
+          Untuk kebutuhan informasi, konsultasi, maupun pembahasan proyek, silakan hubungi CV. Laban Environment Global melalui email resmi.
+        </p>
+
+        <div class="contact-item">
+          <div class="contact-icon">@</div>
+          <div>
+            <strong>EMAIL RESMI</strong>
+            <span>laban.environment.global@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <h3 data-id="Mulai konsultasi." data-en="Start a consultation.">Mulai konsultasi.</h3>
+        <p data-id="Kontak website ini dibuat menggunakan email sebagai channel komunikasi utama." data-en="This website uses email as the main communication channel.">Kontak website ini dibuat menggunakan email sebagai channel komunikasi utama.</p>
+        <a class="email-contact" href="mailto:laban.environment.global@gmail.com">
+          <span>laban.environment.global@gmail.com</span>
+          <small>KIRIM EMAIL →</small>
+        </a>
+
+        <div style="margin-top:22px;padding:17px;background:#f7faf7;border:1px solid #e3e9e5;font-size:10.5px;line-height:1.7;color:#66756d">
+          <strong style="display:block;color:#063d27;margin-bottom:4px">CV. LABAN ENVIRONMENT GLOBAL</strong>
+          Environment • Engineering • Consultant<br>
+          Permata Hijau Blok N, Kota Serang Baru (KSB)
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
+</main>
 
 <footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="labanlogoterupdate.jpeg" alt="CV. Laban Environment Global" class="footer-logo">
+          <div class="footer-brand-name">CV. LABAN ENVIRONMENT GLOBAL</div>
+        </div>
+        <p class="footer-description">
+          <strong>Sustaining Future Together</strong><br><br>
+          Environment • Engineering • Consultant<br><br>
+          CV. Laban Environment Global adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi.
+        </p>
+      </div>
 
-<div class="container">
+      <div>
+        <div class="footer-title" data-id="NAVIGASI" data-en="NAVIGATION">NAVIGASI</div>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">Tentang Kami</a>
+          <a href="#services">Layanan</a>
+          <a href="#scope">Ruang Lingkup</a>
+          <a href="#documents">Legalitas</a>
+        </div>
+      </div>
 
-<div class="footer-grid">
+      <div>
+        <div class="footer-title" data-id="KONTAK" data-en="CONTACT">KONTAK</div>
+        <div class="footer-links">
+          <a href="mailto:laban.environment.global@gmail.com">laban.environment.global@gmail.com</a>
+          <a href="#contact" data-id="Kirim Email" data-en="Send Email">Kirim Email</a>
+        </div>
+      </div>
+    </div>
 
-
-<div>
-
-
-<div class="footer-brand">
-
-<img
-src="labanlogoterupdate.jpeg"
-alt="LABAN Environment Global"
-class="footer-logo"
->
-
-<div class="footer-brand-name">
-LABAN ENVIRONMENT GLOBAL
-</div>
-
-</div>
-
-
-<p class="footer-description">
-
-<strong>
-Sustaining Future Together
-</strong>
-
-<br><br>
-
-Environment • Engineering • Consultant
-
-<br><br>
-
-KSB. Komp. Permata Hijau Blok N No. 05
-RT 002 RW 008, Kel. Banjar Agung,
-Cipocok - Kota Serang
-
-</p>
-
-</div>
-
-
-
-<div>
-
-<div
-class="footer-title"
-data-id="NAVIGASI"
-data-en="NAVIGATION"
->
-NAVIGASI
-</div>
-
-
-<div class="footer-links">
-
-<a href="#home">Home</a>
-
-<a href="#about">Tentang Kami</a>
-
-<a href="#services">Layanan</a>
-
-<a href="#experts">Tenaga Ahli</a>
-
-<a href="#portfolio">Portofolio</a>
-
-</div>
-
-</div>
-
-
-
-<div>
-
-<div
-class="footer-title"
-data-id="KONTAK"
-data-en="CONTACT"
->
-KONTAK
-</div>
-
-
-<div class="footer-links">
-
-<a href="tel:+6281299119884">
-0812 9911 9884
-</a>
-
-<a href="mailto:cvlaban71@gmail.com">
-cvlaban71@gmail.com
-</a>
-
-<a
-href="https://wa.me/6281299119884"
-target="_blank"
-rel="noopener"
->
-WhatsApp
-</a>
-
-<a
-href="#contact"
-data-id="Formulir Konsultasi"
-data-en="Consultation Form"
->
-Formulir Konsultasi
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-
-<div class="footer-bottom">
-
-<span>
-
-©
-<span id="year"></span>
-LABAN Environment Global.
-All rights reserved.
-
-</span>
-
-<span>
-Sustaining Future Together
-</span>
-
-</div>
-
-</div>
-
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> CV. Laban Environment Global. All rights reserved.</span>
+      <span>Sustaining Future Together</span>
+    </div>
+  </div>
 </footer>
 
-
-
-<!-- =========================================================
-     FLOATING WHATSAPP
-========================================================= -->
-
-<a
-href="https://wa.me/6281299119884"
-target="_blank"
-rel="noopener"
-class="whatsapp-float"
-aria-label="WhatsApp"
->
-W
-</a>
-
-
-
-<!-- =========================================================
-     JAVASCRIPT
-========================================================= -->
-
 <script>
+const menuToggle=document.getElementById("menuToggle");
+const navMenu=document.getElementById("navMenu");
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
-
-const menuToggle =
-document.getElementById("menuToggle");
-
-const navMenu =
-document.getElementById("navMenu");
-
-
-menuToggle.addEventListener(
-"click",
-function(){
-
-    navMenu.classList.toggle("active");
-
-    if(
-        navMenu.classList.contains("active")
-    ){
-
-        menuToggle.innerHTML = "×";
-
-    }else{
-
-        menuToggle.innerHTML = "☰";
-
-    }
-
+menuToggle.addEventListener("click",()=>{
+  navMenu.classList.toggle("active");
+  menuToggle.textContent=navMenu.classList.contains("active")?"×":"☰";
 });
 
-
-/* =========================================================
-   CLOSE MENU AFTER CLICK
-========================================================= */
-
-document
-.querySelectorAll(".nav-menu > a")
-.forEach(function(link){
-
-    link.addEventListener(
-    "click",
-    function(){
-
-        navMenu.classList.remove("active");
-
-        menuToggle.innerHTML = "☰";
-
-    });
-
+document.querySelectorAll(".nav-menu>a").forEach(link=>{
+  link.addEventListener("click",()=>{
+    navMenu.classList.remove("active");
+    menuToggle.textContent="☰";
+  });
 });
 
-
-/* =========================================================
-   LANGUAGE
-========================================================= */
-
-const languageButtons =
-document.querySelectorAll(
-".language-btn"
-);
-
-const translatedElements =
-document.querySelectorAll(
-"[data-id][data-en]"
-);
-
+const languageButtons=document.querySelectorAll(".language-btn");
+const translatedElements=document.querySelectorAll("[data-id][data-en]");
 
 function changeLanguage(language){
+  translatedElements.forEach(el=>{
+    const translation=el.getAttribute("data-"+language);
+    if(translation) el.innerHTML=translation;
+  });
 
-    translatedElements.forEach(
-    function(element){
+  languageButtons.forEach(btn=>{
+    btn.classList.toggle("active",btn.dataset.lang===language);
+  });
 
-        const translation =
-        element.getAttribute(
-            "data-" + language
-        );
-
-        if(translation){
-
-            element.innerHTML =
-            translation;
-
-        }
-
-    });
-
-
-    languageButtons.forEach(
-    function(button){
-
-        button.classList.remove(
-            "active"
-        );
-
-        if(
-            button.dataset.lang ===
-            language
-        ){
-
-            button.classList.add(
-                "active"
-            );
-
-        }
-
-    });
-
-
-    document.documentElement.lang =
-    language;
-
-
-    localStorage.setItem(
-        "labanLanguage",
-        language
-    );
-
+  document.documentElement.lang=language;
+  localStorage.setItem("labanLanguage",language);
 }
 
-
-languageButtons.forEach(
-function(button){
-
-    button.addEventListener(
-    "click",
-    function(){
-
-        changeLanguage(
-            button.dataset.lang
-        );
-
-    });
-
+languageButtons.forEach(btn=>{
+  btn.addEventListener("click",()=>changeLanguage(btn.dataset.lang));
 });
 
+const savedLanguage=localStorage.getItem("labanLanguage");
+changeLanguage(savedLanguage==="en"||savedLanguage==="id"?savedLanguage:"id");
 
-/* =========================================================
-   LOAD LANGUAGE
-========================================================= */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("active");
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.1});
 
-const savedLanguage =
-localStorage.getItem(
-"labanLanguage"
-);
-
-
-if(
-    savedLanguage === "en" ||
-    savedLanguage === "id"
-){
-
-    changeLanguage(
-        savedLanguage
-    );
-
-}else{
-
-    changeLanguage("id");
-
-}
-
-
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-const revealElements =
-document.querySelectorAll(
-".reveal"
-);
-
-
-const observer =
-new IntersectionObserver(
-
-function(entries){
-
-    entries.forEach(
-    function(entry){
-
-        if(
-            entry.isIntersecting
-        ){
-
-            entry.target.classList.add(
-                "active"
-            );
-
-            observer.unobserve(
-                entry.target
-            );
-
-        }
-
-    });
-
-},
-{
-    threshold:.1
-});
-
-
-revealElements.forEach(
-function(element){
-
-    observer.observe(
-        element
-    );
-
-});
-
-
-/* =========================================================
-   YEAR
-========================================================= */
-
-document.getElementById(
-"year"
-).textContent =
-new Date().getFullYear();
-
+document.querySelectorAll(".reveal").forEach(el=>observer.observe(el));
+document.getElementById("year").textContent=new Date().getFullYear();
 </script>
 
-
 </body>
-
 </html>
