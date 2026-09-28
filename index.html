@@ -251,6 +251,21 @@ header{
     cursor:pointer;
 }
 
+
+.mobile-language{
+    display:none;
+    padding:12px 16px;
+    gap:5px;
+    border-top:1px solid #edf1ee;
+    background:#fbfdfb;
+}
+
+@media(max-width:900px){
+    .mobile-language{
+        display:flex;
+    }
+}
+
 /* HERO */
 .hero{
     padding-top:82px;
@@ -959,6 +974,102 @@ header{
     }
 }
 
+
+
+/* HERO — 18 IMAGE ROTATION */
+.slider-counter{
+    position:absolute;
+    z-index:8;
+    top:22px;
+    right:22px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#fff;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1px;
+    text-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+
+.slider-counter i{
+    width:22px;
+    height:1px;
+    background:rgba(255,255,255,.7);
+    display:block;
+}
+
+.slider-progress{
+    position:absolute;
+    z-index:8;
+    left:22px;
+    top:25px;
+    width:85px;
+    height:2px;
+    overflow:hidden;
+    border-radius:99px;
+    background:rgba(255,255,255,.28);
+}
+
+.slider-progress span{
+    display:block;
+    width:5.55%;
+    height:100%;
+    background:#fff;
+    border-radius:99px;
+    transition:width .45s ease;
+}
+
+
+/* DOCUMENTATION — FEATURED + COMPLETE DISPLAY */
+.documentation-featured-grid{
+    position:relative;
+}
+
+.documentation-featured-grid .documentation-card:nth-child(-n+3){
+    border-color:rgba(8,120,63,.20);
+}
+
+.documentation-featured-grid .documentation-card:nth-child(-n+3) .documentation-image{
+    height:285px;
+}
+
+.documentation-featured-grid .documentation-card:nth-child(n+4) .documentation-image{
+    height:250px;
+}
+
+.documentation-note{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin-top:24px;
+    padding:15px 17px;
+    border:1px solid var(--border);
+    background:#fbfdfb;
+    border-radius:12px;
+    color:var(--muted);
+    font-size:10.5px;
+}
+
+.documentation-note strong{
+    color:var(--green);
+    font-size:10px;
+}
+
+@media(max-width:620px){
+    .documentation-featured-grid .documentation-card:nth-child(-n+3) .documentation-image,
+    .documentation-featured-grid .documentation-card:nth-child(n+4) .documentation-image{
+        height:285px;
+    }
+
+    .documentation-note{
+        display:block;
+        line-height:1.7;
+    }
+}
+
+
 /* LEGAL DOCUMENT GALLERY */
 .document-gallery{
     display:grid;
@@ -1652,11 +1763,17 @@ footer{
             <a href="#documentation">Dokumentasi</a>
             <a href="#legal">Legalitas</a>
             <a href="#contact" class="nav-contact">Kontak</a>
+
+            <div class="mobile-language">
+                <button class="language-btn active" id="mobileLangID" type="button">ID</button>
+                <button class="language-btn" id="mobileLangEN" type="button">EN</button>
+            </div>
+
         </nav>
 
         <div class="language-switcher">
-            <button class="language-btn active">ID</button>
-            <button class="language-btn">EN</button>
+            <button class="language-btn active" id="langID" type="button">ID</button>
+            <button class="language-btn" id="langEN" type="button">EN</button>
         </div>
     </div>
 </header>
@@ -1696,23 +1813,68 @@ footer{
         <div class="hero-visual reveal">
             <div class="hero-slider" id="heroSlider">
 
-                <!-- FOTO HERO: sesuai nama file di GitHub -->
                 <div class="hero-slide active">
-                    <img src="foto 1.png" alt="Dokumentasi kegiatan CV. Laban Environment Global">
+                    <img src="foto 1.png" alt="CV. Laban Environment Global — documentation 1" loading="eager" onerror="this.parentElement.remove()">
                 </div>
-
                 <div class="hero-slide">
-                    <img src="foto 2.png" alt="Dokumentasi lapangan CV. Laban Environment Global">
+                    <img src="foto 2.png" alt="CV. Laban Environment Global — documentation 2" loading="eager" onerror="this.parentElement.remove()">
                 </div>
-
                 <div class="hero-slide">
-                    <img src="foto 3.png" alt="Aktivitas teknis CV. Laban Environment Global">
+                    <img src="foto 3.png" alt="CV. Laban Environment Global — documentation 3" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 1.jpeg" alt="CV. Laban Environment Global — documentation 4" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 2.jpeg" alt="CV. Laban Environment Global — documentation 5" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 3.jpeg" alt="CV. Laban Environment Global — documentation 6" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 4.jpeg" alt="CV. Laban Environment Global — documentation 7" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 5.jpeg" alt="CV. Laban Environment Global — documentation 8" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 6.jpeg" alt="CV. Laban Environment Global — documentation 9" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 7.jpeg" alt="CV. Laban Environment Global — documentation 10" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 8.jpeg" alt="CV. Laban Environment Global — documentation 11" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 9.jpeg" alt="CV. Laban Environment Global — documentation 12" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 10.jpeg" alt="CV. Laban Environment Global — documentation 13" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 11.jpeg" alt="CV. Laban Environment Global — documentation 14" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 12.jpeg" alt="CV. Laban Environment Global — documentation 15" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 13.jpeg" alt="CV. Laban Environment Global — documentation 16" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 14.jpeg" alt="CV. Laban Environment Global — documentation 17" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 15.jpeg" alt="CV. Laban Environment Global — documentation 18" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="slider-counter">
+                    <span id="slideCurrent">01</span>
+                    <i></i>
+                    <span>18</span>
                 </div>
 
-                <div class="slider-dots">
-                    <button class="slider-dot active" data-slide="0" aria-label="Foto 1"></button>
-                    <button class="slider-dot" data-slide="1" aria-label="Foto 2"></button>
-                    <button class="slider-dot" data-slide="2" aria-label="Foto 3"></button>
+                <div class="slider-progress">
+                    <span id="sliderProgress"></span>
                 </div>
 
                 <div class="hero-slider-info">
@@ -2073,7 +2235,7 @@ footer{
             galeri untuk memberikan gambaran visual mengenai aktivitas dan pekerjaan perusahaan.
         </p>
 
-        <div class="documentation-grid">
+        <div class="documentation-grid documentation-featured-grid">
 
             <article class="documentation-card reveal">
                 <div class="documentation-image">
@@ -2534,32 +2696,81 @@ document.querySelectorAll("#navMenu a").forEach(link => {
     });
 });
 
-/* HERO AUTO SLIDER */
+/* HERO AUTO SLIDER — 18 IMAGES */
 const slides = document.querySelectorAll(".hero-slide");
-const dots = document.querySelectorAll(".slider-dot");
 const slideTitle = document.getElementById("slideTitle");
+const slideCurrent = document.getElementById("slideCurrent");
+const sliderProgress = document.getElementById("sliderProgress");
 
-const slideTitles = [
+const slideTitlesID = [
+    "Aktivitas Profesional di Lapangan",
+    "Survey & Observasi",
+    "Aktivitas Teknis Lapangan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan"
+];
+
+const slideTitlesEN = [
     "Professional Work in the Field",
     "Survey & Observation",
-    "Technical Field Activity"
+    "Technical Field Activity",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation"
 ];
 
 let currentSlide = 0;
 let sliderTimer;
 
 function showSlide(index){
+    if(!slides.length) return;
+
     currentSlide = index;
 
     slides.forEach((slide, i) => {
         slide.classList.toggle("active", i === index);
     });
 
-    dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
-    });
+    const lang = document.documentElement.lang === "en" ? "en" : "id";
 
-    slideTitle.textContent = slideTitles[index];
+    if(slideTitle){
+        slideTitle.textContent = lang === "en"
+            ? slideTitlesEN[index]
+            : slideTitlesID[index];
+    }
+
+    if(slideCurrent){
+        slideCurrent.textContent = String(index + 1).padStart(2,"0");
+    }
+
+    if(sliderProgress){
+        sliderProgress.style.width = `${((index + 1) / slides.length) * 100}%`;
+    }
 }
 
 function nextSlide(){
@@ -2571,13 +2782,7 @@ function startSlider(){
     sliderTimer = setInterval(nextSlide, 4500);
 }
 
-dots.forEach(dot => {
-    dot.addEventListener("click", () => {
-        showSlide(Number(dot.dataset.slide));
-        startSlider();
-    });
-});
-
+showSlide(0);
 startSlider();
 
 /* REVEAL ANIMATION */
@@ -2640,6 +2845,265 @@ document.addEventListener("keydown", (event) => {
     if(event.key === "Escape" && documentModal.classList.contains("open")){
         closeDocumentModal();
     }
+});
+
+
+/* BILINGUAL MODE — ID / EN */
+const translations = {
+    "Beranda":"Home",
+    "Tentang":"About",
+    "Layanan":"Services",
+    "Pengurus":"Team",
+    "Lingkup":"Scope",
+    "Dokumentasi":"Documentation",
+    "Legalitas":"Legal",
+    "Kontak":"Contact",
+    "Kenal Perusahaan":"Explore Company",
+    "Hubungi Kami":"Contact Us",
+    "SUSTAINING FUTURE TOGETHER":"SUSTAINING FUTURE TOGETHER",
+    "ENVIRONMENT • ENGINEERING • CONSULTANT":"ENVIRONMENT • ENGINEERING • CONSULTANT",
+    "Building":"Building",
+    "Better":"Better",
+    "Solutions.":"Solutions.",
+    "Laban Environment Global":"Laban Environment Global",
+    "Professional solutions for environment, engineering and construction.":"Professional solutions for environmental, engineering and construction needs.",
+    "CV. Laban Environment Global adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, bermutu dan tepat waktu.":"CV. Laban Environment Global is a consulting, planning, supervision and construction company supported by experts from various disciplines to deliver professional, high-quality and timely services.",
+    "Tahun Berdiri":"Year Established",
+    "Bentuk Badan Usaha":"Business Entity",
+    "CV":"CV",
+    "Laban Environment Global":"Laban Environment Global",
+    "01 / Company Profile":"01 / Company Profile",
+    "02 / Direction":"02 / Direction",
+    "03 / Services":"03 / Services",
+    "04 / Organization":"04 / Organization",
+    "05 / Scope":"05 / Scope",
+    "06 / Documentation":"06 / Documentation",
+    "07 / Legal":"07 / Legal",
+    "08 / Contact":"08 / Contact",
+    "Company Profile":"Company Profile",
+    "Professional solutions for environment, engineering and construction.":"Professional solutions for environmental, engineering and construction needs.",
+    "Visi":"Vision",
+    "Misi":"Mission",
+    "Rencana Jangka Pendek":"Short-Term Plan",
+    "Rencana Jangka Menengah":"Medium-Term Plan",
+    "Rencana Jangka Panjang":"Long-Term Plan",
+    "Lingkup Jasa":"Service Scope",
+    "Pengurus & Divisi":"Management & Divisions",
+    "Ruang Lingkup Pelayanan":"Service Scope",
+    "Dokumentasi Lapangan":"Field Documentation",
+    "Legalitas Perusahaan":"Company Legal Documents",
+    "Let's Collaborate":"Let's Collaborate",
+    "Kirim Email":"Send Email",
+    "Let's talk about your next project.":"Let's talk about your next project.",
+    "Contact LEG":"Contact LEG",
+    "Kontak resmi perusahaan melalui email.":"Official company contact via email.",
+    "EMAIL":"EMAIL",
+    "ALAMAT":"ADDRESS",
+    "Buka alamat di Google Maps":"Open address in Google Maps",
+    "Lihat Lokasi Perusahaan di Google Maps":"View Company Location on Google Maps",
+    "NAVIGATION":"NAVIGATION",
+    "CONTACT":"CONTACT",
+    "Google Maps":"Google Maps",
+    "All rights reserved.":"All rights reserved.",
+    "Environment • Engineering • Consultant":"Environment • Engineering • Consultant",
+
+    "Feasibility Study":"Feasibility Study",
+    "Master Plan":"Master Plan",
+    "Detail Engineering Design":"Detail Engineering Design",
+    "Dokumen Lingkungan":"Environmental Documents",
+    "Konstruksi & Engineering":"Construction & Engineering",
+    "Pengelolaan Air":"Water Management",
+    "Sampah & Limbah":"Waste & Residual Management",
+    "Penelitian & Kajian":"Research & Studies",
+    "Konsultasi Teknis":"Technical Consulting",
+
+    "Aktivitas Lapangan":"Field Activities",
+    "Survey & Observasi":"Survey & Observation",
+    "Kegiatan Teknis":"Technical Activities",
+    "Dokumentasi Kegiatan":"Activity Documentation",
+    "Aktivitas Lapangan":"Field Activities",
+    "Survey & Observasi":"Survey & Observation",
+    "FIELD WORK":"FIELD WORK",
+    "DOCUMENTATION 01":"DOCUMENTATION 01",
+    "DOCUMENTATION 02":"DOCUMENTATION 02",
+    "DOCUMENTATION 03":"DOCUMENTATION 03",
+    "DOCUMENTATION 04":"DOCUMENTATION 04",
+    "DOCUMENTATION 05":"DOCUMENTATION 05",
+    "DOCUMENTATION 06":"DOCUMENTATION 06",
+    "DOCUMENTATION 07":"DOCUMENTATION 07",
+    "DOCUMENTATION 08":"DOCUMENTATION 08",
+    "DOCUMENTATION 09":"DOCUMENTATION 09",
+    "DOCUMENTATION 10":"DOCUMENTATION 10",
+    "DOCUMENTATION 11":"DOCUMENTATION 11",
+    "DOCUMENTATION 12":"DOCUMENTATION 12",
+    "DOCUMENTATION 13":"DOCUMENTATION 13",
+    "DOCUMENTATION 14":"DOCUMENTATION 14",
+    "DOCUMENTATION 15":"DOCUMENTATION 15",
+    "Dokumentasi kegiatan teknis di lapangan.":"Technical field activity documentation.",
+    "Dokumentasi kegiatan survey dan observasi.":"Survey and observation documentation.",
+    "Dokumentasi aktivitas teknis perusahaan.":"Technical activity documentation.",
+    "Dokumentasi kegiatan CV. Laban Environment Global.":"CV. Laban Environment Global activity documentation.",
+    "dokumentasi tersedia":"documentation items available",
+    "Semua 18 foto dokumentasi juga tampil bergantian pada display utama.":"Featured photos and field documentation are presented in one collection.",
+
+    "Legal Document":"Legal Document",
+    "LEGAL DOCUMENT":"LEGAL DOCUMENT",
+    "TAX DOCUMENT":"TAX DOCUMENT",
+    "PERMIT":"PERMIT",
+    "ADMINISTRATIVE":"ADMINISTRATIVE",
+    "Nomor Induk Berusaha":"Business Identification Number",
+    "Izin Lingkungan":"Environmental Permit",
+    "Izin Lokasi":"Location Permit",
+    "Izin Usaha":"Business Permit",
+    "SK Domisili":"Domicile Certificate",
+    "VIEW DOCUMENT":"VIEW DOCUMENT",
+    "Lihat NIB":"View Business Identification Number",
+    "Lihat NPWP":"View NPWP",
+    "Lihat Izin Lingkungan":"View Environmental Permit",
+    "Lihat Izin Lokasi":"View Location Permit",
+    "Lihat Izin Usaha":"View Business Permit",
+    "Lihat SK Domisili":"View Domicile Certificate",
+
+    "PLAN 01":"PLAN 01",
+    "PLAN 02":"PLAN 02",
+    "PLAN 03":"PLAN 03",
+    "DIRECTOR":"DIRECTOR",
+    "DIREKTUR":"DIRECTOR",
+    "DIVISI KEUANGAN":"FINANCE DIVISION",
+    "DIVISI MASTER PLAN RS":"HOSPITAL MASTER PLAN DIVISION",
+    "DIVISI ARSITEKTUR":"ARCHITECTURE DIVISION",
+    "IT SUPPORT":"IT SUPPORT",
+
+    "Perencanaan":"Planning",
+    "Konstruksi":"Construction",
+    "Pengelolaan Air":"Water Management",
+    "Sampah":"Waste",
+    "Penelitian":"Research",
+
+    "Nama Perusahaan":"Company Name",
+    "Status":"Status",
+    "Pusat":"Head Office",
+    "Alamat":"Address",
+    "Kota Serang Baru, Cipocok, Kota Serang, Banten":"Kota Serang Baru, Cipocok, Serang City, Banten",
+
+    "Dokumen legalitas dan administrasi perusahaan ditampilkan secara visual.":"The company's legal and administrative documents are presented visually.",
+    "Dokumen legalitas dan administrasi perusahaan.":"Company legal and administrative documents.",
+    "Legalitas dan administrasi perusahaan.":"Company legal and administrative records."
+};
+
+const languageOriginals = new WeakMap();
+
+function collectTextNodes(root){
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const nodes = [];
+    let node;
+    while(node = walker.nextNode()){
+        if(!node.parentElement) continue;
+        if(["SCRIPT","STYLE","NOSCRIPT"].includes(node.parentElement.tagName)) continue;
+        if(node.textContent.trim()) nodes.push(node);
+    }
+    return nodes;
+}
+
+function setLanguage(lang){
+    document.title = lang === "en"
+        ? "CV. Laban Environment Global | Environment, Engineering & Consultant"
+        : "CV. Laban Environment Global | Environment, Engineering & Consultant";
+    const nodes = collectTextNodes(document.body);
+
+    nodes.forEach(node => {
+        if(!languageOriginals.has(node)){
+            languageOriginals.set(node, node.textContent);
+        }
+
+        const original = languageOriginals.get(node);
+        const trimmed = original.trim();
+
+        if(lang === "en" && translations[trimmed]){
+            const translated = original.replace(trimmed, translations[trimmed]);
+            node.textContent = translated;
+        }else if(lang === "id"){
+            node.textContent = original;
+        }
+    });
+
+    // Dynamic hero slide title.
+    if(typeof currentSlide !== "undefined"){
+        const title = document.getElementById("slideTitle");
+        if(title){
+            title.textContent = lang === "en"
+                ? slideTitlesEN[currentSlide]
+                : slideTitlesID[currentSlide];
+        }
+    }
+
+    document.documentElement.lang = lang === "en" ? "en" : "id";
+
+    document.getElementById("langID")?.classList.toggle("active", lang === "id");
+    document.getElementById("langEN")?.classList.toggle("active", lang === "en");
+
+    try{
+        localStorage.setItem("leg-language", lang);
+    }catch(e){}
+}
+
+document.getElementById("langID")?.addEventListener("click", () => setLanguage("id"));
+document.getElementById("langEN")?.addEventListener("click", () => setLanguage("en"));
+
+
+
+document.getElementById("mobileLangID")?.addEventListener("click", () => setLanguage("id"));
+document.getElementById("mobileLangEN")?.addEventListener("click", () => setLanguage("en"));
+
+function syncMobileLanguage(lang){
+    document.getElementById("mobileLangID")?.classList.toggle("active", lang === "id");
+    document.getElementById("mobileLangEN")?.classList.toggle("active", lang === "en");
+}
+
+const originalSetLanguage = setLanguage;
+setLanguage = function(lang){
+    originalSetLanguage(lang);
+    syncMobileLanguage(lang);
+};
+
+try{
+    const savedLanguage = localStorage.getItem("leg-language");
+    if(savedLanguage === "en"){
+        setLanguage("en");
+    }
+}catch(e){}
+
+
+/* LONG-FORM CONTENT TRANSLATIONS */
+Object.assign(translations, {
+    "CV. Laban Environment Global (LEG) didirikan pada 15 Oktober 2020 berdasarkan Akta Pendirian Notaris Tatu Afifah, SH. M.Kn No. 1 Tahun 2020 di Kota Serang.":"CV. Laban Environment Global (LEG) was established on 15 October 2020 under Deed of Establishment No. 1 of 2020 by Notary Tatu Afifah, SH. M.Kn in Serang City.",
+    "LEG merupakan perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang dipersiapkan secara profesional dengan dukungan tenaga ahli berbagai disiplin ilmu yang berpengalaman.":"LEG is a consulting, planning, supervision and construction company supported by experienced professionals from various disciplines.",
+    "Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu serta menciptakan iklim kerja yang kondusif untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan.":"Provide the best, high-quality and timely services while creating a conducive working environment to deliver optimal results without overlooking usefulness.",
+    "Membangun kerjasama kemitraan usaha secara profesional dan proporsional dengan badan, instansi/institusi dan lembaga terkait guna berperan serta pada program pembangunan nasional.":"Build professional and proportional business partnerships with relevant organizations, institutions and agencies to contribute to national development programs.",
+    "Mengembangkan dan memperkenalkan perusahaan jasa konsultasi dan konstruksi untuk bersaing ke taraf internasional.":"Develop and introduce the consulting and construction business to compete at an international level.",
+    "Menekankan kualitas produk jasa yang dihasilkan untuk memperkuat posisi dasar dan menentukan peluang-peluang bisnis yang ada.":"Emphasize service quality to strengthen the company's foundation and identify available business opportunities.",
+    "Perencanaan dan kajian kelayakan sebagai dasar pengembangan kegiatan dan proyek.":"Feasibility planning and studies as a foundation for activities and project development.",
+    "Penyusunan rencana induk yang terarah untuk mendukung kebutuhan pengembangan.":"Structured master planning to support development needs.",
+    "Perencanaan teknis detail untuk mendukung pelaksanaan konstruksi secara terukur.":"Detailed technical planning to support measured construction implementation.",
+    "AMDAL, UKL-UPL, KLHS dan DELH sesuai kebutuhan kegiatan dan ketentuan yang berlaku.":"AMDAL, UKL-UPL, KLHS and DELH according to activity needs and applicable requirements.",
+    "Arsitektur, bangunan dan sipil dengan pendekatan teknis dan administrasi profesional.":"Architecture, building and civil works with a professional technical and administrative approach.",
+    "Pengelolaan air bersih, air limbah dan kebutuhan sistem pengelolaan terkait.":"Clean water, wastewater and related management systems.",
+    "Pengelolaan dan daur ulang sampah serta remediasi sesuai kebutuhan lapangan.":"Waste management, recycling and remediation according to field requirements.",
+    "Penelitian dan kajian ilmiah lainnya untuk mendukung kebutuhan teknis dan pengembangan.":"Research and other scientific studies to support technical and development needs.",
+    "Pendampingan profesional yang didukung tenaga ahli dari berbagai disiplin ilmu.":"Professional assistance supported by experts from various disciplines.",
+    "Mendukung pengelolaan keuangan perusahaan.":"Supports the company's financial management.",
+    "Mendukung pengembangan dan penyusunan master plan rumah sakit.":"Supports the development and preparation of hospital master plans.",
+    "Mendukung pekerjaan arsitektur dan kebutuhan desain teknis.":"Supports architectural work and technical design needs.",
+    "Mendukung kebutuhan teknologi informasi perusahaan.":"Supports the company's information technology needs.",
+    "Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan, pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.":"LEG's service scope is designed to support planning, supervision, construction, environmental and resource management processes.",
+    "Feasibility Study, Master Plan dan Detail Engineering Design.":"Feasibility Study, Master Plan and Detail Engineering Design.",
+    "AMDAL, UKL-UPL, KLHS dan DELH.":"AMDAL, UKL-UPL, KLHS and DELH.",
+    "Arsitektur, bangunan dan sipil.":"Architecture, building and civil works.",
+    "Air bersih dan air limbah.":"Clean water and wastewater.",
+    "Pengelolaan, daur ulang dan remediasi.":"Management, recycling and remediation.",
+    "Penelitian dan kajian ilmiah lainnya.":"Research and other scientific studies.",
+    "Silakan hubungi CV. Laban Environment Global melalui email untuk kebutuhan konsultasi, kerja sama dan informasi perusahaan.":"Please contact CV. Laban Environment Global by email for consultation, partnership and company information.",
+    "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines."
 });
 
 /* YEAR */
