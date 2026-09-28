@@ -913,6 +913,52 @@ header{
 }
 
 
+
+/* EXTENDED DOCUMENTATION GALLERY */
+.documentation-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:stretch;
+}
+
+.documentation-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.documentation-image{
+    height:250px;
+    flex-shrink:0;
+}
+
+.documentation-content{
+    flex:1;
+}
+
+.documentation-card:nth-child(3n + 2) .documentation-image{
+    background:#edf5ef;
+}
+
+.documentation-card:nth-child(3n + 3) .documentation-image{
+    background:#f2f5f2;
+}
+
+@media(max-width:900px){
+    .documentation-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:620px){
+    .documentation-grid{
+        grid-template-columns:1fr;
+    }
+
+    .documentation-image{
+        height:285px;
+    }
+}
+
 /* LEGAL DOCUMENT GALLERY */
 .document-gallery{
     display:grid;
@@ -2023,15 +2069,15 @@ footer{
         <div class="section-label">06 / Documentation</div>
         <h2 class="section-title">Dokumentasi Lapangan</h2>
         <p class="section-description">
-            Dokumentasi ditampilkan dengan kualitas lebih jelas sebagai bagian
-            dari portofolio visual kegiatan perusahaan.
+            Dokumentasi kegiatan CV. Laban Environment Global ditampilkan dalam satu
+            galeri untuk memberikan gambaran visual mengenai aktivitas dan pekerjaan perusahaan.
         </p>
 
         <div class="documentation-grid">
 
             <article class="documentation-card reveal">
                 <div class="documentation-image">
-                    <img src="foto 1.png" alt="Dokumentasi 1">
+                    <img src="foto 1.png" alt="Aktivitas Lapangan" loading="lazy">
                 </div>
                 <div class="documentation-content">
                     <small>FIELD WORK</small>
@@ -2039,10 +2085,9 @@ footer{
                     <p>Dokumentasi kegiatan teknis di lapangan.</p>
                 </div>
             </article>
-
             <article class="documentation-card reveal">
                 <div class="documentation-image">
-                    <img src="foto 2.png" alt="Dokumentasi 2">
+                    <img src="foto 2.png" alt="Survey & Observasi" loading="lazy">
                 </div>
                 <div class="documentation-content">
                     <small>FIELD WORK</small>
@@ -2050,10 +2095,9 @@ footer{
                     <p>Dokumentasi kegiatan survey dan observasi.</p>
                 </div>
             </article>
-
             <article class="documentation-card reveal">
                 <div class="documentation-image">
-                    <img src="foto 3.png" alt="Dokumentasi 3">
+                    <img src="foto 3.png" alt="Kegiatan Teknis" loading="lazy">
                 </div>
                 <div class="documentation-content">
                     <small>FIELD WORK</small>
@@ -2061,8 +2105,158 @@ footer{
                     <p>Dokumentasi aktivitas teknis perusahaan.</p>
                 </div>
             </article>
-
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 1.jpeg" alt="Dokumentasi kegiatan LEG 1" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 01</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 2.jpeg" alt="Dokumentasi kegiatan LEG 2" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 02</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 3.jpeg" alt="Dokumentasi kegiatan LEG 3" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 03</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 4.jpeg" alt="Dokumentasi kegiatan LEG 4" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 04</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 5.jpeg" alt="Dokumentasi kegiatan LEG 5" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 05</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 6.jpeg" alt="Dokumentasi kegiatan LEG 6" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 06</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 7.jpeg" alt="Dokumentasi kegiatan LEG 7" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 07</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 8.jpeg" alt="Dokumentasi kegiatan LEG 8" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 08</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 9.jpeg" alt="Dokumentasi kegiatan LEG 9" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 09</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 10.jpeg" alt="Dokumentasi kegiatan LEG 10" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 10</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 11.jpeg" alt="Dokumentasi kegiatan LEG 11" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 11</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 12.jpeg" alt="Dokumentasi kegiatan LEG 12" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 12</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 13.jpeg" alt="Dokumentasi kegiatan LEG 13" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 13</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 14.jpeg" alt="Dokumentasi kegiatan LEG 14" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 14</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 15.jpeg" alt="Dokumentasi kegiatan LEG 15" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 15</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
         </div>
+
     </div>
 </section>
 
