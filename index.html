@@ -1749,6 +1749,23 @@ footer{
     }
 }
 </style>
+
+/* FINAL LANGUAGE SWITCH — CLICKABLE */
+.language-switcher{
+    position:relative;
+    z-index:10001;
+    pointer-events:auto;
+}
+
+.language-btn{
+    position:relative;
+    z-index:10002;
+    pointer-events:auto !important;
+    cursor:pointer;
+    user-select:none;
+    -webkit-tap-highlight-color:transparent;
+}
+
 </head>
 
 <body>
@@ -1777,15 +1794,15 @@ footer{
             <a href="#contact" class="nav-contact">Kontak</a>
 
             <div class="mobile-language">
-                <button class="language-btn active" id="mobileLangID" type="button" onclick="window.setLEGLanguage('id'); return false;">ID</button>
-                <button class="language-btn" id="mobileLangEN" type="button" onclick="window.setLEGLanguage('en'); return false;">EN</button>
+                <button class="language-btn active" id="mobileLangID" type="button">ID</button>
+                <button class="language-btn" id="mobileLangEN" type="button">EN</button>
             </div>
 
         </nav>
 
         <div class="language-switcher">
-            <button class="language-btn active" id="langID" type="button" onclick="window.setLEGLanguage('id'); return false;">ID</button>
-            <button class="language-btn" id="langEN" type="button" onclick="window.setLEGLanguage('en'); return false;">EN</button>
+            <button class="language-btn active" id="langID" type="button">ID</button>
+            <button class="language-btn" id="langEN" type="button">EN</button>
         </div>
     </div>
 </header>
@@ -2693,6 +2710,19 @@ footer{
     </div>
 </footer>
 
+
+
+
+<!-- LEGAL DOCUMENT VIEWER -->
+<div class="document-modal" id="documentModal" aria-hidden="true">
+    <div class="document-modal-inner">
+        <div class="document-modal-title" id="documentModalTitle"></div>
+        <button class="document-modal-close" id="documentModalClose" aria-label="Tutup">×</button>
+        <img class="document-modal-image" id="documentModalImage" src="" alt="">
+    </div>
+</div>
+
+
 <script>
 /* MOBILE MENU */
 const menuToggle = document.getElementById("menuToggle");
@@ -2860,266 +2890,6 @@ document.addEventListener("keydown", (event) => {
 });
 
 
-/* BILINGUAL MODE — ID / EN */
-const translations = {
-    "Beranda":"Home",
-    "Tentang":"About",
-    "Layanan":"Services",
-    "Pengurus":"Team",
-    "Lingkup":"Scope",
-    "Dokumentasi":"Documentation",
-    "Legalitas":"Legal",
-    "Kontak":"Contact",
-    "Kenal Perusahaan":"Explore Company",
-    "Hubungi Kami":"Contact Us",
-    "SUSTAINING FUTURE TOGETHER":"SUSTAINING FUTURE TOGETHER",
-    "ENVIRONMENT • ENGINEERING • CONSULTANT":"ENVIRONMENT • ENGINEERING • CONSULTANT",
-    "Building":"Building",
-    "Better":"Better",
-    "Solutions.":"Solutions.",
-    "Laban Environment Global":"Laban Environment Global",
-    "Professional solutions for environment, engineering and construction.":"Professional solutions for environmental, engineering and construction needs.",
-    "CV. Laban Environment Global adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, bermutu dan tepat waktu.":"CV. Laban Environment Global is a consulting, planning, supervision and construction company supported by experts from various disciplines to deliver professional, high-quality and timely services.",
-    "Tahun Berdiri":"Year Established",
-    "Bentuk Badan Usaha":"Business Entity",
-    "CV":"CV",
-    "Laban Environment Global":"Laban Environment Global",
-    "01 / Company Profile":"01 / Company Profile",
-    "02 / Direction":"02 / Direction",
-    "03 / Services":"03 / Services",
-    "04 / Organization":"04 / Organization",
-    "05 / Scope":"05 / Scope",
-    "06 / Documentation":"06 / Documentation",
-    "07 / Legal":"07 / Legal",
-    "08 / Contact":"08 / Contact",
-    "Company Profile":"Company Profile",
-    "Professional solutions for environment, engineering and construction.":"Professional solutions for environmental, engineering and construction needs.",
-    "Visi":"Vision",
-    "Misi":"Mission",
-    "Rencana Jangka Pendek":"Short-Term Plan",
-    "Rencana Jangka Menengah":"Medium-Term Plan",
-    "Rencana Jangka Panjang":"Long-Term Plan",
-    "Lingkup Jasa":"Service Scope",
-    "Pengurus & Divisi":"Management & Divisions",
-    "Ruang Lingkup Pelayanan":"Service Scope",
-    "Dokumentasi Lapangan":"Field Documentation",
-    "Legalitas Perusahaan":"Company Legal Documents",
-    "Let's Collaborate":"Let's Collaborate",
-    "Kirim Email":"Send Email",
-    "Let's talk about your next project.":"Let's talk about your next project.",
-    "Contact LEG":"Contact LEG",
-    "Kontak resmi perusahaan melalui email.":"Official company contact via email.",
-    "EMAIL":"EMAIL",
-    "ALAMAT":"ADDRESS",
-    "Buka alamat di Google Maps":"Open address in Google Maps",
-    "Lihat Lokasi Perusahaan di Google Maps":"View Company Location on Google Maps",
-    "NAVIGATION":"NAVIGATION",
-    "CONTACT":"CONTACT",
-    "Google Maps":"Google Maps",
-    "All rights reserved.":"All rights reserved.",
-    "Environment • Engineering • Consultant":"Environment • Engineering • Consultant",
-
-    "Feasibility Study":"Feasibility Study",
-    "Master Plan":"Master Plan",
-    "Detail Engineering Design":"Detail Engineering Design",
-    "Dokumen Lingkungan":"Environmental Documents",
-    "Konstruksi & Engineering":"Construction & Engineering",
-    "Pengelolaan Air":"Water Management",
-    "Sampah & Limbah":"Waste & Residual Management",
-    "Penelitian & Kajian":"Research & Studies",
-    "Konsultasi Teknis":"Technical Consulting",
-
-    "Aktivitas Lapangan":"Field Activities",
-    "Survey & Observasi":"Survey & Observation",
-    "Kegiatan Teknis":"Technical Activities",
-    "Dokumentasi Kegiatan":"Activity Documentation",
-    "Aktivitas Lapangan":"Field Activities",
-    "Survey & Observasi":"Survey & Observation",
-    "FIELD WORK":"FIELD WORK",
-    "DOCUMENTATION 01":"DOCUMENTATION 01",
-    "DOCUMENTATION 02":"DOCUMENTATION 02",
-    "DOCUMENTATION 03":"DOCUMENTATION 03",
-    "DOCUMENTATION 04":"DOCUMENTATION 04",
-    "DOCUMENTATION 05":"DOCUMENTATION 05",
-    "DOCUMENTATION 06":"DOCUMENTATION 06",
-    "DOCUMENTATION 07":"DOCUMENTATION 07",
-    "DOCUMENTATION 08":"DOCUMENTATION 08",
-    "DOCUMENTATION 09":"DOCUMENTATION 09",
-    "DOCUMENTATION 10":"DOCUMENTATION 10",
-    "DOCUMENTATION 11":"DOCUMENTATION 11",
-    "DOCUMENTATION 12":"DOCUMENTATION 12",
-    "DOCUMENTATION 13":"DOCUMENTATION 13",
-    "DOCUMENTATION 14":"DOCUMENTATION 14",
-    "DOCUMENTATION 15":"DOCUMENTATION 15",
-    "Dokumentasi kegiatan teknis di lapangan.":"Technical field activity documentation.",
-    "Dokumentasi kegiatan survey dan observasi.":"Survey and observation documentation.",
-    "Dokumentasi aktivitas teknis perusahaan.":"Technical activity documentation.",
-    "Dokumentasi kegiatan CV. Laban Environment Global.":"CV. Laban Environment Global activity documentation.",
-    "dokumentasi tersedia":"documentation items available",
-    "Semua 18 foto dokumentasi juga tampil bergantian pada display utama.":"Featured photos and field documentation are presented in one collection.",
-
-    "Legal Document":"Legal Document",
-    "LEGAL DOCUMENT":"LEGAL DOCUMENT",
-    "TAX DOCUMENT":"TAX DOCUMENT",
-    "PERMIT":"PERMIT",
-    "ADMINISTRATIVE":"ADMINISTRATIVE",
-    "Nomor Induk Berusaha":"Business Identification Number",
-    "Izin Lingkungan":"Environmental Permit",
-    "Izin Lokasi":"Location Permit",
-    "Izin Usaha":"Business Permit",
-    "SK Domisili":"Domicile Certificate",
-    "VIEW DOCUMENT":"VIEW DOCUMENT",
-    "Lihat NIB":"View Business Identification Number",
-    "Lihat NPWP":"View NPWP",
-    "Lihat Izin Lingkungan":"View Environmental Permit",
-    "Lihat Izin Lokasi":"View Location Permit",
-    "Lihat Izin Usaha":"View Business Permit",
-    "Lihat SK Domisili":"View Domicile Certificate",
-
-    "PLAN 01":"PLAN 01",
-    "PLAN 02":"PLAN 02",
-    "PLAN 03":"PLAN 03",
-    "DIRECTOR":"DIRECTOR",
-    "DIREKTUR":"DIRECTOR",
-    "DIVISI KEUANGAN":"FINANCE DIVISION",
-    "DIVISI MASTER PLAN RS":"HOSPITAL MASTER PLAN DIVISION",
-    "DIVISI ARSITEKTUR":"ARCHITECTURE DIVISION",
-    "IT SUPPORT":"IT SUPPORT",
-
-    "Perencanaan":"Planning",
-    "Konstruksi":"Construction",
-    "Pengelolaan Air":"Water Management",
-    "Sampah":"Waste",
-    "Penelitian":"Research",
-
-    "Nama Perusahaan":"Company Name",
-    "Status":"Status",
-    "Pusat":"Head Office",
-    "Alamat":"Address",
-    "Kota Serang Baru, Cipocok, Kota Serang, Banten":"Kota Serang Baru, Cipocok, Serang City, Banten",
-
-    "Dokumen legalitas dan administrasi perusahaan ditampilkan secara visual.":"The company's legal and administrative documents are presented visually.",
-    "Dokumen legalitas dan administrasi perusahaan.":"Company legal and administrative documents.",
-    "Legalitas dan administrasi perusahaan.":"Company legal and administrative records."
-};
-
-const languageOriginals = new WeakMap();
-window.LEG_TRANSLATIONS = translations;
-window.LEG_LANGUAGE_ORIGINALS = languageOriginals;
-
-function collectTextNodes(root){
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
-    const nodes = [];
-    let node;
-    while(node = walker.nextNode()){
-        if(!node.parentElement) continue;
-        if(["SCRIPT","STYLE","NOSCRIPT"].includes(node.parentElement.tagName)) continue;
-        if(node.textContent.trim()) nodes.push(node);
-    }
-    return nodes;
-}
-
-function setLanguage(lang){
-    document.title = lang === "en"
-        ? "CV. Laban Environment Global | Environment, Engineering & Consultant"
-        : "CV. Laban Environment Global | Environment, Engineering & Consultant";
-    const nodes = collectTextNodes(document.body);
-
-    nodes.forEach(node => {
-        if(!languageOriginals.has(node)){
-            languageOriginals.set(node, node.textContent);
-        }
-
-        const original = languageOriginals.get(node);
-        const trimmed = original.trim();
-
-        if(lang === "en" && translations[trimmed]){
-            const translated = original.replace(trimmed, translations[trimmed]);
-            node.textContent = translated;
-        }else if(lang === "id"){
-            node.textContent = original;
-        }
-    });
-
-    // Dynamic hero slide title.
-    if(typeof currentSlide !== "undefined"){
-        const title = document.getElementById("slideTitle");
-        if(title){
-            title.textContent = lang === "en"
-                ? slideTitlesEN[currentSlide]
-                : slideTitlesID[currentSlide];
-        }
-    }
-
-    document.documentElement.lang = lang === "en" ? "en" : "id";
-
-    document.getElementById("langID")?.classList.toggle("active", lang === "id");
-    document.getElementById("langEN")?.classList.toggle("active", lang === "en");
-
-    try{
-        localStorage.setItem("leg-language", lang);
-    }catch(e){}
-}
-
-document.getElementById("langID")?.addEventListener("click", () => setLanguage("id"));
-document.getElementById("langEN")?.addEventListener("click", () => setLanguage("en"));
-
-
-
-document.getElementById("mobileLangID")?.addEventListener("click", () => setLanguage("id"));
-document.getElementById("mobileLangEN")?.addEventListener("click", () => setLanguage("en"));
-
-function syncMobileLanguage(lang){
-    document.getElementById("mobileLangID")?.classList.toggle("active", lang === "id");
-    document.getElementById("mobileLangEN")?.classList.toggle("active", lang === "en");
-}
-
-const originalSetLanguage = setLanguage;
-setLanguage = function(lang){
-    originalSetLanguage(lang);
-    syncMobileLanguage(lang);
-};
-
-try{
-    const savedLanguage = localStorage.getItem("leg-language");
-    if(savedLanguage === "en"){
-        setLanguage("en");
-    }
-}catch(e){}
-
-
-/* LONG-FORM CONTENT TRANSLATIONS */
-Object.assign(translations, {
-    "CV. Laban Environment Global (LEG) didirikan pada 15 Oktober 2020 berdasarkan Akta Pendirian Notaris Tatu Afifah, SH. M.Kn No. 1 Tahun 2020 di Kota Serang.":"CV. Laban Environment Global (LEG) was established on 15 October 2020 under Deed of Establishment No. 1 of 2020 by Notary Tatu Afifah, SH. M.Kn in Serang City.",
-    "LEG merupakan perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang dipersiapkan secara profesional dengan dukungan tenaga ahli berbagai disiplin ilmu yang berpengalaman.":"LEG is a consulting, planning, supervision and construction company supported by experienced professionals from various disciplines.",
-    "Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu serta menciptakan iklim kerja yang kondusif untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan.":"Provide the best, high-quality and timely services while creating a conducive working environment to deliver optimal results without overlooking usefulness.",
-    "Membangun kerjasama kemitraan usaha secara profesional dan proporsional dengan badan, instansi/institusi dan lembaga terkait guna berperan serta pada program pembangunan nasional.":"Build professional and proportional business partnerships with relevant organizations, institutions and agencies to contribute to national development programs.",
-    "Mengembangkan dan memperkenalkan perusahaan jasa konsultasi dan konstruksi untuk bersaing ke taraf internasional.":"Develop and introduce the consulting and construction business to compete at an international level.",
-    "Menekankan kualitas produk jasa yang dihasilkan untuk memperkuat posisi dasar dan menentukan peluang-peluang bisnis yang ada.":"Emphasize service quality to strengthen the company's foundation and identify available business opportunities.",
-    "Perencanaan dan kajian kelayakan sebagai dasar pengembangan kegiatan dan proyek.":"Feasibility planning and studies as a foundation for activities and project development.",
-    "Penyusunan rencana induk yang terarah untuk mendukung kebutuhan pengembangan.":"Structured master planning to support development needs.",
-    "Perencanaan teknis detail untuk mendukung pelaksanaan konstruksi secara terukur.":"Detailed technical planning to support measured construction implementation.",
-    "AMDAL, UKL-UPL, KLHS dan DELH sesuai kebutuhan kegiatan dan ketentuan yang berlaku.":"AMDAL, UKL-UPL, KLHS and DELH according to activity needs and applicable requirements.",
-    "Arsitektur, bangunan dan sipil dengan pendekatan teknis dan administrasi profesional.":"Architecture, building and civil works with a professional technical and administrative approach.",
-    "Pengelolaan air bersih, air limbah dan kebutuhan sistem pengelolaan terkait.":"Clean water, wastewater and related management systems.",
-    "Pengelolaan dan daur ulang sampah serta remediasi sesuai kebutuhan lapangan.":"Waste management, recycling and remediation according to field requirements.",
-    "Penelitian dan kajian ilmiah lainnya untuk mendukung kebutuhan teknis dan pengembangan.":"Research and other scientific studies to support technical and development needs.",
-    "Pendampingan profesional yang didukung tenaga ahli dari berbagai disiplin ilmu.":"Professional assistance supported by experts from various disciplines.",
-    "Mendukung pengelolaan keuangan perusahaan.":"Supports the company's financial management.",
-    "Mendukung pengembangan dan penyusunan master plan rumah sakit.":"Supports the development and preparation of hospital master plans.",
-    "Mendukung pekerjaan arsitektur dan kebutuhan desain teknis.":"Supports architectural work and technical design needs.",
-    "Mendukung kebutuhan teknologi informasi perusahaan.":"Supports the company's information technology needs.",
-    "Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan, pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.":"LEG's service scope is designed to support planning, supervision, construction, environmental and resource management processes.",
-    "Feasibility Study, Master Plan dan Detail Engineering Design.":"Feasibility Study, Master Plan and Detail Engineering Design.",
-    "AMDAL, UKL-UPL, KLHS dan DELH.":"AMDAL, UKL-UPL, KLHS and DELH.",
-    "Arsitektur, bangunan dan sipil.":"Architecture, building and civil works.",
-    "Air bersih dan air limbah.":"Clean water and wastewater.",
-    "Pengelolaan, daur ulang dan remediasi.":"Management, recycling and remediation.",
-    "Penelitian dan kajian ilmiah lainnya.":"Research and other scientific studies.",
-    "Silakan hubungi CV. Laban Environment Global melalui email untuk kebutuhan konsultasi, kerja sama dan informasi perusahaan.":"Please contact CV. Laban Environment Global by email for consultation, partnership and company information.",
-    "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines."
-});
-
 /* YEAR */
 document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -3132,25 +2902,153 @@ document.querySelectorAll(".language-btn").forEach(btn => {
         btn.classList.add("active");
     });
 });
-</script>
 
+;
 
-<!-- LEGAL DOCUMENT VIEWER -->
-<div class="document-modal" id="documentModal" aria-hidden="true">
-    <div class="document-modal-inner">
-        <div class="document-modal-title" id="documentModalTitle"></div>
-        <button class="document-modal-close" id="documentModalClose" aria-label="Tutup">×</button>
-        <img class="document-modal-image" id="documentModalImage" src="" alt="">
-    </div>
-</div>
-
-
-/* HARDENED LANGUAGE SWITCH — DIRECT CLICK SUPPORT */
-window.setLEGLanguage = function(lang){
+window.addEventListener("DOMContentLoaded", function(){
     try{
-        const dict = window.LEG_TRANSLATIONS || {};
-        const originals = window.LEG_LANGUAGE_ORIGINALS || new WeakMap();
+        const saved = localStorage.getItem("leg-language");
+        if(saved === "en"){
+            window.setLEGLanguage("en");
+        }
+    }catch(e){}
+});
 
+/* =========================================================
+   LEG LANGUAGE SYSTEM — FINAL / STABLE
+   ========================================================= */
+
+(function(){
+    const translations = {
+        "Beranda":"Home",
+        "Tentang":"About",
+        "Layanan":"Services",
+        "Pengurus":"Team",
+        "Lingkup":"Scope",
+        "Dokumentasi":"Documentation",
+        "Legalitas":"Legal",
+        "Kontak":"Contact",
+
+        "Kenal Perusahaan":"Explore Company",
+        "Hubungi Kami":"Contact Us",
+        "Kirim Email":"Send Email",
+        "Buka alamat di Google Maps":"Open Address in Google Maps",
+        "Lihat Lokasi Perusahaan di Google Maps":"View Company Location on Google Maps",
+
+        "SUSTAINING FUTURE TOGETHER":"SUSTAINING FUTURE TOGETHER",
+        "ENVIRONMENT • ENGINEERING • CONSULTANT":"ENVIRONMENT • ENGINEERING • CONSULTANT",
+        "Building":"Building",
+        "Better":"Better",
+        "Solutions.":"Solutions.",
+
+        "Company Profile":"Company Profile",
+        "Visi":"Vision",
+        "Misi":"Mission",
+        "Rencana Jangka Pendek":"Short-Term Plan",
+        "Rencana Jangka Menengah":"Medium-Term Plan",
+        "Rencana Jangka Panjang":"Long-Term Plan",
+
+        "Lingkup Jasa":"Service Scope",
+        "Pengurus & Divisi":"Management & Divisions",
+        "Ruang Lingkup Pelayanan":"Service Scope",
+        "Dokumentasi Lapangan":"Field Documentation",
+        "Legalitas Perusahaan":"Company Legal Documents",
+
+        "Let's Collaborate":"Let's Collaborate",
+        "Let's talk about your next project.":"Let's talk about your next project.",
+        "Contact LEG":"Contact LEG",
+        "Kontak resmi perusahaan melalui email.":"Official company contact via email.",
+
+        "EMAIL":"EMAIL",
+        "ALAMAT":"ADDRESS",
+        "NAVIGATION":"NAVIGATION",
+        "CONTACT":"CONTACT",
+        "Google Maps":"Google Maps",
+        "All rights reserved.":"All rights reserved.",
+
+        "Feasibility Study":"Feasibility Study",
+        "Master Plan":"Master Plan",
+        "Detail Engineering Design":"Detail Engineering Design",
+        "Dokumen Lingkungan":"Environmental Documents",
+        "Konstruksi & Engineering":"Construction & Engineering",
+        "Pengelolaan Air":"Water Management",
+        "Sampah & Limbah":"Waste & Residual Management",
+        "Penelitian & Kajian":"Research & Studies",
+        "Konsultasi Teknis":"Technical Consulting",
+
+        "Aktivitas Lapangan":"Field Activities",
+        "Survey & Observasi":"Survey & Observation",
+        "Kegiatan Teknis":"Technical Activities",
+        "Dokumentasi Kegiatan":"Activity Documentation",
+        "FIELD WORK":"FIELD WORK",
+
+        "Dokumentasi kegiatan teknis di lapangan.":"Technical field activity documentation.",
+        "Dokumentasi kegiatan survey dan observasi.":"Survey and observation documentation.",
+        "Dokumentasi aktivitas teknis perusahaan.":"Technical activity documentation.",
+        "Dokumentasi kegiatan CV. Laban Environment Global.":"CV. Laban Environment Global activity documentation.",
+        "dokumentasi tersedia":"documentation items available",
+        "Semua 18 foto dokumentasi juga tampil bergantian pada display utama.":"All 18 documentation photos also rotate through the main display.",
+
+        "LEGAL DOCUMENT":"LEGAL DOCUMENT",
+        "TAX DOCUMENT":"TAX DOCUMENT",
+        "PERMIT":"PERMIT",
+        "ADMINISTRATIVE":"ADMINISTRATIVE",
+        "VIEW DOCUMENT":"VIEW DOCUMENT",
+        "Nomor Induk Berusaha":"Business Identification Number",
+        "Izin Lingkungan":"Environmental Permit",
+        "Izin Lokasi":"Location Permit",
+        "Izin Usaha":"Business Permit",
+        "SK Domisili":"Domicile Certificate",
+
+        "DIRECTOR":"DIRECTOR",
+        "DIREKTUR":"DIRECTOR",
+        "DIVISI KEUANGAN":"FINANCE DIVISION",
+        "DIVISI MASTER PLAN RS":"HOSPITAL MASTER PLAN DIVISION",
+        "DIVISI ARSITEKTUR":"ARCHITECTURE DIVISION",
+        "IT SUPPORT":"IT SUPPORT",
+
+        "Perencanaan":"Planning",
+        "Konstruksi":"Construction",
+        "Pengelolaan Air":"Water Management",
+        "Sampah":"Waste",
+        "Penelitian":"Research",
+
+        "Nama Perusahaan":"Company Name",
+        "Status":"Status",
+        "Pusat":"Head Office",
+        "Alamat":"Address",
+
+        "Dokumen legalitas dan administrasi perusahaan ditampilkan secara visual.":"The company's legal and administrative documents are presented visually.",
+        "Dokumen legalitas dan administrasi perusahaan.":"Company legal and administrative documents.",
+        "Legalitas dan administrasi perusahaan.":"Company legal and administrative records.",
+
+        "CV. Laban Environment Global (LEG) didirikan pada 15 Oktober 2020 berdasarkan Akta Pendirian Notaris Tatu Afifah, SH. M.Kn No. 1 Tahun 2020 di Kota Serang.":"CV. Laban Environment Global (LEG) was established on 15 October 2020 under Deed of Establishment No. 1 of 2020 by Notary Tatu Afifah, SH. M.Kn in Serang City.",
+        "LEG merupakan perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang dipersiapkan secara profesional dengan dukungan tenaga ahli berbagai disiplin ilmu yang berpengalaman.":"LEG is a consulting, planning, supervision and construction company supported by experienced professionals from various disciplines.",
+        "Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu serta menciptakan iklim kerja yang kondusif untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan.":"Provide the best, high-quality and timely services while creating a conducive working environment to deliver optimal results without overlooking usefulness.",
+        "Membangun kerjasama kemitraan usaha secara profesional dan proporsional dengan badan, instansi/institusi dan lembaga terkait guna berperan serta pada program pembangunan nasional.":"Build professional and proportional business partnerships with relevant organizations, institutions and agencies to contribute to national development programs.",
+        "Mengembangkan dan memperkenalkan perusahaan jasa konsultasi dan konstruksi untuk bersaing ke taraf internasional.":"Develop and introduce the consulting and construction business to compete at an international level.",
+        "Menekankan kualitas produk jasa yang dihasilkan untuk memperkuat posisi dasar dan menentukan peluang-peluang bisnis yang ada.":"Emphasize service quality to strengthen the company's foundation and identify available business opportunities.",
+        "Perencanaan dan kajian kelayakan sebagai dasar pengembangan kegiatan dan proyek.":"Feasibility planning and studies as a foundation for activities and project development.",
+        "Penyusunan rencana induk yang terarah untuk mendukung kebutuhan pengembangan.":"Structured master planning to support development needs.",
+        "Perencanaan teknis detail untuk mendukung pelaksanaan konstruksi secara terukur.":"Detailed technical planning to support measured construction implementation.",
+        "AMDAL, UKL-UPL, KLHS dan DELH sesuai kebutuhan kegiatan dan ketentuan yang berlaku.":"AMDAL, UKL-UPL, KLHS and DELH according to activity needs and applicable requirements.",
+        "Arsitektur, bangunan dan sipil dengan pendekatan teknis dan administrasi profesional.":"Architecture, building and civil works with a professional technical and administrative approach.",
+        "Pengelolaan air bersih, air limbah dan kebutuhan sistem pengelolaan terkait.":"Clean water, wastewater and related management systems.",
+        "Pengelolaan dan daur ulang sampah serta remediasi sesuai kebutuhan lapangan.":"Waste management, recycling and remediation according to field requirements.",
+        "Penelitian dan kajian ilmiah lainnya untuk mendukung kebutuhan teknis dan pengembangan.":"Research and other scientific studies to support technical and development needs.",
+        "Pendampingan profesional yang didukung tenaga ahli dari berbagai disiplin ilmu.":"Professional assistance supported by experts from various disciplines.",
+        "Mendukung pengelolaan keuangan perusahaan.":"Supports the company's financial management.",
+        "Mendukung pengembangan dan penyusunan master plan rumah sakit.":"Supports the development and preparation of hospital master plans.",
+        "Mendukung pekerjaan arsitektur dan kebutuhan desain teknis.":"Supports architectural work and technical design needs.",
+        "Mendukung kebutuhan teknologi informasi perusahaan.":"Supports the company's information technology needs.",
+        "Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan, pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.":"LEG's service scope is designed to support planning, supervision, construction, environmental and resource management processes.",
+        "Silakan hubungi CV. Laban Environment Global melalui email untuk kebutuhan konsultasi, kerja sama dan informasi perusahaan.":"Please contact CV. Laban Environment Global by email for consultation, partnership and company information.",
+        "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines."
+    };
+
+    const originalText = new WeakMap();
+
+    function collectTextNodes(){
         const walker = document.createTreeWalker(
             document.body,
             NodeFilter.SHOW_TEXT
@@ -3162,50 +3060,62 @@ window.setLEGLanguage = function(lang){
         while(node = walker.nextNode()){
             const parent = node.parentElement;
             if(!parent) continue;
-            if(["SCRIPT","STYLE","NOSCRIPT"].includes(parent.tagName)) continue;
-            if(parent.closest(".language-switcher, .mobile-language")) continue;
-            if(node.textContent.trim()) nodes.push(node);
-        }
 
-        nodes.forEach(textNode => {
-            if(!originals.has(textNode)){
-                originals.set(textNode, textNode.textContent);
+            const tag = parent.tagName;
+            if(tag === "SCRIPT" || tag === "STYLE" || tag === "NOSCRIPT"){
+                continue;
             }
 
-            const original = originals.get(textNode);
-            const clean = original.trim();
+            if(parent.closest(".language-switcher, .mobile-language")){
+                continue;
+            }
 
-            if(lang === "en"){
-                if(dict[clean]){
-                    textNode.textContent = original.replace(clean, dict[clean]);
+            if(node.textContent.trim()){
+                nodes.push(node);
+            }
+        }
+
+        return nodes;
+    }
+
+    function setLanguage(lang){
+        const english = lang === "en";
+
+        collectTextNodes().forEach(node => {
+            if(!originalText.has(node)){
+                originalText.set(node, node.textContent);
+            }
+
+            const source = originalText.get(node);
+            const clean = source.trim();
+
+            if(english){
+                if(translations[clean]){
+                    node.textContent = source.replace(clean, translations[clean]);
                 }
             }else{
-                textNode.textContent = original;
+                node.textContent = source;
             }
         });
 
-        document.documentElement.lang = lang === "en" ? "en" : "id";
+        document.documentElement.lang = english ? "en" : "id";
 
-        const buttons = [
-            document.getElementById("langID"),
-            document.getElementById("langEN"),
-            document.getElementById("mobileLangID"),
-            document.getElementById("mobileLangEN")
-        ];
+        document.querySelectorAll(".language-btn").forEach(btn => {
+            const id = btn.id.toLowerCase();
+            const isEN = id.includes("en");
+            const isID = id.includes("id");
 
-        buttons.forEach(button => {
-            if(!button) return;
-            button.classList.toggle("active",
-                (lang === "en" && button.id.toLowerCase().includes("en")) ||
-                (lang === "id" && button.id.toLowerCase().includes("id"))
+            btn.classList.toggle("active",
+                (english && isEN) ||
+                (!english && isID)
             );
         });
 
-        // Keep the current hero image title synchronized.
         if(typeof currentSlide !== "undefined"){
             const title = document.getElementById("slideTitle");
+
             if(title && typeof slideTitlesEN !== "undefined" && typeof slideTitlesID !== "undefined"){
-                title.textContent = lang === "en"
+                title.textContent = english
                     ? slideTitlesEN[currentSlide]
                     : slideTitlesID[currentSlide];
             }
@@ -3213,23 +3123,61 @@ window.setLEGLanguage = function(lang){
 
         try{
             localStorage.setItem("leg-language", lang);
-        }catch(e){}
+        }catch(error){}
 
-        return false;
-    }catch(error){
-        console.error("LEG language switch error:", error);
         return false;
     }
-};
 
-window.addEventListener("DOMContentLoaded", function(){
-    try{
-        const saved = localStorage.getItem("leg-language");
-        if(saved === "en"){
-            window.setLEGLanguage("en");
-        }
-    }catch(e){}
-});
+    // Expose one definitive function globally.
+    window.setLEGLanguage = setLanguage;
 
+    // Desktop buttons
+    const langID = document.getElementById("langID");
+    const langEN = document.getElementById("langEN");
+
+    if(langID){
+        langID.addEventListener("click", function(event){
+            event.preventDefault();
+            setLanguage("id");
+        });
+    }
+
+    if(langEN){
+        langEN.addEventListener("click", function(event){
+            event.preventDefault();
+            setLanguage("en");
+        });
+    }
+
+    // Mobile buttons
+    const mobileLangID = document.getElementById("mobileLangID");
+    const mobileLangEN = document.getElementById("mobileLangEN");
+
+    if(mobileLangID){
+        mobileLangID.addEventListener("click", function(event){
+            event.preventDefault();
+            setLanguage("id");
+        });
+    }
+
+    if(mobileLangEN){
+        mobileLangEN.addEventListener("click", function(event){
+            event.preventDefault();
+            setLanguage("en");
+        });
+    }
+
+    window.addEventListener("DOMContentLoaded", function(){
+        let saved = "id";
+
+        try{
+            saved = localStorage.getItem("leg-language") || "id";
+        }catch(error){}
+
+        setLanguage(saved === "en" ? "en" : "id");
+    });
+})();
+
+</script>
 </body>
 </html>
