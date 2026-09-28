@@ -1748,7 +1748,6 @@ footer{
         flex-direction:column;
     }
 }
-</style>
 
 /* FINAL LANGUAGE SWITCH — CLICKABLE */
 .language-switcher{
@@ -1756,7 +1755,6 @@ footer{
     z-index:10001;
     pointer-events:auto;
 }
-
 .language-btn{
     position:relative;
     z-index:10002;
@@ -1765,6 +1763,8 @@ footer{
     user-select:none;
     -webkit-tap-highlight-color:transparent;
 }
+
+</style>
 
 </head>
 
@@ -1794,15 +1794,15 @@ footer{
             <a href="#contact" class="nav-contact">Kontak</a>
 
             <div class="mobile-language">
-                <button class="language-btn active" id="mobileLangID" type="button">ID</button>
-                <button class="language-btn" id="mobileLangEN" type="button">EN</button>
+                <button class="language-btn active" id="mobileLangID" type="button" aria-label="Bahasa Indonesia">ID</button>
+                <button class="language-btn" id="mobileLangEN" type="button" aria-label="English">EN</button>
             </div>
 
         </nav>
 
         <div class="language-switcher">
-            <button class="language-btn active" id="langID" type="button">ID</button>
-            <button class="language-btn" id="langEN" type="button">EN</button>
+            <button class="language-btn active" id="langID" type="button" aria-label="Bahasa Indonesia">ID</button>
+            <button class="language-btn" id="langEN" type="button" aria-label="English">EN</button>
         </div>
     </div>
 </header>
@@ -3043,7 +3043,92 @@ window.addEventListener("DOMContentLoaded", function(){
         "Mendukung kebutuhan teknologi informasi perusahaan.":"Supports the company's information technology needs.",
         "Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan, pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.":"LEG's service scope is designed to support planning, supervision, construction, environmental and resource management processes.",
         "Silakan hubungi CV. Laban Environment Global melalui email untuk kebutuhan konsultasi, kerja sama dan informasi perusahaan.":"Please contact CV. Laban Environment Global by email for consultation, partnership and company information.",
+        "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines.",
+
+        "CV. Laban Environment Global adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, bermutu dan tepat waktu.":"CV. Laban Environment Global is a consulting, planning, supervision and construction company supported by experts from various disciplines to deliver professional, high-quality and timely services.",
+        "Kenal Perusahaan":"Explore Company",
+        "Hubungi Kami":"Contact Us",
+
+        "Tahun Berdiri":"Year Established",
+        "Bentuk Badan Usaha":"Business Entity",
+        "Nama Perusahaan":"Company Name",
+        "Status":"Status",
+        "Pusat":"Head Office",
+        "Alamat":"Address",
+
+        "Arah perusahaan dibangun melalui kualitas jasa, profesionalisme, kemitraan dan pengembangan usaha yang berkelanjutan.":"The company's direction is built on service quality, professionalism, partnerships and sustainable business development.",
+        "Menjadi perusahaan konsultan nasional yang berkualitas dan terpercaya serta berdaya saing di Indonesia dan mendapatkan pengakuan internasional.":"To become a high-quality and trusted national consulting company with strong competitiveness in Indonesia and international recognition.",
+        "Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu serta menciptakan iklim kerja yang kondusif untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan.":"To provide the best, high-quality and timely services while creating a conducive working environment to deliver optimal results without overlooking usefulness.",
+
+        "Membangun kerjasama kemitraan usaha secara profesional dan proporsional dengan badan, instansi/institusi dan lembaga terkait guna berperan serta pada program pembangunan nasional.":"To build professional and proportional business partnerships with relevant organizations, institutions and agencies to contribute to national development programs.",
+        "Mengembangkan dan memperkenalkan perusahaan jasa konsultasi dan konstruksi untuk bersaing ke taraf internasional.":"To develop and introduce the consulting and construction business to compete at an international level.",
+        "Menekankan kualitas produk jasa yang dihasilkan untuk memperkuat posisi dasar dan menentukan peluang-peluang bisnis yang ada.":"To emphasize service quality, strengthen the company's foundation and identify available business opportunities.",
+
+        "Lingkup Jasa":"Service Scope",
+        "Layanan LEG mencakup konsultasi, perencanaan, konstruksi, dokumen lingkungan, pengelolaan air dan sampah serta penelitian.":"LEG's services cover consulting, planning, construction, environmental documents, water and waste management, as well as research.",
+        "Perencanaan dan kajian kelayakan sebagai dasar pengembangan kegiatan dan proyek.":"Feasibility planning and studies as a foundation for activity and project development.",
+        "Penyusunan rencana induk yang terarah untuk mendukung kebutuhan pengembangan.":"Structured master planning to support development needs.",
+        "Perencanaan teknis detail untuk mendukung pelaksanaan konstruksi secara terukur.":"Detailed technical planning to support measured construction implementation.",
+        "AMDAL, UKL-UPL, KLHS dan DELH sesuai kebutuhan kegiatan dan ketentuan yang berlaku.":"AMDAL, UKL-UPL, KLHS and DELH according to activity needs and applicable requirements.",
+        "Arsitektur, bangunan dan sipil dengan pendekatan teknis dan administrasi profesional.":"Architecture, building and civil works with a professional technical and administrative approach.",
+        "Pengelolaan air bersih, air limbah dan kebutuhan sistem pengelolaan terkait.":"Clean water, wastewater and related management systems.",
+        "Pengelolaan dan daur ulang sampah serta remediasi sesuai kebutuhan lapangan.":"Waste management, recycling and remediation according to field requirements.",
+        "Penelitian dan kajian ilmiah lainnya untuk mendukung kebutuhan teknis dan pengembangan.":"Research and other scientific studies to support technical and development needs.",
+        "Pendampingan profesional yang didukung tenaga ahli dari berbagai disiplin ilmu.":"Professional assistance supported by experts from various disciplines.",
+
+        "Pengurus & Divisi":"Management & Divisions",
+        "Struktur pengurus dan tenaga ahli perusahaan berdasarkan Company Profile LEG.":"The company's management and expert structure is based on the LEG Company Profile.",
+        "DIREKTUR":"DIRECTOR",
+        "Pemilik perusahaan, direksi sekaligus penanggung jawab perusahaan.":"Company owner, director and person responsible for the company.",
+        "DIVISI KEUANGAN":"FINANCE DIVISION",
+        "Mendukung pengelolaan keuangan perusahaan.":"Supports the company's financial management.",
+        "DIVISI MASTER PLAN RS":"HOSPITAL MASTER PLAN DIVISION",
+        "Mendukung pengembangan dan penyusunan master plan rumah sakit.":"Supports the development and preparation of hospital master plans.",
+        "DIVISI ARSITEKTUR":"ARCHITECTURE DIVISION",
+        "Mendukung pekerjaan arsitektur dan kebutuhan desain teknis.":"Supports architectural work and technical design needs.",
+        "IT SUPPORT":"IT SUPPORT",
+        "Mendukung kebutuhan teknologi informasi perusahaan.":"Supports the company's information technology needs.",
+
+        "Ruang Lingkup Pelayanan":"Service Scope",
+        "Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan, pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.":"LEG's service scope is designed to support planning, supervision, construction, environmental and resource management processes.",
+        "Perencanaan":"Planning",
+        "Feasibility Study, Master Plan dan Detail Engineering Design.":"Feasibility Study, Master Plan and Detail Engineering Design.",
+        "Konstruksi":"Construction",
+        "Arsitektur, bangunan dan sipil.":"Architecture, building and civil works.",
+        "Air bersih dan air limbah.":"Clean water and wastewater.",
+        "Sampah":"Waste",
+        "Pengelolaan, daur ulang dan remediasi.":"Management, recycling and remediation.",
+        "Penelitian":"Research",
+        "Penelitian dan kajian ilmiah lainnya.":"Research and other scientific studies.",
+
+        "Dokumentasi Lapangan":"Field Documentation",
+        "Dokumentasi kegiatan CV. Laban Environment Global ditampilkan dalam satu galeri untuk memberikan gambaran visual mengenai aktivitas dan pekerjaan perusahaan.":"CV. Laban Environment Global activity documentation is presented in one gallery to provide a visual overview of the company's activities and work.",
+        "Aktivitas Lapangan":"Field Activities",
+        "Dokumentasi kegiatan teknis di lapangan.":"Technical field activity documentation.",
+        "Dokumentasi kegiatan survey dan observasi.":"Survey and observation documentation.",
+        "Kegiatan Teknis":"Technical Activities",
+        "Dokumentasi aktivitas teknis perusahaan.":"Technical activity documentation.",
+        "Dokumentasi Kegiatan":"Activity Documentation",
+        "Dokumentasi kegiatan CV. Laban Environment Global.":"CV. Laban Environment Global activity documentation.",
+
+        "Legalitas Perusahaan":"Company Legal Documents",
+        "Dokumen legalitas perusahaan ditampilkan secara visual untuk memudahkan pengunjung mengenali kelengkapan administrasi CV. Laban Environment Global.":"The company's legal documents are presented visually to help visitors review the administrative completeness of CV. Laban Environment Global.",
+        "Nomor Induk Berusaha":"Business Identification Number",
+        "Izin Lingkungan":"Environmental Permit",
+        "Izin Lokasi":"Location Permit",
+        "Izin Usaha":"Business Permit",
+        "SK Domisili":"Domicile Certificate",
+        "Buka alamat di Google Maps":"Open Address in Google Maps",
+
+        "Untuk kebutuhan kerja sama dan konsultasi, silakan hubungi perusahaan melalui email.":"For partnership and consulting needs, please contact the company by email.",
+        "Kirim Email":"Send Email",
+        "Let's talk about your next project.":"Let's talk about your next project.",
+        "Silakan hubungi CV. Laban Environment Global melalui email untuk kebutuhan konsultasi, kerja sama dan informasi perusahaan.":"Please contact CV. Laban Environment Global by email for consultation, partnership and company information.",
+        "Kontak resmi perusahaan melalui email.":"Official company contact via email.",
+        "Lihat Lokasi Perusahaan di Google Maps":"View Company Location on Google Maps",
+
         "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines."
+
     };
 
     const originalText = new WeakMap();
