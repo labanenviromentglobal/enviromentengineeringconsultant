@@ -1764,6 +1764,241 @@ footer{
     -webkit-tap-highlight-color:transparent;
 }
 
+
+/* =========================================================
+   HERO DOCUMENTATION SILHOUETTE — FINAL POLISH
+   The rotating documentation photos remain the same 18 assets,
+   but on Home they act as a subtle visual silhouette behind
+   the hero copy instead of a dominant card on the right.
+   ========================================================= */
+.hero{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 72% 42%, rgba(8,120,63,.045), transparent 34%),
+        linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,.96) 43%, rgba(255,255,255,.76) 100%);
+}
+
+.hero-grid{
+    position:relative;
+    z-index:2;
+    display:block;
+    min-height:650px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:4;
+    width:min(760px, 100%);
+    max-width:760px;
+    padding:104px 0 112px;
+}
+
+.hero-content h1{
+    position:relative;
+    z-index:5;
+}
+
+.hero-description{
+    max-width:650px;
+}
+
+.hero-actions{
+    position:relative;
+    z-index:6;
+}
+
+.hero-visual{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    display:block;
+    overflow:hidden;
+}
+
+.hero-slider{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    max-width:none;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    background:transparent;
+    overflow:hidden;
+}
+
+.hero-slide{
+    inset:0;
+    transform:scale(1.03);
+    transition:opacity 1.2s ease, transform 7s ease;
+}
+
+.hero-slide.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+.hero-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    opacity:.16;
+    filter:saturate(.58) contrast(.88);
+    -webkit-mask-image:linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0,0,0,.16) 20%,
+        rgba(0,0,0,.55) 48%,
+        rgba(0,0,0,.86) 78%,
+        rgba(0,0,0,.48) 100%
+    );
+    mask-image:linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0,0,0,.16) 20%,
+        rgba(0,0,0,.55) 48%,
+        rgba(0,0,0,.86) 78%,
+        rgba(0,0,0,.48) 100%
+    );
+}
+
+.hero-slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,
+            rgba(255,255,255,.98) 0%,
+            rgba(255,255,255,.92) 25%,
+            rgba(255,255,255,.55) 54%,
+            rgba(255,255,255,.12) 100%
+        ),
+        linear-gradient(180deg,
+            rgba(255,255,255,.18),
+            rgba(255,255,255,.03) 45%,
+            rgba(255,255,255,.34)
+        );
+    pointer-events:none;
+}
+
+.hero-slider-info{
+    left:30px;
+    right:auto;
+    bottom:28px;
+    z-index:10;
+    opacity:.76;
+}
+
+.hero-slider-info small,
+.hero-slider-info strong{
+    text-shadow:0 1px 8px rgba(255,255,255,.9);
+}
+
+.slider-counter{
+    top:28px;
+    right:30px;
+    color:#0a3d2c;
+    text-shadow:0 1px 8px rgba(255,255,255,.85);
+}
+
+.slider-counter i{
+    background:rgba(8,120,63,.32);
+}
+
+.slider-progress{
+    left:30px;
+    top:31px;
+    background:rgba(8,120,63,.12);
+}
+
+.slider-progress span{
+    background:#08783f;
+}
+
+@media(max-width:900px){
+    .hero-grid{
+        min-height:620px;
+    }
+
+    .hero-content{
+        width:100%;
+        max-width:700px;
+        padding:88px 0 100px;
+    }
+
+    .hero-slide img{
+        opacity:.12;
+        -webkit-mask-image:linear-gradient(
+            90deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.7)
+        );
+        mask-image:linear-gradient(
+            90deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.7)
+        );
+    }
+}
+
+@media(max-width:620px){
+    .hero-grid{
+        min-height:720px;
+    }
+
+    .hero-content{
+        padding:78px 0 94px;
+    }
+
+    .hero::before{
+        background:linear-gradient(
+            90deg,
+            rgba(255,255,255,.97),
+            rgba(255,255,255,.83)
+        );
+    }
+
+    .hero-slide img{
+        opacity:.09;
+    }
+
+    .slider-counter{
+        top:22px;
+        right:18px;
+    }
+
+    .slider-progress{
+        left:18px;
+        top:25px;
+    }
+
+    .hero-slider-info{
+        left:18px;
+        bottom:20px;
+    }
+}
+
+
+html,body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
 </style>
 
 </head>
@@ -1834,7 +2069,7 @@ footer{
             </p>
 
             <div class="hero-actions">
-                <a href="#about" class="btn btn-primary">Kenali Perusahaan</a>
+                <a href="#about" class="btn btn-primary">Kenal Perusahaan</a>
                 <a href="#contact" class="btn btn-outline">Hubungi Kami</a>
             </div>
         </div>
@@ -2929,7 +3164,7 @@ window.addEventListener("DOMContentLoaded", function(){
         "Legalitas":"Legal",
         "Kontak":"Contact",
 
-        "Kenali Perusahaan":"Explore Company",
+        "Kenal Perusahaan":"Explore Company",
         "Hubungi Kami":"Contact Us",
         "Kirim Email":"Send Email",
         "Buka alamat di Google Maps":"Open Address in Google Maps",
@@ -3046,7 +3281,7 @@ window.addEventListener("DOMContentLoaded", function(){
         "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines.",
 
         "CV. Laban Environment Global adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, bermutu dan tepat waktu.":"CV. Laban Environment Global is a consulting, planning, supervision and construction company supported by experts from various disciplines to deliver professional, high-quality and timely services.",
-        "Kenali Perusahaan":"Explore Company",
+        "Kenal Perusahaan":"Explore Company",
         "Hubungi Kami":"Contact Us",
 
         "Tahun Berdiri":"Year Established",
@@ -3127,8 +3362,22 @@ window.addEventListener("DOMContentLoaded", function(){
         "Kontak resmi perusahaan melalui email.":"Official company contact via email.",
         "Lihat Lokasi Perusahaan di Google Maps":"View Company Location on Google Maps",
 
-        "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines."
+        "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines.",
 
+        "Laban Environment Global":"Laban Environment Global",
+        "CV. Laban Environment Global adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, bermutu dan tepat waktu.":"CV. Laban Environment Global is a consulting, planning, supervision and construction company supported by experts from various disciplines to deliver professional, high-quality and timely services.",
+        "Building":"Building",
+        "Better":"Better",
+        "Solutions.":"Solutions.",
+        "SUSTAINING FUTURE TOGETHER":"SUSTAINING FUTURE TOGETHER",
+        "ENVIRONMENT • ENGINEERING • CONSULTANT":"ENVIRONMENT • ENGINEERING • CONSULTANT",
+        "Professional Work in the Field":"Professional Work in the Field",
+        "Aktivitas Profesional di Lapangan":"Professional Work in the Field",
+        "Survey & Observasi":"Survey & Observation",
+        "Aktivitas Teknis Lapangan":"Technical Field Activity",
+        "FIELD DOCUMENTATION":"FIELD DOCUMENTATION",
+        "dokumentasi tersedia":"documentation items available",
+        "Semua 18 foto dokumentasi juga tampil bergantian pada display utama.":"All 18 documentation photos also rotate through the main display.",
     };
 
     const originalText = new WeakMap();
