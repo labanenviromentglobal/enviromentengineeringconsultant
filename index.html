@@ -1999,6 +1999,130 @@ html,body{
     overflow-x:hidden;
 }
 
+
+
+/* =========================================================
+   HOME HERO — CLEAR DOCUMENTATION BACKGROUND
+   ========================================================= */
+.hero-visual{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    z-index:0 !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+}
+
+.hero-visual .hero-slider{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:#edf4ef !important;
+}
+
+.hero-slide{
+    position:absolute !important;
+    inset:0 !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:scale(1.02) !important;
+    transition:opacity 1s ease, transform 5s ease !important;
+}
+
+.hero-slide.active{
+    opacity:.42 !important;
+    visibility:visible !important;
+    transform:scale(1) !important;
+}
+
+.hero-slide img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    filter:saturate(.78) contrast(.98) brightness(1.04) !important;
+}
+
+/* Soft readability layer: only the left side is brightened.
+   The photo remains clearly visible on the right. */
+.hero-slider::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:2 !important;
+    pointer-events:none !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.98) 0%,
+            rgba(255,255,255,.91) 28%,
+            rgba(255,255,255,.60) 48%,
+            rgba(255,255,255,.16) 72%,
+            rgba(255,255,255,.04) 100%
+        ) !important;
+}
+
+/* Very light top/bottom blending, not a full white wash. */
+.hero-slider::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:3 !important;
+    pointer-events:none !important;
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.10) 0%,
+        transparent 25%,
+        transparent 78%,
+        rgba(255,255,255,.10) 100%
+    ) !important;
+}
+
+.hero-slider-info{
+    display:none !important;
+}
+
+.slider-counter{
+    z-index:8 !important;
+    opacity:.72 !important;
+}
+
+.slider-progress{
+    z-index:8 !important;
+    opacity:.55 !important;
+}
+
+.hero-content{
+    position:relative !important;
+    z-index:10 !important;
+}
+
+@media(max-width:900px){
+    .hero-visual{
+        opacity:1 !important;
+    }
+
+    .hero-slide.active{
+        opacity:.24 !important;
+    }
+
+    .hero-slider::after{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,.98) 0%,
+                rgba(255,255,255,.91) 55%,
+                rgba(255,255,255,.55) 100%
+            ) !important;
+    }
+}
+
 </style>
 
 </head>
@@ -2140,14 +2264,8 @@ html,body{
                 <div class="slider-progress">
                     <span id="sliderProgress"></span>
                 </div>
-
-                <div class="hero-slider-info">
-                    <small>FIELD DOCUMENTATION</small>
-                    <strong id="slideTitle">Professional Work in the Field</strong>
-                </div>
-
-            </div>
-        </div>
+</div>
+</div>
 
     </div>
 </section>
@@ -3036,9 +3154,7 @@ function showSlide(index){
     const lang = document.documentElement.lang === "en" ? "en" : "id";
 
     if(slideTitle){
-        slideTitle.textContent = lang === "en"
-            ? slideTitlesEN[index]
-            : slideTitlesID[index];
+        slideTitle.textContent = "";
     }
 
     if(slideCurrent){
