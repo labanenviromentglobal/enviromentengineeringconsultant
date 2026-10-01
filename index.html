@@ -3,1715 +3,3994 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>CV. Laban Environment Global | Environment, Engineering & Consultant</title>
+<meta name="description" content="CV. Laban Environment Global (LEG) - perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi.">
+<meta name="theme-color" content="#08783f">
+
+<link rel="icon" type="image/jpeg" href="labanlogoterupdate.jpeg">
 
 <style>
 :root{
-  --green:#08783f;
-  --green2:#0aa957;
-  --dark:#082f22;
-  --lime:#9bd63b;
-  --soft:#eff8f1;
-  --text:#18372a;
-  --muted:#69776f;
-  --border:#e1e9e4;
-  --white:#fff;
-  --shadow:0 25px 70px rgba(7,55,35,.12);
-  --max:1180px;
+    --green:#08783f;
+    --green-2:#0aa957;
+    --dark:#082f22;
+    --navy:#172638;
+    --lime:#9bd63b;
+    --soft:#eff8f1;
+    --soft-2:#f7faf8;
+    --text:#18372a;
+    --muted:#69776f;
+    --border:#e1e9e4;
+    --white:#fff;
+    --container:1180px;
+    --shadow:0 30px 80px rgba(7,55,35,.12);
+    --shadow-soft:0 14px 40px rgba(7,55,35,.075);
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:var(--text);
-  background:#fff;
-  line-height:1.6;
-  overflow-x:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    color:var(--text);
+    background:#fff;
+    line-height:1.6;
+    overflow-x:hidden;
 }
-img{max-width:100%;display:block}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.container{width:min(var(--max),calc(100% - 44px));margin:auto}
-.section{padding:100px 0}
-.label{
-  color:var(--green);
-  font-size:11px;
-  font-weight:900;
-  letter-spacing:2px;
-  text-transform:uppercase;
-  margin-bottom:15px;
+
+img{
+    max-width:100%;
+    display:block;
 }
-.title{
-  color:var(--dark);
-  font-size:clamp(38px,5vw,60px);
-  line-height:1;
-  letter-spacing:-3px;
-  margin-bottom:20px;
+
+a{
+    text-decoration:none;
+    color:inherit;
 }
-.desc{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.9;
-  max-width:700px;
+
+button{
+    font:inherit;
 }
+
+.container{
+    width:min(var(--container), calc(100% - 44px));
+    margin:auto;
+}
+
+.section{
+    padding:105px 0;
+}
+
+.section-label{
+    color:var(--green);
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2.4px;
+    margin-bottom:17px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    color:var(--dark);
+    font-size:clamp(39px,4vw,58px);
+    line-height:1.02;
+    letter-spacing:-2.9px;
+    margin-bottom:20px;
+}
+
+.section-description{
+    max-width:690px;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.9;
+}
+
 .btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:50px;
-  padding:0 22px;
-  border-radius:6px;
-  font-size:12px;
-  font-weight:800;
-  transition:.25s;
-  cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:50px;
+    padding:0 23px;
+    border-radius:5px;
+    font-size:12px;
+    font-weight:800;
+    transition:.25s ease;
+    cursor:pointer;
+    box-shadow:0 7px 18px rgba(7,55,35,.06);
 }
-.btn-primary{background:var(--green);color:#fff}
-.btn-primary:hover{background:var(--dark);transform:translateY(-2px)}
+
+.btn-primary{
+    background:var(--green);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--dark);
+    transform:translateY(-2px);
+}
+
 .btn-outline{
-  border:1px solid #cbd8d0;
-  color:var(--green);
-  background:#fff;
+    background:#fff;
+    color:var(--green);
+    border:1px solid #cad8cf;
 }
-.btn-outline:hover{background:var(--soft);transform:translateY(-2px)}
+
+.btn-outline:hover{
+    background:var(--soft);
+    border-color:var(--green);
+    transform:translateY(-2px);
+}
 
 /* HEADER */
 header{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  height:82px;
-  z-index:1000;
-  background:rgba(255,255,255,.92);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(8,47,34,.08);
+    position:fixed;
+    inset:0 0 auto;
+    height:82px;
+    z-index:1000;
+    background:rgba(255,255,255,.88);
+    backdrop-filter:blur(20px) saturate(130%);
+    border-bottom:1px solid rgba(8,47,34,.06);
+    box-shadow:0 8px 30px rgba(7,55,35,.035);
 }
-.nav{
-  height:82px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
+
+.navbar{
+    height:82px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
 }
+
 .brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  flex-shrink:0;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    flex-shrink:0;
+    position:relative;
 }
-.logo{
-  width:55px;
-  height:55px;
-  object-fit:contain;
+
+.brand-logo{
+    width:56px;
+    height:56px;
+    object-fit:contain;
+    filter:drop-shadow(0 6px 12px rgba(8,120,63,.10));
+    transition:.25s ease;
 }
-.brand-text{display:flex;flex-direction:column}
+
+.brand-text{
+    display:flex;
+    flex-direction:column;
+}
+
 .brand-name{
-  font-size:18px;
-  line-height:1;
-  font-weight:900;
-  color:var(--dark);
+    color:var(--dark);
+    font-size:19px;
+    font-weight:900;
+    letter-spacing:.7px;
+    line-height:1;
 }
-.brand-sub{
-  color:var(--green);
-  font-size:7px;
-  font-weight:900;
-  letter-spacing:1.2px;
-  margin-top:6px;
+
+.brand-subtitle{
+    color:var(--green);
+    font-size:7.5px;
+    font-weight:900;
+    letter-spacing:1.35px;
+    margin-top:6px;
 }
+
 .nav-menu{
-  display:flex;
-  align-items:center;
-  gap:5px;
+    display:flex;
+    align-items:center;
+    gap:18px;
 }
+
 .nav-menu a{
-  padding:9px 10px;
-  border-radius:6px;
-  color:#45554d;
-  font-size:10px;
-  font-weight:800;
+    color:#45554d;
+    font-size:10.5px;
+    font-weight:800;
+    white-space:nowrap;
+    transition:.22s ease;
+    padding:8px 9px;
+    border-radius:8px;
 }
-.nav-menu a:hover{color:var(--green)}
+
+.nav-menu a:hover{
+    color:var(--green);
+}
+
+.language-switcher{
+    display:flex;
+    align-items:center;
+    padding:3px;
+    border:1px solid #dfe7e1;
+    border-radius:30px;
+    background:#f7faf7;
+    position:relative;
+    z-index:10001;
+    pointer-events:auto;
+}
+
+.language-btn{
+    border:none;
+    background:transparent;
+    color:#718078;
+    padding:6px 10px;
+    border-radius:20px;
+    font-size:9px;
+    font-weight:900;
+    cursor:pointer;
+    position:relative;
+    z-index:10002;
+    pointer-events:auto !important;
+    user-select:none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+.language-btn:hover{
+    color:var(--green);
+}
+
+.language-btn.active{
+    background:var(--green);
+    color:#fff;
+}
+
 .nav-contact{
-  color:#fff!important;
-  background:var(--green);
+    color:#fff !important;
+    background:var(--green);
+    padding:10px 15px;
+    border-radius:5px;
 }
-.nav-contact:hover{background:var(--dark)}
-.lang{
-  display:flex;
-  gap:3px;
-  padding:3px;
-  border:1px solid #dce6df;
-  border-radius:30px;
-  background:#f7faf8;
+
+.nav-contact:hover{
+    background:var(--dark) !important;
 }
-.lang button{
-  border:0;
-  padding:6px 9px;
-  border-radius:20px;
-  background:transparent;
-  color:#718078;
-  font-size:9px;
-  font-weight:900;
-  cursor:pointer;
-}
-.lang button.active{background:var(--green);color:#fff}
+
 .menu-toggle{
-  display:none;
-  border:0;
-  background:none;
-  color:var(--green);
-  font-size:25px;
-  cursor:pointer;
+    display:none;
+    border:none;
+    background:none;
+    color:var(--green);
+    font-size:25px;
+    cursor:pointer;
+}
+
+
+.mobile-language{
+    display:none;
+    padding:12px 16px;
+    gap:5px;
+    border-top:1px solid #edf1ee;
+    background:#fbfdfb;
+}
+
+@media(max-width:900px){
+    .mobile-language{
+        display:flex;
+    }
 }
 
 /* HERO */
 .hero{
-  min-height:780px;
-  padding-top:82px;
-  display:flex;
-  align-items:center;
-  background:
-    radial-gradient(circle at 85% 20%,rgba(8,120,63,.08),transparent 30%),
-    linear-gradient(180deg,#fff,#f7fbf8);
+    padding-top:82px;
+    min-height:780px;
+    position:relative;
+    isolation:isolate;
+    display:flex;
+    align-items:center;
+    border-bottom:1px solid #edf0ee;
+    overflow:hidden;
+    background:
+        radial-gradient(circle at 86% 25%, rgba(8,120,63,.075), transparent 28%),
+        radial-gradient(circle at 4% 90%, rgba(155,214,59,.08), transparent 24%),
+        linear-gradient(180deg,#fff 0%,#fff 68%,#f8fbf9 100%);
 }
+
 .hero-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:65px;
-  align-items:center;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:78px;
+    align-items:center;
 }
+
+.hero-content{
+    padding:72px 0;
+}
+
 .hero-slogan{
-  color:var(--green);
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:2.5px;
-  margin-bottom:16px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:var(--green);
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:2.5px;
+    margin-bottom:20px;
 }
+
+
+
 .hero-badge{
-  display:inline-block;
-  padding:8px 13px;
-  border-radius:50px;
-  color:var(--green);
-  background:rgba(8,120,63,.07);
-  border:1px solid rgba(8,120,63,.1);
-  font-size:8px;
-  font-weight:900;
-  letter-spacing:1px;
-  margin-bottom:20px;
+    display:inline-flex;
+    align-items:center;
+    padding:8px 12px;
+    margin-bottom:20px;
+    background:rgba(8,120,63,.075);
+    color:var(--green);
+    font-size:8.5px;
+    font-weight:900;
+    letter-spacing:1px;
+    border-radius:999px;
+    border:1px solid rgba(8,120,63,.08);
 }
+
 .hero h1{
-  color:var(--dark);
-  font-size:clamp(52px,6vw,82px);
-  line-height:.94;
-  letter-spacing:-5px;
-  margin-bottom:20px;
+    color:var(--dark);
+    font-size:clamp(54px,6.2vw,82px);
+    line-height:.94;
+    letter-spacing:-5px;
+    margin-bottom:24px;
+    max-width:700px;
 }
-.hero h1 span{color:var(--green)}
+
+.hero h1 span{
+    color:var(--green);
+}
+
 .hero-tagline{
-  display:inline-block;
-  position:relative;
-  color:var(--green);
-  font-size:clamp(25px,3vw,36px);
-  line-height:1.05;
-  font-weight:900;
-  letter-spacing:-1px;
-  text-transform:uppercase;
-  margin-bottom:20px;
+    color:var(--green);
+    font-size:18px;
+    font-weight:900;
+    margin-bottom:14px;
 }
-.hero-tagline:after{
-  content:"";
-  display:block;
-  width:75px;
-  height:4px;
-  border-radius:20px;
-  background:var(--lime);
-  margin-top:9px;
-}
+
 .hero-description{
-  max-width:620px;
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.9;
-  margin-bottom:28px;
+    max-width:620px;
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.9;
+    margin-bottom:29px;
 }
-.actions{display:flex;gap:10px;flex-wrap:wrap}
 
+.hero-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+/* HERO SLIDER */
 .hero-visual{
-  position:relative;
-  height:560px;
+    position:relative;
+    min-height:545px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
-.slider{
-  position:relative;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  border-radius:18px;
-  background:#eaf2ed;
-  box-shadow:var(--shadow);
-}
-.slide{
-  position:absolute;
-  inset:0;
-  opacity:0;
-  transition:opacity 1s ease;
-}
-.slide.active{opacity:1}
-.slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:saturate(.8) contrast(.9) brightness(1.04);
-}
-.slide:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(180deg,rgba(255,255,255,.1),rgba(6,61,39,.3));
-}
-.slide-info{
-  position:absolute;
-  left:24px;
-  right:24px;
-  bottom:24px;
-  z-index:5;
-  padding:17px 19px;
-  border-radius:12px;
-  background:rgba(255,255,255,.86);
-  backdrop-filter:blur(15px);
-}
-.slide-info small{
-  color:var(--green);
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:1.5px;
-}
-.slide-info strong{
-  display:block;
-  color:var(--dark);
-  font-size:15px;
-  margin-top:3px;
-}
-.dots{
-  position:absolute;
-  right:20px;
-  top:20px;
-  z-index:10;
-  display:flex;
-  gap:5px;
-}
-.dot{
-  width:7px;
-  height:7px;
-  padding:0;
-  border:0;
-  border-radius:50%;
-  background:rgba(255,255,255,.55);
-  cursor:pointer;
-}
-.dot.active{width:22px;border-radius:10px;background:#fff}
 
-/* STRIP */
-.strip{
-  border-bottom:1px solid var(--border);
-  background:#fafcfb;
+.hero-slider{
+    position:relative;
+    width:min(100%,535px);
+    height:555px;
+    overflow:hidden;
+    background:#eaf2ed;
+    border:1px solid rgba(8,120,63,.11);
+    box-shadow:var(--shadow);
+    border-radius:18px;
 }
-.strip-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+.hero-slide{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    transform:scale(1.045);
+    transition:opacity 1.2s ease, transform 5.5s ease;
 }
-.strip-item{
-  text-align:center;
-  padding:25px;
-  border-right:1px solid var(--border);
+
+.hero-slide.active{
+    opacity:1;
+    transform:scale(1);
 }
-.strip-item:last-child{border:0}
-.strip-item b{
-  display:block;
-  color:var(--green);
-  font-size:22px;
+
+.hero-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter:saturate(.78) contrast(.88) brightness(1.04);
 }
-.strip-item span{
-  color:var(--muted);
-  font-size:10px;
-  font-weight:700;
+
+.hero-slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(180deg,rgba(255,255,255,.20),rgba(6,61,39,.28)),
+        linear-gradient(90deg,rgba(8,120,63,.12),transparent 58%);
+}
+
+.hero-slider-info{
+    position:absolute;
+    z-index:5;
+    left:25px;
+    right:25px;
+    bottom:24px;
+    padding:18px 20px;
+    background:rgba(255,255,255,.84);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.68);
+    box-shadow:0 14px 34px rgba(6,61,39,.12);
+    border-radius:13px;
+}
+
+.hero-slider-info small{
+    color:var(--green);
+    display:block;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1.6px;
+    margin-bottom:4px;
+}
+
+.hero-slider-info strong{
+    color:var(--dark);
+    font-size:15px;
+}
+
+.slider-dots{
+    position:absolute;
+    z-index:7;
+    top:22px;
+    right:22px;
+    display:flex;
+    gap:6px;
+}
+
+.slider-dot{
+    width:7px;
+    height:7px;
+    border:0;
+    border-radius:999px;
+    background:rgba(255,255,255,.55);
+    cursor:pointer;
+    transition:.2s;
+}
+
+.slider-dot.active{
+    width:22px;
+    border-radius:10px;
+    background:#fff;
+}
+
+/* COMPANY STRIP */
+.company-strip{
+    background:#fafcfb;
+    border-bottom:1px solid var(--border);
+}
+
+.company-strip-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.company-strip-item{
+    text-align:center;
+    padding:27px 20px;
+    border-right:1px solid var(--border);
+    transition:.2s ease;
+}
+
+.company-strip-item:last-child{
+    border-right:0;
+}
+
+.company-strip-code{
+    color:var(--green);
+    font-size:21px;
+    font-weight:900;
+}
+
+.company-strip-title{
+    color:var(--muted);
+    font-size:10px;
+    font-weight:700;
 }
 
 /* ABOUT */
-.about-grid{
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:65px;
-  align-items:center;
-}
-.about-box{
-  min-height:420px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  overflow:hidden;
-  border:1px solid var(--border);
-  border-radius:18px;
-  background:#f7fbf8;
-}
-.about-box:before{
-  content:"";
-  position:absolute;
-  width:280px;
-  height:280px;
-  border:1px solid rgba(8,120,63,.12);
-  border-radius:50%;
-}
-.about-box img{
-  position:relative;
-  width:270px;
-  z-index:2;
-}
-.about-text p{
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.95;
-  margin-bottom:16px;
-}
-.about-list{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:12px;
-  margin-top:25px;
-}
-.about-list div{
-  padding:16px;
-  background:var(--soft);
-  border-radius:10px;
-}
-.about-list b{
-  display:block;
-  color:var(--green);
-  font-size:12px;
-}
-.about-list span{
-  color:var(--muted);
-  font-size:11px;
+.about{
+    background:#fff;
 }
 
-/* VISION */
-.vm{
-  background:var(--soft);
+.about-grid{
+    display:grid;
+    grid-template-columns:.82fr 1.18fr;
+    gap:70px;
+    align-items:center;
 }
+
+.about-logo-area{
+    min-height:440px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#f8fbf8;
+    border:1px solid var(--border);
+    position:relative;
+    overflow:hidden;
+    border-radius:18px;
+}
+
+.about-logo-area::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border:1px solid rgba(8,120,63,.12);
+    border-radius:50%;
+}
+
+.about-logo{
+    width:280px;
+    max-width:72%;
+    object-fit:contain;
+    position:relative;
+    z-index:2;
+}
+
+.about-content h2{
+    color:var(--dark);
+    font-size:clamp(37px,4vw,54px);
+    line-height:1.07;
+    letter-spacing:-2.5px;
+    margin-bottom:22px;
+}
+
+.about-content p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.9;
+    margin-bottom:14px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+    margin-top:27px;
+}
+
+.info-card{
+    padding:18px;
+    background:#fff;
+    border:1px solid var(--border);
+}
+
+.info-card strong{
+    display:block;
+    color:var(--dark);
+    font-size:11px;
+    margin-bottom:5px;
+}
+
+.info-card span{
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.7;
+}
+
+/* VISION MISSION */
+.vm-section{
+    background:var(--soft-2);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+}
+
 .vm-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin-top:45px;
 }
+
 .vm-card{
-  padding:40px;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:15px;
+    background:#fff;
+    border:1px solid var(--border);
+    padding:34px;
+    border-radius:16px;
 }
+
 .vm-card h3{
-  color:var(--dark);
-  font-size:27px;
-  margin-bottom:15px;
+    color:var(--dark);
+    font-size:22px;
+    margin-bottom:13px;
 }
-.vm-card p,.vm-card li{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.9;
+
+.vm-card p,
+.vm-card li{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.85;
 }
-.vm-card ul{padding-left:20px}
+
+.vm-card ul{
+    padding-left:18px;
+}
+
+.plan-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:18px;
+}
+
+.plan-card{
+    background:#fff;
+    border:1px solid var(--border);
+    padding:27px;
+    border-radius:14px;
+}
+
+.plan-card .number{
+    color:var(--green);
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:1px;
+    margin-bottom:17px;
+}
+
+.plan-card h3{
+    color:var(--dark);
+    font-size:17px;
+    margin-bottom:8px;
+}
+
+.plan-card p{
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.8;
+}
 
 /* SERVICES */
+.services{
+    background:#fff;
+}
+
+.services-heading{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    gap:50px;
+    margin-bottom:48px;
+}
+
 .services-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:45px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
 }
-.service{
-  padding:30px;
-  min-height:220px;
-  border:1px solid var(--border);
-  border-radius:14px;
-  background:#fff;
-  transition:.25s;
+
+.service-card{
+    background:#fff;
+    border:1px solid var(--border);
+    padding:28px;
+    min-height:235px;
+    transition:.28s ease;
+    position:relative;
+    overflow:hidden;
 }
-.service:hover{
-  transform:translateY(-5px);
-  box-shadow:var(--shadow);
+
+.service-card:hover{
+    border-color:#b8cfc0;
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-soft);
 }
+
 .service-number{
-  color:var(--lime);
-  font-size:12px;
-  font-weight:900;
+    color:#8fbc70;
+    font-size:10px;
+    font-weight:900;
+    margin-bottom:21px;
 }
-.service h3{
-  color:var(--dark);
-  font-size:20px;
-  margin:13px 0 9px;
+
+.service-icon{
+    width:43px;
+    height:43px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--soft);
+    color:var(--green);
+    font-size:10px;
+    font-weight:900;
+    margin-bottom:19px;
 }
-.service p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.8;
+
+.service-card h3{
+    color:var(--dark);
+    font-size:17px;
+    margin-bottom:9px;
+}
+
+.service-card p{
+    color:var(--muted);
+    font-size:10.5px;
+    line-height:1.8;
 }
 
 /* TEAM */
-.team{
-  background:#f8fbf9;
+.experts{
+    background:var(--soft-2);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
 }
-.team-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:45px;
+
+.expert-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:48px;
 }
-.person{
-  padding:28px;
-  background:#fff;
-  border:1px solid var(--border);
-  border-radius:14px;
+
+.expert-card{
+    background:#fff;
+    border:1px solid var(--border);
+    padding:29px;
+    min-height:245px;
+    border-radius:15px;
 }
-.person h3{
-  color:var(--dark);
-  font-size:17px;
-  line-height:1.35;
-  margin-bottom:8px;
+
+.expert-placeholder{
+    width:61px;
+    height:61px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--soft);
+    color:var(--green);
+    font-size:19px;
+    font-weight:900;
+    margin-bottom:20px;
 }
-.person span{
-  color:var(--green);
-  font-size:10px;
-  font-weight:900;
-  letter-spacing:1px;
+
+.expert-card h3{
+    color:var(--dark);
+    font-size:17px;
+    margin-bottom:6px;
 }
-.person p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.8;
-  margin-top:12px;
+
+.expert-card .role{
+    color:var(--green);
+    font-size:9.5px;
+    font-weight:800;
+    margin-bottom:13px;
+}
+
+.expert-card p{
+    color:var(--muted);
+    font-size:10.5px;
+    line-height:1.8;
 }
 
 /* SCOPE */
+.scope{
+    background:#fff;
+}
+
 .scope-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-  margin-top:45px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    margin-top:47px;
 }
+
 .scope-card{
-  padding:28px;
-  border:1px solid var(--border);
-  border-radius:14px;
-  background:#fff;
+    border:1px solid var(--border);
+    padding:25px;
+    display:flex;
+    border-radius:14px;
+    gap:18px;
+    align-items:flex-start;
+    transition:.25s ease;
+    background:linear-gradient(180deg,#fff,#fbfdfb);
 }
+
+.scope-card:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow);
+}
+
+.scope-number{
+    color:var(--green);
+    font-size:11px;
+    font-weight:900;
+    min-width:30px;
+}
+
 .scope-card h3{
-  color:var(--green);
-  font-size:18px;
-  margin-bottom:8px;
+    color:var(--dark);
+    font-size:15px;
+    margin-bottom:5px;
 }
+
 .scope-card p{
-  color:var(--muted);
-  font-size:12px;
-  line-height:1.8;
+    color:var(--muted);
+    font-size:10.5px;
+    line-height:1.8;
 }
 
 /* DOCUMENTATION */
-.documentation{background:#f8fbf9}
-.gallery{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-top:40px;
+.documentation{
+    background:var(--soft-2);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
 }
-.gallery figure{
-  position:relative;
-  height:230px;
-  overflow:hidden;
-  border-radius:12px;
-  background:#eaf2ed;
+
+.documentation-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-top:48px;
 }
-.gallery img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  transition:.4s;
+
+.documentation-card{
+    background:#fff;
+    border:1px solid var(--border);
+    overflow:hidden;
+    border-radius:15px;
 }
-.gallery figure:hover img{transform:scale(1.06)}
-.gallery figcaption{
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:0;
-  padding:12px;
-  color:#fff;
-  background:linear-gradient(transparent,rgba(0,0,0,.7));
-  font-size:10px;
-  font-weight:800;
+
+.documentation-image{
+    height:230px;
+    background:#eaf1ec;
+    overflow:hidden;
+}
+
+.documentation-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.45s;
+}
+
+.documentation-card:hover img{
+    transform:scale(1.04);
+}
+
+.documentation-content{
+    padding:20px;
+}
+
+.documentation-content small{
+    color:var(--green);
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.documentation-content h3{
+    color:var(--dark);
+    font-size:16px;
+    margin-top:5px;
+}
+
+.documentation-content p{
+    color:var(--muted);
+    font-size:10px;
+    line-height:1.7;
+    margin-top:6px;
+}
+
+/* LEGAL */
+.documents{
+    background:var(--dark);
+    color:#fff;
+}
+
+.documents .section-label{
+    color:var(--lime);
+}
+
+.documents .section-title{
+    color:#fff;
+}
+
+.documents .section-description{
+    color:rgba(255,255,255,.63);
+}
+
+.document-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:48px;
+}
+
+.document-card{
+    border:1px solid rgba(255,255,255,.12);
+    padding:28px;
+    background:rgba(255,255,255,.035);
+}
+
+.document-card h3{
+    color:#fff;
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.document-card p{
+    color:rgba(255,255,255,.55);
+    font-size:10.5px;
+    line-height:1.8;
+}
+
+.document-status{
+    display:inline-block;
+    margin-top:18px;
+    padding:5px 9px;
+    background:rgba(155,214,59,.1);
+    color:var(--lime);
+    font-size:8.5px;
+    font-weight:900;
+}
+
+
+
+/* EXTENDED DOCUMENTATION GALLERY */
+.documentation-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    align-items:stretch;
+}
+
+.documentation-card{
+    display:flex;
+    flex-direction:column;
+    height:100%;
+}
+
+.documentation-image{
+    height:250px;
+    flex-shrink:0;
+}
+
+.documentation-content{
+    flex:1;
+}
+
+.documentation-card:nth-child(3n + 2) .documentation-image{
+    background:#edf5ef;
+}
+
+.documentation-card:nth-child(3n + 3) .documentation-image{
+    background:#f2f5f2;
+}
+
+@media(max-width:900px){
+    .documentation-grid{
+        grid-template-columns:repeat(2,minmax(0,1fr));
+    }
+}
+
+@media(max-width:620px){
+    .documentation-grid{
+        grid-template-columns:1fr;
+    }
+
+    .documentation-image{
+        height:285px;
+    }
+}
+
+
+
+/* HERO — 18 IMAGE ROTATION */
+.slider-counter{
+    position:absolute;
+    z-index:8;
+    top:22px;
+    right:22px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#fff;
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1px;
+    text-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+
+.slider-counter i{
+    width:22px;
+    height:1px;
+    background:rgba(255,255,255,.7);
+    display:block;
+}
+
+.slider-progress{
+    position:absolute;
+    z-index:8;
+    left:22px;
+    top:25px;
+    width:85px;
+    height:2px;
+    overflow:hidden;
+    border-radius:99px;
+    background:rgba(255,255,255,.28);
+}
+
+.slider-progress span{
+    display:block;
+    width:5.55%;
+    height:100%;
+    background:#fff;
+    border-radius:99px;
+    transition:width .45s ease;
+}
+
+
+/* DOCUMENTATION — FEATURED + COMPLETE DISPLAY */
+.documentation-featured-grid{
+    position:relative;
+}
+
+.documentation-featured-grid .documentation-card:nth-child(-n+3){
+    border-color:rgba(8,120,63,.20);
+}
+
+.documentation-featured-grid .documentation-card:nth-child(-n+3) .documentation-image{
+    height:285px;
+}
+
+.documentation-featured-grid .documentation-card:nth-child(n+4) .documentation-image{
+    height:250px;
+}
+
+.documentation-note{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    margin-top:24px;
+    padding:15px 17px;
+    border:1px solid var(--border);
+    background:#fbfdfb;
+    border-radius:12px;
+    color:var(--muted);
+    font-size:10.5px;
+}
+
+.documentation-note strong{
+    color:var(--green);
+    font-size:10px;
+}
+
+@media(max-width:620px){
+    .documentation-featured-grid .documentation-card:nth-child(-n+3) .documentation-image,
+    .documentation-featured-grid .documentation-card:nth-child(n+4) .documentation-image{
+        height:285px;
+    }
+
+    .documentation-note{
+        display:block;
+        line-height:1.7;
+    }
+}
+
+
+/* LEGAL DOCUMENT GALLERY */
+.document-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:48px;
+}
+
+.document-visual-card{
+    background:rgba(255,255,255,.045);
+    border:1px solid rgba(255,255,255,.11);
+    border-radius:16px;
+    overflow:hidden;
+    transition:.28s ease;
+}
+
+.document-visual-card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(155,214,59,.30);
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+}
+
+.document-preview{
+    height:310px;
+    background:#f2f5f2;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.document-preview img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    background:#f2f5f2;
+    transition:.35s ease;
+}
+
+.document-visual-card:hover .document-preview img{
+    transform:scale(1.025);
+}
+
+.document-overlay{
+    position:absolute;
+    inset:auto 14px 14px;
+    padding:10px 12px;
+    background:rgba(6,44,29,.88);
+    color:#fff;
+    font-size:8px;
+    font-weight:900;
+    letter-spacing:1.3px;
+    opacity:0;
+    transform:translateY(8px);
+    transition:.25s ease;
+    text-align:center;
+    border-radius:8px;
+}
+
+.document-visual-card:hover .document-overlay{
+    opacity:1;
+    transform:none;
+}
+
+.document-visual-info{
+    min-height:92px;
+    padding:18px 18px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.document-visual-info small{
+    display:block;
+    color:var(--lime);
+    font-size:7.5px;
+    font-weight:900;
+    letter-spacing:1.3px;
+    margin-bottom:5px;
+}
+
+.document-visual-info h3{
+    color:#fff;
+    font-size:15px;
+}
+
+.document-open{
+    width:36px;
+    height:36px;
+    flex:0 0 36px;
+    border:1px solid rgba(255,255,255,.17);
+    border-radius:50%;
+    background:transparent;
+    color:#fff;
+    cursor:pointer;
+    font-size:19px;
+    line-height:1;
+    transition:.22s ease;
+}
+
+.document-open:hover{
+    background:var(--lime);
+    color:var(--dark);
+    border-color:var(--lime);
+    transform:rotate(90deg);
+}
+
+/* DOCUMENT LIGHTBOX */
+.document-modal{
+    position:fixed;
+    inset:0;
+    z-index:3000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    background:rgba(2,19,13,.88);
+    backdrop-filter:blur(12px);
+}
+
+.document-modal.open{
+    display:flex;
+}
+
+.document-modal-inner{
+    width:min(1100px,96vw);
+    max-height:92vh;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.document-modal-title{
+    width:100%;
+    color:#fff;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:12px;
+    text-align:left;
+}
+
+.document-modal-image{
+    max-width:100%;
+    max-height:78vh;
+    object-fit:contain;
+    border-radius:10px;
+    box-shadow:0 30px 90px rgba(0,0,0,.45);
+    background:#fff;
+}
+
+.document-modal-close{
+    position:absolute;
+    right:-5px;
+    top:-48px;
+    width:36px;
+    height:36px;
+    border:1px solid rgba(255,255,255,.22);
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    cursor:pointer;
+    font-size:19px;
+}
+
+.document-modal-close:hover{
+    background:#fff;
+    color:var(--dark);
+}
+
+@media(max-width:900px){
+    .document-gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:620px){
+    .document-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .document-preview{
+        height:360px;
+    }
+
+    .document-modal{
+        padding:18px;
+    }
+}
+
+/* CONTACT */
+.contact{
+    background:var(--soft-2);
+    border-top:1px solid var(--border);
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    gap:70px;
+    align-items:start;
+}
+
+.contact-info h2{
+    color:var(--dark);
+    font-size:clamp(37px,4vw,53px);
+    line-height:1.07;
+    letter-spacing:-2.5px;
+    margin-bottom:19px;
+}
+
+.contact-info > p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.8;
+    max-width:520px;
+    margin-bottom:27px;
+}
+
+.contact-list{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.contact-item{
+    display:flex;
+    gap:13px;
+    align-items:flex-start;
+}
+
+.contact-icon{
+    width:40px;
+    height:40px;
+    flex-shrink:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--soft);
+    color:var(--green);
+    font-size:10px;
+    font-weight:900;
+}
+
+.contact-item strong{
+    display:block;
+    color:var(--dark);
+    font-size:10px;
+    letter-spacing:.6px;
+    margin-bottom:3px;
+}
+
+.contact-item span,
+.contact-item a{
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.7;
+}
+
+.contact-item a:hover{
+    color:var(--green);
+}
+
+.map-link{
+    display:inline-flex;
+    margin-top:7px;
+    color:var(--green) !important;
+    font-weight:800;
+}
+
+.contact-card{
+    background:#fff;
+    border:1px solid var(--border);
+    padding:38px;
+    box-shadow:var(--shadow);
+    border-radius:18px;
+}
+
+.contact-card h3{
+    color:var(--dark);
+    font-size:25px;
+    margin-bottom:8px;
+}
+
+.contact-card > p{
+    color:var(--muted);
+    font-size:12px;
+    margin-bottom:23px;
+}
+
+.email-box{
+    display:flex;
+    align-items:center;
+    gap:13px;
+    padding:20px;
+    border:1px solid var(--border);
+    background:var(--soft-2);
+}
+
+.email-box .email-icon{
+    width:43px;
+    height:43px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:var(--green);
+    color:#fff;
+    font-weight:900;
+}
+
+.email-box span{
+    display:block;
+    color:var(--dark);
+    font-size:11px;
+    font-weight:800;
+}
+
+.email-box a{
+    color:var(--green);
+    font-size:12px;
+    font-weight:800;
+    word-break:break-word;
+}
+
+.map-button{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:52px;
+    margin-top:12px;
+    background:var(--green);
+    color:#fff;
+    font-size:11px;
+    font-weight:800;
+    transition:.2s;
+}
+
+.map-button:hover{
+    background:var(--dark);
+    transform:translateY(-2px);
 }
 
 /* CTA */
 .cta{
-  padding:80px 0;
-  background:var(--dark);
-  color:#fff;
-}
-.cta-inner{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
-}
-.cta h2{
-  font-size:clamp(32px,4vw,52px);
-  line-height:1;
-  letter-spacing:-2px;
-  margin-bottom:12px;
-}
-.cta p{
-  color:#b8c8bf;
-  font-size:13px;
-  max-width:650px;
+    padding:0 0 100px;
+    background:var(--soft-2);
 }
 
-/* CONTACT */
-.contact-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
+.cta-box{
+    background:
+        radial-gradient(circle at 85% 15%, rgba(155,214,59,.15), transparent 25%),
+        linear-gradient(135deg,#08783f 0%,#076b38 100%);
+    color:#fff;
+    padding:60px;
+    border-radius:20px;
+    box-shadow:0 25px 65px rgba(8,120,63,.18);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:45px;
 }
-.contact-card{
-  padding:35px;
-  border:1px solid var(--border);
-  border-radius:15px;
-  background:#fff;
+
+.cta-box .section-label{
+    color:var(--lime);
 }
-.contact-card h3{
-  color:var(--dark);
-  font-size:22px;
-  margin-bottom:18px;
+
+.cta-box h2{
+    max-width:740px;
+    font-size:clamp(33px,4vw,50px);
+    line-height:1.08;
+    letter-spacing:-2px;
 }
-.contact-item{
-  padding:15px 0;
-  border-bottom:1px solid #edf1ee;
+
+.cta-box p{
+    color:rgba(255,255,255,.65);
+    font-size:12px;
+    margin-top:11px;
 }
-.contact-item:last-child{border:0}
-.contact-item small{
-  display:block;
-  color:var(--green);
-  font-size:9px;
-  font-weight:900;
-  letter-spacing:1px;
-  margin-bottom:4px;
+
+.cta-button{
+    flex-shrink:0;
 }
-.contact-item p,.contact-item a{
-  color:var(--muted);
-  font-size:13px;
-  line-height:1.7;
+
+.cta-button .btn{
+    background:#fff;
+    color:var(--green);
 }
 
 /* FOOTER */
 footer{
-  padding:35px 0;
-  background:#051d15;
-  color:#fff;
+    background:#062c1d;
+    color:#fff;
+    padding:55px 0 25px;
 }
-.footer{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:20px;
-}
-.footer-brand{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.footer-brand img{width:48px}
-.footer-brand strong{font-size:14px}
-.footer small{color:#94aaa0;font-size:10px}
 
-/* MOBILE */
-@media(max-width:1050px){
-  .nav-menu{gap:0}
-  .nav-menu a{padding:8px 7px}
-  .hero-grid{gap:35px}
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr .7fr .7fr;
+    gap:55px;
+    padding-bottom:38px;
+    border-bottom:1px solid rgba(255,255,255,.1);
 }
-@media(max-width:900px){
-  header{height:72px}
-  .nav{height:72px}
-  .menu-toggle{display:block}
-  .nav-menu{
-    display:none;
-    position:absolute;
-    top:72px;
-    left:0;
-    right:0;
-    padding:15px 22px 20px;
+
+.footer-brand{
+    display:flex;
+    align-items:center;
+    gap:11px;
+    margin-bottom:17px;
+}
+
+.footer-logo{
+    width:58px;
+    height:58px;
+    object-fit:contain;
+}
+
+.footer-brand-name{
+    font-size:15px;
+    font-weight:900;
+}
+
+.footer-description{
+    color:rgba(255,255,255,.55);
+    max-width:440px;
+    font-size:10.5px;
+    line-height:1.8;
+}
+
+.footer-title{
+    color:var(--lime);
+    font-size:9px;
+    font-weight:900;
+    letter-spacing:1.5px;
+    margin-bottom:15px;
+}
+
+.footer-links{
+    display:flex;
     flex-direction:column;
-    align-items:stretch;
-    background:#fff;
-    border-bottom:1px solid var(--border);
-    box-shadow:0 15px 30px rgba(0,0,0,.06);
-  }
-  .nav-menu.open{display:flex}
-  .nav-menu a{padding:12px}
-  .hero{
-    padding-top:72px;
-    min-height:auto;
-  }
-  .hero-grid{
-    grid-template-columns:1fr;
-    padding:70px 0;
-  }
-  .hero-visual{height:470px}
-  .about-grid,.contact-grid{grid-template-columns:1fr}
-  .services-grid,.team-grid,.scope-grid{grid-template-columns:repeat(2,1fr)}
-  .gallery{grid-template-columns:repeat(3,1fr)}
-  .cta-inner{flex-direction:column;align-items:flex-start}
+    gap:9px;
 }
-@media(max-width:600px){
-  .container{width:min(100% - 30px,var(--max))}
-  .section{padding:75px 0}
-  .brand-name{font-size:15px}
-  .brand-sub{font-size:6px}
-  .logo{width:48px;height:48px}
-  .lang{display:none}
-  .hero h1{font-size:52px;letter-spacing:-3px}
-  .hero-visual{height:390px}
-  .strip-grid{grid-template-columns:1fr}
-  .strip-item{
-    border-right:0;
-    border-bottom:1px solid var(--border);
-  }
-  .about-list,.vm-grid,.services-grid,.team-grid,.scope-grid{
-    grid-template-columns:1fr;
-  }
-  .gallery{grid-template-columns:repeat(2,1fr)}
-  .gallery figure{height:180px}
-  .footer{flex-direction:column;align-items:flex-start}
+
+.footer-links a{
+    color:rgba(255,255,255,.66);
+    font-size:10.5px;
+}
+
+.footer-links a:hover{
+    color:#fff;
+}
+
+.footer-bottom{
+    padding-top:23px;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:rgba(255,255,255,.42);
+    font-size:9px;
 }
 
 /* REVEAL */
 .reveal{
-  opacity:0;
-  transform:translateY(25px);
-  transition:.7s ease;
+    opacity:0;
+    transform:translateY(22px);
+    transition:.7s ease;
 }
-.reveal.show{
-  opacity:1;
-  transform:none;
+
+.reveal.visible{
+    opacity:1;
+    transform:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:1050px){
+    .nav-menu{
+        gap:12px;
+    }
+
+    .nav-menu a{
+        font-size:9.5px;
+    }
+
+    .hero-grid{
+        gap:40px;
+    }
+
+    .hero h1{
+        font-size:clamp(47px,6vw,68px);
+    }
+}
+
+@media(max-width:900px){
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-menu{
+        position:absolute;
+        top:82px;
+        left:22px;
+        right:22px;
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        background:#fff;
+        border:1px solid var(--border);
+        box-shadow:var(--shadow);
+    }
+
+    .nav-menu.open{
+        display:flex;
+    }
+
+    .nav-menu a{
+        padding:14px 18px;
+        border-bottom:1px solid #edf1ee;
+        font-size:11px;
+    }
+
+    .nav-contact{
+        border-radius:0;
+    }
+
+    .language-switcher{
+        display:none;
+    }
+
+    .hero-grid,
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-content{
+        padding:75px 0 35px;
+    }
+
+    .hero-visual{
+        min-height:auto;
+        padding-bottom:75px;
+    }
+
+    .hero-slider{
+        height:450px;
+    }
+
+    .services-grid,
+    .expert-grid,
+    .documentation-grid,
+    .document-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .about-logo-area{
+        min-height:350px;
+    }
+
+    .vm-grid,
+    .scope-grid{
+        grid-template-columns:1fr;
+    }
+
+    .plan-grid{
+        grid-template-columns:1fr;
+    }
+
+    .contact-grid{
+        gap:35px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .footer-grid > :first-child{
+        grid-column:1/-1;
+    }
+}
+
+@media(max-width:620px){
+    .container{
+        width:min(var(--container), calc(100% - 30px));
+    }
+
+    .section{
+        padding:78px 0;
+    }
+
+    .brand-name{
+        font-size:15px;
+    }
+
+    .brand-subtitle{
+        font-size:6px;
+    }
+
+    .brand-logo{
+        width:45px;
+        height:45px;
+    }
+
+    .hero h1{
+        font-size:50px;
+        letter-spacing:-3px;
+    }
+
+    .hero-slider{
+        height:380px;
+    }
+
+    .company-strip-grid{
+        grid-template-columns:1fr;
+    }
+
+    .company-strip-item{
+        border-right:0;
+        border-bottom:1px solid var(--border);
+    }
+
+    .company-strip-item:last-child{
+        border-bottom:0;
+    }
+
+    .info-grid,
+    .services-grid,
+    .expert-grid,
+    .documentation-grid,
+    .document-grid{
+        grid-template-columns:1fr;
+    }
+
+    .services-heading{
+        display:block;
+    }
+
+    .contact-card{
+        padding:25px;
+    }
+
+    .cta-box{
+        padding:35px 27px;
+        display:block;
+    }
+
+    .cta-button{
+        margin-top:25px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid > :first-child{
+        grid-column:auto;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+
+/* FINAL LANGUAGE SWITCH — CLICKABLE */
+.language-switcher{
+    position:relative;
+    z-index:10001;
+    pointer-events:auto;
+}
+.language-btn{
+    position:relative;
+    z-index:10002;
+    pointer-events:auto !important;
+    cursor:pointer;
+    user-select:none;
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+/* =========================================================
+   HERO DOCUMENTATION SILHOUETTE — FINAL POLISH
+   The rotating documentation photos remain the same 18 assets,
+   but on Home they act as a subtle visual silhouette behind
+   the hero copy instead of a dominant card on the right.
+   ========================================================= */
+.hero{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:0;
+    pointer-events:none;
+    background:
+        radial-gradient(circle at 72% 42%, rgba(8,120,63,.045), transparent 34%),
+        linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,.96) 43%, rgba(255,255,255,.76) 100%);
+}
+
+.hero-grid{
+    position:relative;
+    z-index:2;
+    display:block;
+    min-height:650px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:4;
+    width:min(760px, 100%);
+    max-width:760px;
+    padding:104px 0 112px;
+}
+
+.hero-content h1{
+    position:relative;
+    z-index:5;
+}
+
+.hero-description{
+    max-width:650px;
+}
+
+.hero-actions{
+    position:relative;
+    z-index:6;
+}
+
+.hero-visual{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    display:block;
+    overflow:hidden;
+}
+
+.hero-slider{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    max-width:none;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    background:transparent;
+    overflow:hidden;
+}
+
+.hero-slide{
+    inset:0;
+    transform:scale(1.03);
+    transition:opacity 1.2s ease, transform 7s ease;
+}
+
+.hero-slide.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+.hero-slide img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:center;
+    opacity:.16;
+    filter:saturate(.58) contrast(.88);
+    -webkit-mask-image:linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0,0,0,.16) 20%,
+        rgba(0,0,0,.55) 48%,
+        rgba(0,0,0,.86) 78%,
+        rgba(0,0,0,.48) 100%
+    );
+    mask-image:linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(0,0,0,.16) 20%,
+        rgba(0,0,0,.55) 48%,
+        rgba(0,0,0,.86) 78%,
+        rgba(0,0,0,.48) 100%
+    );
+}
+
+.hero-slide::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(90deg,
+            rgba(255,255,255,.98) 0%,
+            rgba(255,255,255,.92) 25%,
+            rgba(255,255,255,.55) 54%,
+            rgba(255,255,255,.12) 100%
+        ),
+        linear-gradient(180deg,
+            rgba(255,255,255,.18),
+            rgba(255,255,255,.03) 45%,
+            rgba(255,255,255,.34)
+        );
+    pointer-events:none;
+}
+
+.hero-slider-info{
+    left:30px;
+    right:auto;
+    bottom:28px;
+    z-index:10;
+    opacity:.76;
+}
+
+.hero-slider-info small,
+.hero-slider-info strong{
+    text-shadow:0 1px 8px rgba(255,255,255,.9);
+}
+
+.slider-counter{
+    top:28px;
+    right:30px;
+    color:#0a3d2c;
+    text-shadow:0 1px 8px rgba(255,255,255,.85);
+}
+
+.slider-counter i{
+    background:rgba(8,120,63,.32);
+}
+
+.slider-progress{
+    left:30px;
+    top:31px;
+    background:rgba(8,120,63,.12);
+}
+
+.slider-progress span{
+    background:#08783f;
+}
+
+@media(max-width:900px){
+    .hero-grid{
+        min-height:620px;
+    }
+
+    .hero-content{
+        width:100%;
+        max-width:700px;
+        padding:88px 0 100px;
+    }
+
+    .hero-slide img{
+        opacity:.12;
+        -webkit-mask-image:linear-gradient(
+            90deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.7)
+        );
+        mask-image:linear-gradient(
+            90deg,
+            rgba(0,0,0,.12),
+            rgba(0,0,0,.7)
+        );
+    }
+}
+
+@media(max-width:620px){
+    .hero-grid{
+        min-height:720px;
+    }
+
+    .hero-content{
+        padding:78px 0 94px;
+    }
+
+    .hero::before{
+        background:linear-gradient(
+            90deg,
+            rgba(255,255,255,.97),
+            rgba(255,255,255,.83)
+        );
+    }
+
+    .hero-slide img{
+        opacity:.09;
+    }
+
+    .slider-counter{
+        top:22px;
+        right:18px;
+    }
+
+    .slider-progress{
+        left:18px;
+        top:25px;
+    }
+
+    .hero-slider-info{
+        left:18px;
+        bottom:20px;
+    }
+}
+
+
+html,body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+
+
+/* =========================================================
+   HOME HERO — CLEAR DOCUMENTATION BACKGROUND
+   ========================================================= */
+.hero-visual{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    z-index:0 !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+}
+
+.hero-visual .hero-slider{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:#edf4ef !important;
+}
+
+.hero-slide{
+    position:absolute !important;
+    inset:0 !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:scale(1.02) !important;
+    transition:opacity 1s ease, transform 5s ease !important;
+}
+
+.hero-slide.active{
+    opacity:.42 !important;
+    visibility:visible !important;
+    transform:scale(1) !important;
+}
+
+.hero-slide img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    filter:saturate(.78) contrast(.98) brightness(1.04) !important;
+}
+
+/* Soft readability layer: only the left side is brightened.
+   The photo remains clearly visible on the right. */
+.hero-slider::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:2 !important;
+    pointer-events:none !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.98) 0%,
+            rgba(255,255,255,.91) 28%,
+            rgba(255,255,255,.60) 48%,
+            rgba(255,255,255,.16) 72%,
+            rgba(255,255,255,.04) 100%
+        ) !important;
+}
+
+/* Very light top/bottom blending, not a full white wash. */
+.hero-slider::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:3 !important;
+    pointer-events:none !important;
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.10) 0%,
+        transparent 25%,
+        transparent 78%,
+        rgba(255,255,255,.10) 100%
+    ) !important;
+}
+
+.hero-slider-info{
+    display:none !important;
+}
+
+.slider-counter{
+    z-index:8 !important;
+    opacity:.72 !important;
+}
+
+.slider-progress{
+    z-index:8 !important;
+    opacity:.55 !important;
+}
+
+.hero-content{
+    position:relative !important;
+    z-index:10 !important;
+}
+
+@media(max-width:900px){
+    .hero-visual{
+        opacity:1 !important;
+    }
+
+    .hero-slide.active{
+        opacity:.24 !important;
+    }
+
+    .hero-slider::after{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,.98) 0%,
+                rgba(255,255,255,.91) 55%,
+                rgba(255,255,255,.55) 100%
+            ) !important;
+    }
+}
+
+
+
+/* =========================================================
+   HERO — CLEAR SLIDE PHOTOGRAPHY
+   Each documentation image is intentionally visible.
+   ========================================================= */
+
+.hero{
+    position:relative !important;
+    overflow:hidden !important;
+    min-height:calc(100vh - 78px) !important;
+}
+
+.hero-visual{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    z-index:0 !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+}
+
+.hero-visual .hero-slider{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:#dfeae3 !important;
+}
+
+.hero-slide{
+    position:absolute !important;
+    inset:0 !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:scale(1.015) !important;
+    transition:opacity .9s ease, transform 4.8s ease !important;
+}
+
+.hero-slide.active{
+    opacity:.72 !important;
+    visibility:visible !important;
+    transform:scale(1) !important;
+}
+
+.hero-slide img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center !important;
+    filter:saturate(.88) contrast(1.02) brightness(1.02) !important;
+}
+
+/* Readability is concentrated on the left.
+   The right side stays visibly photographic. */
+.hero-slider::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:2 !important;
+    pointer-events:none !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.96) 0%,
+            rgba(255,255,255,.84) 22%,
+            rgba(255,255,255,.48) 42%,
+            rgba(255,255,255,.10) 63%,
+            rgba(255,255,255,.00) 78%
+        ) !important;
+}
+
+.hero-slider::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:3 !important;
+    pointer-events:none !important;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.08) 0%,
+            rgba(255,255,255,0) 24%,
+            rgba(255,255,255,.04) 100%
+        ) !important;
+}
+
+/* Keep the hero content clearly above the photography. */
+.hero-content{
+    position:relative !important;
+    z-index:10 !important;
+}
+
+.slider-counter{
+    z-index:8 !important;
+    opacity:.88 !important;
+}
+
+.slider-progress{
+    z-index:8 !important;
+    opacity:.78 !important;
+}
+
+/* On narrower screens, retain enough image visibility while
+   keeping the headline readable. */
+@media(max-width:900px){
+    .hero{
+        min-height:760px !important;
+    }
+
+    .hero-slide.active{
+        opacity:.56 !important;
+    }
+
+    .hero-slider::after{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,.95) 0%,
+                rgba(255,255,255,.78) 48%,
+                rgba(255,255,255,.24) 100%
+            ) !important;
+    }
+}
+
+
+
+/* =========================================================
+   HERO FINAL — SPLIT PHOTO / TEXT BLEND
+   RIGHT SIDE = CLEAR PHOTO
+   LEFT SIDE = SOFT BLEND BEHIND TEXT
+   ========================================================= */
+
+.hero{
+    position:relative !important;
+    overflow:hidden !important;
+    min-height:calc(100vh - 78px) !important;
+    isolation:isolate !important;
+}
+
+/* Full-width photographic layer */
+.hero-visual{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    z-index:0 !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+}
+
+.hero-visual .hero-slider{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:#dce8e0 !important;
+    overflow:hidden !important;
+}
+
+/* Every slide occupies the complete hero */
+.hero-slide{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:scale(1.01) !important;
+    transition:
+        opacity .85s ease,
+        transform 5s ease !important;
+}
+
+.hero-slide.active{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:scale(1) !important;
+}
+
+.hero-slide img{
+    display:block !important;
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+
+    /* Keep the important activity/detail toward the right */
+    object-position:68% center !important;
+
+    /* Clear, natural photo */
+    filter:
+        saturate(.92)
+        contrast(1.04)
+        brightness(1.02) !important;
+
+    opacity:1 !important;
+}
+
+/*
+   THE IMPORTANT PART:
+   The right ~55% is deliberately CLEAR.
+   The left gradually blends into the white page.
+*/
+.hero-slider::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:4 !important;
+    pointer-events:none !important;
+
+    background:
+        linear-gradient(
+            90deg,
+
+            /* text area: white */
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,1) 25%,
+
+            /* gradual blend */
+            rgba(255,255,255,.96) 32%,
+            rgba(255,255,255,.82) 40%,
+            rgba(255,255,255,.56) 47%,
+            rgba(255,255,255,.25) 54%,
+
+            /* photo area: clear */
+            rgba(255,255,255,.05) 61%,
+            rgba(255,255,255,0) 67%,
+            rgba(255,255,255,0) 100%
+        ) !important;
+}
+
+/* Very subtle top/bottom atmosphere only */
+.hero-slider::before{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:5 !important;
+    pointer-events:none !important;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,.08) 0%,
+            rgba(255,255,255,0) 18%,
+            rgba(255,255,255,0) 86%,
+            rgba(255,255,255,.05) 100%
+        ) !important;
+}
+
+/* Text always stays crisp above the image */
+.hero-content{
+    position:relative !important;
+    z-index:10 !important;
+}
+
+/* Keep slide controls visible but understated */
+.slider-counter{
+    position:relative !important;
+    z-index:12 !important;
+    opacity:.9 !important;
+}
+
+.slider-progress{
+    position:relative !important;
+    z-index:12 !important;
+    opacity:.78 !important;
+}
+
+/* No documentation caption on the Home hero */
+.hero-slider-info{
+    display:none !important;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+@media(max-width:1100px){
+    .hero-slide img{
+        object-position:72% center !important;
+    }
+
+    .hero-slider::after{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,1) 0%,
+                rgba(255,255,255,1) 27%,
+                rgba(255,255,255,.94) 38%,
+                rgba(255,255,255,.68) 48%,
+                rgba(255,255,255,.25) 59%,
+                rgba(255,255,255,0) 70%,
+                rgba(255,255,255,0) 100%
+            ) !important;
+    }
+}
+
+@media(max-width:900px){
+    .hero{
+        min-height:760px !important;
+    }
+
+    .hero-slide img{
+        object-position:72% center !important;
+    }
+
+    .hero-slider::after{
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255,255,255,1) 0%,
+                rgba(255,255,255,.98) 34%,
+                rgba(255,255,255,.78) 49%,
+                rgba(255,255,255,.30) 64%,
+                rgba(255,255,255,0) 78%,
+                rgba(255,255,255,0) 100%
+            ) !important;
+    }
+}
+
+
+
+/* =========================================================
+   FINAL HERO UPDATE — PHOTO AS FULL HOME BACKGROUND
+   Keeps the original HTML structure and original company data.
+   ========================================================= */
+.hero{
+    position:relative !important;
+    min-height:calc(100vh - 82px) !important;
+    overflow:hidden !important;
+    isolation:isolate !important;
+    background:#082f22 !important;
+}
+
+.hero-grid{
+    position:relative !important;
+    min-height:calc(100vh - 82px) !important;
+    display:flex !important;
+    align-items:center !important;
+    z-index:5 !important;
+}
+
+.hero-content{
+    position:relative !important;
+    z-index:10 !important;
+    width:58% !important;
+    max-width:700px !important;
+}
+
+.hero-visual{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+    z-index:1 !important;
+    pointer-events:none !important;
+    overflow:hidden !important;
+}
+
+.hero-visual .hero-slider{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    max-width:none !important;
+    border:0 !important;
+    border-radius:0 !important;
+    box-shadow:none !important;
+    background:#082f22 !important;
+}
+
+.hero-visual .hero-slide{
+    position:absolute !important;
+    inset:0 !important;
+    width:100% !important;
+    height:100% !important;
+    opacity:0 !important;
+    visibility:hidden !important;
+    transform:scale(1.035) !important;
+    transition:opacity 1.15s ease,transform 6s ease !important;
+}
+
+.hero-visual .hero-slide.active{
+    opacity:1 !important;
+    visibility:visible !important;
+    transform:scale(1) !important;
+}
+
+.hero-visual .hero-slide img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+    object-position:center center !important;
+    filter:saturate(.82) contrast(1.02) brightness(.66) !important;
+}
+
+/* Premium readability overlay: strong on the left, transparent on the photo. */
+.hero-visual .hero-slider::after{
+    content:"" !important;
+    position:absolute !important;
+    inset:0 !important;
+    z-index:4 !important;
+    pointer-events:none !important;
+    background:
+        linear-gradient(90deg,
+            rgba(2,34,24,.92) 0%,
+            rgba(2,34,24,.78) 20%,
+            rgba(2,34,24,.48) 42%,
+            rgba(2,34,24,.18) 67%,
+            rgba(2,34,24,.05) 100%),
+        linear-gradient(180deg,
+            rgba(0,0,0,.24) 0%,
+            rgba(0,0,0,.02) 38%,
+            rgba(0,0,0,.30) 100%);
+}
+
+.hero .hero-slogan{
+    color:#b9e86b !important;
+    text-shadow:0 2px 14px rgba(0,0,0,.45);
+}
+
+.hero .hero-badge{
+    color:#fff !important;
+    background:rgba(255,255,255,.10) !important;
+    border-color:rgba(255,255,255,.24) !important;
+    backdrop-filter:blur(9px);
+}
+
+.hero h1{
+    color:#fff !important;
+    text-shadow:0 5px 22px rgba(0,0,0,.42);
+}
+
+.hero h1 span,
+.hero .hero-tagline{
+    color:#b9e86b !important;
+}
+
+.hero .hero-tagline{
+    font-size:clamp(22px,2.6vw,34px) !important;
+    font-weight:900 !important;
+    text-transform:uppercase !important;
+    letter-spacing:-.6px !important;
+    text-shadow:0 3px 16px rgba(0,0,0,.42);
+}
+
+.hero .hero-tagline::after{
+    content:"";
+    display:block;
+    width:78px;
+    height:4px;
+    margin-top:10px;
+    border-radius:20px;
+    background:#b9e86b;
+}
+
+.hero .hero-description{
+    color:rgba(255,255,255,.90) !important;
+    text-shadow:0 2px 12px rgba(0,0,0,.35);
+}
+
+/* The old field-documentation caption must never appear in Home. */
+.hero-slider-info,
+.hero-slider .slide-info{
+    display:none !important;
+}
+
+@media(max-width:900px){
+    .hero{
+        min-height:calc(100vh - 72px) !important;
+    }
+    .hero-grid{
+        min-height:calc(100vh - 72px) !important;
+    }
+    .hero-content{
+        width:100% !important;
+        max-width:720px !important;
+        padding:80px 0 95px !important;
+    }
+    .hero-visual .hero-slide img{
+        object-position:center center !important;
+        filter:saturate(.76) contrast(1.01) brightness(.48) !important;
+    }
+    .hero-visual .hero-slider::after{
+        background:
+            linear-gradient(90deg,
+                rgba(2,34,24,.90) 0%,
+                rgba(2,34,24,.70) 50%,
+                rgba(2,34,24,.28) 100%),
+            linear-gradient(180deg,
+                rgba(0,0,0,.22),
+                rgba(0,0,0,.30));
+    }
+}
+
+@media(max-width:620px){
+    .hero-content{
+        padding:72px 0 88px !important;
+    }
+    .hero h1{
+        font-size:50px !important;
+    }
+    .hero .hero-tagline{
+        font-size:25px !important;
+    }
+    .hero .hero-description{
+        font-size:13px !important;
+    }
+    .hero-visual .hero-slide img{
+        object-position:58% center !important;
+    }
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <div class="container nav">
+    <div class="container navbar">
 
-    <a href="#home" class="brand">
-      <img src="LOGONYAPAKEYANGINI.png" class="logo" alt="CV. Laban Environment Global">
-      <div class="brand-text">
-        <div class="brand-name">LABAN ENVIRONMENT GLOBAL</div>
-        <div class="brand-sub">ENVIRONMENT • ENGINEERING • CONSULTANT</div>
-      </div>
-    </a>
+        <a href="#home" class="brand">
+            <img class="brand-logo" src="LOGONYAPAKEYANGINI.png" alt="CV. Laban Environment Global">
+            <span class="brand-text">
+                <span class="brand-name">CV. LEG</span>
+                <span class="brand-subtitle">LABAN ENVIRONMENT GLOBAL</span>
+            </span>
+        </a>
 
-    <button class="menu-toggle" id="menuToggle">☰</button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">☰</button>
 
-    <nav class="nav-menu" id="navMenu">
-      <a href="#home">Home</a>
-      <a href="#about">Tentang</a>
-      <a href="#services">Layanan</a>
-      <a href="#team">Tim</a>
-      <a href="#scope">Ruang Lingkup</a>
-      <a href="#documentation">Dokumentasi</a>
-      <a href="#contact" class="nav-contact">Kontak</a>
-    </nav>
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home">Beranda</a>
+            <a href="#about">Tentang</a>
+            <a href="#services">Layanan</a>
+            <a href="#team">Pengurus</a>
+            <a href="#scope">Lingkup</a>
+            <a href="#documentation">Dokumentasi</a>
+            <a href="#contact" class="nav-contact">Kontak</a>
 
-    <div class="lang">
-      <button id="langID" class="active">ID</button>
-      <button id="langEN">EN</button>
+            <div class="mobile-language">
+                <button class="language-btn active" id="mobileLangID" type="button" aria-label="Bahasa Indonesia">ID</button>
+                <button class="language-btn" id="mobileLangEN" type="button" aria-label="English">EN</button>
+            </div>
+
+        </nav>
+
+        <div class="language-switcher">
+            <button class="language-btn active" id="langID" type="button" aria-label="Bahasa Indonesia">ID</button>
+            <button class="language-btn" id="langEN" type="button" aria-label="English">EN</button>
+        </div>
     </div>
-
-  </div>
 </header>
+
+<main>
 
 <!-- HERO -->
 <section class="hero" id="home">
-  <div class="container hero-grid">
+    <div class="container hero-grid">
 
-    <div class="reveal">
-      <div class="hero-slogan">SUSTAINING FUTURE TOGETHER</div>
+        <div class="hero-content reveal">
+            <div class="hero-slogan">SUSTAINING FUTURE TOGETHER</div>
 
-      <div class="hero-badge">
-        ENVIRONMENT • ENGINEERING • CONSULTANT
-      </div>
+            <div class="hero-badge">ENVIRONMENT • ENGINEERING • CONSULTANT</div>
 
-      <h1>
-        Building<br>
-        <span>Better</span><br>
-        Solutions.
-      </h1>
+            <h1>
+                Building<br>
+                <span>Better</span><br>
+                Solutions.
+            </h1>
 
-      <div class="hero-tagline">
-        Laban Environment Global
-      </div>
+            <div class="hero-tagline">Laban Environment Global</div>
 
-      <p class="hero-description">
-        CV. Laban Environment Global adalah perusahaan jasa konsultasi,
-        perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli
-        dari berbagai disiplin ilmu untuk menghasilkan layanan yang
-        profesional, bermutu dan tepat waktu.
-      </p>
+            <p class="hero-description">
+                CV. Laban Environment Global adalah perusahaan jasa konsultasi,
+                perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli
+                dari berbagai disiplin ilmu untuk menghasilkan layanan yang
+                profesional, bermutu dan tepat waktu.
+            </p>
 
-      <div class="actions">
-        <a href="#services" class="btn btn-primary">Lihat Layanan</a>
-        <a href="#contact" class="btn btn-outline">Hubungi Kami</a>
-      </div>
-    </div>
-
-    <div class="hero-visual reveal">
-
-      <div class="slider" id="heroSlider">
-
-        <div class="slide active">
-          <img src="foto 1.png" alt="Dokumentasi LEG 1">
+            <div class="hero-actions">
+                <a href="#about" class="btn btn-primary">Kenal Perusahaan</a>
+                <a href="#contact" class="btn btn-outline">Hubungi Kami</a>
+            </div>
         </div>
 
-        <div class="slide">
-          <img src="foto 2.png" alt="Dokumentasi LEG 2">
-        </div>
+        <div class="hero-visual reveal">
+            <div class="hero-slider" id="heroSlider">
 
-        <div class="slide">
-          <img src="foto 3.png" alt="Dokumentasi LEG 3">
-        </div>
+                <div class="hero-slide active">
+                    <img src="foto 1.png" alt="CV. Laban Environment Global — documentation 1" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="foto 2.png" alt="CV. Laban Environment Global — documentation 2" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="foto 3.png" alt="CV. Laban Environment Global — documentation 3" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 1.jpeg" alt="CV. Laban Environment Global — documentation 4" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 2.jpeg" alt="CV. Laban Environment Global — documentation 5" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 3.jpeg" alt="CV. Laban Environment Global — documentation 6" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 4.jpeg" alt="CV. Laban Environment Global — documentation 7" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 5.jpeg" alt="CV. Laban Environment Global — documentation 8" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 6.jpeg" alt="CV. Laban Environment Global — documentation 9" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 7.jpeg" alt="CV. Laban Environment Global — documentation 10" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 8.jpeg" alt="CV. Laban Environment Global — documentation 11" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 9.jpeg" alt="CV. Laban Environment Global — documentation 12" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 10.jpeg" alt="CV. Laban Environment Global — documentation 13" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 11.jpeg" alt="CV. Laban Environment Global — documentation 14" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 12.jpeg" alt="CV. Laban Environment Global — documentation 15" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 13.jpeg" alt="CV. Laban Environment Global — documentation 16" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 14.jpeg" alt="CV. Laban Environment Global — documentation 17" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="hero-slide">
+                    <img src="dokumentasi 15.jpeg" alt="CV. Laban Environment Global — documentation 18" loading="eager" onerror="this.parentElement.remove()">
+                </div>
+                <div class="slider-counter">
+                    <span id="slideCurrent">01</span>
+                    <i></i>
+                    <span>18</span>
+                </div>
 
-        <div class="slide">
-          <img src="dokumentasi 1.jpeg" alt="Dokumentasi LEG 4">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 2.jpeg" alt="Dokumentasi LEG 5">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 3.jpeg" alt="Dokumentasi LEG 6">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 4.jpeg" alt="Dokumentasi LEG 7">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 5.jpeg" alt="Dokumentasi LEG 8">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 6.jpeg" alt="Dokumentasi LEG 9">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 7.jpeg" alt="Dokumentasi LEG 10">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 8.jpeg" alt="Dokumentasi LEG 11">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 9.jpeg" alt="Dokumentasi LEG 12">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 10.jpeg" alt="Dokumentasi LEG 13">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 11.jpeg" alt="Dokumentasi LEG 14">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 12.jpeg" alt="Dokumentasi LEG 15">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 13.jpeg" alt="Dokumentasi LEG 16">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 14.jpeg" alt="Dokumentasi LEG 17">
-        </div>
-
-        <div class="slide">
-          <img src="dokumentasi 15.jpeg" alt="Dokumentasi LEG 18">
-        </div>
-
-        <div class="dots" id="dots"></div>
-
-        <div class="slide-info">
-          <small>FIELD DOCUMENTATION</small>
-          <strong id="slideTitle">Aktivitas Profesional di Lapangan</strong>
-        </div>
-
-      </div>
+                <div class="slider-progress">
+                    <span id="sliderProgress"></span>
+                </div>
+</div>
+</div>
 
     </div>
-
-  </div>
 </section>
 
-<!-- STRIP -->
-<section class="strip">
-  <div class="container strip-grid">
+<!-- COMPANY STRIP -->
+<section class="company-strip">
+    <div class="container company-strip-grid">
+        <div class="company-strip-item">
+            <div class="company-strip-code">2020</div>
+            <div class="company-strip-title">Tahun Berdiri</div>
+        </div>
 
-    <div class="strip-item">
-      <b>01</b>
-      <span>Environment</span>
+        <div class="company-strip-item">
+            <div class="company-strip-code">CV</div>
+            <div class="company-strip-title">Bentuk Badan Usaha</div>
+        </div>
+
+        <div class="company-strip-item">
+            <div class="company-strip-code">LEG</div>
+            <div class="company-strip-title">Laban Environment Global</div>
+        </div>
     </div>
-
-    <div class="strip-item">
-      <b>02</b>
-      <span>Engineering</span>
-    </div>
-
-    <div class="strip-item">
-      <b>03</b>
-      <span>Consultant</span>
-    </div>
-
-  </div>
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
-  <div class="container about-grid">
+<section class="section about" id="about">
+    <div class="container about-grid">
 
-    <div class="about-box reveal">
-      <img src="LOGONYAPAKEYANGINI.png" alt="Logo CV. Laban Environment Global">
-    </div>
-
-    <div class="about-text reveal">
-
-      <div class="label">Tentang Perusahaan</div>
-
-      <h2 class="title">Laban Environment Global</h2>
-
-      <p>
-        CV. Laban Environment Global merupakan perusahaan yang bergerak
-        dalam bidang konsultasi, perencanaan, pengawasan dan konstruksi.
-      </p>
-
-      <p>
-        LEG didukung oleh tenaga ahli dari berbagai disiplin ilmu untuk
-        memberikan solusi profesional dalam bidang lingkungan, teknik,
-        bangunan, sumber daya air, pengelolaan limbah serta kebutuhan
-        konsultasi lainnya.
-      </p>
-
-      <div class="about-list">
-
-        <div>
-          <b>Profesional</b>
-          <span>Didukung tenaga ahli berbagai disiplin ilmu.</span>
+        <div class="about-logo-area reveal">
+            <img class="about-logo" src="LOGONYAPAKEYANGINI.png" alt="Logo CV. Laban Environment Global">
         </div>
 
-        <div>
-          <b>Terintegrasi</b>
-          <span>Perencanaan hingga pengawasan pekerjaan.</span>
-        </div>
+        <div class="about-content reveal">
+            <div class="section-label">01 / Company Profile</div>
 
-        <div>
-          <b>Teknis</b>
-          <span>Berbasis kajian dan kebutuhan lapangan.</span>
-        </div>
+            <h2>Professional solutions for environment, engineering and construction.</h2>
 
-        <div>
-          <b>Berorientasi Solusi</b>
-          <span>Mendukung kebutuhan proyek secara terukur.</span>
-        </div>
+            <p>
+                CV. Laban Environment Global (LEG) didirikan pada 15 Oktober 2020
+                berdasarkan Akta Pendirian Notaris Tatu Afifah, SH. M.Kn No. 1 Tahun 2020
+                di Kota Serang.
+            </p>
 
-      </div>
+            <p>
+                LEG merupakan perusahaan jasa konsultasi, perencanaan, pengawasan
+                dan konstruksi yang dipersiapkan secara profesional dengan dukungan
+                tenaga ahli berbagai disiplin ilmu yang berpengalaman.
+            </p>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <strong>Nama Perusahaan</strong>
+                    <span>CV. Laban Environment Global (LEG)</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>Tahun Berdiri</strong>
+                    <span>15 Oktober 2020</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>Status</strong>
+                    <span>Pusat</span>
+                </div>
+
+                <div class="info-card">
+                    <strong>Alamat</strong>
+                    <span>Kota Serang Baru, Cipocok, Kota Serang, Banten</span>
+                </div>
+            </div>
+        </div>
 
     </div>
-
-  </div>
 </section>
 
-<!-- VISI MISI -->
-<section class="section vm">
-  <div class="container">
+<!-- VISION MISSION -->
+<section class="section vm-section">
+    <div class="container">
 
-    <div class="label">Arah Perusahaan</div>
-    <h2 class="title">Visi & Misi</h2>
-
-    <div class="vm-grid">
-
-      <div class="vm-card reveal">
-        <h3>Visi</h3>
-        <p>
-          Menjadi perusahaan konsultasi dan jasa konstruksi yang profesional,
-          terpercaya dan mampu memberikan solusi berkelanjutan bagi kebutuhan
-          pembangunan dan lingkungan.
+        <div class="section-label">02 / Direction</div>
+        <h2 class="section-title">Vision & Mission</h2>
+        <p class="section-description">
+            Arah perusahaan dibangun melalui kualitas jasa, profesionalisme,
+            kemitraan dan pengembangan usaha yang berkelanjutan.
         </p>
-      </div>
 
-      <div class="vm-card reveal">
-        <h3>Misi</h3>
-        <ul>
-          <li>Memberikan layanan profesional dan berkualitas.</li>
-          <li>Mengembangkan solusi berbasis kebutuhan teknis.</li>
-          <li>Mendukung pembangunan yang memperhatikan aspek lingkungan.</li>
-          <li>Meningkatkan kompetensi tenaga ahli secara berkelanjutan.</li>
-        </ul>
-      </div>
+        <div class="vm-grid">
+            <div class="vm-card reveal">
+                <h3>Visi</h3>
+                <p>
+                    Menjadi perusahaan konsultan nasional yang berkualitas dan
+                    terpercaya serta berdaya saing di Indonesia dan mendapatkan
+                    pengakuan internasional.
+                </p>
+            </div>
+
+            <div class="vm-card reveal">
+                <h3>Misi</h3>
+                <p>
+                    Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas
+                    dan tepat waktu serta menciptakan iklim kerja yang kondusif
+                    untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan.
+                </p>
+            </div>
+        </div>
+
+        <div class="plan-grid">
+            <div class="plan-card reveal">
+                <div class="number">PLAN 01</div>
+                <h3>Rencana Jangka Pendek</h3>
+                <p>
+                    Membangun kerjasama kemitraan usaha secara profesional dan
+                    proporsional dengan badan, instansi/institusi dan lembaga terkait
+                    guna berperan serta pada program pembangunan nasional.
+                </p>
+            </div>
+
+            <div class="plan-card reveal">
+                <div class="number">PLAN 02</div>
+                <h3>Rencana Jangka Menengah</h3>
+                <p>
+                    Mengembangkan dan memperkenalkan perusahaan jasa konsultasi
+                    dan konstruksi untuk bersaing ke taraf internasional.
+                </p>
+            </div>
+
+            <div class="plan-card reveal">
+                <div class="number">PLAN 03</div>
+                <h3>Rencana Jangka Panjang</h3>
+                <p>
+                    Menekankan kualitas produk jasa yang dihasilkan untuk memperkuat
+                    posisi dasar dan menentukan peluang-peluang bisnis yang ada.
+                </p>
+            </div>
+        </div>
 
     </div>
-
-  </div>
 </section>
 
 <!-- SERVICES -->
-<section class="section" id="services">
-  <div class="container">
+<section class="section services" id="services">
+    <div class="container">
 
-    <div class="label">Layanan</div>
-    <h2 class="title">Layanan Profesional</h2>
+        <div class="services-heading">
+            <div>
+                <div class="section-label">03 / Services</div>
+                <h2 class="section-title">Lingkup Jasa</h2>
+            </div>
 
-    <p class="desc">
-      Layanan CV. Laban Environment Global mencakup kebutuhan konsultasi,
-      perencanaan, lingkungan, engineering, konstruksi dan pengelolaan
-      sumber daya.
-    </p>
+            <p class="section-description">
+                Layanan LEG mencakup konsultasi, perencanaan, konstruksi,
+                dokumen lingkungan, pengelolaan air dan sampah serta penelitian.
+            </p>
+        </div>
 
-    <div class="services-grid">
+        <div class="services-grid">
 
-      <article class="service reveal">
-        <div class="service-number">01</div>
-        <h3>Lingkungan</h3>
-        <p>
-          AMDAL, UKL-UPL, KLHS dan DELH sesuai kebutuhan kegiatan dan
-          ketentuan yang berlaku.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">01</div>
+                <div class="service-icon">FS</div>
+                <h3>Feasibility Study</h3>
+                <p>Perencanaan dan kajian kelayakan sebagai dasar pengembangan kegiatan dan proyek.</p>
+            </article>
 
-      <article class="service reveal">
-        <div class="service-number">02</div>
-        <h3>PKKPRL</h3>
-        <p>
-          Penyusunan dan pendampingan PKKPRL sesuai kebutuhan kegiatan.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">02</div>
+                <div class="service-icon">MP</div>
+                <h3>Master Plan</h3>
+                <p>Penyusunan rencana induk yang terarah untuk mendukung kebutuhan pengembangan.</p>
+            </article>
 
-      <article class="service reveal">
-        <div class="service-number">03</div>
-        <h3>Perencanaan</h3>
-        <p>
-          Feasibility Study, Master Plan dan Detail Engineering Design
-          untuk mendukung kebutuhan proyek.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">03</div>
+                <div class="service-icon">DED</div>
+                <h3>Detail Engineering Design</h3>
+                <p>Perencanaan teknis detail untuk mendukung pelaksanaan konstruksi secara terukur.</p>
+            </article>
 
-      <article class="service reveal">
-        <div class="service-number">04</div>
-        <h3>Engineering</h3>
-        <p>
-          Perencanaan teknis untuk mendukung pelaksanaan konstruksi
-          secara terukur.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">04</div>
+                <div class="service-icon">ENV</div>
+                <h3>Dokumen Lingkungan</h3>
+                <p>AMDAL, UKL-UPL, KLHS dan DELH sesuai kebutuhan kegiatan dan ketentuan yang berlaku.</p>
+            </article>
 
-      <article class="service reveal">
-        <div class="service-number">05</div>
-        <h3>Arsitektur & Sipil</h3>
-        <p>
-          Arsitektur, bangunan dan sipil dengan pendekatan teknis dan
-          administrasi profesional.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">05</div>
+                <div class="service-icon">PKK</div>
+                <h3>PKKPRL</h3>
+                <p>Penyusunan dan pendampingan PKKPRL sesuai kebutuhan kegiatan dan ketentuan yang berlaku.</p>
+            </article>
 
-      <article class="service reveal">
-        <div class="service-number">06</div>
-        <h3>Air Bersih & Limbah</h3>
-        <p>
-          Pengelolaan air bersih, air limbah dan kebutuhan sistem
-          pengelolaan terkait.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">06</div>
+                <div class="service-icon">ENG</div>
+                <h3>Konstruksi & Engineering</h3>
+                <p>Arsitektur, bangunan dan sipil dengan pendekatan teknis dan administrasi profesional.</p>
+            </article>
 
-      <article class="service reveal">
-        <div class="service-number">07</div>
-        <h3>Sampah & Remediasi</h3>
-        <p>
-          Pengelolaan dan daur ulang sampah serta remediasi sesuai
-          kebutuhan lapangan.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">07</div>
+                <div class="service-icon">WTR</div>
+                <h3>Pengelolaan Air</h3>
+                <p>Pengelolaan air bersih, air limbah dan kebutuhan sistem pengelolaan terkait.</p>
+            </article>
 
-      <article class="service reveal">
-        <div class="service-number">08</div>
-        <h3>Penelitian</h3>
-        <p>
-          Penelitian dan kajian ilmiah lainnya untuk mendukung kebutuhan
-          teknis dan pengembangan.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">08</div>
+                <div class="service-icon">WST</div>
+                <h3>Sampah & Limbah</h3>
+                <p>Pengelolaan dan daur ulang sampah serta remediasi sesuai kebutuhan lapangan.</p>
+            </article>
 
-      <article class="service reveal">
-        <div class="service-number">09</div>
-        <h3>Pendampingan</h3>
-        <p>
-          Pendampingan profesional yang didukung tenaga ahli dari
-          berbagai disiplin ilmu.
-        </p>
-      </article>
+             <article class="service-card reveal">
+                <div class="service-number">09</div>
+                <div class="service-icon">RSH</div>
+                <h3>Penelitian & Kajian</h3>
+                <p>Penelitian dan kajian ilmiah lainnya untuk mendukung kebutuhan teknis dan pengembangan.</p>
+            </article>
 
+             <article class="service-card reveal">
+                <div class="service-number">10</div>
+                <div class="service-icon">CON</div>
+                <h3>Konsultasi Teknis</h3>
+                <p>Pendampingan profesional yang didukung tenaga ahli dari berbagai disiplin ilmu.</p>
+            </article>
+
+        </div>
     </div>
-
-  </div>
 </section>
 
 <!-- TEAM -->
-<section class="section team" id="team">
-  <div class="container">
+<section class="section experts" id="team">
+    <div class="container">
 
-    <div class="label">Pengurus & Tenaga Ahli</div>
-    <h2 class="title">Tim Profesional</h2>
-
-    <p class="desc">
-      Struktur pengurus dan tenaga ahli perusahaan untuk mendukung
-      kebutuhan pekerjaan dan pelayanan profesional.
-    </p>
-
-    <div class="team-grid">
-
-      <article class="person reveal">
-        <h3>Binyati, S.T., M.T</h3>
-        <span>TENAGA AHLI</span>
-        <p>
-          Mendukung kegiatan teknis, perencanaan dan kebutuhan konsultasi
-          perusahaan.
+        <div class="section-label">04 / Organization</div>
+        <h2 class="section-title">Pengurus & Divisi</h2>
+        <p class="section-description">
+            Struktur pengurus dan tenaga ahli perusahaan berdasarkan Company Profile LEG.
         </p>
-      </article>
 
-      <article class="person reveal">
-        <h3>Agung Sudrajat, S.T., M.Eng., Ph.D.</h3>
-        <span>TENAGA AHLI</span>
-        <p>
-          Mendukung kajian teknis, engineering dan kebutuhan pengembangan
-          solusi profesional.
-        </p>
-      </article>
+        <div class="expert-grid">
 
-      <article class="person reveal">
-        <h3>Dr. Anis Masyruroh, S.T., M.T</h3>
-        <span>TENAGA AHLI</span>
-        <p>
-          Mendukung pekerjaan konsultasi dan kajian teknis perusahaan.
-        </p>
-      </article>
+            <article class="expert-card reveal">
+                <div class="expert-placeholder">DR</div>
+                <h3>Dr. Anis Masyruroh, S.T., M.T</h3>
+                <div class="role">DIREKTUR</div>
+                <p>Pemilik perusahaan, direksi sekaligus penanggung jawab perusahaan.</p>
+            </article>
 
-      <article class="person reveal">
-        <h3>Iroh Rahmawati, S.E., M.AK</h3>
-        <span>DIVISI KEUANGAN</span>
-        <p>
-          Mendukung pengelolaan administrasi dan keuangan perusahaan.
-        </p>
-      </article>
+            <article class="expert-card reveal">
+                <div class="expert-placeholder">BY</div>
+                <h3>Binyati, S.T., M.T</h3>
+                <div class="role">TENAGA AHLI</div>
+                <p>Mendukung kegiatan teknis, perencanaan dan kebutuhan konsultasi perusahaan.</p>
+            </article>
 
-      <article class="person reveal">
-        <h3>dr. Hadiyani Nugraha</h3>
-        <span>TENAGA AHLI</span>
-        <p>
-          Mendukung kebutuhan kajian dan pelayanan sesuai bidang keahlian.
-        </p>
-      </article>
+            <article class="expert-card reveal">
+                <div class="expert-placeholder">AS</div>
+                <h3>Agung Sudrajat, S.T., M.Eng., Ph.D.</h3>
+                <div class="role">TENAGA AHLI</div>
+                <p>Mendukung kajian teknis, engineering dan kebutuhan pengembangan solusi profesional.</p>
+            </article>
 
-      <article class="person reveal">
-        <h3>Shony Mandala, S.T., IAI</h3>
-        <span>ARSITEKTUR</span>
-        <p>
-          Mendukung pekerjaan arsitektur dan kebutuhan desain teknis.
-        </p>
-      </article>
+            <article class="expert-card reveal">
+                <div class="expert-placeholder">IR</div>
+                <h3>Iroh Rahmawati, S.E., M.AK</h3>
+                <div class="role">DIVISI KEUANGAN</div>
+                <p>Mendukung pengelolaan keuangan perusahaan.</p>
+            </article>
 
-      <article class="person reveal">
-        <h3>Budiono, S.Kom</h3>
-        <span>IT SUPPORT</span>
-        <p>
-          Mendukung kebutuhan teknologi informasi perusahaan.
-        </p>
-      </article>
+            <article class="expert-card reveal">
+                <div class="expert-placeholder">HN</div>
+                <h3>dr. Hadiyani Nugraha</h3>
+                <div class="role">DIVISI MASTER PLAN RS</div>
+                <p>Mendukung pengembangan dan penyusunan master plan rumah sakit.</p>
+            </article>
 
+            <article class="expert-card reveal">
+                <div class="expert-placeholder">SM</div>
+                <h3>Shony Mandala, S.T., IAI</h3>
+                <div class="role">DIVISI ARSITEKTUR</div>
+                <p>Mendukung pekerjaan arsitektur dan kebutuhan desain teknis.</p>
+            </article>
+
+            <article class="expert-card reveal">
+                <div class="expert-placeholder">BS</div>
+                <h3>Budiono, S.Kom</h3>
+                <div class="role">IT SUPPORT</div>
+                <p>Mendukung kebutuhan teknologi informasi perusahaan.</p>
+            </article>
+
+        </div>
     </div>
-
-  </div>
 </section>
 
 <!-- SCOPE -->
-<section class="section" id="scope">
-  <div class="container">
+<section class="section scope" id="scope">
+    <div class="container">
 
-    <div class="label">Ruang Lingkup</div>
-    <h2 class="title">Ruang Lingkup Pelayanan</h2>
-
-    <p class="desc">
-      Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan,
-      pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.
-    </p>
-
-    <div class="scope-grid">
-
-      <div class="scope-card reveal">
-        <h3>Perencanaan</h3>
-        <p>
-          Feasibility Study, Master Plan dan Detail Engineering Design.
+        <div class="section-label">05 / Scope</div>
+        <h2 class="section-title">Ruang Lingkup Pelayanan</h2>
+        <p class="section-description">
+            Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan,
+            pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.
         </p>
-      </div>
 
-      <div class="scope-card reveal">
-        <h3>Konstruksi</h3>
-        <p>
-          Arsitektur, bangunan dan pekerjaan sipil.
-        </p>
-      </div>
+        <div class="scope-grid">
 
-      <div class="scope-card reveal">
-        <h3>Lingkungan</h3>
-        <p>
-          Kajian dan dokumen lingkungan sesuai kebutuhan kegiatan.
-        </p>
-      </div>
+             <div class="scope-card reveal">
+                <div class="scope-number">01</div>
+                <div>
+                    <h3>Perencanaan</h3>
+                    <p>Feasibility Study, Master Plan dan Detail Engineering Design.</p>
+                </div>
+            </div>
 
-      <div class="scope-card reveal">
-        <h3>PKKPRL</h3>
-        <p>
-          Penyusunan dan pendampingan PKKPRL sesuai kebutuhan kegiatan.
-        </p>
-      </div>
+             <div class="scope-card reveal">
+                <div class="scope-number">02</div>
+                <div>
+                    <h3>Dokumen Lingkungan</h3>
+                    <p>AMDAL, UKL-UPL, KLHS dan DELH.</p>
+                </div>
+            </div>
 
-      <div class="scope-card reveal">
-        <h3>Air</h3>
-        <p>
-          Air bersih dan air limbah serta sistem pengelolaan terkait.
-        </p>
-      </div>
+             <div class="scope-card reveal">
+                <div class="scope-number">03</div>
+                <div>
+                    <h3>PKKPRL</h3>
+                    <p>Penyusunan dan pendampingan PKKPRL sesuai kebutuhan kegiatan.</p>
+                </div>
+            </div>
 
-      <div class="scope-card reveal">
-        <h3>Sampah</h3>
-        <p>
-          Pengelolaan, daur ulang dan remediasi.
-        </p>
-      </div>
+             <div class="scope-card reveal">
+                <div class="scope-number">04</div>
+                <div>
+                    <h3>Konstruksi</h3>
+                    <p>Arsitektur, bangunan dan sipil.</p>
+                </div>
+            </div>
 
-      <div class="scope-card reveal">
-        <h3>Penelitian</h3>
-        <p>
-          Penelitian dan kajian ilmiah lainnya.
-        </p>
-      </div>
+             <div class="scope-card reveal">
+                <div class="scope-number">05</div>
+                <div>
+                    <h3>Pengelolaan Air</h3>
+                    <p>Air bersih dan air limbah.</p>
+                </div>
+            </div>
 
-      <div class="scope-card reveal">
-        <h3>Pendampingan</h3>
-        <p>
-          Pendampingan profesional dengan dukungan tenaga ahli.
-        </p>
-      </div>
+             <div class="scope-card reveal">
+                <div class="scope-number">06</div>
+                <div>
+                    <h3>Sampah</h3>
+                    <p>Pengelolaan, daur ulang dan remediasi.</p>
+                </div>
+            </div>
 
+             <div class="scope-card reveal">
+                <div class="scope-number">07</div>
+                <div>
+                    <h3>Penelitian</h3>
+                    <p>Penelitian dan kajian ilmiah lainnya.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-  </div>
 </section>
 
 <!-- DOCUMENTATION -->
 <section class="section documentation" id="documentation">
-  <div class="container">
+    <div class="container">
 
-    <div class="label">Field Documentation</div>
-    <h2 class="title">Dokumentasi Lapangan</h2>
+        <div class="section-label">06 / Documentation</div>
+        <h2 class="section-title">Dokumentasi Lapangan</h2>
+        <p class="section-description">
+            Dokumentasi kegiatan CV. Laban Environment Global ditampilkan dalam satu
+            galeri untuk memberikan gambaran visual mengenai aktivitas dan pekerjaan perusahaan.
+        </p>
 
-    <p class="desc">
-      Dokumentasi kegiatan CV. Laban Environment Global ditampilkan
-      dalam satu galeri untuk memberikan gambaran visual mengenai
-      aktivitas dan pekerjaan perusahaan.
-    </p>
+        <div class="documentation-grid documentation-featured-grid">
 
-    <div class="gallery">
-
-      <figure class="reveal">
-        <img src="foto 1.png" alt="Aktivitas Lapangan">
-        <figcaption>Aktivitas Lapangan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="foto 2.png" alt="Survey dan Observasi">
-        <figcaption>Survey & Observasi</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="foto 3.png" alt="Kegiatan Teknis">
-        <figcaption>Kegiatan Teknis</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 1.jpeg" alt="Dokumentasi 1">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 2.jpeg" alt="Dokumentasi 2">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 3.jpeg" alt="Dokumentasi 3">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 4.jpeg" alt="Dokumentasi 4">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 5.jpeg" alt="Dokumentasi 5">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 6.jpeg" alt="Dokumentasi 6">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 7.jpeg" alt="Dokumentasi 7">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 8.jpeg" alt="Dokumentasi 8">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 9.jpeg" alt="Dokumentasi 9">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 10.jpeg" alt="Dokumentasi 10">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 11.jpeg" alt="Dokumentasi 11">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 12.jpeg" alt="Dokumentasi 12">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 13.jpeg" alt="Dokumentasi 13">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 14.jpeg" alt="Dokumentasi 14">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
-
-      <figure class="reveal">
-        <img src="dokumentasi 15.jpeg" alt="Dokumentasi 15">
-        <figcaption>Dokumentasi Kegiatan</figcaption>
-      </figure>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="foto 1.png" alt="Aktivitas Lapangan" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>FIELD WORK</small>
+                    <h3>Aktivitas Lapangan</h3>
+                    <p>Dokumentasi kegiatan teknis di lapangan.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="foto 2.png" alt="Survey & Observasi" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>FIELD WORK</small>
+                    <h3>Survey & Observasi</h3>
+                    <p>Dokumentasi kegiatan survey dan observasi.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="foto 3.png" alt="Kegiatan Teknis" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>FIELD WORK</small>
+                    <h3>Kegiatan Teknis</h3>
+                    <p>Dokumentasi aktivitas teknis perusahaan.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 1.jpeg" alt="Dokumentasi kegiatan LEG 1" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 01</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 2.jpeg" alt="Dokumentasi kegiatan LEG 2" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 02</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 3.jpeg" alt="Dokumentasi kegiatan LEG 3" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 03</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 4.jpeg" alt="Dokumentasi kegiatan LEG 4" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 04</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 5.jpeg" alt="Dokumentasi kegiatan LEG 5" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 05</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 6.jpeg" alt="Dokumentasi kegiatan LEG 6" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 06</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 7.jpeg" alt="Dokumentasi kegiatan LEG 7" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 07</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 8.jpeg" alt="Dokumentasi kegiatan LEG 8" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 08</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 9.jpeg" alt="Dokumentasi kegiatan LEG 9" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 09</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 10.jpeg" alt="Dokumentasi kegiatan LEG 10" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 10</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 11.jpeg" alt="Dokumentasi kegiatan LEG 11" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 11</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 12.jpeg" alt="Dokumentasi kegiatan LEG 12" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 12</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 13.jpeg" alt="Dokumentasi kegiatan LEG 13" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 13</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 14.jpeg" alt="Dokumentasi kegiatan LEG 14" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 14</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+            <article class="documentation-card reveal">
+                <div class="documentation-image">
+                    <img src="dokumentasi 15.jpeg" alt="Dokumentasi kegiatan LEG 15" loading="lazy">
+                </div>
+                <div class="documentation-content">
+                    <small>DOCUMENTATION 15</small>
+                    <h3>Dokumentasi Kegiatan</h3>
+                    <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
+                </div>
+            </article>
+        </div>
 
     </div>
-
-  </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-  <div class="container cta-inner">
+    <div class="container">
+        <div class="cta-box reveal">
 
-    <div>
-      <h2>Let's talk about your next project.</h2>
-      <p>
-        Silakan hubungi CV. Laban Environment Global untuk kebutuhan
-        konsultasi, kerja sama dan informasi perusahaan.
-      </p>
+            <div>
+                <div class="section-label">Let's Collaborate</div>
+                <h2>Build better solutions with CV. Laban Environment Global.</h2>
+                <p>Untuk kebutuhan kerja sama dan konsultasi, silakan hubungi perusahaan melalui email.</p>
+            </div>
+
+            <div class="cta-button">
+                <a href="mailto:laban.environment.global@gmail.com" class="btn">Kirim Email</a>
+            </div>
+
+        </div>
     </div>
-
-    <a href="#contact" class="btn btn-primary">
-      Hubungi Kami
-    </a>
-
-  </div>
 </section>
 
 <!-- CONTACT -->
-<section class="section" id="contact">
-  <div class="container">
+<section class="section contact" id="contact">
+    <div class="container contact-grid">
 
-    <div class="label">Contact</div>
-    <h2 class="title">Hubungi Kami</h2>
+        <div class="contact-info reveal">
+            <div class="section-label">08 / Contact</div>
+            <h2>Let's talk about your next project.</h2>
 
-    <div class="contact-grid">
+            <p>
+                Silakan hubungi CV. Laban Environment Global melalui email
+                untuk kebutuhan konsultasi, kerja sama dan informasi perusahaan.
+            </p>
 
-      <div class="contact-card reveal">
+            <div class="contact-list">
 
-        <h3>Kontak Perusahaan</h3>
+                <div class="contact-item">
+                    <div class="contact-icon">@</div>
+                    <div>
+                        <strong>EMAIL</strong>
+                        <a href="mailto:laban.environment.global@gmail.com">
+                            laban.environment.global@gmail.com
+                        </a>
+                    </div>
+                </div>
 
-        <div class="contact-item">
-          <small>EMAIL</small>
-          <a href="mailto:labanenvironmentglobal@gmail.com">
-            labanenvironmentglobal@gmail.com
-          </a>
+                <div class="contact-item">
+                    <div class="contact-icon">LOC</div>
+                    <div>
+                        <strong>ALAMAT</strong>
+                        <span>
+                            KSB. Komp. Permata Hijau Blok N No. 05,
+                            RT 002 RW 008, Kel. Banjar Agung,
+                            Cipocok, Kota Serang, Banten.
+                        </span>
+                        <a
+                            class="map-link"
+                            href="https://www.google.com/maps/search/?api=1&query=CV%20Laban%20Environment%20Global%2C%20Permata%20Hijau%20Blok%20N%2C%20Banjar%20Agung%2C%20Cipocok%2C%20Kota%20Serang%2C%20Banten"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Buka alamat di Google Maps
+                        </a>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
-        <div class="contact-item">
-          <small>ALAMAT</small>
-          <p>
-            Permata Hijau Blok N,<br>
-            RT 002 RW 008, Kel. Banjar Agung,<br>
-            Kec. Cipocok Jaya, Kota Serang, Banten.
-          </p>
+        <div class="contact-card reveal">
+            <h3>Contact LEG</h3>
+            <p>Kontak resmi perusahaan melalui email.</p>
+
+            <div class="email-box">
+                <div class="email-icon">@</div>
+                <div>
+                    <span>Email</span>
+                    <a href="mailto:laban.environment.global@gmail.com">
+                        laban.environment.global@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <a
+                class="map-button"
+                href="https://www.google.com/maps/search/?api=1&query=CV%20Laban%20Environment%20Global%2C%20Permata%20Hijau%20Blok%20N%2C%20Banjar%20Agung%2C%20Cipocok%2C%20Kota%20Serang%2C%20Banten"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Lihat Lokasi Perusahaan di Google Maps
+            </a>
         </div>
-
-        <div class="contact-item">
-          <small>LOKASI</small>
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=CV%20Laban%20Environment%20Global%2C%20Permata%20Hijau%20Blok%20N%2C%20Banjar%20Agung%2C%20Cipocok%2C%20Kota%20Serang%2C%20Banten"
-            target="_blank"
-            rel="noopener"
-          >
-            Buka alamat di Google Maps
-          </a>
-        </div>
-
-      </div>
-
-      <div class="contact-card reveal">
-
-        <h3>Let's Work Together</h3>
-
-        <p class="desc">
-          Untuk kebutuhan kerja sama dan konsultasi, silakan hubungi
-          perusahaan melalui email.
-        </p>
-
-        <br>
-
-        <a
-          href="mailto:labanenvironmentglobal@gmail.com"
-          class="btn btn-primary"
-        >
-          Kirim Email
-        </a>
-
-      </div>
 
     </div>
-
-  </div>
 </section>
+
+</main>
 
 <!-- FOOTER -->
 <footer>
-  <div class="container footer">
+    <div class="container">
 
-    <div class="footer-brand">
-      <img src="LOGONYAPAKEYANGINI.png" alt="LEG">
-      <strong>CV. LABAN ENVIRONMENT GLOBAL</strong>
+        <div class="footer-grid">
+
+            <div>
+                <div class="footer-brand">
+                    <img class="footer-logo" src="LOGONYAPAKEYANGINI.png" alt="CV. Laban Environment Global">
+                    <div class="footer-brand-name">CV. Laban Environment Global</div>
+                </div>
+
+                <p class="footer-description">
+                    Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi
+                    dengan dukungan tenaga ahli berbagai disiplin ilmu.
+                </p>
+            </div>
+
+            <div>
+                <div class="footer-title">NAVIGATION</div>
+                <div class="footer-links">
+                    <a href="#about">Tentang</a>
+                    <a href="#services">Layanan</a>
+                    <a href="#team">Pengurus</a>
+                    <a href="#documentation">Dokumentasi</a>
+                </div>
+            </div>
+
+            <div>
+                <div class="footer-title">CONTACT</div>
+                <div class="footer-links">
+                    <a href="mailto:laban.environment.global@gmail.com">Email</a>
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=CV%20Laban%20Environment%20Global%2C%20Permata%20Hijau%20Blok%20N%2C%20Banjar%20Agung%2C%20Cipocok%2C%20Kota%20Serang%2C%20Banten"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >Google Maps</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> CV. Laban Environment Global. All rights reserved.</span>
+            <span>Environment • Engineering • Consultant</span>
+        </div>
+
     </div>
-
-    <small>
-      © 2026 CV. Laban Environment Global. All Rights Reserved.
-    </small>
-
-  </div>
 </footer>
 
+
+
+
+<!-- LEGAL DOCUMENT VIEWER -->
+
+
+
 <script>
-/* =========================
-   MOBILE MENU
-========================= */
+/* MOBILE MENU */
 const menuToggle = document.getElementById("menuToggle");
 const navMenu = document.getElementById("navMenu");
 
-menuToggle.addEventListener("click",function(){
-  navMenu.classList.toggle("open");
+menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
 });
 
-document.querySelectorAll(".nav-menu a").forEach(function(link){
-  link.addEventListener("click",function(){
-    navMenu.classList.remove("open");
-  });
+document.querySelectorAll("#navMenu a").forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("open");
+    });
 });
 
-/* =========================
-   HERO SLIDER
-========================= */
-const slides = document.querySelectorAll(".slide");
-const dotsContainer = document.getElementById("dots");
+/* HERO AUTO SLIDER — 18 IMAGES */
+const slides = document.querySelectorAll(".hero-slide");
 const slideTitle = document.getElementById("slideTitle");
+const slideCurrent = document.getElementById("slideCurrent");
+const sliderProgress = document.getElementById("sliderProgress");
 
 const slideTitlesID = [
-  "Aktivitas Profesional di Lapangan",
-  "Aktivitas Profesional di Lapangan",
-  "Survey & Observasi",
-  "Dokumentasi Kegiatan",
-  "Dokumentasi Kegiatan",
-  "Dokumentasi Kegiatan",
-  "Kegiatan Teknis",
-  "Kegiatan Teknis",
-  "Aktivitas Teknis Lapangan",
-  "Aktivitas Teknis Lapangan",
-  "Survey & Observasi",
-  "Survey & Observasi",
-  "Dokumentasi Kegiatan",
-  "Dokumentasi Kegiatan",
-  "Dokumentasi Kegiatan",
-  "Dokumentasi Kegiatan",
-  "Dokumentasi Kegiatan",
-  "Dokumentasi Kegiatan"
+    "Aktivitas Profesional di Lapangan",
+    "Survey & Observasi",
+    "Aktivitas Teknis Lapangan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan",
+    "Dokumentasi Kegiatan"
 ];
 
 const slideTitlesEN = [
-  "Professional Work in the Field",
-  "Professional Work in the Field",
-  "Survey & Observation",
-  "Activity Documentation",
-  "Activity Documentation",
-  "Activity Documentation",
-  "Technical Activities",
-  "Technical Activities",
-  "Technical Field Activity",
-  "Technical Field Activity",
-  "Survey & Observation",
-  "Survey & Observation",
-  "Activity Documentation",
-  "Activity Documentation",
-  "Activity Documentation",
-  "Activity Documentation",
-  "Activity Documentation",
-  "Activity Documentation"
+    "Professional Work in the Field",
+    "Survey & Observation",
+    "Technical Field Activity",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation",
+    "Field Documentation"
 ];
 
 let currentSlide = 0;
-let currentLanguage = "id";
-
-/* buat titik slider */
-slides.forEach(function(_,index){
-  const dot = document.createElement("button");
-  dot.className = "dot" + (index === 0 ? " active" : "");
-  dot.setAttribute("aria-label","Slide "+(index+1));
-
-  dot.addEventListener("click",function(){
-    showSlide(index);
-  });
-
-  dotsContainer.appendChild(dot);
-});
-
-const dots = document.querySelectorAll(".dot");
+let sliderTimer;
 
 function showSlide(index){
-  slides.forEach(function(slide,i){
-    slide.classList.toggle("active",i === index);
-  });
+    if(!slides.length) return;
 
-  dots.forEach(function(dot,i){
-    dot.classList.toggle("active",i === index);
-  });
+    currentSlide = index;
 
-  currentSlide = index;
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+    });
 
-  slideTitle.textContent =
-    currentLanguage === "en"
-      ? slideTitlesEN[index]
-      : slideTitlesID[index];
+    const lang = document.documentElement.lang === "en" ? "en" : "id";
+
+    if(slideTitle){
+        slideTitle.textContent = "";
+    }
+
+    if(slideCurrent){
+        slideCurrent.textContent = String(index + 1).padStart(2,"0");
+    }
+
+    if(sliderProgress){
+        sliderProgress.style.width = `${((index + 1) / slides.length) * 100}%`;
+    }
 }
 
-setInterval(function(){
-  showSlide((currentSlide + 1) % slides.length);
-},5000);
+function nextSlide(){
+    showSlide((currentSlide + 1) % slides.length);
+}
 
-/* =========================
-   SCROLL REVEAL
-========================= */
-const observer = new IntersectionObserver(function(entries){
-  entries.forEach(function(entry){
-    if(entry.isIntersecting){
-      entry.target.classList.add("show");
-      observer.unobserve(entry.target);
-    }
-  });
-},{
-  threshold:.1
+function startSlider(){
+    clearInterval(sliderTimer);
+    sliderTimer = setInterval(nextSlide, 4500);
+}
+
+showSlide(0);
+startSlider();
+
+/* REVEAL ANIMATION */
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold:.12
 });
 
-document.querySelectorAll(".reveal").forEach(function(el){
-  observer.observe(el);
+revealElements.forEach(el => revealObserver.observe(el));
+
+
+/* YEAR */
+document.getElementById("year").textContent = new Date().getFullYear();
+
+/* LANGUAGE BUTTON VISUAL */
+document.querySelectorAll(".language-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelectorAll(".language-btn").forEach(item => {
+            item.classList.remove("active");
+        });
+        btn.classList.add("active");
+    });
 });
 
-/* =========================
-   LANGUAGE
-========================= */
+;
 
-const translations = {
+window.addEventListener("DOMContentLoaded", function(){
+    try{
+        const saved = localStorage.getItem("leg-language");
+        if(saved === "en"){
+            window.setLEGLanguage("en");
+        }
+    }catch(e){}
+});
 
-  "Home":"Home",
-  "Tentang":"About",
-  "Layanan":"Services",
-  "Tim":"Team",
-  "Ruang Lingkup":"Service Scope",
-  "Dokumentasi":"Documentation",
-  "Kontak":"Contact",
+/* =========================================================
+   LEG LANGUAGE SYSTEM — FINAL / STABLE
+   ========================================================= */
 
-  "Tentang Perusahaan":"About the Company",
-  "Arah Perusahaan":"Company Direction",
-  "Layanan":"Services",
-  "Pengurus & Tenaga Ahli":"Management & Experts",
-  "Ruang Lingkup":"Service Scope",
+(function(){
+    const translations = {
+        "Beranda":"Home",
+        "Tentang":"About",
+        "Layanan":"Services",
+        "Pengurus":"Team",
+        "Lingkup":"Scope",
+        "Dokumentasi":"Documentation",
+        "Kontak":"Contact",
 
-  "Layanan Profesional":"Professional Services",
-  "Tim Profesional":"Professional Team",
-  "Ruang Lingkup Pelayanan":"Service Scope",
-  "Dokumentasi Lapangan":"Field Documentation",
+        "Kenal Perusahaan":"Explore Company",
+        "Hubungi Kami":"Contact Us",
+        "Kirim Email":"Send Email",
+        "Buka alamat di Google Maps":"Open Address in Google Maps",
+        "Lihat Lokasi Perusahaan di Google Maps":"View Company Location on Google Maps",
 
-  "Visi":"Vision",
-  "Misi":"Mission",
+        "SUSTAINING FUTURE TOGETHER":"SUSTAINING FUTURE TOGETHER",
+        "ENVIRONMENT • ENGINEERING • CONSULTANT":"ENVIRONMENT • ENGINEERING • CONSULTANT",
+        "Building":"Building",
+        "Better":"Better",
+        "Solutions.":"Solutions.",
 
-  "Perencanaan":"Planning",
-  "Konstruksi":"Construction",
-  "Lingkungan":"Environment",
-  "Air":"Water",
-  "Sampah":"Waste",
-  "Penelitian":"Research",
-  "Pendampingan":"Assistance",
+        "Company Profile":"Company Profile",
+        "Visi":"Vision",
+        "Misi":"Mission",
+        "Rencana Jangka Pendek":"Short-Term Plan",
+        "Rencana Jangka Menengah":"Medium-Term Plan",
+        "Rencana Jangka Panjang":"Long-Term Plan",
 
-  "Let's Work Together":"Let's Work Together",
-  "Hubungi Kami":"Contact Us",
-  "Lihat Layanan":"View Services",
-  "Kirim Email":"Send Email",
+        "Lingkup Jasa":"Service Scope",
+        "Pengurus & Divisi":"Management & Divisions",
+        "Ruang Lingkup Pelayanan":"Service Scope",
+        "Dokumentasi Lapangan":"Field Documentation",
 
-  "FIELD DOCUMENTATION":"FIELD DOCUMENTATION",
-  "Aktivitas Profesional di Lapangan":"Professional Work in the Field",
-  "Survey & Observasi":"Survey & Observation",
-  "Kegiatan Teknis":"Technical Activities",
-  "Aktivitas Teknis Lapangan":"Technical Field Activity",
-  "Dokumentasi Kegiatan":"Activity Documentation",
+        "Let's Collaborate":"Let's Collaborate",
+        "Let's talk about your next project.":"Let's talk about your next project.",
+        "Contact LEG":"Contact LEG",
+        "Kontak resmi perusahaan melalui email.":"Official company contact via email.",
 
-  "ENVIRONMENT • ENGINEERING • CONSULTANT":
-    "ENVIRONMENT • ENGINEERING • CONSULTANT",
+        "EMAIL":"EMAIL",
+        "ALAMAT":"ADDRESS",
+        "NAVIGATION":"NAVIGATION",
+        "CONTACT":"CONTACT",
+        "Google Maps":"Google Maps",
+        "All rights reserved.":"All rights reserved.",
 
-  "SUSTAINING FUTURE TOGETHER":
-    "SUSTAINING FUTURE TOGETHER"
+        "Feasibility Study":"Feasibility Study",
+        "Master Plan":"Master Plan",
+        "Detail Engineering Design":"Detail Engineering Design",
+        "Dokumen Lingkungan":"Environmental Documents",
+        "Konstruksi & Engineering":"Construction & Engineering",
+        "Pengelolaan Air":"Water Management",
+        "Sampah & Limbah":"Waste & Residual Management",
+        "Penelitian & Kajian":"Research & Studies",
+        "Konsultasi Teknis":"Technical Consulting",
 
-};
+        "Aktivitas Lapangan":"Field Activities",
+        "Survey & Observasi":"Survey & Observation",
+        "Kegiatan Teknis":"Technical Activities",
+        "Dokumentasi Kegiatan":"Activity Documentation",
+        "FIELD WORK":"FIELD WORK",
 
-const originalText = new WeakMap();
+        "Dokumentasi kegiatan teknis di lapangan.":"Technical field activity documentation.",
+        "Dokumentasi kegiatan survey dan observasi.":"Survey and observation documentation.",
+        "Dokumentasi aktivitas teknis perusahaan.":"Technical activity documentation.",
+        "Dokumentasi kegiatan CV. Laban Environment Global.":"CV. Laban Environment Global activity documentation.",
+        "dokumentasi tersedia":"documentation items available",
+        "Semua 18 foto dokumentasi juga tampil bergantian pada display utama.":"All 18 documentation photos also rotate through the main display.",
 
-function getTextNodes(){
 
-  const walker = document.createTreeWalker(
-    document.body,
-    NodeFilter.SHOW_TEXT
-  );
+        "DIRECTOR":"DIRECTOR",
+        "DIREKTUR":"DIRECTOR",
+        "DIVISI KEUANGAN":"FINANCE DIVISION",
+        "DIVISI MASTER PLAN RS":"HOSPITAL MASTER PLAN DIVISION",
+        "DIVISI ARSITEKTUR":"ARCHITECTURE DIVISION",
+        "IT SUPPORT":"IT SUPPORT",
 
-  const result = [];
-  let node;
+        "Perencanaan":"Planning",
+        "Konstruksi":"Construction",
+        "Pengelolaan Air":"Water Management",
+        "Sampah":"Waste",
+        "Penelitian":"Research",
 
-  while(node = walker.nextNode()){
+        "Nama Perusahaan":"Company Name",
+        "Status":"Status",
+        "Pusat":"Head Office",
+        "Alamat":"Address",
 
-    const parent = node.parentElement;
 
-    if(!parent) continue;
+        "CV. Laban Environment Global (LEG) didirikan pada 15 Oktober 2020 berdasarkan Akta Pendirian Notaris Tatu Afifah, SH. M.Kn No. 1 Tahun 2020 di Kota Serang.":"CV. Laban Environment Global (LEG) was established on 15 October 2020 under Deed of Establishment No. 1 of 2020 by Notary Tatu Afifah, SH. M.Kn in Serang City.",
+        "LEG merupakan perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang dipersiapkan secara profesional dengan dukungan tenaga ahli berbagai disiplin ilmu yang berpengalaman.":"LEG is a consulting, planning, supervision and construction company supported by experienced professionals from various disciplines.",
+        "Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu serta menciptakan iklim kerja yang kondusif untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan.":"Provide the best, high-quality and timely services while creating a conducive working environment to deliver optimal results without overlooking usefulness.",
+        "Membangun kerjasama kemitraan usaha secara profesional dan proporsional dengan badan, instansi/institusi dan lembaga terkait guna berperan serta pada program pembangunan nasional.":"Build professional and proportional business partnerships with relevant organizations, institutions and agencies to contribute to national development programs.",
+        "Mengembangkan dan memperkenalkan perusahaan jasa konsultasi dan konstruksi untuk bersaing ke taraf internasional.":"Develop and introduce the consulting and construction business to compete at an international level.",
+        "Menekankan kualitas produk jasa yang dihasilkan untuk memperkuat posisi dasar dan menentukan peluang-peluang bisnis yang ada.":"Emphasize service quality to strengthen the company's foundation and identify available business opportunities.",
+        "Perencanaan dan kajian kelayakan sebagai dasar pengembangan kegiatan dan proyek.":"Feasibility planning and studies as a foundation for activities and project development.",
+        "Penyusunan rencana induk yang terarah untuk mendukung kebutuhan pengembangan.":"Structured master planning to support development needs.",
+        "Perencanaan teknis detail untuk mendukung pelaksanaan konstruksi secara terukur.":"Detailed technical planning to support measured construction implementation.",
+        "AMDAL, UKL-UPL, KLHS dan DELH sesuai kebutuhan kegiatan dan ketentuan yang berlaku.":"AMDAL, UKL-UPL, KLHS and DELH according to activity needs and applicable requirements.",
+        "Arsitektur, bangunan dan sipil dengan pendekatan teknis dan administrasi profesional.":"Architecture, building and civil works with a professional technical and administrative approach.",
+        "Pengelolaan air bersih, air limbah dan kebutuhan sistem pengelolaan terkait.":"Clean water, wastewater and related management systems.",
+        "Pengelolaan dan daur ulang sampah serta remediasi sesuai kebutuhan lapangan.":"Waste management, recycling and remediation according to field requirements.",
+        "Penelitian dan kajian ilmiah lainnya untuk mendukung kebutuhan teknis dan pengembangan.":"Research and other scientific studies to support technical and development needs.",
+        "Pendampingan profesional yang didukung tenaga ahli dari berbagai disiplin ilmu.":"Professional assistance supported by experts from various disciplines.",
+        "Mendukung pengelolaan keuangan perusahaan.":"Supports the company's financial management.",
+        "Mendukung pengembangan dan penyusunan master plan rumah sakit.":"Supports the development and preparation of hospital master plans.",
+        "Mendukung pekerjaan arsitektur dan kebutuhan desain teknis.":"Supports architectural work and technical design needs.",
+        "Mendukung kebutuhan teknologi informasi perusahaan.":"Supports the company's information technology needs.",
+        "Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan, pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.":"LEG's service scope is designed to support planning, supervision, construction, environmental and resource management processes.",
+        "Silakan hubungi CV. Laban Environment Global melalui email untuk kebutuhan konsultasi, kerja sama dan informasi perusahaan.":"Please contact CV. Laban Environment Global by email for consultation, partnership and company information.",
+        "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines.",
 
-    if(
-      parent.tagName === "SCRIPT" ||
-      parent.tagName === "STYLE"
-    ){
-      continue;
+        "CV. Laban Environment Global adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, bermutu dan tepat waktu.":"CV. Laban Environment Global is a consulting, planning, supervision and construction company supported by experts from various disciplines to deliver professional, high-quality and timely services.",
+        "Kenal Perusahaan":"Explore Company",
+        "Hubungi Kami":"Contact Us",
+
+        "Tahun Berdiri":"Year Established",
+        "Bentuk Badan Usaha":"Business Entity",
+        "Nama Perusahaan":"Company Name",
+        "Status":"Status",
+        "Pusat":"Head Office",
+        "Alamat":"Address",
+
+        "Arah perusahaan dibangun melalui kualitas jasa, profesionalisme, kemitraan dan pengembangan usaha yang berkelanjutan.":"The company's direction is built on service quality, professionalism, partnerships and sustainable business development.",
+        "Menjadi perusahaan konsultan nasional yang berkualitas dan terpercaya serta berdaya saing di Indonesia dan mendapatkan pengakuan internasional.":"To become a high-quality and trusted national consulting company with strong competitiveness in Indonesia and international recognition.",
+        "Memberikan pelayanan yang terbaik, bermutu tinggi, berkualitas dan tepat waktu serta menciptakan iklim kerja yang kondusif untuk menghasilkan jasa yang optimal tanpa mengabaikan kemanfaatan.":"To provide the best, high-quality and timely services while creating a conducive working environment to deliver optimal results without overlooking usefulness.",
+
+        "Membangun kerjasama kemitraan usaha secara profesional dan proporsional dengan badan, instansi/institusi dan lembaga terkait guna berperan serta pada program pembangunan nasional.":"To build professional and proportional business partnerships with relevant organizations, institutions and agencies to contribute to national development programs.",
+        "Mengembangkan dan memperkenalkan perusahaan jasa konsultasi dan konstruksi untuk bersaing ke taraf internasional.":"To develop and introduce the consulting and construction business to compete at an international level.",
+        "Menekankan kualitas produk jasa yang dihasilkan untuk memperkuat posisi dasar dan menentukan peluang-peluang bisnis yang ada.":"To emphasize service quality, strengthen the company's foundation and identify available business opportunities.",
+
+        "Lingkup Jasa":"Service Scope",
+        "Layanan LEG mencakup konsultasi, perencanaan, konstruksi, dokumen lingkungan, pengelolaan air dan sampah serta penelitian.":"LEG's services cover consulting, planning, construction, environmental documents, water and waste management, as well as research.",
+        "Perencanaan dan kajian kelayakan sebagai dasar pengembangan kegiatan dan proyek.":"Feasibility planning and studies as a foundation for activity and project development.",
+        "Penyusunan rencana induk yang terarah untuk mendukung kebutuhan pengembangan.":"Structured master planning to support development needs.",
+        "Perencanaan teknis detail untuk mendukung pelaksanaan konstruksi secara terukur.":"Detailed technical planning to support measured construction implementation.",
+        "AMDAL, UKL-UPL, KLHS dan DELH sesuai kebutuhan kegiatan dan ketentuan yang berlaku.":"AMDAL, UKL-UPL, KLHS and DELH according to activity needs and applicable requirements.",
+        "Arsitektur, bangunan dan sipil dengan pendekatan teknis dan administrasi profesional.":"Architecture, building and civil works with a professional technical and administrative approach.",
+        "Pengelolaan air bersih, air limbah dan kebutuhan sistem pengelolaan terkait.":"Clean water, wastewater and related management systems.",
+        "Pengelolaan dan daur ulang sampah serta remediasi sesuai kebutuhan lapangan.":"Waste management, recycling and remediation according to field requirements.",
+        "Penelitian dan kajian ilmiah lainnya untuk mendukung kebutuhan teknis dan pengembangan.":"Research and other scientific studies to support technical and development needs.",
+        "Pendampingan profesional yang didukung tenaga ahli dari berbagai disiplin ilmu.":"Professional assistance supported by experts from various disciplines.",
+
+        "Pengurus & Divisi":"Management & Divisions",
+        "Struktur pengurus dan tenaga ahli perusahaan berdasarkan Company Profile LEG.":"The company's management and expert structure is based on the LEG Company Profile.",
+        "DIREKTUR":"DIRECTOR",
+        "Pemilik perusahaan, direksi sekaligus penanggung jawab perusahaan.":"Company owner, director and person responsible for the company.",
+        "DIVISI KEUANGAN":"FINANCE DIVISION",
+        "Mendukung pengelolaan keuangan perusahaan.":"Supports the company's financial management.",
+        "DIVISI MASTER PLAN RS":"HOSPITAL MASTER PLAN DIVISION",
+        "Mendukung pengembangan dan penyusunan master plan rumah sakit.":"Supports the development and preparation of hospital master plans.",
+        "DIVISI ARSITEKTUR":"ARCHITECTURE DIVISION",
+        "Mendukung pekerjaan arsitektur dan kebutuhan desain teknis.":"Supports architectural work and technical design needs.",
+        "IT SUPPORT":"IT SUPPORT",
+        "Mendukung kebutuhan teknologi informasi perusahaan.":"Supports the company's information technology needs.",
+
+        "Ruang Lingkup Pelayanan":"Service Scope",
+        "Cakupan pelayanan LEG dirancang untuk mendukung proses perencanaan, pengawasan, konstruksi, lingkungan dan pengelolaan sumber daya.":"LEG's service scope is designed to support planning, supervision, construction, environmental and resource management processes.",
+        "Perencanaan":"Planning",
+        "Feasibility Study, Master Plan dan Detail Engineering Design.":"Feasibility Study, Master Plan and Detail Engineering Design.",
+        "Konstruksi":"Construction",
+        "Arsitektur, bangunan dan sipil.":"Architecture, building and civil works.",
+        "Air bersih dan air limbah.":"Clean water and wastewater.",
+        "Sampah":"Waste",
+        "Pengelolaan, daur ulang dan remediasi.":"Management, recycling and remediation.",
+        "Penelitian":"Research",
+        "Penelitian dan kajian ilmiah lainnya.":"Research and other scientific studies.",
+
+        "Dokumentasi Lapangan":"Field Documentation",
+        "Dokumentasi kegiatan CV. Laban Environment Global ditampilkan dalam satu galeri untuk memberikan gambaran visual mengenai aktivitas dan pekerjaan perusahaan.":"CV. Laban Environment Global activity documentation is presented in one gallery to provide a visual overview of the company's activities and work.",
+        "Aktivitas Lapangan":"Field Activities",
+        "Dokumentasi kegiatan teknis di lapangan.":"Technical field activity documentation.",
+        "Dokumentasi kegiatan survey dan observasi.":"Survey and observation documentation.",
+        "Kegiatan Teknis":"Technical Activities",
+        "Dokumentasi aktivitas teknis perusahaan.":"Technical activity documentation.",
+        "Dokumentasi Kegiatan":"Activity Documentation",
+        "Dokumentasi kegiatan CV. Laban Environment Global.":"CV. Laban Environment Global activity documentation.",
+
+        "Buka alamat di Google Maps":"Open Address in Google Maps",
+
+        "Untuk kebutuhan kerja sama dan konsultasi, silakan hubungi perusahaan melalui email.":"For partnership and consulting needs, please contact the company by email.",
+        "Kirim Email":"Send Email",
+        "Let's talk about your next project.":"Let's talk about your next project.",
+        "Silakan hubungi CV. Laban Environment Global melalui email untuk kebutuhan konsultasi, kerja sama dan informasi perusahaan.":"Please contact CV. Laban Environment Global by email for consultation, partnership and company information.",
+        "Kontak resmi perusahaan melalui email.":"Official company contact via email.",
+        "Lihat Lokasi Perusahaan di Google Maps":"View Company Location on Google Maps",
+
+        "Perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi dengan dukungan tenaga ahli berbagai disiplin ilmu.":"A consulting, planning, supervision and construction company supported by experts from various disciplines.",
+
+        "Laban Environment Global":"Laban Environment Global",
+        "CV. Laban Environment Global adalah perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli dari berbagai disiplin ilmu untuk menghasilkan layanan yang profesional, bermutu dan tepat waktu.":"CV. Laban Environment Global is a consulting, planning, supervision and construction company supported by experts from various disciplines to deliver professional, high-quality and timely services.",
+        "Building":"Building",
+        "Better":"Better",
+        "Solutions.":"Solutions.",
+        "SUSTAINING FUTURE TOGETHER":"SUSTAINING FUTURE TOGETHER",
+        "ENVIRONMENT • ENGINEERING • CONSULTANT":"ENVIRONMENT • ENGINEERING • CONSULTANT",
+        "Professional Work in the Field":"Professional Work in the Field",
+        "Aktivitas Profesional di Lapangan":"Professional Work in the Field",
+        "Survey & Observasi":"Survey & Observation",
+        "Aktivitas Teknis Lapangan":"Technical Field Activity",
+        "FIELD DOCUMENTATION":"FIELD DOCUMENTATION",
+        "dokumentasi tersedia":"documentation items available",
+        "Semua 18 foto dokumentasi juga tampil bergantian pada display utama.":"All 18 documentation photos also rotate through the main display.",
+    };
+
+    const originalText = new WeakMap();
+
+    function collectTextNodes(){
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT
+        );
+
+        const nodes = [];
+        let node;
+
+        while(node = walker.nextNode()){
+            const parent = node.parentElement;
+            if(!parent) continue;
+
+            const tag = parent.tagName;
+            if(tag === "SCRIPT" || tag === "STYLE" || tag === "NOSCRIPT"){
+                continue;
+            }
+
+            if(parent.closest(".language-switcher, .mobile-language")){
+                continue;
+            }
+
+            if(node.textContent.trim()){
+                nodes.push(node);
+            }
+        }
+
+        return nodes;
     }
 
-    if(
-      parent.closest(".lang") ||
-      parent.closest(".nav-menu")
-    ){
-      continue;
+    function setLanguage(lang){
+        const english = lang === "en";
+
+        collectTextNodes().forEach(node => {
+            if(!originalText.has(node)){
+                originalText.set(node, node.textContent);
+            }
+
+            const source = originalText.get(node);
+            const clean = source.trim();
+
+            if(english){
+                if(translations[clean]){
+                    node.textContent = source.replace(clean, translations[clean]);
+                }
+            }else{
+                node.textContent = source;
+            }
+        });
+
+        document.documentElement.lang = english ? "en" : "id";
+
+        document.querySelectorAll(".language-btn").forEach(btn => {
+            const id = btn.id.toLowerCase();
+            const isEN = id.includes("en");
+            const isID = id.includes("id");
+
+            btn.classList.toggle("active",
+                (english && isEN) ||
+                (!english && isID)
+            );
+        });
+
+        if(typeof currentSlide !== "undefined"){
+            const title = document.getElementById("slideTitle");
+
+            if(title && typeof slideTitlesEN !== "undefined" && typeof slideTitlesID !== "undefined"){
+                title.textContent = english
+                    ? slideTitlesEN[currentSlide]
+                    : slideTitlesID[currentSlide];
+            }
+        }
+
+        try{
+            localStorage.setItem("leg-language", lang);
+        }catch(error){}
+
+        return false;
     }
 
-    if(node.textContent.trim()){
-      result.push(node);
-    }
-  }
+    // Expose one definitive function globally.
+    window.setLEGLanguage = setLanguage;
 
-  return result;
-}
+    // Desktop buttons
+    const langID = document.getElementById("langID");
+    const langEN = document.getElementById("langEN");
 
-function setLanguage(lang){
-
-  currentLanguage = lang;
-
-  const english = lang === "en";
-
-  getTextNodes().forEach(function(node){
-
-    if(!originalText.has(node)){
-      originalText.set(node,node.textContent);
+    if(langID){
+        langID.addEventListener("click", function(event){
+            event.preventDefault();
+            setLanguage("id");
+        });
     }
 
-    const source = originalText.get(node);
-    const clean = source.trim();
-
-    if(english){
-
-      if(translations[clean]){
-        node.textContent =
-          source.replace(clean,translations[clean]);
-      }
-
-    }else{
-
-      node.textContent = source;
-
+    if(langEN){
+        langEN.addEventListener("click", function(event){
+            event.preventDefault();
+            setLanguage("en");
+        });
     }
 
-  });
+    // Mobile buttons
+    const mobileLangID = document.getElementById("mobileLangID");
+    const mobileLangEN = document.getElementById("mobileLangEN");
 
-  document.documentElement.lang =
-    english ? "en" : "id";
+    if(mobileLangID){
+        mobileLangID.addEventListener("click", function(event){
+            event.preventDefault();
+            setLanguage("id");
+        });
+    }
 
-  document.getElementById("langID")
-    .classList.toggle("active",!english);
+    if(mobileLangEN){
+        mobileLangEN.addEventListener("click", function(event){
+            event.preventDefault();
+            setLanguage("en");
+        });
+    }
 
-  document.getElementById("langEN")
-    .classList.toggle("active",english);
+    window.addEventListener("DOMContentLoaded", function(){
+        let saved = "id";
 
-  slideTitle.textContent =
-    english
-      ? slideTitlesEN[currentSlide]
-      : slideTitlesID[currentSlide];
-}
+        try{
+            saved = localStorage.getItem("leg-language") || "id";
+        }catch(error){}
 
-document.getElementById("langID")
-  .addEventListener("click",function(){
-    setLanguage("id");
-  });
-
-document.getElementById("langEN")
-  .addEventListener("click",function(){
-    setLanguage("en");
-  });
+        setLanguage(saved === "en" ? "en" : "id");
+    });
+})();
 
 </script>
-
 </body>
 </html>
