@@ -6,9 +6,25 @@
 
 <title>CV. Laban Environment Global | Environment, Engineering & Consultant</title>
 
-<meta name="description" content="CV. Laban Environment Global (LEG) - perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi.">
+<meta
+    name="description"
+    content="CV. Laban Environment Global (LEG) - perusahaan jasa konsultasi, perencanaan, pengawasan dan konstruksi."
+>
+
+<meta name="theme-color" content="#08783f">
+
+<link
+    rel="icon"
+    type="image/jpeg"
+    href="labanlogoterupdate.jpeg"
+>
 
 <style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
 :root{
     --green:#08783f;
     --green2:#0aa957;
@@ -20,9 +36,20 @@
     --muted:#69776f;
     --border:#e1e9e4;
     --white:#fff;
-    --container:1180px;
+
+    /*
+       Lebar maksimal konten.
+       Dibuat sedikit lebih lega untuk laptop.
+    */
+    --container:1240px;
+
     --shadow:0 25px 70px rgba(7,55,35,.14);
 }
+
+
+/* =========================================================
+   RESET
+========================================================= */
 
 *{
     margin:0;
@@ -57,7 +84,11 @@ button{
 }
 
 .container{
-    width:min(var(--container),calc(100% - 44px));
+    width:min(
+        var(--container),
+        calc(100% - 44px)
+    );
+
     margin:auto;
 }
 
@@ -89,16 +120,31 @@ button{
     line-height:1.9;
 }
 
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
+
     min-height:50px;
+
     padding:0 22px;
+
     border-radius:6px;
+
     font-size:12px;
     font-weight:800;
-    transition:.25s;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease;
+
     cursor:pointer;
 }
 
@@ -123,40 +169,53 @@ button{
     transform:translateY(-2px);
 }
 
+
 /* =========================================================
    HEADER
 ========================================================= */
 
 header{
     position:fixed;
+
     top:0;
     left:0;
     right:0;
+
     height:82px;
+
     z-index:1000;
-    background:rgba(255,255,255,.92);
+
+    background:rgba(255,255,255,.94);
+
     backdrop-filter:blur(18px);
-    border-bottom:1px solid rgba(8,47,34,.08);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:
+        1px solid rgba(8,47,34,.08);
 }
 
 .navbar{
     height:82px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:22px;
+
+    gap:28px;
 }
 
 .brand{
     display:flex;
     align-items:center;
     gap:12px;
+
     flex-shrink:0;
 }
 
 .brand-logo{
     width:56px;
     height:56px;
+
     object-fit:contain;
 }
 
@@ -167,31 +226,44 @@ header{
 
 .brand-name{
     color:var(--dark);
+
     font-size:19px;
     font-weight:900;
+
     line-height:1;
 }
 
 .brand-subtitle{
     color:var(--green);
+
     font-size:7.5px;
     font-weight:900;
+
     letter-spacing:1.35px;
+
     margin-top:6px;
 }
 
 .nav-menu{
     display:flex;
     align-items:center;
-    gap:12px;
+
+    gap:13px;
+
+    margin-left:auto;
 }
 
 .nav-menu a{
     color:#45554d;
+
     font-size:10.5px;
     font-weight:800;
+
     padding:8px 9px;
+
     border-radius:7px;
+
+    transition:.2s ease;
 }
 
 .nav-menu a:hover{
@@ -200,30 +272,43 @@ header{
 
 .nav-contact{
     background:var(--green);
-    color:#fff!important;
+    color:#fff !important;
 }
 
 .nav-contact:hover{
-    background:var(--dark)!important;
+    background:var(--dark) !important;
 }
 
 .language-switcher{
     display:flex;
+
     gap:3px;
+
     padding:3px;
+
     border:1px solid #dfe7e1;
+
     border-radius:30px;
+
     background:#f7faf7;
+
+    flex-shrink:0;
 }
 
 .language-btn{
     border:0;
+
     background:transparent;
+
     color:#718078;
+
     padding:7px 10px;
+
     border-radius:20px;
+
     font-size:9px;
     font-weight:900;
+
     cursor:pointer;
 }
 
@@ -234,233 +319,410 @@ header{
 
 .menu-toggle{
     display:none;
+
     border:0;
+
     background:none;
+
     color:var(--green);
+
     font-size:25px;
+
     cursor:pointer;
 }
 
+
 /* =========================================================
-   HOME
-   FOTO JADI BACKGROUND PENUH
+   HOME / HERO
 ========================================================= */
 
 .hero{
     position:relative;
+
     min-height:100vh;
+
     padding-top:82px;
+
     display:flex;
     align-items:center;
+
     overflow:hidden;
+
     isolation:isolate;
+
     background:#092f23;
 }
 
 .hero-grid{
     width:100%;
-    min-height:calc(100vh - 82px);
+
+    min-height:
+        calc(100vh - 82px);
+
     display:flex;
     align-items:center;
+
     position:relative;
+
     z-index:10;
 }
 
+
+/*
+=========================================================
+DESKTOP HERO CONTENT
+
+Ini yang diperbaiki dari screenshot laptop.
+
+Sebelumnya tulisan terlalu dekat dengan sisi kiri.
+Sekarang diberi breathing room yang proporsional.
+=========================================================
+*/
+
 .hero-content{
-    width:min(660px,65%);
-    padding:70px 0;
+    width:min(690px,67%);
+
+    padding:
+        72px
+        clamp(30px,4vw,68px)
+        72px
+        clamp(30px,4vw,68px);
+
     position:relative;
+
     z-index:20;
 }
 
+
+/* slogan */
+
 .hero-slogan{
     color:var(--lime);
+
     font-size:10px;
     font-weight:900;
+
     letter-spacing:2.5px;
+
     margin-bottom:18px;
-    text-shadow:0 2px 10px rgba(0,0,0,.45);
+
+    text-shadow:
+        0 2px 10px rgba(0,0,0,.45);
 }
+
+
+/* badge */
 
 .hero-badge{
     display:inline-flex;
+
     padding:8px 13px;
+
     margin-bottom:20px;
+
     color:#fff;
-    background:rgba(255,255,255,.10);
-    border:1px solid rgba(255,255,255,.25);
+
+    background:
+        rgba(255,255,255,.10);
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
     border-radius:50px;
+
     font-size:8.5px;
     font-weight:900;
+
     letter-spacing:1px;
+
     backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
 }
+
+
+/* main heading */
 
 .hero h1{
     color:#fff;
-    font-size:clamp(55px,6.5vw,86px);
+
+    font-size:
+        clamp(55px,6vw,86px);
+
     line-height:.91;
+
     letter-spacing:-5px;
+
     margin-bottom:22px;
-    text-shadow:0 8px 25px rgba(0,0,0,.45);
+
+    text-shadow:
+        0 8px 25px rgba(0,0,0,.45);
 }
 
 .hero h1 span{
     color:var(--lime);
 }
 
+
+/* tagline */
+
 .hero-tagline{
     display:inline-block;
+
     color:#c3f05e;
-    font-size:clamp(24px,2.8vw,37px);
+
+    font-size:
+        clamp(24px,2.8vw,37px);
+
     font-weight:900;
+
     line-height:1.05;
+
     text-transform:uppercase;
-    text-shadow:0 4px 18px rgba(0,0,0,.45);
+
+    text-shadow:
+        0 4px 18px rgba(0,0,0,.45);
+
     margin-bottom:16px;
 }
 
 .hero-tagline::after{
     content:"";
+
     display:block;
+
     width:78px;
     height:4px;
+
     background:var(--lime);
+
     border-radius:20px;
+
     margin-top:10px;
 }
 
+
+/* description */
+
 .hero-description{
-    max-width:640px;
-    color:rgba(255,255,255,.92);
+    max-width:650px;
+
+    color:
+        rgba(255,255,255,.94);
+
     font-size:14px;
+
     line-height:1.9;
+
     margin-bottom:28px;
-    text-shadow:0 2px 12px rgba(0,0,0,.5);
+
+    text-shadow:
+        0 2px 12px rgba(0,0,0,.5);
 }
+
+
+/* buttons */
 
 .hero-actions{
     display:flex;
+
     flex-wrap:wrap;
+
     gap:10px;
 }
 
 .hero-actions .btn-outline{
     color:#fff;
-    background:rgba(255,255,255,.12);
-    border-color:rgba(255,255,255,.45);
+
+    background:
+        rgba(255,255,255,.12);
+
+    border-color:
+        rgba(255,255,255,.45);
+
     backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
 }
 
-/* FOTO BACKGROUND */
+
+/* =========================================================
+   HERO BACKGROUND
+========================================================= */
 
 .hero-visual{
     position:absolute;
-    inset:0;
-    width:100%;
+
+    /*
+       Dipaksa full viewport.
+       Ini memperbaiki screenshot HP yang terlihat
+       seperti gambar mempunyai margin kiri/kanan.
+    */
+    top:0;
+    left:50%;
+
+    width:100vw;
     height:100%;
+
+    transform:translateX(-50%);
+
     z-index:1;
+
     pointer-events:none;
+
+    overflow:hidden;
 }
 
 .hero-slider{
     position:absolute;
+
     inset:0;
+
     width:100%;
     height:100%;
+
+    max-width:none;
+
     overflow:hidden;
+
     background:#092f23;
 }
 
 .hero-slide{
     position:absolute;
+
     inset:0;
+
     opacity:0;
-    transform:scale(1.03);
+
+    transform:scale(1.025);
+
     transition:
-        opacity 1.2s ease,
+        opacity 1.15s ease,
         transform 6s ease;
 }
 
 .hero-slide.active{
     opacity:1;
+
     transform:scale(1);
 }
 
 .hero-slide img{
     width:100%;
     height:100%;
+
     object-fit:cover;
-    object-position:center;
+
+    /*
+       Desktop:
+       foto dibuat sedikit lebih ke kanan agar
+       area teks kiri lebih bersih.
+    */
+    object-position:center center;
+
     filter:
-        saturate(.92)
+        saturate(.94)
         contrast(1.04)
-        brightness(.72);
+        brightness(.70);
 }
 
-/* OVERLAY FOTO
-   kiri lebih gelap agar teks terbaca,
-   kanan tetap memperlihatkan foto
-*/
+
+/* =========================================================
+   HERO IMAGE OVERLAY
+========================================================= */
 
 .hero-slide::after{
     content:"";
+
     position:absolute;
+
     inset:0;
+
     background:
         linear-gradient(
             90deg,
-            rgba(3,30,21,.88) 0%,
-            rgba(3,30,21,.72) 24%,
-            rgba(3,30,21,.42) 47%,
-            rgba(3,30,21,.12) 72%,
-            rgba(3,30,21,.05) 100%
+
+            rgba(3,30,21,.90) 0%,
+
+            rgba(3,30,21,.76) 23%,
+
+            rgba(3,30,21,.48) 45%,
+
+            rgba(3,30,21,.17) 69%,
+
+            rgba(3,30,21,.04) 100%
         ),
+
         linear-gradient(
             180deg,
-            rgba(0,0,0,.18),
+            rgba(0,0,0,.15),
             rgba(0,0,0,.28)
         );
+
+    pointer-events:none;
 }
 
-/* Counter kecil di kiri atas */
+
+/* =========================================================
+   SLIDER COUNTER
+========================================================= */
 
 .slider-counter{
     position:absolute;
+
     top:30px;
-    left:35px;
+    left:48px;
+
     z-index:30;
+
     display:flex;
+
     align-items:center;
+
     gap:10px;
+
     color:#fff;
+
     font-size:11px;
     font-weight:900;
+
     letter-spacing:1px;
+
+    text-shadow:
+        0 2px 8px rgba(0,0,0,.4);
 }
 
 .slider-counter i{
     width:75px;
     height:2px;
-    background:rgba(255,255,255,.35);
+
+    background:
+        rgba(255,255,255,.35);
+
     position:relative;
 }
 
 .slider-counter i::after{
     content:"";
+
     position:absolute;
+
     left:0;
     top:0;
+
     width:40%;
     height:2px;
+
     background:var(--lime);
 }
 
-/* HILANGKAN FIELD DOCUMENTATION */
 
-.hero-slider-info{
-    display:none!important;
+/* Jangan tampilkan caption dokumentasi */
+
+.hero-slider-info,
+.hero .slide-info{
+    display:none !important;
 }
+
 
 /* =========================================================
    COMPANY STRIP
@@ -468,18 +730,25 @@ header{
 
 .company-strip{
     background:#fafcfb;
-    border-bottom:1px solid var(--border);
+
+    border-bottom:
+        1px solid var(--border);
 }
 
 .company-strip-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
 }
 
 .company-strip-item{
     text-align:center;
+
     padding:27px 20px;
-    border-right:1px solid var(--border);
+
+    border-right:
+        1px solid var(--border);
 }
 
 .company-strip-item:last-child{
@@ -488,15 +757,18 @@ header{
 
 .company-strip-code{
     color:var(--green);
+
     font-size:21px;
     font-weight:900;
 }
 
 .company-strip-title{
     color:var(--muted);
+
     font-size:10px;
     font-weight:700;
 }
+
 
 /* =========================================================
    ABOUT
@@ -508,80 +780,120 @@ header{
 
 .about-grid{
     display:grid;
-    grid-template-columns:.82fr 1.18fr;
+
+    grid-template-columns:
+        .82fr 1.18fr;
+
     gap:70px;
+
     align-items:center;
 }
 
 .about-logo-area{
     min-height:440px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     background:#f8fbf8;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:18px;
+
     position:relative;
+
     overflow:hidden;
 }
 
 .about-logo-area::before{
     content:"";
+
     position:absolute;
+
     width:300px;
     height:300px;
-    border:1px solid rgba(8,120,63,.12);
+
+    border:
+        1px solid rgba(8,120,63,.12);
+
     border-radius:50%;
 }
 
 .about-logo{
     width:280px;
+
     position:relative;
+
     z-index:2;
 }
 
 .about-content h2{
     color:var(--dark);
-    font-size:clamp(37px,4vw,54px);
+
+    font-size:
+        clamp(37px,4vw,54px);
+
     line-height:1.07;
+
     letter-spacing:-2.5px;
+
     margin-bottom:22px;
 }
 
 .about-content p{
     color:var(--muted);
+
     font-size:13px;
+
     line-height:1.9;
+
     margin-bottom:14px;
 }
 
 .info-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
     gap:12px;
+
     margin-top:27px;
 }
 
 .info-card{
     padding:17px;
+
     background:var(--soft);
+
     border-radius:10px;
 }
 
 .info-card strong{
     display:block;
+
     color:var(--green);
+
     font-size:10px;
+
     margin-bottom:5px;
 }
 
 .info-card span{
     color:var(--muted);
+
     font-size:10px;
+
+    line-height:1.7;
 }
 
+
 /* =========================================================
-   VISI MISI
+   VISION & MISSION
 ========================================================= */
 
 .vm-section{
@@ -590,63 +902,91 @@ header{
 
 .vm-grid{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
     gap:18px;
+
     margin-top:40px;
 }
 
 .vm-card{
     background:#fff;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:15px;
+
     padding:35px;
 }
 
 .vm-card h3{
     color:var(--dark);
+
     font-size:24px;
+
     margin-bottom:12px;
 }
 
 .vm-card p{
     color:var(--muted);
+
     font-size:12px;
+
     line-height:1.9;
 }
 
 .plan-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:18px;
+
     margin-top:18px;
 }
 
 .plan-card{
     background:#fff;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:15px;
+
     padding:30px;
 }
 
 .plan-card .number{
     color:var(--green);
+
     font-size:9px;
     font-weight:900;
+
     letter-spacing:1.5px;
+
     margin-bottom:8px;
 }
 
 .plan-card h3{
     color:var(--dark);
+
     font-size:20px;
+
     margin-bottom:10px;
 }
 
 .plan-card p{
     color:var(--muted);
+
     font-size:12px;
+
     line-height:1.9;
 }
+
 
 /* =========================================================
    SERVICES
@@ -658,41 +998,58 @@ header{
 
 .services-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:18px;
+
     margin-top:45px;
 }
 
 .service-card{
     background:#fff;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:14px;
+
     padding:28px;
+
     transition:.25s;
 }
 
 .service-card:hover{
     transform:translateY(-5px);
+
     box-shadow:var(--shadow);
 }
 
 .service-code{
-    color:var(--lime);
+    color:var(--green);
+
     font-size:11px;
+
     font-weight:900;
 }
 
 .service-card h3{
     color:var(--dark);
+
     font-size:19px;
+
     margin:10px 0;
 }
 
 .service-card p{
     color:var(--muted);
+
     font-size:11.5px;
+
     line-height:1.8;
 }
+
 
 /* =========================================================
    TEAM
@@ -704,50 +1061,72 @@ header{
 
 .expert-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:18px;
+
     margin-top:45px;
 }
 
 .expert-card{
     background:#fff;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:14px;
+
     padding:28px;
+
     transition:.25s;
 }
 
 .expert-card:hover{
     transform:translateY(-4px);
+
     box-shadow:var(--shadow);
 }
 
 .expert-code{
-    color:var(--lime);
+    color:var(--green);
+
     font-size:11px;
+
     font-weight:900;
 }
 
 .expert-card h3{
     color:var(--dark);
+
     font-size:17px;
+
     line-height:1.35;
+
     margin:10px 0 7px;
 }
 
 .expert-role{
     color:var(--green);
+
     font-size:9px;
+
     font-weight:900;
+
     letter-spacing:1px;
 }
 
 .expert-card p{
     color:var(--muted);
+
     font-size:11.5px;
+
     line-height:1.8;
+
     margin-top:12px;
 }
+
 
 /* =========================================================
    SCOPE
@@ -759,41 +1138,58 @@ header{
 
 .scope-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:18px;
+
     margin-top:45px;
 }
 
 .scope-card{
     background:#fff;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:14px;
+
     padding:28px;
+
     transition:.25s;
 }
 
 .scope-card:hover{
     transform:translateY(-4px);
+
     box-shadow:var(--shadow);
 }
 
 .scope-number{
-    color:var(--lime);
+    color:var(--green);
+
     font-size:11px;
+
     font-weight:900;
 }
 
 .scope-card h3{
     color:var(--dark);
+
     font-size:18px;
+
     margin:9px 0;
 }
 
 .scope-card p{
     color:var(--muted);
+
     font-size:11.5px;
+
     line-height:1.8;
 }
+
 
 /* =========================================================
    DOCUMENTATION
@@ -805,33 +1201,48 @@ header{
 
 .documentation-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:18px;
+
     margin-top:45px;
 }
 
 .documentation-card{
     background:#fff;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     border-radius:14px;
+
     overflow:hidden;
+
     transition:.25s;
 }
 
 .documentation-card:hover{
     transform:translateY(-4px);
+
     box-shadow:var(--shadow);
 }
 
 .documentation-image{
     height:220px;
+
     overflow:hidden;
+
+    background:#eaf1ec;
 }
 
 .documentation-image img{
     width:100%;
     height:100%;
+
     object-fit:cover;
+
     transition:.4s;
 }
 
@@ -845,28 +1256,41 @@ header{
 
 .documentation-content small{
     color:var(--green);
+
     font-size:8px;
+
     font-weight:900;
+
     letter-spacing:1.2px;
 }
 
 .documentation-content h3{
     color:var(--dark);
+
     font-size:18px;
+
     margin:8px 0;
 }
 
 .documentation-content p{
     color:var(--muted);
+
     font-size:11px;
+
+    line-height:1.8;
 }
+
 
 /* =========================================================
    CTA
 ========================================================= */
 
 .cta{
-    padding:0 0 100px;
+    padding:
+        0
+        0
+        100px;
+
     background:#f8fbf9;
 }
 
@@ -882,12 +1306,19 @@ header{
             #08783f,
             #076b38
         );
+
     color:#fff;
+
     padding:60px;
+
     border-radius:20px;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     gap:40px;
 }
 
@@ -896,21 +1327,29 @@ header{
 }
 
 .cta-box h2{
-    font-size:clamp(32px,4vw,50px);
+    font-size:
+        clamp(32px,4vw,50px);
+
     line-height:1.08;
+
     letter-spacing:-2px;
 }
 
 .cta-box p{
-    color:rgba(255,255,255,.7);
+    color:
+        rgba(255,255,255,.7);
+
     font-size:12px;
+
     margin-top:10px;
 }
 
 .cta-button .btn{
     background:#fff;
+
     color:var(--green);
 }
+
 
 /* =========================================================
    CONTACT
@@ -918,139 +1357,209 @@ header{
 
 .contact{
     background:var(--soft2);
-    border-top:1px solid var(--border);
+
+    border-top:
+        1px solid var(--border);
 }
 
 .contact-grid{
     display:grid;
-    grid-template-columns:.9fr 1.1fr;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
     gap:70px;
 }
 
 .contact-info h2{
     color:var(--dark);
-    font-size:clamp(37px,4vw,53px);
+
+    font-size:
+        clamp(37px,4vw,53px);
+
     line-height:1.07;
+
     letter-spacing:-2.5px;
+
     margin-bottom:19px;
 }
 
 .contact-info > p{
     color:var(--muted);
+
     font-size:13px;
+
     line-height:1.8;
+
     margin-bottom:27px;
 }
 
 .contact-list{
     display:flex;
+
     flex-direction:column;
+
     gap:18px;
 }
 
 .contact-item{
     display:flex;
+
     gap:13px;
 }
 
 .contact-icon{
     width:40px;
     height:40px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     background:var(--soft);
+
     color:var(--green);
+
     font-size:10px;
+
     font-weight:900;
+
     flex-shrink:0;
 }
 
 .contact-item strong{
     display:block;
+
     color:var(--dark);
+
     font-size:10px;
+
     margin-bottom:3px;
 }
 
 .contact-item span,
 .contact-item a{
     color:var(--muted);
+
     font-size:11px;
+
     line-height:1.7;
 }
 
 .map-link{
     display:inline-flex;
+
     margin-top:7px;
-    color:var(--green)!important;
+
+    color:var(--green) !important;
+
     font-weight:800;
 }
 
 .contact-card{
     background:#fff;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     padding:38px;
+
     box-shadow:var(--shadow);
+
     border-radius:18px;
 }
 
 .contact-card h3{
     color:var(--dark);
+
     font-size:25px;
+
     margin-bottom:8px;
 }
 
 .contact-card > p{
     color:var(--muted);
+
     font-size:12px;
+
     margin-bottom:23px;
 }
 
 .email-box{
     display:flex;
+
     gap:13px;
+
     padding:20px;
-    border:1px solid var(--border);
+
+    border:
+        1px solid var(--border);
+
     background:var(--soft2);
 }
 
 .email-icon{
     width:43px;
     height:43px;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     background:var(--green);
+
     color:#fff;
+
     font-weight:900;
 }
 
 .email-box span{
     display:block;
+
     color:var(--dark);
+
     font-size:11px;
+
     font-weight:800;
 }
 
 .email-box a{
     color:var(--green);
+
     font-size:12px;
+
     font-weight:800;
 }
 
 .map-button{
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     width:100%;
+
     min-height:52px;
+
     margin-top:12px;
+
     background:var(--green);
+
     color:#fff;
+
     font-size:11px;
+
     font-weight:800;
+
+    transition:.25s;
 }
+
+.map-button:hover{
+    background:var(--dark);
+}
+
 
 /* =========================================================
    FOOTER
@@ -1058,87 +1567,198 @@ header{
 
 footer{
     background:#062c1d;
+
     color:#fff;
+
     padding:55px 0 25px;
 }
 
 .footer-grid{
     display:grid;
-    grid-template-columns:1.3fr .7fr .7fr;
+
+    grid-template-columns:
+        1.3fr .7fr .7fr;
+
     gap:55px;
+
     padding-bottom:38px;
-    border-bottom:1px solid rgba(255,255,255,.1);
+
+    border-bottom:
+        1px solid rgba(255,255,255,.1);
 }
 
 .footer-brand{
     display:flex;
+
     align-items:center;
+
     gap:11px;
+
     margin-bottom:17px;
 }
 
 .footer-logo{
     width:58px;
     height:58px;
+
     object-fit:contain;
 }
 
 .footer-brand-name{
     font-size:15px;
+
     font-weight:900;
 }
 
 .footer-description{
-    color:rgba(255,255,255,.55);
+    color:
+        rgba(255,255,255,.55);
+
     font-size:10.5px;
+
     line-height:1.8;
 }
 
 .footer-title{
     color:var(--lime);
+
     font-size:9px;
+
     font-weight:900;
+
     letter-spacing:1.5px;
+
     margin-bottom:15px;
 }
 
 .footer-links{
     display:flex;
+
     flex-direction:column;
+
     gap:9px;
 }
 
 .footer-links a{
-    color:rgba(255,255,255,.66);
+    color:
+        rgba(255,255,255,.66);
+
     font-size:10.5px;
+}
+
+.footer-links a:hover{
+    color:#fff;
 }
 
 .footer-bottom{
     padding-top:23px;
+
     display:flex;
+
     justify-content:space-between;
+
     gap:20px;
-    color:rgba(255,255,255,.42);
+
+    color:
+        rgba(255,255,255,.42);
+
     font-size:9px;
 }
 
+
 /* =========================================================
-   ANIMATION
+   REVEAL
 ========================================================= */
 
 .reveal{
     opacity:0;
-    transform:translateY(22px);
+
+    transform:
+        translateY(22px);
+
     transition:.7s ease;
 }
 
 .reveal.visible{
     opacity:1;
+
     transform:none;
 }
 
+
+/* =========================================================
+   LAPTOP / DESKTOP REFINEMENT
+========================================================= */
+
+/*
+   Laptop screenshot:
+   teks terlalu mepet ke kiri.
+   Di breakpoint ini kita tambah ruang kiri,
+   tetapi tidak membuat konten terlalu jauh.
+*/
+
+@media(min-width:901px){
+
+    .hero-grid{
+        min-height:
+            calc(100vh - 82px);
+
+        padding-left:
+            clamp(8px,1vw,22px);
+    }
+
+    .hero-content{
+        padding-left:
+            clamp(32px,4vw,66px);
+
+        padding-right:
+            clamp(20px,2.5vw,42px);
+    }
+
+    .slider-counter{
+        left:
+            clamp(30px,3vw,52px);
+    }
+
+}
+
+
 /* =========================================================
    TABLET
+========================================================= */
+
+@media(max-width:1100px){
+
+    .container{
+        width:
+            min(
+                var(--container),
+                calc(100% - 38px)
+            );
+    }
+
+    .nav-menu{
+        gap:5px;
+    }
+
+    .nav-menu a{
+        padding-left:7px;
+        padding-right:7px;
+    }
+
+    .hero-content{
+        width:72%;
+    }
+
+    .hero-slide img{
+        object-position:center center;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET 900
 ========================================================= */
 
 @media(max-width:900px){
@@ -1148,22 +1768,44 @@ footer{
         height:72px;
     }
 
+    .navbar{
+        gap:12px;
+    }
+
     .menu-toggle{
         display:block;
+
+        margin-left:auto;
     }
 
     .nav-menu{
         position:absolute;
+
         top:72px;
+
         left:15px;
         right:15px;
+
         display:none;
+
         flex-direction:column;
+
         align-items:stretch;
+
         gap:0;
+
+        margin:0;
+
         background:#fff;
-        border:1px solid var(--border);
+
+        border:
+            1px solid var(--border);
+
+        border-radius:10px;
+
         box-shadow:var(--shadow);
+
+        overflow:hidden;
     }
 
     .nav-menu.open{
@@ -1172,7 +1814,9 @@ footer{
 
     .nav-menu a{
         padding:14px 18px;
-        border-bottom:1px solid #edf1ee;
+
+        border-bottom:
+            1px solid #edf1ee;
     }
 
     .language-switcher{
@@ -1181,16 +1825,40 @@ footer{
 
     .hero{
         padding-top:72px;
-        min-height:100vh;
+
+        min-height:
+            calc(100vh - 0px);
     }
 
     .hero-grid{
-        min-height:calc(100vh - 72px);
+        min-height:
+            calc(100vh - 72px);
+
+        width:100%;
     }
 
+    /*
+       Tablet:
+       teks sedikit lebih masuk dari kiri.
+    */
+
     .hero-content{
-        width:75%;
-        padding:65px 0;
+        width:78%;
+
+        padding:
+            65px
+            25px
+            65px
+            25px;
+    }
+
+    .hero-slide img{
+        object-position:
+            center center;
+    }
+
+    .slider-counter{
+        left:28px;
     }
 
     .about-grid,
@@ -1202,7 +1870,8 @@ footer{
     .expert-grid,
     .scope-grid,
     .documentation-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
     }
 
     .vm-grid,
@@ -1211,10 +1880,12 @@ footer{
     }
 
     .footer-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
 }
+
 
 /* =========================================================
    MOBILE
@@ -1222,8 +1893,26 @@ footer{
 
 @media(max-width:620px){
 
+    /*
+       Container halaman tetap normal,
+       TETAPI hero background tidak mengikuti container.
+    */
+
     .container{
-        width:min(var(--container),calc(100% - 30px));
+        width:
+            calc(100% - 30px);
+    }
+
+    header{
+        height:72px;
+    }
+
+    .navbar{
+        height:72px;
+    }
+
+    .brand{
+        gap:9px;
     }
 
     .brand-logo{
@@ -1237,47 +1926,258 @@ footer{
 
     .brand-subtitle{
         font-size:6px;
+
+        letter-spacing:
+            1.05px;
     }
+
+
+    /* =====================================================
+       MOBILE HERO
+    ===================================================== */
+
+    .hero{
+        width:100%;
+
+        min-height:
+            calc(100svh - 0px);
+
+        padding-top:72px;
+
+        display:flex;
+
+        align-items:stretch;
+
+        overflow:hidden;
+    }
+
+    .hero-grid{
+        width:100%;
+
+        min-height:
+            calc(100svh - 72px);
+
+        display:flex;
+
+        align-items:center;
+
+        padding:0;
+
+        margin:0 auto;
+
+        z-index:10;
+    }
+
+
+    /*
+       Mobile:
+       background benar-benar 100vw.
+    */
+
+    .hero-visual{
+        position:absolute;
+
+        top:0;
+        left:50%;
+
+        width:100vw;
+        height:100%;
+
+        transform:
+            translateX(-50%);
+
+        margin:0;
+        padding:0;
+
+        z-index:1;
+    }
+
+    .hero-slider{
+        position:absolute;
+
+        inset:0;
+
+        width:100vw;
+        height:100%;
+
+        margin:0;
+        padding:0;
+
+        border:0;
+        border-radius:0;
+    }
+
+
+    /*
+       Teks mobile:
+       tidak terlalu ke kiri dan tetap memberi
+       ruang agar foto terlihat di kanan-kiri.
+    */
 
     .hero-content{
         width:100%;
-        padding:65px 0;
+
+        max-width:none;
+
+        padding:
+            76px
+            26px
+            92px
+            26px;
+
+        margin:0;
+
+        z-index:20;
     }
+
+
+    .hero-slogan{
+        font-size:9px;
+
+        letter-spacing:
+            2.25px;
+
+        margin-bottom:18px;
+    }
+
+
+    .hero-badge{
+        font-size:8px;
+
+        padding:
+            8px 12px;
+
+        margin-bottom:24px;
+    }
+
 
     .hero h1{
-        font-size:48px;
-        letter-spacing:-3px;
+        font-size:
+            clamp(48px,13vw,62px);
+
+        line-height:.92;
+
+        letter-spacing:-3.8px;
+
+        margin-bottom:23px;
     }
+
 
     .hero-tagline{
-        font-size:27px;
+        font-size:
+            clamp(24px,7.4vw,31px);
+
+        line-height:1.08;
+
+        margin-bottom:18px;
     }
+
+    .hero-tagline::after{
+        width:76px;
+
+        height:4px;
+
+        margin-top:11px;
+    }
+
 
     .hero-description{
+        max-width:100%;
+
         font-size:13px;
+
+        line-height:1.95;
+
+        margin-bottom:28px;
     }
 
-    .hero-slide img{
-        object-position:58% center;
-        filter:
-            saturate(.88)
-            contrast(1.03)
-            brightness(.62);
+
+    .hero-actions{
+        gap:10px;
     }
+
+    .hero-actions .btn{
+        min-height:52px;
+
+        padding:
+            0 20px;
+
+        font-size:12px;
+    }
+
+
+    /*
+       FOTO MOBILE
+
+       Karena layar HP jauh lebih tinggi daripada foto
+       landscape, object-fit:cover memang akan melakukan
+       crop horizontal.
+
+       Kita geser posisi sedikit ke tengah-kanan supaya
+       objek utama tetap masuk dan seluruh area layar
+       kiri-kanan terisi.
+    */
+
+    .hero-slide img{
+        width:100vw;
+        height:100%;
+
+        min-width:100vw;
+
+        object-fit:cover;
+
+        object-position:
+            56% center;
+
+        filter:
+            saturate(.90)
+            contrast(1.03)
+            brightness(.58);
+    }
+
+
+    /*
+       Overlay mobile dibuat lebih lembut.
+       Tidak lagi putih/gradient.
+    */
 
     .hero-slide::after{
         background:
             linear-gradient(
                 90deg,
-                rgba(3,30,21,.82),
-                rgba(3,30,21,.45)
+                rgba(3,30,21,.80) 0%,
+                rgba(3,30,21,.56) 45%,
+                rgba(3,30,21,.24) 75%,
+                rgba(3,30,21,.12) 100%
             ),
             linear-gradient(
                 180deg,
-                rgba(0,0,0,.15),
-                rgba(0,0,0,.35)
+                rgba(0,0,0,.14),
+                rgba(0,0,0,.32)
             );
     }
+
+
+    /*
+       Counter mobile tidak terlalu masuk.
+    */
+
+    .slider-counter{
+        top:21px;
+
+        left:26px;
+
+        font-size:10px;
+    }
+
+    .slider-counter i{
+        width:64px;
+    }
+
+
+    /* =====================================================
+       REST MOBILE
+    ===================================================== */
 
     .company-strip-grid{
         grid-template-columns:1fr;
@@ -1285,10 +2185,15 @@ footer{
 
     .company-strip-item{
         border-right:0;
-        border-bottom:1px solid var(--border);
+
+        border-bottom:
+            1px solid var(--border);
     }
 
-    .info-grid,
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
     .services-grid,
     .expert-grid,
     .scope-grid,
@@ -1296,9 +2201,15 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .documentation-image{
+        height:260px;
+    }
+
     .cta-box{
         display:block;
-        padding:35px 27px;
+
+        padding:
+            35px 27px;
     }
 
     .cta-button{
@@ -1314,20 +2225,113 @@ footer{
     }
 
 }
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:390px){
+
+    .hero-content{
+        padding:
+            70px
+            22px
+            85px
+            22px;
+    }
+
+    .hero h1{
+        font-size:45px;
+
+        letter-spacing:-3px;
+    }
+
+    .hero-tagline{
+        font-size:23px;
+    }
+
+    .hero-description{
+        font-size:12.5px;
+    }
+
+    .hero-actions .btn{
+        padding:
+            0 17px;
+    }
+
+    .slider-counter{
+        left:22px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY WIDE LAPTOP / DESKTOP
+========================================================= */
+
+@media(min-width:1400px){
+
+    .hero-content{
+        width:700px;
+
+        padding-left:70px;
+    }
+
+    .hero h1{
+        font-size:88px;
+    }
+
+    .hero-description{
+        font-size:14px;
+    }
+
+}
+
+
+/* =========================================================
+   REVEAL FALLBACK
+========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    .hero-slide{
+        transition:none;
+    }
+
+    .reveal{
+        opacity:1;
+        transform:none;
+        transition:none;
+    }
+
+}
+
 </style>
 </head>
 
+
 <body>
 
-<!-- ======================================================
+
+<!-- =========================================================
      HEADER
-====================================================== -->
+========================================================= -->
 
 <header>
 
 <div class="container navbar">
 
-<a href="#home" class="brand">
+
+<a
+    href="#home"
+    class="brand"
+>
 
 <img
     src="LOGONYAPAKEYANGINI.png"
@@ -1349,25 +2353,45 @@ LABAN ENVIRONMENT GLOBAL
 
 </a>
 
+
 <button
     class="menu-toggle"
     id="menuToggle"
     type="button"
+    aria-label="Buka menu"
 >
 ☰
 </button>
+
 
 <nav
     class="nav-menu"
     id="navMenu"
 >
 
-<a href="#home">Beranda</a>
-<a href="#about">Tentang</a>
-<a href="#services">Layanan</a>
-<a href="#team">Pengurus</a>
-<a href="#scope">Lingkup</a>
-<a href="#documentation">Dokumentasi</a>
+<a href="#home">
+Beranda
+</a>
+
+<a href="#about">
+Tentang
+</a>
+
+<a href="#services">
+Layanan
+</a>
+
+<a href="#team">
+Pengurus
+</a>
+
+<a href="#scope">
+Lingkup
+</a>
+
+<a href="#documentation">
+Dokumentasi
+</a>
 
 <a
     href="#contact"
@@ -1377,6 +2401,7 @@ Kontak
 </a>
 
 </nav>
+
 
 <div class="language-switcher">
 
@@ -1398,16 +2423,22 @@ EN
 
 </div>
 
+
 </div>
 
 </header>
 
 
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
 <main>
 
-<!-- ======================================================
+
+<!-- =========================================================
      HOME
-====================================================== -->
+========================================================= -->
 
 <section
     class="hero"
@@ -1416,15 +2447,19 @@ EN
 
 <div class="container hero-grid">
 
+
 <div class="hero-content reveal">
+
 
 <div class="hero-slogan">
 SUSTAINING FUTURE TOGETHER
 </div>
 
+
 <div class="hero-badge">
 ENVIRONMENT • ENGINEERING • CONSULTANT
 </div>
+
 
 <h1>
 Building
@@ -1434,18 +2469,22 @@ Building
 Solutions.
 </h1>
 
+
 <div class="hero-tagline">
-Laban Environment Global
+LABAN ENVIRONMENT GLOBAL
 </div>
+
 
 <p class="hero-description">
 
-CV. Laban Environment Global adalah perusahaan jasa konsultasi,
-perencanaan, pengawasan dan konstruksi yang didukung tenaga ahli
-dari berbagai disiplin ilmu untuk menghasilkan layanan yang
-profesional, bermutu dan tepat waktu.
+CV. Laban Environment Global adalah perusahaan jasa
+konsultasi, perencanaan, pengawasan dan konstruksi
+yang didukung tenaga ahli dari berbagai disiplin ilmu
+untuk menghasilkan layanan yang profesional, bermutu
+dan tepat waktu.
 
 </p>
+
 
 <div class="hero-actions">
 
@@ -1465,10 +2504,13 @@ Hubungi Kami
 
 </div>
 
+
 </div>
 
 
-<!-- FOTO BACKGROUND -->
+<!-- =====================================================
+     FULL BACKGROUND SLIDER
+===================================================== -->
 
 <div class="hero-visual">
 
@@ -1477,130 +2519,184 @@ Hubungi Kami
     id="heroSlider"
 >
 
+
 <div class="hero-slide active">
+
 <img
     src="foto 1.png"
     alt="Dokumentasi LEG 1"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="foto 2.png"
     alt="Dokumentasi LEG 2"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="foto 3.png"
     alt="Dokumentasi LEG 3"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 1.jpeg"
     alt="Dokumentasi LEG 4"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 2.jpeg"
     alt="Dokumentasi LEG 5"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 3.jpeg"
     alt="Dokumentasi LEG 6"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 4.jpeg"
     alt="Dokumentasi LEG 7"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 5.jpeg"
     alt="Dokumentasi LEG 8"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 6.jpeg"
     alt="Dokumentasi LEG 9"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 7.jpeg"
     alt="Dokumentasi LEG 10"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 8.jpeg"
     alt="Dokumentasi LEG 11"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 9.jpeg"
     alt="Dokumentasi LEG 12"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 10.jpeg"
     alt="Dokumentasi LEG 13"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 11.jpeg"
     alt="Dokumentasi LEG 14"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 12.jpeg"
     alt="Dokumentasi LEG 15"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 13.jpeg"
     alt="Dokumentasi LEG 16"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 14.jpeg"
     alt="Dokumentasi LEG 17"
 >
+
 </div>
 
+
 <div class="hero-slide">
+
 <img
     src="dokumentasi 15.jpeg"
     alt="Dokumentasi LEG 18"
 >
+
 </div>
 
 
@@ -1618,6 +2714,7 @@ Hubungi Kami
 
 </div>
 
+
 </div>
 
 </div>
@@ -1627,13 +2724,14 @@ Hubungi Kami
 </section>
 
 
-<!-- ======================================================
+<!-- =========================================================
      COMPANY STRIP
-====================================================== -->
+========================================================= -->
 
 <section class="company-strip">
 
 <div class="container company-strip-grid">
+
 
 <div class="company-strip-item">
 
@@ -1673,14 +2771,15 @@ Laban Environment Global
 
 </div>
 
+
 </div>
 
 </section>
 
 
-<!-- ======================================================
-     ABOUT / COMPANY PROFILE
-====================================================== -->
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
 <section
     class="section about"
@@ -1688,6 +2787,7 @@ Laban Environment Global
 >
 
 <div class="container about-grid">
+
 
 <div class="about-logo-area reveal">
 
@@ -1706,10 +2806,12 @@ Laban Environment Global
 01 / Company Profile
 </div>
 
+
 <h2>
 Professional solutions for environment,
 engineering and construction.
 </h2>
+
 
 <p>
 
@@ -1719,6 +2821,7 @@ Notaris Tatu Afifah, SH. M.Kn No. 1 Tahun 2020
 di Kota Serang.
 
 </p>
+
 
 <p>
 
@@ -1731,6 +2834,7 @@ tenaga ahli berbagai disiplin ilmu yang berpengalaman.
 
 
 <div class="info-grid">
+
 
 <div class="info-card">
 
@@ -1778,11 +2882,13 @@ Alamat
 </strong>
 
 <span>
-Kota Serang Baru, Cipocok,
-Kota Serang, Banten
+KSB. Komp. Permata Hijau Blok N No. 05,
+RT 002 RW 008, Kel. Banjar Agung,
+Cipocok, Kota Serang, Banten.
 </span>
 
 </div>
+
 
 </div>
 
@@ -1793,21 +2899,24 @@ Kota Serang, Banten
 </section>
 
 
-<!-- ======================================================
-     VISI MISI
-====================================================== -->
+<!-- =========================================================
+     VISION & MISSION
+========================================================= -->
 
 <section class="section vm-section">
 
 <div class="container">
 
+
 <div class="section-label">
 02 / Direction
 </div>
 
+
 <h2 class="section-title">
 Vision & Mission
 </h2>
+
 
 <p class="section-description">
 
@@ -1819,6 +2928,7 @@ yang berkelanjutan.
 
 
 <div class="vm-grid">
+
 
 <div class="vm-card reveal">
 
@@ -1854,10 +2964,12 @@ optimal tanpa mengabaikan kemanfaatan.
 
 </div>
 
+
 </div>
 
 
 <div class="plan-grid">
+
 
 <div class="plan-card reveal">
 
@@ -1922,6 +3034,7 @@ peluang-peluang bisnis yang ada.
 
 </div>
 
+
 </div>
 
 </div>
@@ -1929,9 +3042,9 @@ peluang-peluang bisnis yang ada.
 </section>
 
 
-<!-- ======================================================
+<!-- =========================================================
      SERVICES
-====================================================== -->
+========================================================= -->
 
 <section
     class="section services"
@@ -1940,24 +3053,28 @@ peluang-peluang bisnis yang ada.
 
 <div class="container">
 
+
 <div class="section-label">
 03 / Services
 </div>
+
 
 <h2 class="section-title">
 Lingkup Jasa
 </h2>
 
+
 <p class="section-description">
 
 Layanan LEG mencakup konsultasi, perencanaan,
-konstruksi, dokumen lingkungan, pengelolaan air
-dan sampah serta penelitian.
+konstruksi, dokumen lingkungan, PKKPRL,
+pengelolaan air dan sampah serta penelitian.
 
 </p>
 
 
 <div class="services-grid">
+
 
 <div class="service-card reveal">
 
@@ -2138,6 +3255,7 @@ ahli dari berbagai disiplin ilmu.
 
 </div>
 
+
 </div>
 
 </div>
@@ -2145,9 +3263,9 @@ ahli dari berbagai disiplin ilmu.
 </section>
 
 
-<!-- ======================================================
+<!-- =========================================================
      TEAM
-====================================================== -->
+========================================================= -->
 
 <section
     class="section experts"
@@ -2156,13 +3274,16 @@ ahli dari berbagai disiplin ilmu.
 
 <div class="container">
 
+
 <div class="section-label">
 04 / Organization
 </div>
 
+
 <h2 class="section-title">
 Pengurus & Divisi
 </h2>
+
 
 <p class="section-description">
 
@@ -2335,9 +3456,9 @@ kebutuhan pengembangan solusi profesional.
 </section>
 
 
-<!-- ======================================================
+<!-- =========================================================
      SCOPE
-====================================================== -->
+========================================================= -->
 
 <section
     class="section scope"
@@ -2346,19 +3467,22 @@ kebutuhan pengembangan solusi profesional.
 
 <div class="container">
 
+
 <div class="section-label">
 05 / Scope
 </div>
+
 
 <h2 class="section-title">
 Ruang Lingkup Pelayanan
 </h2>
 
+
 <p class="section-description">
 
 Cakupan pelayanan LEG dirancang untuk mendukung
 proses perencanaan, pengawasan, konstruksi,
-lingkungan dan pengelolaan sumber daya.
+lingkungan, PKKPRL dan pengelolaan sumber daya.
 
 </p>
 
@@ -2494,9 +3618,9 @@ Penelitian dan kajian ilmiah lainnya.
 </section>
 
 
-<!-- ======================================================
+<!-- =========================================================
      DOCUMENTATION
-====================================================== -->
+========================================================= -->
 
 <section
     class="section documentation"
@@ -2505,13 +3629,16 @@ Penelitian dan kajian ilmiah lainnya.
 
 <div class="container">
 
+
 <div class="section-label">
 06 / Documentation
 </div>
 
+
 <h2 class="section-title">
 Dokumentasi Lapangan
 </h2>
+
 
 <p class="section-description">
 
@@ -2529,10 +3656,13 @@ perusahaan.
 <div class="documentation-card reveal">
 
 <div class="documentation-image">
+
 <img
     src="foto 1.png"
     alt="Aktivitas Lapangan"
+    loading="lazy"
 >
+
 </div>
 
 <div class="documentation-content">
@@ -2557,10 +3687,13 @@ Dokumentasi kegiatan teknis di lapangan.
 <div class="documentation-card reveal">
 
 <div class="documentation-image">
+
 <img
     src="foto 2.png"
     alt="Survey dan Observasi"
+    loading="lazy"
 >
+
 </div>
 
 <div class="documentation-content">
@@ -2585,10 +3718,13 @@ Dokumentasi kegiatan survey dan observasi.
 <div class="documentation-card reveal">
 
 <div class="documentation-image">
+
 <img
     src="foto 3.png"
     alt="Kegiatan Teknis"
+    loading="lazy"
 >
+
 </div>
 
 <div class="documentation-content">
@@ -2611,182 +3747,227 @@ Dokumentasi aktivitas teknis perusahaan.
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 1.jpeg" alt="Dokumentasi 1">
+<img src="dokumentasi 1.jpeg" alt="Dokumentasi 1" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 01</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 2.jpeg" alt="Dokumentasi 2">
+<img src="dokumentasi 2.jpeg" alt="Dokumentasi 2" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 02</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 3.jpeg" alt="Dokumentasi 3">
+<img src="dokumentasi 3.jpeg" alt="Dokumentasi 3" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 03</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 4.jpeg" alt="Dokumentasi 4">
+<img src="dokumentasi 4.jpeg" alt="Dokumentasi 4" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 04</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 5.jpeg" alt="Dokumentasi 5">
+<img src="dokumentasi 5.jpeg" alt="Dokumentasi 5" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 05</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 6.jpeg" alt="Dokumentasi 6">
+<img src="dokumentasi 6.jpeg" alt="Dokumentasi 6" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 06</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 7.jpeg" alt="Dokumentasi 7">
+<img src="dokumentasi 7.jpeg" alt="Dokumentasi 7" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 07</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 8.jpeg" alt="Dokumentasi 8">
+<img src="dokumentasi 8.jpeg" alt="Dokumentasi 8" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 08</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 9.jpeg" alt="Dokumentasi 9">
+<img src="dokumentasi 9.jpeg" alt="Dokumentasi 9" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 09</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 10.jpeg" alt="Dokumentasi 10">
+<img src="dokumentasi 10.jpeg" alt="Dokumentasi 10" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 10</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 11.jpeg" alt="Dokumentasi 11">
+<img src="dokumentasi 11.jpeg" alt="Dokumentasi 11" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 11</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 12.jpeg" alt="Dokumentasi 12">
+<img src="dokumentasi 12.jpeg" alt="Dokumentasi 12" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 12</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 13.jpeg" alt="Dokumentasi 13">
+<img src="dokumentasi 13.jpeg" alt="Dokumentasi 13" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 13</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 14.jpeg" alt="Dokumentasi 14">
+<img src="dokumentasi 14.jpeg" alt="Dokumentasi 14" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 14</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
 <div class="documentation-card reveal">
+
 <div class="documentation-image">
-<img src="dokumentasi 15.jpeg" alt="Dokumentasi 15">
+<img src="dokumentasi 15.jpeg" alt="Dokumentasi 15" loading="lazy">
 </div>
+
 <div class="documentation-content">
 <small>DOCUMENTATION 15</small>
 <h3>Dokumentasi Kegiatan</h3>
 <p>Dokumentasi kegiatan CV. Laban Environment Global.</p>
 </div>
+
 </div>
 
 
@@ -2797,15 +3978,16 @@ Dokumentasi aktivitas teknis perusahaan.
 </section>
 
 
-<!-- ======================================================
+<!-- =========================================================
      CTA
-====================================================== -->
+========================================================= -->
 
 <section class="cta">
 
 <div class="container">
 
 <div class="cta-box reveal">
+
 
 <div>
 
@@ -2825,6 +4007,7 @@ silakan hubungi perusahaan melalui email.
 
 </div>
 
+
 <div class="cta-button">
 
 <a
@@ -2836,6 +4019,7 @@ Kirim Email
 
 </div>
 
+
 </div>
 
 </div>
@@ -2843,9 +4027,9 @@ Kirim Email
 </section>
 
 
-<!-- ======================================================
+<!-- =========================================================
      CONTACT
-====================================================== -->
+========================================================= -->
 
 <section
     class="section contact"
@@ -2853,6 +4037,7 @@ Kirim Email
 >
 
 <div class="container contact-grid">
+
 
 <div class="contact-info reveal">
 
@@ -2874,6 +4059,7 @@ kerja sama dan informasi perusahaan.
 
 
 <div class="contact-list">
+
 
 <div class="contact-item">
 
@@ -2916,6 +4102,7 @@ Cipocok, Kota Serang, Banten.
 
 </span>
 
+
 <a
     class="map-link"
     href="https://www.google.com/maps/search/?api=1&query=CV%20Laban%20Environment%20Global%2C%20Permata%20Hijau%20Blok%20N%2C%20Banjar%20Agung%2C%20Cipocok%2C%20Kota%20Serang%2C%20Banten"
@@ -2928,6 +4115,7 @@ Buka alamat di Google Maps
 </div>
 
 </div>
+
 
 </div>
 
@@ -2943,6 +4131,7 @@ Contact LEG
 <p>
 Kontak resmi perusahaan melalui email.
 </p>
+
 
 <div class="email-box">
 
@@ -2974,18 +4163,21 @@ laban.environment.global@gmail.com
 Lihat Lokasi Perusahaan di Google Maps
 </a>
 
+
 </div>
+
 
 </div>
 
 </section>
 
+
 </main>
 
 
-<!-- ======================================================
+<!-- =========================================================
      FOOTER
-====================================================== -->
+========================================================= -->
 
 <footer>
 
@@ -2993,14 +4185,15 @@ Lihat Lokasi Perusahaan di Google Maps
 
 <div class="footer-grid">
 
+
 <div>
 
 <div class="footer-brand">
 
 <img
+    class="footer-logo"
     src="LOGONYAPAKEYANGINI.png"
     alt="CV. Laban Environment Global"
-    class="footer-logo"
 >
 
 <div class="footer-brand-name">
@@ -3008,6 +4201,7 @@ CV. Laban Environment Global
 </div>
 
 </div>
+
 
 <p class="footer-description">
 
@@ -3028,6 +4222,10 @@ NAVIGATION
 
 <div class="footer-links">
 
+<a href="#home">
+Beranda
+</a>
+
 <a href="#about">
 Tentang
 </a>
@@ -3038,6 +4236,10 @@ Layanan
 
 <a href="#team">
 Pengurus
+</a>
+
+<a href="#scope">
+Lingkup
 </a>
 
 <a href="#documentation">
@@ -3073,6 +4275,7 @@ Google Maps
 
 </div>
 
+
 </div>
 
 
@@ -3090,20 +4293,22 @@ Environment • Engineering • Consultant
 
 </div>
 
+
 </div>
 
 </footer>
 
 
-<!-- ======================================================
+<!-- =========================================================
      JAVASCRIPT
-====================================================== -->
+========================================================= -->
 
 <script>
 
-/* ======================================================
+
+/* =========================================================
    MOBILE MENU
-====================================================== */
+========================================================= */
 
 const menuToggle =
     document.getElementById("menuToggle");
@@ -3111,13 +4316,19 @@ const menuToggle =
 const navMenu =
     document.getElementById("navMenu");
 
-if(menuToggle && navMenu){
+
+if(
+    menuToggle &&
+    navMenu
+){
 
     menuToggle.addEventListener(
         "click",
         function(){
 
-            navMenu.classList.toggle("open");
+            navMenu.classList.toggle(
+                "open"
+            );
 
         }
     );
@@ -3125,35 +4336,43 @@ if(menuToggle && navMenu){
 }
 
 
-/* ======================================================
-   CLOSE MOBILE MENU
-====================================================== */
+/* =========================================================
+   CLOSE MENU AFTER CLICK
+========================================================= */
 
 document
 .querySelectorAll(".nav-menu a")
-.forEach(function(link){
+.forEach(
+    function(link){
 
-    link.addEventListener(
-        "click",
-        function(){
+        link.addEventListener(
+            "click",
+            function(){
 
-            navMenu.classList.remove("open");
+                navMenu.classList.remove(
+                    "open"
+                );
 
-        }
-    );
+            }
+        );
 
-});
+    }
+);
 
 
-/* ======================================================
+/* =========================================================
    HERO SLIDER
-====================================================== */
+========================================================= */
 
 const slides =
-    document.querySelectorAll(".hero-slide");
+    document.querySelectorAll(
+        ".hero-slide"
+    );
 
 const counter =
-    document.getElementById("slideCurrent");
+    document.getElementById(
+        "slideCurrent"
+    );
 
 let currentSlide = 0;
 
@@ -3163,6 +4382,7 @@ function showSlide(index){
     if(!slides.length){
         return;
     }
+
 
     slides.forEach(
         function(slide,i){
@@ -3175,103 +4395,176 @@ function showSlide(index){
         }
     );
 
+
     currentSlide = index;
+
 
     if(counter){
 
         counter.textContent =
-            String(index + 1).padStart(2,"0");
+            String(
+                index + 1
+            ).padStart(
+                2,
+                "0"
+            );
 
     }
 
 }
 
 
-setInterval(
-    function(){
+if(slides.length > 1){
 
-        let next =
-            (currentSlide + 1)
-            % slides.length;
+    setInterval(
+        function(){
 
-        showSlide(next);
-
-    },
-    5000
-);
-
-
-/* ======================================================
-   SCROLL REVEAL
-====================================================== */
-
-const revealObserver =
-    new IntersectionObserver(
-        function(entries){
-
-            entries.forEach(
-                function(entry){
-
-                    if(entry.isIntersecting){
-
-                        entry.target
-                            .classList
-                            .add("visible");
-
-                        revealObserver
-                            .unobserve(entry.target);
-
-                    }
-
-                }
+            showSlide(
+                (
+                    currentSlide + 1
+                )
+                %
+                slides.length
             );
 
         },
-        {
-            threshold:.08
-        }
+        5000
     );
 
-
-document
-.querySelectorAll(".reveal")
-.forEach(
-    function(element){
-
-        revealObserver.observe(element);
-
-    }
-);
+}
 
 
-/* ======================================================
-   LANGUAGE
-====================================================== */
+showSlide(0);
 
-const languageButtons =
-    document.querySelectorAll(".language-btn");
 
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
+
+if(
+    "IntersectionObserver"
+    in window
+){
+
+    const revealObserver =
+        new IntersectionObserver(
+            function(entries){
+
+                entries.forEach(
+                    function(entry){
+
+                        if(
+                            entry.isIntersecting
+                        ){
+
+                            entry
+                                .target
+                                .classList
+                                .add(
+                                    "visible"
+                                );
+
+                            revealObserver
+                                .unobserve(
+                                    entry.target
+                                );
+
+                        }
+
+                    }
+                );
+
+            },
+            {
+                threshold:.08
+            }
+        );
+
+
+    document
+        .querySelectorAll(
+            ".reveal"
+        )
+        .forEach(
+            function(element){
+
+                revealObserver.observe(
+                    element
+                );
+
+            }
+        );
+
+}
+else{
+
+    document
+        .querySelectorAll(
+            ".reveal"
+        )
+        .forEach(
+            function(element){
+
+                element.classList.add(
+                    "visible"
+                );
+
+            }
+        );
+
+}
+
+
+/* =========================================================
+   LANGUAGE SWITCHER
+========================================================= */
 
 const translations = {
 
-    "Beranda":"Home",
-    "Tentang":"About",
-    "Layanan":"Services",
-    "Pengurus":"Management",
-    "Lingkup":"Scope",
-    "Dokumentasi":"Documentation",
-    "Kontak":"Contact",
+    "Beranda":
+        "Home",
 
-    "Kenal Perusahaan":"Company Profile",
-    "Hubungi Kami":"Contact Us",
-    "Kirim Email":"Send Email",
+    "Tentang":
+        "About",
 
-    "Tahun Berdiri":"Established",
-    "Bentuk Badan Usaha":"Business Form",
-    "Nama Perusahaan":"Company Name",
+    "Layanan":
+        "Services",
 
-    "Visi":"Vision",
-    "Misi":"Mission",
+    "Pengurus":
+        "Management",
+
+    "Lingkup":
+        "Scope",
+
+    "Dokumentasi":
+        "Documentation",
+
+    "Kontak":
+        "Contact",
+
+    "Kenal Perusahaan":
+        "Company Profile",
+
+    "Hubungi Kami":
+        "Contact Us",
+
+    "Kirim Email":
+        "Send Email",
+
+    "Tahun Berdiri":
+        "Established",
+
+    "Bentuk Badan Usaha":
+        "Business Form",
+
+    "Nama Perusahaan":
+        "Company Name",
+
+    "Visi":
+        "Vision",
+
+    "Misi":
+        "Mission",
 
     "Rencana Jangka Pendek":
         "Short-Term Plan",
@@ -3287,6 +4580,9 @@ const translations = {
 
     "Dokumen Lingkungan":
         "Environmental Documents",
+
+    "PKKPRL":
+        "PKKPRL",
 
     "Pengelolaan Air":
         "Water Management",
@@ -3313,12 +4609,31 @@ const translations = {
         "Waste",
 
     "Penelitian":
-        "Research"
+        "Research",
+
+    "Let's Collaborate":
+        "Let's Collaborate",
+
+    "Dokumentasi Lapangan":
+        "Field Documentation",
+
+    "Aktivitas Lapangan":
+        "Field Activity",
+
+    "Survey & Observasi":
+        "Survey & Observation",
+
+    "Kegiatan Teknis":
+        "Technical Activity",
+
+    "Alamat":
+        "Address",
+
+    "Email":
+        "Email"
 
 };
 
-
-/* simpan teks asli */
 
 const originalTexts =
     new Map();
@@ -3347,42 +4662,16 @@ document
 
 function setLanguage(language){
 
-    languageButtons.forEach(
-        function(button){
-
-            const isID =
-                button.id
-                .toLowerCase()
-                .includes("id");
-
-            const active =
-                language === "id"
-                    ? isID
-                    : !isID;
-
-            button.classList.toggle(
-                "active",
-                active
-            );
-
-        }
-    );
-
-
     originalTexts.forEach(
         function(original,element){
 
-            if(language === "id"){
+            const clean =
+                original.trim();
 
-                element.textContent =
-                    original;
 
-            }
-
-            else{
-
-                const clean =
-                    original.trim();
+            if(
+                language === "en"
+            ){
 
                 if(
                     translations[clean]
@@ -3397,17 +4686,61 @@ function setLanguage(language){
                 }
 
             }
+            else{
+
+                element.textContent =
+                    original;
+
+            }
 
         }
     );
 
+
+    document
+        .querySelectorAll(
+            ".language-btn"
+        )
+        .forEach(
+            function(button){
+
+                const id =
+                    button.id
+                    .toLowerCase();
+
+                const isEnglish =
+                    id.includes("en");
+
+                const isIndonesia =
+                    id.includes("id");
+
+
+                button.classList.toggle(
+                    "active",
+
+                    language === "en"
+                        ? isEnglish
+                        : isIndonesia
+                );
+
+            }
+        );
+
+
+    document.documentElement.lang =
+        language === "en"
+            ? "en"
+            : "id";
+
 }
 
 
-/* tombol ID */
+/* ID */
 
 const langID =
-    document.getElementById("langID");
+    document.getElementById(
+        "langID"
+    );
 
 if(langID){
 
@@ -3423,10 +4756,12 @@ if(langID){
 }
 
 
-/* tombol EN */
+/* EN */
 
 const langEN =
-    document.getElementById("langEN");
+    document.getElementById(
+        "langEN"
+    );
 
 if(langEN){
 
@@ -3442,29 +4777,32 @@ if(langEN){
 }
 
 
-/* ======================================================
+/* =========================================================
    YEAR
-====================================================== */
+========================================================= */
 
 const year =
-    document.getElementById("year");
+    document.getElementById(
+        "year"
+    );
 
 if(year){
 
     year.textContent =
-        new Date().getFullYear();
+        new Date()
+            .getFullYear();
 
 }
 
 
-/* ======================================================
-   INITIAL
-====================================================== */
+/* =========================================================
+   INITIAL LANGUAGE
+========================================================= */
 
-showSlide(0);
 setLanguage("id");
 
 </script>
+
 
 </body>
 </html>
